@@ -20,7 +20,7 @@ from PIL import Image, ImageOps
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(SITE, 'src', 'data', 'case-studies')
 IMG = os.path.join(SITE, 'src', 'assets', 'work')
-CREDITS = re.compile(r'^\s*(course|for|instructor|project team|team members?|my role|thanks|special thanks|all the works|harvard graduate|realized)', re.I)
+CREDITS = re.compile(r'^\s*(course|for:|instructor|project team|team members?|my role|special thanks|thanks:|all the works|harvard graduate|realized)', re.I)
 
 
 def whiteness(block):
@@ -105,7 +105,7 @@ PLAN = {
     'imago': {0: 'small-l', 1: 'beside-r', 2: 'half-l', 3: 'grid3', 4: 'narrow-r', 8: 'wide-l', 9: 'text-l',
               10: 'half-l', 11: 'half-r', 12: 'text-r', 13: 'half-l', 14: 'section', 15: 'tri-a', 16: 'tri-b', 17: 'tri-c'},
     'seesaw': {2: 'full', 3: 'half-l', 4: 'half-r stagger', 5: 'section', 6: 'grid3', 7: 'grid3', 8: 'section',
-               9: 'full', 13: 'text-l', 14: 'half-r', 15: 'text-l pull', 16: 'wide-l', 18: 'small-l'},
+               9: 'full', 14: 'half-r', 16: 'wide-l', 18: 'small-l'},
     'tables': {0: 'full', 2: 'half-l', 3: 'grid3', 4: 'wide-r'},
     'yottabyte': {2: 'quote', 3: 'full', 4: 'half-l', 5: 'half-r', 6: 'wide-l', 7: 'full', 8: 'half-l', 9: 'half-r'},
     'prismo': {2: 'quote', 4: 'text-l', 6: 'wide-r', 9: 'text-l', 10: 'half-r', 11: 'grid4', 14: 'grid3', 17: 'section',

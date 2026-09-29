@@ -28,12 +28,10 @@ const path = Astro.url.pathname;
 	</head>
 	<body>
 		<header class="site-header">
-			<a href="/" class="wordmark">KAI ZHANG</a>
-			<nav>
-				<a href="/" aria-current={path === '/' || path.startsWith('/list') || path.startsWith('/work') ? 'page' : undefined}>Work</a>
-				<a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a>
-				<a href="mailto:this.kaizhang@gmail.com">Contact</a>
-			</nav>
+			<a href="/" class="wordmark">Kai Zhang</a>
+			<a href="/" aria-current={path === '/' || path.startsWith('/list') || path.startsWith('/work') ? 'page' : undefined}>Work</a>
+			<a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a>
+			<a href="mailto:this.kaizhang@gmail.com" class="last">Contact</a>
 		</header>
 		<main>
 			<slot />
@@ -82,6 +80,20 @@ const path = Astro.url.pathname;
 		font-weight: 800 900;
 		font-display: swap;
 	}
+	/* Text cut for running copy */
+	@font-face {
+		font-family: 'Neue Montreal Text';
+		src: url('/fonts/NeueMontrealText-Book.woff2') format('woff2');
+		font-weight: 400;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Neue Montreal Text';
+		src: url('/fonts/NeueMontrealText-BookItalic.woff2') format('woff2');
+		font-weight: 400;
+		font-style: italic;
+		font-display: swap;
+	}
 	:root {
 		--bg: #f4f4f2;
 		--fg: #111;
@@ -90,6 +102,7 @@ const path = Astro.url.pathname;
 		--accent: #2a4bff;
 		--mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 		--sans: 'Neue Montreal', 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+		--text: 'Neue Montreal Text', 'Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
 		--gutter: clamp(16px, 4vw, 48px);
 		color-scheme: light;
 	}
@@ -132,7 +145,6 @@ const path = Astro.url.pathname;
 		max-width: 100%;
 		display: block;
 	}
-	.site-header,
 	.site-footer {
 		display: flex;
 		justify-content: space-between;
@@ -144,27 +156,44 @@ const path = Astro.url.pathname;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 	}
+	/* Header: wordmark and links spread across four equal columns, generous air above and below */
 	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		padding-block: 20px;
-		background: var(--bg);
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		align-items: baseline;
+		padding-block: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px);
+		font-size: 13px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
 	}
-	.wordmark {
+	.site-header a {
+		color: var(--muted);
+		transition: color 0.2s ease;
+	}
+	.site-header a:hover,
+	.site-header a[aria-current='page'],
+	.site-header .wordmark {
+		color: var(--fg);
+	}
+	.site-header .wordmark {
 		font-weight: 600;
 	}
-	.site-header nav,
+	.site-header .last {
+		text-align: right;
+	}
+	@media (max-width: 720px) {
+		.site-header {
+			grid-template-columns: auto 1fr 1fr auto;
+			gap: 16px;
+		}
+	}
 	.site-footer .links {
 		display: flex;
 		gap: 1.5rem;
 	}
-	.site-header nav a,
 	.site-footer a {
 		color: var(--muted);
 	}
-	.site-header nav a:hover,
-	.site-header nav a[aria-current='page'],
 	.site-footer a:hover {
 		color: var(--fg);
 	}

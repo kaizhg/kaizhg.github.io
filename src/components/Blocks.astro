@@ -34,6 +34,20 @@ interface Cell {
 	blocks: Block[];
 }
 
+const plainText = (b?: Laid) =>
+	!!b && b.type === 'text' && !b.layout && (b.kind === 'text' || !b.kind) && b.html.replace(/<[^>]+>/g, '').length < 900;
+// Text cell that shares the row with an image cell of the given class, bottom-aligned
+const BESIDE: Record<string, [string, 'before' | 'after']> = {
+	'wide-r': ['beside-l low', 'before'],
+	'half-r': ['text-l low', 'before'],
+	'narrow-r': ['text-l low', 'before'],
+	'third-r': ['text-l low', 'before'],
+	'wide-l': ['beside-r low', 'after'],
+	'half-l': ['text-r low', 'after'],
+	'narrow-l': ['text-r low', 'after'],
+	'third-l': ['text-r low', 'after'],
+};
+
 function layout(bs: Laid[]): Cell[] {
 	const cells: Cell[] = [];
 	let side: 'l' | 'r' = 'r';
@@ -44,14 +58,41 @@ function layout(bs: Laid[]): Cell[] {
 		const b = bs[i];
 		const next = bs[i + 1];
 
+		// Push a media cell; if plain text follows and there is room beside the image,
+		// the text joins the same row, aligned to the image's bottom edge (magazine style)
+		const pushMedia = (cls: string) => {
+			const beside = BESIDE[cls.replace(/ stagger$/, '')];
+			if (beside && plainText(next)) {
+				const [tcls, where] = beside;
+				if (where === 'before') cells.push({ cls: tcls, blocks: [next] }, { cls, blocks: [b] });
+				else cells.push({ cls, blocks: [b] }, { cls: tcls, blocks: [next] });
+				i++;
+			} else cells.push({ cls, blocks: [b] });
+			if (/-l\b/.test(cls)) side = 'r';
+			else if (/-r\b/.test(cls)) side = 'l';
+		};
+
 		// Explicit decision from the plan (gallery/row layouts are handled inside the block)
 		if (b.layout && b.type !== 'gallery' && b.type !== 'row') {
 			if (b.layout === 'skip') continue;
 			if (/ pull$/.test(b.layout)) cells.splice(cells.length - 1, 0, { cls: b.layout.replace(/ pull$/, ''), blocks: [b] });
-			else cells.push({ cls: b.layout, blocks: [b] });
+			else if (b.type === 'text') cells.push({ cls: b.layout, blocks: [b] });
+			else pushMedia(b.layout);
 			if (/-l\b/.test(b.layout)) side = 'r';
 			else if (/-r\b/.test(b.layout)) side = 'l';
 			continue;
+		}
+
+		// A staggered pair of photos followed by text: the text tucks under the first photo
+		if (b.type === 'row' && plainText(next)) {
+			const media = b.columns.flatMap((c) => c.blocks);
+			const photos = media.length > 0 && media.every((m) => m.type === 'image' || m.type === 'loop' || m.type === 'video');
+			if (photos && b.columns.length === 2 && b.layout !== 'flat') {
+				const merged = { ...b, columns: [{ ...b.columns[0], blocks: [...b.columns[0].blocks, next!] }, b.columns[1]] };
+				cells.push({ cls: 'full', blocks: [merged] });
+				i++;
+				continue;
+			}
 		}
 
 		if (b.type === 'text') {
@@ -84,21 +125,15 @@ function layout(bs: Laid[]): Cell[] {
 		if (isImg(b)) {
 			if (b.kind === 'white') {
 				// Diagrams and renders on white never go full-bleed
-				cells.push({ cls: `${landscape(b) ? 'wide' : 'half'}-${side}`, blocks: [b] });
-				flip();
+				pushMedia(`${landscape(b) ? 'wide' : 'half'}-${side}`);
 			} else if (portrait(b)) {
-				cells.push({ cls: `narrow-${side}`, blocks: [b] });
-				flip();
+				pushMedia(`narrow-${side}`);
 			} else if (landscape(b)) {
 				if (singles % 2 === 0) cells.push({ cls: 'full', blocks: [b] });
-				else {
-					cells.push({ cls: `wide-${side}`, blocks: [b] });
-					flip();
-				}
+				else pushMedia(`wide-${side}`);
 				singles++;
 			} else {
-				cells.push({ cls: `half-${side}`, blocks: [b] });
-				flip();
+				pushMedia(`half-${side}`);
 			}
 			continue;
 		}
@@ -136,8 +171,9 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout)
 					return (
 						<div class="block embed">
 							<iframe
-								src={`https://www.youtube-nocookie.com/embed/${b.id}${b.start ? `?start=${b.start}` : ''}`}
+								src={`https://www.youtube.com/embed/${b.id}${b.start ? `?start=${b.start}` : ''}`}
 								title={`${title} video`}
+								referrerpolicy="strict-origin-when-cross-origin"
 								loading="lazy"
 								allow="autoplay; picture-in-picture; fullscreen"
 								allowfullscreen
@@ -224,8 +260,9 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout)
 	.tri-c { grid-column: 9 / 13; }
 	.text-l { grid-column: 1 / 6; }
 	.text-r { grid-column: 8 / 13; }
-	.beside-l { grid-column: 1 / 5; align-self: end; }
-	.beside-r { grid-column: 9 / 13; align-self: end; }
+	.beside-l { grid-column: 1 / 5; }
+	.beside-r { grid-column: 9 / 13; }
+	.low { align-self: end; }
 	.credits { grid-column: 1 / 5; }
 	.quote { grid-column: 2 / 12; }
 	.section {
@@ -284,6 +321,7 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout)
 	}
 	.text :global(p),
 	.text :global(li) {
+		font-family: var(--text);
 		font-size: 15px;
 		line-height: 1.65;
 		margin: 0 0 1em;
@@ -314,7 +352,7 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout)
 	.quote .text :global(p) {
 		font-size: clamp(24px, 3.2vw, 44px);
 		line-height: 1.12;
-		font-weight: 500;
+		font-weight: 600;
 		letter-spacing: -0.02em;
 		margin: 0;
 		text-wrap: balance;
@@ -355,7 +393,7 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout)
 	.gallery.grid5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 	.row {
 		gap: clamp(16px, 3vw, 48px);
-		align-items: center;
+		align-items: flex-end;
 	}
 	.row.stagger {
 		align-items: flex-start;

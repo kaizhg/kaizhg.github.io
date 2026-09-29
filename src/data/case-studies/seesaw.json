@@ -214,7 +214,6 @@
   {
    "type": "text",
    "html": "<h3>Third and fourth iteration: free rotation</h3>\n<p>The solution to the movement problem was to introduce an extra degree of freedom. The third prototype effectively used a rod and a slightly larger hole, but it lacked a polished look and feel. To elevate the user experience, I added two bearings on each handle, resulting in smoother rotation and a premium feel. You can clearly tell the difference when you grab it in your hands.</p>",
-   "layout": "text-l",
    "kind": "text"
   },
   {
@@ -228,8 +227,7 @@
   {
    "type": "text",
    "html": "<p>Thanks to the cross-shaped design, the electronic components are straightforward, requiring only one joystick and an Arduino board. The joystick's X value corresponds to Player 1's acceleration, while the Y value corresponds to Player 2's acceleration.</p>",
-   "layout": "text-l pull",
-   "kind": "credits"
+   "kind": "text"
   },
   {
    "type": "image",

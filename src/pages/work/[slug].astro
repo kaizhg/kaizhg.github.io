@@ -104,8 +104,7 @@ const hasBody = study && !study.locked && blocks.length > 0;
 	h1 {
 		font-size: clamp(32px, 4.4vw, 60px);
 		line-height: 1;
-		font-weight: 600;
-		font-stretch: 92%;
+		font-weight: 700;
 		letter-spacing: -0.025em;
 		margin: 0 0 28px;
 		text-wrap: balance;
@@ -140,6 +139,7 @@ const hasBody = study && !study.locked && blocks.length > 0;
 		margin: 0;
 	}
 	.lead :global(p) {
+		font-family: var(--text);
 		font-size: clamp(17px, 1.5vw, 21px);
 		line-height: 1.45;
 		font-weight: 400;
@@ -180,7 +180,7 @@ const hasBody = study && !study.locked && blocks.length > 0;
 		padding-block: 24px;
 		border-top: 1px solid var(--line);
 		font-size: 20px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 	.next .label {
 		font: 12px var(--mono);
