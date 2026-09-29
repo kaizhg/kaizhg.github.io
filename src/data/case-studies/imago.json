@@ -13,18 +13,24 @@
    "type": "image",
    "src": "imago/02.png",
    "width": 1049,
-   "height": 192
+   "height": 192,
+   "layout": "small-l",
+   "kind": "logo"
   },
   {
    "type": "text",
-   "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>"
+   "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>",
+   "layout": "beside-r",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "imago/03.png",
    "width": 2400,
    "height": 2393,
-   "caption": "It's launched and available for purchase on Red (XiaoHongShu)."
+   "caption": "It's launched and available for purchase on Red (XiaoHongShu).",
+   "layout": "half-l",
+   "kind": "photo"
   },
   {
    "type": "gallery",
@@ -33,27 +39,34 @@
      "type": "image",
      "src": "imago/04.jpg",
      "width": 1280,
-     "height": 1707
+     "height": 1707,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "imago/05.jpg",
      "width": 1280,
-     "height": 1707
+     "height": 1707,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "imago/06.jpg",
      "width": 1280,
-     "height": 1707
+     "height": 1707,
+     "kind": "photo"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "image",
    "src": "imago/07.jpg",
    "width": 1284,
-   "height": 1692
+   "height": 1692,
+   "layout": "narrow-r",
+   "kind": "photo"
   },
   {
    "type": "row",
@@ -65,7 +78,8 @@
        "type": "image",
        "src": "imago/08.jpg",
        "width": 2400,
-       "height": 2213
+       "height": 2213,
+       "kind": "photo"
       }
      ]
     },
@@ -76,11 +90,13 @@
        "type": "image",
        "src": "imago/09.jpg",
        "width": 1800,
-       "height": 2400
+       "height": 2400,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "gallery",
@@ -89,15 +105,18 @@
      "type": "image",
      "src": "imago/10.jpg",
      "width": 1080,
-     "height": 1619
+     "height": 1619,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "imago/11.jpg",
      "width": 1080,
-     "height": 1619
+     "height": 1619,
+     "kind": "photo"
     }
-   ]
+   ],
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -109,7 +128,8 @@
        "type": "image",
        "src": "imago/12.jpg",
        "width": 1280,
-       "height": 1724
+       "height": 1724,
+       "kind": "photo"
       }
      ]
     },
@@ -120,66 +140,88 @@
        "type": "image",
        "src": "imago/13.jpg",
        "width": 1406,
-       "height": 1056
+       "height": 1056,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "image",
    "src": "imago/14.jpg",
    "width": 2400,
    "height": 1746,
-   "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang"
+   "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
+   "layout": "wide-l",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h3>This page shows some of the early studies of Project Imago,<br>starting at 2021.</h3>"
+   "html": "<h3>This page shows some of the early studies of Project Imago,<br>starting at 2021.</h3>",
+   "layout": "text-l",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "imago/15.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "imago/16.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-r",
+   "kind": "white"
   },
   {
    "type": "text",
-   "html": "<h2>↗↗↗</h2>\n<h3>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</h3>"
+   "html": "<h2>↗↗↗</h2>\n<h3>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</h3>",
+   "layout": "text-r",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "imago/17.png",
    "width": 2000,
-   "height": 1500
+   "height": 1500,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "text",
-   "html": "<h3>Other Digital Explorations</h3>"
+   "html": "<h3>Other Digital Explorations</h3>",
+   "layout": "section",
+   "kind": "section"
   },
   {
    "type": "image",
    "src": "imago/18.jpg",
    "width": 2200,
-   "height": 1467
+   "height": 1467,
+   "layout": "tri-a",
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "imago/19.jpg",
    "width": 1920,
-   "height": 1200
+   "height": 1200,
+   "layout": "tri-b",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "imago/20.jpg",
    "width": 1920,
-   "height": 1440
+   "height": 1440,
+   "layout": "tri-c",
+   "kind": "photo"
   },
   {
    "type": "gallery",
@@ -188,15 +230,18 @@
      "type": "image",
      "src": "imago/21.jpg",
      "width": 1280,
-     "height": 960
+     "height": 960,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "imago/22.jpg",
      "width": 1280,
-     "height": 960
+     "height": 960,
+     "kind": "photo"
     }
-   ]
+   ],
+   "kind": "gallery"
   }
  ],
  "cover": {

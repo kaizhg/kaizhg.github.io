@@ -13,17 +13,22 @@
    "type": "image",
    "src": "hyperslice/02.jpg",
    "width": 2400,
-   "height": 1359
+   "height": 1359,
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "hyperslice/03.jpg",
    "width": 1920,
-   "height": 730
+   "height": 730,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "text",
-   "html": "<h3>This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections.</h3>"
+   "html": "<h3>This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections.</h3>",
+   "layout": "beside-r",
+   "kind": "quote"
   },
   {
    "type": "gallery",
@@ -32,37 +37,46 @@
      "type": "image",
      "src": "hyperslice/04.jpg",
      "width": 512,
-     "height": 492
+     "height": 492,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "hyperslice/05.jpg",
      "width": 512,
-     "height": 481
+     "height": 481,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/06.mp4",
      "width": 1000,
-     "height": 1000
+     "height": 1000,
+     "kind": "photo"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/07.mp4",
      "width": 1000,
-     "height": 1000
+     "height": 1000,
+     "kind": "photo"
     }
-   ]
+   ],
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Image Interpolation Matrix</h3>\n<p>By utilizing an M by N image matrix (M: total cross section count, N: interpolation in each layer), it empowers user to parametrically blend geometries using a customized curve. This approach enhances control and facilitates seamless integration of diverse geometries.</p>"
+   "html": "<h3>Image Interpolation Matrix</h3>\n<p>By utilizing an M by N image matrix (M: total cross section count, N: interpolation in each layer), it empowers user to parametrically blend geometries using a customized curve. This approach enhances control and facilitates seamless integration of diverse geometries.</p>",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "hyperslice/08.jpg",
    "width": 2400,
-   "height": 857
+   "height": 857,
+   "layout": "full",
+   "kind": "white"
   },
   {
    "type": "row",
@@ -74,7 +88,8 @@
        "type": "loop",
        "src": "/media/hyperslice/09.mp4",
        "width": 800,
-       "height": 538
+       "height": 538,
+       "kind": "photo"
       }
      ]
     },
@@ -85,15 +100,18 @@
        "type": "loop",
        "src": "/media/hyperslice/10.mp4",
        "width": 800,
-       "height": 538
+       "height": 538,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>It's also possible to get cross-sections from a non-linear axis, and stack them back together to build a sub-form.</h3>"
+   "html": "<h3>It's also possible to get cross-sections from a non-linear axis, and stack them back together to build a sub-form.</h3>",
+   "kind": "quote"
   },
   {
    "type": "gallery",
@@ -102,27 +120,33 @@
      "type": "loop",
      "src": "/media/hyperslice/11.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/12.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/13.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/14.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid4",
+   "kind": "gallery"
   }
  ],
  "cover": {

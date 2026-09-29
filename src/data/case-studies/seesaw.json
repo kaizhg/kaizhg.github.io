@@ -11,33 +11,44 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<p>Course: Interaction Intelligence, Spring 2023<br>Instructor:  Marcelo Coelho<br>Project Duration: 4 Weeks<br>Team members: Kai Zhang, Tatiana Estrina</p>"
+   "html": "<p>Course: Interaction Intelligence, Spring 2023<br>Instructor:  Marcelo Coelho<br>Project Duration: 4 Weeks<br>Team members: Kai Zhang, Tatiana Estrina</p>",
+   "kind": "credits",
+   "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2>\n<p>See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.</p>"
+   "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2>\n<p>See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.</p>",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "seesaw/02.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "seesaw/03.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "half-l",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "seesaw/04.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "half-r stagger",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h3>How to play</h3>"
+   "html": "<h3>How to play</h3>",
+   "layout": "section",
+   "kind": "section"
   },
   {
    "type": "gallery",
@@ -46,21 +57,26 @@
      "type": "image",
      "src": "seesaw/05.jpg",
      "width": 585,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "seesaw/06.jpg",
      "width": 585,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "seesaw/07.jpg",
      "width": 584,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
@@ -69,32 +85,41 @@
      "type": "image",
      "src": "seesaw/08.jpg",
      "width": 585,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "seesaw/09.jpg",
      "width": 585,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "seesaw/10.jpg",
      "width": 585,
-     "height": 463
+     "height": 463,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Controller development</h3>"
+   "html": "<h3>Controller development</h3>",
+   "layout": "section",
+   "kind": "section"
   },
   {
    "type": "image",
    "src": "seesaw/11.png",
    "width": 2400,
    "height": 686,
-   "caption": "Iteration Process"
+   "caption": "Iteration Process",
+   "layout": "full",
+   "kind": "logo"
   },
   {
    "type": "row",
@@ -106,7 +131,8 @@
        "type": "image",
        "src": "seesaw/12.jpg",
        "width": 2400,
-       "height": 1440
+       "height": 1440,
+       "kind": "white"
       }
      ]
     },
@@ -115,11 +141,13 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>First iteration: see-saw</h3>\n<p>The initial controller simply merged a conventional game controller with a see-saw. While the interaction was natural, it failed to foster collaboration---players only use their individual controllers to play the game.</p>"
+       "html": "<h3>First iteration: see-saw</h3>\n<p>The initial controller simply merged a conventional game controller with a see-saw. While the interaction was natural, it failed to foster collaboration---players only use their individual controllers to play the game.</p>",
+       "kind": "text"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "row",
@@ -129,7 +157,8 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Second iteration: cross</h3>\n<p>To promote physical interaction, we combined two see-saws into a cross-shaped controller. This distinctive design encourages players to engage with each other's bodies, adding an extra element of fun. However, the basic cardboard prototype restricts independent movement for players.</p>"
+       "html": "<h3>Second iteration: cross</h3>\n<p>To promote physical interaction, we combined two see-saws into a cross-shaped controller. This distinctive design encourages players to engage with each other's bodies, adding an extra element of fun. However, the basic cardboard prototype restricts independent movement for players.</p>",
+       "kind": "text"
       }
      ]
     },
@@ -140,11 +169,13 @@
        "type": "image",
        "src": "seesaw/13.jpg",
        "width": 2400,
-       "height": 1440
+       "height": 1440,
+       "kind": "white"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "row",
@@ -158,7 +189,8 @@
        "poster": "/media/seesaw/UeZQGAURe-J.jpg",
        "width": 1920,
        "height": 1080,
-       "audio": true
+       "audio": true,
+       "kind": "video"
       }
      ]
     },
@@ -171,41 +203,55 @@
        "poster": "/media/seesaw/6tL4UcHE9mF.jpg",
        "width": 1920,
        "height": 1080,
-       "audio": true
+       "audio": true,
+       "kind": "video"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>Third and fourth iteration: free rotation</h3>\n<p>The solution to the movement problem was to introduce an extra degree of freedom. The third prototype effectively used a rod and a slightly larger hole, but it lacked a polished look and feel. To elevate the user experience, I added two bearings on each handle, resulting in smoother rotation and a premium feel. You can clearly tell the difference when you grab it in your hands.</p>"
+   "html": "<h3>Third and fourth iteration: free rotation</h3>\n<p>The solution to the movement problem was to introduce an extra degree of freedom. The third prototype effectively used a rod and a slightly larger hole, but it lacked a polished look and feel. To elevate the user experience, I added two bearings on each handle, resulting in smoother rotation and a premium feel. You can clearly tell the difference when you grab it in your hands.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "seesaw/14.jpg",
    "width": 2400,
-   "height": 2341
+   "height": 2341,
+   "layout": "half-r",
+   "kind": "white"
   },
   {
    "type": "text",
-   "html": "<p>Thanks to the cross-shaped design, the electronic components are straightforward, requiring only one joystick and an Arduino board. The joystick's X value corresponds to Player 1's acceleration, while the Y value corresponds to Player 2's acceleration.</p>"
+   "html": "<p>Thanks to the cross-shaped design, the electronic components are straightforward, requiring only one joystick and an Arduino board. The joystick's X value corresponds to Player 1's acceleration, while the Y value corresponds to Player 2's acceleration.</p>",
+   "layout": "text-l pull",
+   "kind": "credits"
   },
   {
    "type": "image",
    "src": "seesaw/15.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "wide-l",
+   "kind": "photo"
   },
   {
    "type": "youtube",
-   "id": "kxqCKvFvQow"
+   "id": "kxqCKvFvQow",
+   "start": 7,
+   "kind": "youtube"
   },
   {
    "type": "image",
    "src": "seesaw/16.jpg",
    "width": 1126,
-   "height": 270
+   "height": 270,
+   "layout": "small-l",
+   "kind": "logo"
   }
  ],
  "cover": {

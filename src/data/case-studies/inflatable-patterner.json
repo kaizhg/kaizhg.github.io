@@ -11,22 +11,29 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>How to procedurally generate DMF file for inflatable structures?</h2>"
+   "html": "<h2>How to procedurally generate DMF file for inflatable structures?</h2>",
+   "kind": "quote"
   },
   {
    "type": "text",
-   "html": "<p>June 2023 - August 2023 at <a href=\"https://www.pneu.haus/\">Pneuhaus</a> under guidance of August Lekrecke.</p>\n<p>Over the 8 weeks, I developed C# scripts in Grasshopper for generating production files for inflatable structures. This workflow accelerates entire design process, from form-finding, patterning, labeling, unrolling, and simulation, adaptable to various input topologies and pattern types. It uses the half-edge data structure to enhance performance and robustness.</p>"
+   "html": "<p>June 2023 - August 2023 at <a href=\"https://www.pneu.haus/\">Pneuhaus</a> under guidance of August Lekrecke.</p>\n<p>Over the 8 weeks, I developed C# scripts in Grasshopper for generating production files for inflatable structures. This workflow accelerates entire design process, from form-finding, patterning, labeling, unrolling, and simulation, adaptable to various input topologies and pattern types. It uses the half-edge data structure to enhance performance and robustness.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "inflatable-patterner/02.jpg",
    "width": 2400,
    "height": 1350,
-   "caption": "Inflatable Structure example 1: Cloud Lights by Pneuhaus"
+   "caption": "Inflatable Structure example 1: Cloud Lights by Pneuhaus",
+   "layout": "wide-r",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h2><strong>Solution 1: Closed Boundaries (2D Input)</strong></h2>\n<p>Turn almost any flat doodle drawing into manufacturable inflatable.</p>"
+   "html": "<h2><strong>Solution 1: Closed Boundaries (2D Input)</strong></h2>\n<p>Turn almost any flat doodle drawing into manufacturable inflatable.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "row",
@@ -39,7 +46,8 @@
        "src": "inflatable-patterner/03.jpg",
        "width": 2400,
        "height": 2040,
-       "caption": "Some input tests"
+       "caption": "Some input tests",
+       "kind": "white"
       }
      ]
     },
@@ -51,15 +59,20 @@
        "src": "/media/inflatable-patterner/04.mp4",
        "width": 2600,
        "height": 2210,
-       "caption": "Developable Panels"
+       "caption": "Developable Panels",
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "layout": "flat",
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>The grasshopper definition enables users to freely modify the patterning design for aesthetic, structural, and manufacturing purposes. The segmentation count, length, width, seam alignment, and other parameters can all be easily adjusted based on the needs.</h3>"
+   "html": "<h3>The grasshopper definition enables users to freely modify the patterning design for aesthetic, structural, and manufacturing purposes. The segmentation count, length, width, seam alignment, and other parameters can all be easily adjusted based on the needs.</h3>",
+   "layout": "text-r",
+   "kind": "quote"
   },
   {
    "type": "gallery",
@@ -68,51 +81,61 @@
      "type": "image",
      "src": "inflatable-patterner/05.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/06.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/07.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/08.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/09.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/10.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/11.jpg",
      "width": 1920,
-     "height": 1580
+     "height": 1580,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/12.jpg",
      "width": 1920,
-     "height": 1509
+     "height": 1509,
+     "kind": "white"
     }
-   ]
+   ],
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -125,7 +148,8 @@
        "src": "/media/inflatable-patterner/13.mp4",
        "width": 1312,
        "height": 1080,
-       "caption": "360 View of the final panels"
+       "caption": "360 View of the final panels",
+       "kind": "photo"
       }
      ]
     },
@@ -139,54 +163,67 @@
          "type": "image",
          "src": "inflatable-patterner/14.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/15.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/16.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/17.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/18.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/19.jpg",
          "width": 1920,
-         "height": 1580
+         "height": 1580,
+         "kind": "white"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid2"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "image",
    "src": "inflatable-patterner/20.jpg",
    "width": 2400,
    "height": 1350,
-   "caption": "Inflatable Structure example 2: Grove by Pneuhaus<br>"
+   "caption": "Inflatable Structure example 2: Grove by Pneuhaus<br>",
+   "layout": "wide-l",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h2><strong>Solution 2: Line Networks (3D Input)</strong></h2>\n<p>Turn almost any 3D line networks into manufacturable inflatables with a smoother output profile.</p>"
+   "html": "<h2><strong>Solution 2: Line Networks (3D Input)</strong></h2>\n<p>Turn almost any 3D line networks into manufacturable inflatables with a smoother output profile.</p>",
+   "layout": "text-r",
+   "kind": "text"
   },
   {
    "type": "gallery",
@@ -195,137 +232,165 @@
      "type": "loop",
      "src": "/media/inflatable-patterner/21.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/22.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/23.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/24.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/25.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/26.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/27.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/28.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/29.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/30.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/31.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/32.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/33.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/34.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/35.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/36.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/37.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/38.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/39.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/inflatable-patterner/40.mp4",
      "width": 480,
-     "height": 480
+     "height": 480,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid5",
+   "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Adaptive to Design / Manufacturing needs:</h3>\n<p>The below animation demonstrates the adjustable nature of the complex strip's width (highlighted in blue), while the simple strip's patterning (shown in grey) also automatically adapts to the width change. This feature, specifically requested by my advisor, introduces greater flexibility in fine-tuning design and fabrication processes.</p>"
+   "html": "<h3>Adaptive to Design / Manufacturing needs:</h3>\n<p>The below animation demonstrates the adjustable nature of the complex strip's width (highlighted in blue), while the simple strip's patterning (shown in grey) also automatically adapts to the width change. This feature, specifically requested by my advisor, introduces greater flexibility in fine-tuning design and fabrication processes.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "loop",
    "src": "/media/inflatable-patterner/41.mp4",
    "width": 600,
-   "height": 431
+   "height": 431,
+   "layout": "half-r",
+   "kind": "small"
   },
   {
    "type": "text",
-   "html": "<h3>Assembly Guide I: Group Search</h3>\n<p>The diagram and animation above show the general steps and the mapping between 3D geometry and 2D flattened pieces. The GIF on the right serves as a group dictionary that shows the overall assembly sequence.</p>"
+   "html": "<h3>Assembly Guide I: Group Search</h3>\n<p>The diagram and animation above show the general steps and the mapping between 3D geometry and 2D flattened pieces. The GIF on the right serves as a group dictionary that shows the overall assembly sequence.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "row",
@@ -340,27 +405,33 @@
          "type": "image",
          "src": "inflatable-patterner/42.jpg",
          "width": 1920,
-         "height": 1568
+         "height": 1568,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/43.jpg",
          "width": 1920,
-         "height": 1568
+         "height": 1568,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/44.jpg",
          "width": 1920,
-         "height": 1568
+         "height": 1568,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/45.jpg",
          "width": 1920,
-         "height": 1568
+         "height": 1568,
+         "kind": "white"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid2"
       }
      ]
     },
@@ -371,15 +442,19 @@
        "type": "loop",
        "src": "/media/inflatable-patterner/46.mp4",
        "width": 800,
-       "height": 635
+       "height": 635,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>Assembly Guide II: Neighbor Search</h3>\n<p>The diagram and animation below show the neighbor relationship and the example file of the<br>cutting and plotting profiles. This feature assists fabricator to quickly index the neighbor pieces</p>"
+   "html": "<h3>Assembly Guide II: Neighbor Search</h3>\n<p>The diagram and animation below show the neighbor relationship and the example file of the<br>cutting and plotting profiles. This feature assists fabricator to quickly index the neighbor pieces</p>",
+   "layout": "text-r",
+   "kind": "text"
   },
   {
    "type": "row",
@@ -391,7 +466,8 @@
        "type": "loop",
        "src": "/media/inflatable-patterner/47.mp4",
        "width": 800,
-       "height": 601
+       "height": 601,
+       "kind": "photo"
       }
      ]
     },
@@ -405,34 +481,44 @@
          "type": "image",
          "src": "inflatable-patterner/48.jpg",
          "width": 1920,
-         "height": 1110
+         "height": 1110,
+         "kind": "white"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/49.jpg",
          "width": 1920,
-         "height": 1110
+         "height": 1110,
+         "kind": "white"
         }
-       ]
+       ],
+       "kind": "gallery"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h2><strong>If you are interested in the my thinking process, please take a look at the log<a href=\"https://kaizhg.notion.site/2023-Summer-Pneuhaus-Intern-Log-f12c62426d6a49c2ad19600da80ba9c7?pvs=74\"> HERE</a>.</strong></h2>"
+   "html": "<h2><strong>If you are interested in the my thinking process, please take a look at the log<a href=\"https://kaizhg.notion.site/2023-Summer-Pneuhaus-Intern-Log-f12c62426d6a49c2ad19600da80ba9c7?pvs=74\"> HERE</a>.</strong></h2>",
+   "layout": "text-l",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "inflatable-patterner/50.jpg",
    "width": 1800,
    "height": 2400,
-   "caption": "One example of the closed planar boundaries geometry - a cloud bubble.<br>"
+   "caption": "One example of the closed planar boundaries geometry - a cloud bubble.<br>",
+   "layout": "narrow-r",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h3>Below is another example of the first logic: CLOUD Pillow<br>You can check the process on my <a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#week_2\">How to Make (almost) Anything</a> site.</h3>"
+   "html": "<h3>Below is another example of the first logic: CLOUD Pillow<br>You can check the process on my <a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#week_2\">How to Make (almost) Anything</a> site.</h3>",
+   "layout": "text-l",
+   "kind": "quote"
   },
   {
    "type": "row",
@@ -444,7 +530,8 @@
        "type": "image",
        "src": "inflatable-patterner/51.jpg",
        "width": 1894,
-       "height": 1498
+       "height": 1498,
+       "kind": "white"
       }
      ]
     },
@@ -458,35 +545,44 @@
          "type": "image",
          "src": "inflatable-patterner/52.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/53.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/54.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "inflatable-patterner/55.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid2"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>↑ : Perfect machine cutting<br>↓ : Terrible human sewing</h3>"
+   "html": "<h3>↑ : Perfect machine cutting<br>↓ : Terrible human sewing</h3>",
+   "layout": "quote",
+   "kind": "quote"
   },
   {
    "type": "gallery",
@@ -495,27 +591,33 @@
      "type": "image",
      "src": "inflatable-patterner/56.jpg",
      "width": 2400,
-     "height": 1800
+     "height": 1800,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/57.jpg",
      "width": 2400,
-     "height": 1800
+     "height": 1800,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/58.jpg",
      "width": 2400,
-     "height": 1800
+     "height": 1800,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "inflatable-patterner/59.jpg",
      "width": 2400,
-     "height": 1800
+     "height": 1800,
+     "kind": "photo"
     }
-   ]
+   ],
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -528,7 +630,8 @@
        "src": "inflatable-patterner/60.jpg",
        "width": 2400,
        "height": 1800,
-       "caption": "bad sewing execution --- but demonstrated the idea!"
+       "caption": "bad sewing execution --- but demonstrated the idea!",
+       "kind": "photo"
       }
      ]
     },
@@ -540,11 +643,13 @@
        "src": "inflatable-patterner/61.jpg",
        "width": 1586,
        "height": 1735,
-       "caption": "could be a cute and useless handcuff"
+       "caption": "could be a cute and useless handcuff",
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   }
  ],
  "cover": {

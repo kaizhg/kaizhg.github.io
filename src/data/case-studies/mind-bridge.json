@@ -11,31 +11,40 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2>\n<p>A reflection on technology and post-covid time.</p>"
+   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2>\n<p>A reflection on technology and post-covid time.</p>",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "mind-bridge/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "mind-bridge/03.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "mind-bridge/04.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-r",
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "mind-bridge/05.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
   }
  ],
  "cover": {

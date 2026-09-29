@@ -14,18 +14,23 @@ const study = getCaseStudy(project.slug);
 const i = projects.indexOf(project);
 const next = projects[(i + 1) % projects.length];
 
-let blocks: Block[] = study?.blocks ?? [];
-// The opening paragraph becomes the lead next to the title, magazine style
+type Laid = Block & { kind?: string; layout?: string };
+let blocks: Laid[] = (study?.blocks ?? []) as Laid[];
+// Credits (course, team, role) at the top move into the header under the facts
+const credits: Laid[] = [];
+while (blocks[0]?.type === 'text' && blocks[0].kind === 'credits') credits.push(blocks.shift()!);
+// The opening paragraph or statement becomes the lead next to the title, magazine style
 let lead: string | null = null;
 const first = blocks[0];
 const firstText = first?.type === 'text' ? first.html.replace(/<[^>]+>/g, ' ').trim() : '';
-if (first?.type === 'text' && (/<p>/.test(first.html) || firstText.length >= 40)) {
+if (first?.type === 'text' && first.kind !== 'section' && (/<p>/.test(first.html) || firstText.length >= 40)) {
 	lead = first.html;
 	blocks = blocks.slice(1);
 }
-// Skip the separate hero when the page already opens with that same image
-const opener = blocks[0];
-const showHero = study?.hero && !(opener && 'src' in opener && opener.src === study.hero.src);
+// Don't repeat the hero if the page opens with that same image
+const dup = blocks.findIndex((b, i) => i < 3 && 'src' in b && study?.hero && b.src === study.hero.src);
+if (dup >= 0) blocks = [...blocks.slice(0, dup), ...blocks.slice(dup + 1)];
+const showHero = !!study?.hero;
 const hasBody = study && !study.locked && blocks.length > 0;
 ---
 
@@ -41,6 +46,7 @@ const hasBody = study && !study.locked && blocks.length > 0;
 					<div><dt>Type</dt><dd>{project.summary}</dd></div>
 					{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
 				</dl>
+				{credits.map((c) => <div class="credits" set:html={c.html} />)}
 			</div>
 			{lead && <div class="head-r lead" set:html={lead} />}
 		</header>
@@ -121,6 +127,16 @@ const hasBody = study && !study.locked && blocks.length > 0;
 		margin-bottom: 4px;
 	}
 	dd {
+		margin: 0;
+	}
+	.credits {
+		margin-top: 14px;
+		font: 12px/1.6 var(--mono);
+		color: var(--muted);
+	}
+	.credits :global(p),
+	.credits :global(h3) {
+		font: inherit;
 		margin: 0;
 	}
 	.lead :global(p) {

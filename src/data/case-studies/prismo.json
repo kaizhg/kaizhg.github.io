@@ -10,41 +10,35 @@
  "locked": false,
  "blocks": [
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.385,
-     "blocks": [
-      {
-       "type": "text",
-       "html": "<p>Course: SCI-6476 Transformable Design MethodsInstructor: Chuck HobermanProject Duration: 6 Weeks<br>Team members: Kai Zhang, Quincy Kuang, Danning LiangSpeacial Thanks: Youtian Duan(Welding), Liu Yang(Assembly)</p>"
-      }
-     ]
-    },
-    {
-     "flex": 0.615,
-     "blocks": [
-      {
-       "type": "text",
-       "html": "<p>My Role:<br>[1] Proposed the innovative concept of combining mirror and prismatic structures to create a transformable lighting solution.<br>[2] Conducted research into both design directions and developed a Grasshopper C# script to streamline the design and simulation process for the team.<br>[3] Defined the aesthetic and specifications of the final product.<br>[4] Worked closely with two other team members to address the challenges in the actuation, lighting, and connection design.</p>"
-      }
-     ]
-    }
-   ]
+   "type": "text",
+   "html": "<p>Course: SCI-6476 Transformable Design MethodsInstructor: Chuck HobermanProject Duration: 6 Weeks<br>Team members: Kai Zhang, Quincy Kuang, Danning LiangSpeacial Thanks: Youtian Duan(Welding), Liu Yang(Assembly)</p>",
+   "kind": "credits",
+   "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<h2>What will an \"Inside-Out\" kaleidoscope look like?</h2>"
+   "html": "<p>My Role:<br>[1] Proposed the innovative concept of combining mirror and prismatic structures to create a transformable lighting solution.<br>[2] Conducted research into both design directions and developed a Grasshopper C# script to streamline the design and simulation process for the team.<br>[3] Defined the aesthetic and specifications of the final product.<br>[4] Worked closely with two other team members to address the challenges in the actuation, lighting, and connection design.</p>",
+   "kind": "credits",
+   "layout": "credits"
+  },
+  {
+   "type": "text",
+   "html": "<h2>What will an \"Inside-Out\" kaleidoscope look like?</h2>",
+   "layout": "quote",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "prismo/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<p>Prismo lamp is a modern interpretation of the classic prismatic structure, leveraging its periodic and space-filling properties to create a unique, kinetic aesthetic.</p>"
+   "html": "<p>Prismo lamp is a modern interpretation of the classic prismatic structure, leveraging its periodic and space-filling properties to create a unique, kinetic aesthetic.</p>",
+   "layout": "text-l",
+   "kind": "text"
   },
   {
    "type": "row",
@@ -54,7 +48,8 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Initial InspirationI was first intrigued by the prismatic structure’s movement. The mesmerizing yet unexpected movement makes me wonder how will light bounces inside this structure. A whim suddenly hit me: Why don’t combine periscope and prismatic structure and make an \"inside-out kaleidoscope\", using prismatic transformation to amplify light?</h3>"
+       "html": "<h3>Initial InspirationI was first intrigued by the prismatic structure’s movement. The mesmerizing yet unexpected movement makes me wonder how will light bounces inside this structure. A whim suddenly hit me: Why don’t combine periscope and prismatic structure and make an \"inside-out kaleidoscope\", using prismatic transformation to amplify light?</h3>",
+       "kind": "quote"
       }
      ]
     },
@@ -65,17 +60,21 @@
        "type": "loop",
        "src": "/media/prismo/03.mp4",
        "width": 600,
-       "height": 600
+       "height": 600,
+       "kind": "small"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "image",
    "src": "prismo/04.jpg",
    "width": 1920,
-   "height": 694
+   "height": 694,
+   "layout": "wide-r",
+   "kind": "white"
   },
   {
    "type": "row",
@@ -87,7 +86,8 @@
        "type": "loop",
        "src": "/media/prismo/05.mp4",
        "width": 337,
-       "height": 600
+       "height": 600,
+       "kind": "small"
       }
      ]
     },
@@ -100,11 +100,14 @@
        "poster": "/media/prismo/LnxroyvZTC5.jpg",
        "width": 1920,
        "height": 1080,
-       "audio": true
+       "audio": true,
+       "kind": "video"
       }
      ]
     }
-   ]
+   ],
+   "layout": "flat",
+   "kind": "row"
   },
   {
    "type": "row",
@@ -119,27 +122,33 @@
          "type": "image",
          "src": "prismo/06.jpg",
          "width": 2284,
-         "height": 2284
+         "height": 2284,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/07.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/08.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/09.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid2"
       }
      ]
     },
@@ -148,21 +157,27 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Base Geometry</h3>\n<p>The first step was to identify the optimal base geometry. The geometry needed to be tessellatable, and we explored several options including the Truncated Rhombic Dodecahedron, the Rhombic Dodecahedron, and the Prismatic Polyhedron.<br>We chose the basic Prismatic Polyhedron with 1 degree of freedom (DOF) for the following reasons: given our limited time and resources, a 1 DOF structure was easier to actuate, allowing us to focus more on design refinements rather than technical challenges; the 1 DOF structure was more straightforward for audiences to understand, as people tend to appreciate things they can easily grasp.</p>"
+       "html": "<h3>Base Geometry</h3>\n<p>The first step was to identify the optimal base geometry. The geometry needed to be tessellatable, and we explored several options including the Truncated Rhombic Dodecahedron, the Rhombic Dodecahedron, and the Prismatic Polyhedron.<br>We chose the basic Prismatic Polyhedron with 1 degree of freedom (DOF) for the following reasons: given our limited time and resources, a 1 DOF structure was easier to actuate, allowing us to focus more on design refinements rather than technical challenges; the 1 DOF structure was more straightforward for audiences to understand, as people tend to appreciate things they can easily grasp.</p>",
+       "kind": "text"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>We explored two Y-Shape Polyhedron-based designs: a polar tree and a tessellation structure. The latter was chosen for best highlighting movement through its smart, space-filling mechanics.</h3>"
+   "html": "<h3>We explored two Y-Shape Polyhedron-based designs: a polar tree and a tessellation structure. The latter was chosen for best highlighting movement through its smart, space-filling mechanics.</h3>",
+   "layout": "text-l",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "prismo/10.jpg",
    "width": 2400,
-   "height": 2262
+   "height": 2262,
+   "layout": "half-r",
+   "kind": "white"
   },
   {
    "type": "gallery",
@@ -171,27 +186,33 @@
      "type": "loop",
      "src": "/media/prismo/11.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/prismo/12.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/prismo/13.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/prismo/14.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -201,7 +222,8 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Parametric Design<br>I wrote a C# grasshopper script to streamline the design and simulation process for 1 DOF prismatic structures, greatly improving our ability to iterate and refine the design in a timely manner.<br><br><br><strong><a href=\"/transform\">Click here to see how I improved the workflow in details</a> &gt;&gt;&gt;</strong></h3>"
+       "html": "<h3>Parametric Design<br>I wrote a C# grasshopper script to streamline the design and simulation process for 1 DOF prismatic structures, greatly improving our ability to iterate and refine the design in a timely manner.<br><br><br><strong><a href=\"/transform\">Click here to see how I improved the workflow in details</a> &gt;&gt;&gt;</strong></h3>",
+       "kind": "quote"
       }
      ]
     },
@@ -212,11 +234,13 @@
        "type": "loop",
        "src": "/media/prismo/15.mp4",
        "width": 800,
-       "height": 450
+       "height": 450,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "row",
@@ -231,15 +255,18 @@
          "type": "image",
          "src": "prismo/16.jpg",
          "width": 2400,
-         "height": 1600
+         "height": 1600,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/17.jpg",
          "width": 2400,
-         "height": 1600
+         "height": 1600,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery"
       }
      ]
     },
@@ -248,11 +275,13 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Actuation</h3>\n<p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>"
+       "html": "<h3>Actuation</h3>\n<p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>",
+       "kind": "text"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "gallery",
@@ -261,21 +290,26 @@
      "type": "loop",
      "src": "/media/prismo/18.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/prismo/19.mp4",
      "width": 600,
-     "height": 338
+     "height": 338,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/prismo/20.mp4",
      "width": 337,
-     "height": 600
+     "height": 600,
+     "kind": "small"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -285,7 +319,8 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Connection and Material</h3>\n<p>This was also one of the main challenges of realizing this product. There were three major factors: weight, reflectivity, and connection type:</p>\n<p>[1] Since the whole structure is only driven by a single 35 kg servo motor, the main body of the top moving part has to be as light as possible.<br>[2] The inside material should be reflective enough for light to bounce multiple times. We found out the more light gets bounced the better the kaleidoscope effect it gets.<br>[3] The gap between each panel should be as small as possible to avoid light escape, and the connection should have as little friction as possible to ensure a smooth movement.</p>\n<p>The acrylic mirror has the most reflective surface. However, hinges and fasteners are required for connecting laser cut mirror panel. There are mainly three drawbacks of using hinges and fasteners: 1. The assembly process, which requires fastening more than 1000 screws/rivets by hand, is extremely tedious and not flexible enough for maintenance and placing LED strip; 2. Hinge requires leaving huge gap between panels to avoid self-interference; 3. The lamp doesn’t look clean with this many fasteners exposed.<br>Taken all consideration, we decided to 3D print the panel because we were able to integrate mechanical hinge into the individual panel.</p>"
+       "html": "<h3>Connection and Material</h3>\n<p>This was also one of the main challenges of realizing this product. There were three major factors: weight, reflectivity, and connection type:</p>\n<p>[1] Since the whole structure is only driven by a single 35 kg servo motor, the main body of the top moving part has to be as light as possible.<br>[2] The inside material should be reflective enough for light to bounce multiple times. We found out the more light gets bounced the better the kaleidoscope effect it gets.<br>[3] The gap between each panel should be as small as possible to avoid light escape, and the connection should have as little friction as possible to ensure a smooth movement.</p>\n<p>The acrylic mirror has the most reflective surface. However, hinges and fasteners are required for connecting laser cut mirror panel. There are mainly three drawbacks of using hinges and fasteners: 1. The assembly process, which requires fastening more than 1000 screws/rivets by hand, is extremely tedious and not flexible enough for maintenance and placing LED strip; 2. Hinge requires leaving huge gap between panels to avoid self-interference; 3. The lamp doesn’t look clean with this many fasteners exposed.<br>Taken all consideration, we decided to 3D print the panel because we were able to integrate mechanical hinge into the individual panel.</p>",
+       "kind": "text"
       }
      ]
     },
@@ -299,61 +334,73 @@
          "type": "image",
          "src": "prismo/21.jpg",
          "width": 2273,
-         "height": 2273
+         "height": 2273,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/22.jpg",
          "width": 2374,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/23.jpg",
          "width": 2300,
-         "height": 2300
+         "height": 2300,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/24.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/25.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/26.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/27.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/28.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/29.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid3"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "row",
@@ -363,7 +410,8 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Panel and Base</h3>\n<p>The panels of the lamp are fabricated through SLS printing which resulted in a clean black matte finish. Given the short time frame, we didn’t fully optimize the panel but there is space for shrinking the edge and acquiring a sleeker look. The movement of the panels is enabled through mechanical hinges which are integrated into the panel designs.</p>\n<p>The first panel, which is the fixed side of the base parallelogram, is integrated into the base. We spitted the base in halves to clamp the stand as well as to create space for placing the circuit board.</p>"
+       "html": "<h3>Panel and Base</h3>\n<p>The panels of the lamp are fabricated through SLS printing which resulted in a clean black matte finish. Given the short time frame, we didn’t fully optimize the panel but there is space for shrinking the edge and acquiring a sleeker look. The movement of the panels is enabled through mechanical hinges which are integrated into the panel designs.</p>\n<p>The first panel, which is the fixed side of the base parallelogram, is integrated into the base. We spitted the base in halves to clamp the stand as well as to create space for placing the circuit board.</p>",
+       "kind": "text"
       }
      ]
     },
@@ -377,23 +425,29 @@
          "type": "image",
          "src": "prismo/30.png",
          "width": 706,
-         "height": 1669
+         "height": 1669,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/31.png",
          "width": 1920,
-         "height": 1457
+         "height": 1457,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<h3>Fabrication</h3>"
+   "html": "<h3>Fabrication</h3>",
+   "layout": "section",
+   "kind": "section"
   },
   {
    "type": "row",
@@ -408,57 +462,68 @@
          "type": "image",
          "src": "prismo/32.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/33.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/34.jpg",
          "width": 2312,
-         "height": 2312
+         "height": 2312,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/35.jpg",
          "width": 2123,
-         "height": 2123
+         "height": 2123,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/36.jpg",
          "width": 2180,
-         "height": 2180
+         "height": 2180,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/37.jpg",
          "width": 2372,
-         "height": 2372
+         "height": 2372,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/38.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/39.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         },
         {
          "type": "image",
          "src": "prismo/40.jpg",
          "width": 2400,
-         "height": 2400
+         "height": 2400,
+         "kind": "photo"
         }
-       ]
+       ],
+       "kind": "gallery",
+       "layout": "grid3"
       }
      ]
     },
@@ -471,28 +536,36 @@
        "poster": "/media/prismo/2jB8JQT5ebx.jpg",
        "width": 1080,
        "height": 1920,
-       "audio": false
+       "audio": false,
+       "kind": "video"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   },
   {
    "type": "image",
    "src": "prismo/41.jpg",
    "width": 2400,
    "height": 1313,
-   "caption": "Following studies and tests"
+   "caption": "Following studies and tests",
+   "layout": "wide-l",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h3>Final Product</h3>"
+   "html": "<h3>Final Product</h3>",
+   "layout": "section",
+   "kind": "section"
   },
   {
    "type": "image",
    "src": "prismo/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "gallery",
@@ -501,15 +574,18 @@
      "type": "image",
      "src": "prismo/42.jpg",
      "width": 2400,
-     "height": 1600
+     "height": 1600,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "prismo/43.jpg",
      "width": 2400,
-     "height": 1600
+     "height": 1600,
+     "kind": "photo"
     }
-   ]
+   ],
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -521,7 +597,8 @@
        "type": "image",
        "src": "prismo/44.jpg",
        "width": 2400,
-       "height": 1600
+       "height": 1600,
+       "kind": "photo"
       }
      ]
     },
@@ -532,11 +609,14 @@
        "type": "image",
        "src": "prismo/45.jpg",
        "width": 2400,
-       "height": 2400
+       "height": 2400,
+       "kind": "white"
       }
      ]
     }
-   ]
+   ],
+   "layout": "flat",
+   "kind": "row"
   },
   {
    "type": "video",
@@ -544,7 +624,9 @@
    "poster": "/media/prismo/D-GN8N_iNs3.jpg",
    "width": 1920,
    "height": 1080,
-   "audio": false
+   "audio": false,
+   "layout": "half-l",
+   "kind": "video"
   },
   {
    "type": "video",
@@ -552,7 +634,9 @@
    "poster": "/media/prismo/BQzRHotmRzF.jpg",
    "width": 1280,
    "height": 720,
-   "audio": false
+   "audio": false,
+   "layout": "half-r",
+   "kind": "video"
   },
   {
    "type": "gallery",
@@ -561,21 +645,26 @@
      "type": "image",
      "src": "prismo/46.jpg",
      "width": 2400,
-     "height": 1800
+     "height": 1800,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "prismo/47.jpg",
      "width": 2400,
-     "height": 1901
+     "height": 1901,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "prismo/48.jpg",
      "width": 2400,
-     "height": 2400
+     "height": 2400,
+     "kind": "photo"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   }
  ],
  "cover": {

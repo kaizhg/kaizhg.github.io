@@ -25,7 +25,7 @@ export type MediaBlock = ImageBlock | LoopBlock | VideoBlock;
 export type Block =
 	| MediaBlock
 	| { type: 'text'; html: string }
-	| { type: 'youtube'; id: string }
+	| { type: 'youtube'; id: string; start?: number }
 	| { type: 'gallery'; items: MediaBlock[] }
 	| { type: 'row'; columns: { flex: number; blocks: Block[] }[] };
 

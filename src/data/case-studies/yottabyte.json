@@ -10,55 +10,53 @@
  "locked": false,
  "blocks": [
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "text",
-       "html": "<p>Course: MAS.S64 Drawing++<br>Instructors: Zach Lieberman<br>Project Duration: 2 Weeks</p>\n<p>Speacial Thanks: Lingdong Huang</p>"
-      }
-     ]
-    },
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "text",
-       "html": "<p>Yottabyte is an interactive piece that reveals the non-stop, gigantic yet invisible data comsumption.</p>\n<p>Made in Openframeworks using C++.</p>"
-      }
-     ]
-    }
-   ]
+   "type": "text",
+   "html": "<p>Course: MAS.S64 Drawing++<br>Instructors: Zach Lieberman<br>Project Duration: 2 Weeks</p>\n<p>Speacial Thanks: Lingdong Huang</p>",
+   "kind": "credits",
+   "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<h2>Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?</h2>"
+   "html": "<p>Yottabyte is an interactive piece that reveals the non-stop, gigantic yet invisible data comsumption.</p>\n<p>Made in Openframeworks using C++.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "text",
+   "html": "<h2>Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?</h2>",
+   "layout": "quote",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "yottabyte/02.jpg",
    "width": 2400,
-   "height": 1551
+   "height": 1551,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "yottabyte/03.jpg",
    "width": 2400,
-   "height": 1551
+   "height": 1551,
+   "layout": "half-l",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "yottabyte/04.jpg",
    "width": 2400,
-   "height": 1551
+   "height": 1551,
+   "layout": "half-r",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "yottabyte/05.jpg",
    "width": 2400,
-   "height": 1551
+   "height": 1551,
+   "layout": "wide-l",
+   "kind": "photo"
   },
   {
    "type": "video",
@@ -66,7 +64,9 @@
    "poster": "/media/yottabyte/7vMS_xzEWHw.jpg",
    "width": 1920,
    "height": 1084,
-   "audio": false
+   "audio": false,
+   "layout": "full",
+   "kind": "video"
   },
   {
    "type": "video",
@@ -74,7 +74,9 @@
    "poster": "/media/yottabyte/Mr8zUJBmJVp.jpg",
    "width": 1154,
    "height": 1080,
-   "audio": false
+   "audio": false,
+   "layout": "half-l",
+   "kind": "video"
   },
   {
    "type": "video",
@@ -82,7 +84,9 @@
    "poster": "/media/yottabyte/N5JiUfmA_Rc.jpg",
    "width": 1920,
    "height": 1260,
-   "audio": false
+   "audio": false,
+   "layout": "half-r",
+   "kind": "video"
   }
  ],
  "cover": {

@@ -11,25 +11,32 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>When furniture materializes wind, and wind creates telepresence:</h2>"
+   "html": "<h2>When furniture materializes wind, and wind creates telepresence:</h2>",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "telewind/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "telewind/03.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "image",
    "src": "telewind/04.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "half-r",
+   "kind": "white"
   },
   {
    "type": "video",
@@ -37,7 +44,9 @@
    "poster": "/media/telewind/Gv2fE4WdbH-.jpg",
    "width": 1920,
    "height": 1320,
-   "audio": false
+   "audio": false,
+   "layout": "full",
+   "kind": "video"
   }
  ],
  "cover": {

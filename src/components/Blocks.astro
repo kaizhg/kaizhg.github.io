@@ -2,10 +2,15 @@
 /**
  * Renders a case study's blocks.
  *
- * Top level: lays the blocks out on a 12-column magazine grid — images take one, two
- * or all columns and alternate sides, consecutive images are paired and staggered,
- * text sits in a narrow measure opposite the last image, and heading-only blocks
- * become pull quotes. Nested (inside a row column): plain linear rendering.
+ * Top level: a 12-column magazine grid. Each block may carry a `layout` (assigned by
+ * scripts/plan-layout.py, by eye per project); blocks without one fall back to simple
+ * rules — images alternate sides and pair up, text sits in a narrow measure, headings
+ * become section labels or pull quotes. Cells are placed in order; a left cell followed
+ * by a right cell shares its row (text-l + half-r, wide-l + beside-r). A layout ending in
+ * ' pull' is rendered before the previous cell, so text can sit beside the image that
+ * precedes it in the story.
+ *
+ * Nested (inside a row column): plain linear rendering.
  */
 import Media from './Media.astro';
 import type { Block, MediaBlock } from '../data/case-studies';
@@ -18,21 +23,20 @@ interface Props {
 
 const { blocks, title, nested = false } = Astro.props;
 
+type Laid = Block & { layout?: string; kind?: string };
 const isImg = (b: Block): b is MediaBlock => b.type === 'image' || b.type === 'loop';
 const ratio = (b: MediaBlock) => b.width / b.height;
 const landscape = (b: MediaBlock) => ratio(b) >= 1.25;
 const portrait = (b: MediaBlock) => ratio(b) < 0.9;
-const isStatement = (html: string) => /<h[23]>/.test(html) && !/<p>|<ul>|<ol>/.test(html);
-const allImages = (bs: Block[]) => bs.length > 0 && bs.every(isImg);
 
 interface Cell {
 	cls: string;
 	blocks: Block[];
 }
 
-function layout(bs: Block[]): Cell[] {
+function layout(bs: Laid[]): Cell[] {
 	const cells: Cell[] = [];
-	let side: 'l' | 'r' = 'r'; // where the next non-full item goes
+	let side: 'l' | 'r' = 'r';
 	let singles = 0;
 	const flip = () => (side = side === 'l' ? 'r' : 'l');
 
@@ -40,29 +44,37 @@ function layout(bs: Block[]): Cell[] {
 		const b = bs[i];
 		const next = bs[i + 1];
 
+		// Explicit decision from the plan (gallery/row layouts are handled inside the block)
+		if (b.layout && b.type !== 'gallery' && b.type !== 'row') {
+			if (b.layout === 'skip') continue;
+			if (/ pull$/.test(b.layout)) cells.splice(cells.length - 1, 0, { cls: b.layout.replace(/ pull$/, ''), blocks: [b] });
+			else cells.push({ cls: b.layout, blocks: [b] });
+			if (/-l\b/.test(b.layout)) side = 'r';
+			else if (/-r\b/.test(b.layout)) side = 'l';
+			continue;
+		}
+
 		if (b.type === 'text') {
-			if (isStatement(b.html)) {
-				// Short headings ("Part I: AIncense") are section labels; longer ones read as pull quotes
-				const words = b.html.replace(/<[^>]+>/g, ' ').trim();
-				cells.push({ cls: words.length < 36 ? 'section' : 'quote', blocks: [b] });
-			} else {
+			if (b.kind === 'credits') cells.push({ cls: 'credits', blocks: [b] });
+			else if (b.kind === 'section') cells.push({ cls: 'section', blocks: [b] });
+			else if (b.kind === 'quote') cells.push({ cls: 'quote', blocks: [b] });
+			else {
 				cells.push({ cls: `text-${side}`, blocks: [b] });
 				flip();
 			}
 			continue;
 		}
 
-		if (isImg(b) && next && isImg(next)) {
-			// Two images in a row: put them side by side, second one dropped down a little
-			const [a, c] = [b, next];
-			if (landscape(a) && landscape(c)) {
-				cells.push({ cls: 'half-l', blocks: [a] }, { cls: 'half-r stagger', blocks: [c] });
-			} else if (portrait(a) && portrait(c)) {
-				cells.push({ cls: 'third-l', blocks: [a] }, { cls: 'third-r stagger', blocks: [c] });
-			} else if (portrait(c)) {
-				cells.push({ cls: 'wide-l', blocks: [a] }, { cls: 'narrow-r stagger', blocks: [c] });
+		if (isImg(b) && next && isImg(next) && !next.layout) {
+			const flat = b.kind === 'white' || next.kind === 'white' ? '' : ' stagger';
+			if (landscape(b) && landscape(next)) {
+				cells.push({ cls: 'half-l', blocks: [b] }, { cls: 'half-r' + flat, blocks: [next] });
+			} else if (portrait(b) && portrait(next)) {
+				cells.push({ cls: 'third-l', blocks: [b] }, { cls: 'third-r' + flat, blocks: [next] });
+			} else if (portrait(next)) {
+				cells.push({ cls: 'wide-l', blocks: [b] }, { cls: 'narrow-r' + flat, blocks: [next] });
 			} else {
-				cells.push({ cls: 'narrow-l', blocks: [a] }, { cls: 'wide-r stagger', blocks: [c] });
+				cells.push({ cls: 'narrow-l', blocks: [b] }, { cls: 'wide-r' + flat, blocks: [next] });
 			}
 			i++;
 			side = 'l';
@@ -70,11 +82,14 @@ function layout(bs: Block[]): Cell[] {
 		}
 
 		if (isImg(b)) {
-			if (portrait(b)) {
+			if (b.kind === 'white') {
+				// Diagrams and renders on white never go full-bleed
+				cells.push({ cls: `${landscape(b) ? 'wide' : 'half'}-${side}`, blocks: [b] });
+				flip();
+			} else if (portrait(b)) {
 				cells.push({ cls: `narrow-${side}`, blocks: [b] });
 				flip();
 			} else if (landscape(b)) {
-				// Every other lone landscape image goes full width
 				if (singles % 2 === 0) cells.push({ cls: 'full', blocks: [b] });
 				else {
 					cells.push({ cls: `wide-${side}`, blocks: [b] });
@@ -88,21 +103,21 @@ function layout(bs: Block[]): Cell[] {
 			continue;
 		}
 
-		// video, youtube, gallery, row
 		cells.push({ cls: 'full', blocks: [b] });
 	}
 	return cells;
 }
 
-const cells = nested ? [] : layout(blocks);
+const cells = nested ? [] : layout(blocks as Laid[]);
+const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip)$/.test(b.layout) ? b.layout : 'flow');
 ---
 
 {
 	nested ? (
-		blocks.map((b) => {
+		(blocks as Laid[]).map((b) => {
 			switch (b.type) {
 				case 'text':
-					return <div class="block text" set:html={b.html} />;
+					return <div class:list={['block', 'text', { credits: b.kind === 'credits' }]} set:html={b.html} />;
 				case 'image':
 					return (
 						<figure class="block media-block">
@@ -121,7 +136,7 @@ const cells = nested ? [] : layout(blocks);
 					return (
 						<div class="block embed">
 							<iframe
-								src={`https://www.youtube-nocookie.com/embed/${b.id}`}
+								src={`https://www.youtube-nocookie.com/embed/${b.id}${b.start ? `?start=${b.start}` : ''}`}
 								title={`${title} video`}
 								loading="lazy"
 								allow="autoplay; picture-in-picture; fullscreen"
@@ -131,17 +146,19 @@ const cells = nested ? [] : layout(blocks);
 					);
 				case 'gallery':
 					return (
-						<div class="block gallery">
+						<div class:list={['block', 'gallery', galleryClass(b)]}>
 							{b.items.map((it) => (
-								<div class="cell-flex" style={`flex: ${it.width / it.height}`}>
+								<div class="cell-flex" style={galleryClass(b) === 'flow' ? `flex: ${it.width / it.height}` : undefined}>
 									<Media block={it} alt={title} sizes="(max-width: 800px) 100vw, 40vw" />
 								</div>
 							))}
 						</div>
 					);
-				case 'row':
+				case 'row': {
+					const media = b.columns.flatMap((c) => c.blocks);
+					const photos = media.length > 0 && media.every((m) => m.type === 'image' || m.type === 'loop' || m.type === 'video');
 					return (
-						<div class:list={['block', 'row', { stagger: b.columns.length === 2 && b.columns.every((c) => allImages(c.blocks)) }]}>
+						<div class:list={['block', 'row', { stagger: photos && b.columns.length === 2 && b.layout !== 'flat' }]}>
 							{b.columns.map((c) => (
 								<div class="col" style={`flex: ${c.flex}`}>
 									<Astro.self blocks={c.blocks} title={title} nested />
@@ -149,6 +166,7 @@ const cells = nested ? [] : layout(blocks);
 							))}
 						</div>
 					);
+				}
 			}
 		})
 	) : (
@@ -189,42 +207,27 @@ const cells = nested ? [] : layout(blocks);
 	.cell {
 		min-width: 0;
 	}
-	.full {
-		grid-column: 1 / -1;
-	}
-	.wide-l {
-		grid-column: 1 / 9;
-	}
-	.wide-r {
-		grid-column: 5 / 13;
-	}
-	.half-l {
-		grid-column: 1 / 7;
-	}
-	.half-r {
-		grid-column: 7 / 13;
-	}
-	.narrow-l {
-		grid-column: 1 / 6;
-	}
-	.narrow-r {
-		grid-column: 8 / 13;
-	}
-	.third-l {
-		grid-column: 2 / 6;
-	}
-	.third-r {
-		grid-column: 8 / 12;
-	}
-	.text-l {
-		grid-column: 1 / 6;
-	}
-	.text-r {
-		grid-column: 8 / 13;
-	}
-	.quote {
-		grid-column: 2 / 12;
-	}
+	.full { grid-column: 1 / -1; }
+	.wide-l { grid-column: 1 / 9; }
+	.wide-r { grid-column: 5 / 13; }
+	.half-l { grid-column: 1 / 7; }
+	.half-r { grid-column: 7 / 13; }
+	.narrow-l { grid-column: 1 / 6; }
+	.narrow-r { grid-column: 8 / 13; }
+	.third-l { grid-column: 2 / 6; }
+	.third-r { grid-column: 8 / 12; }
+	.small-l { grid-column: 1 / 5; }
+	.small-c { grid-column: 5 / 9; }
+	.small-r { grid-column: 9 / 13; }
+	.tri-a { grid-column: 1 / 5; }
+	.tri-b { grid-column: 5 / 9; }
+	.tri-c { grid-column: 9 / 13; }
+	.text-l { grid-column: 1 / 6; }
+	.text-r { grid-column: 8 / 13; }
+	.beside-l { grid-column: 1 / 5; align-self: end; }
+	.beside-r { grid-column: 9 / 13; align-self: end; }
+	.credits { grid-column: 1 / 5; }
+	.quote { grid-column: 2 / 12; }
 	.section {
 		grid-column: 1 / -1;
 		padding-top: 14px;
@@ -297,9 +300,18 @@ const cells = nested ? [] : layout(blocks);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
-	/* Heading-only blocks read as pull quotes */
+	/* Credits (course, team, role) read as a small mono colophon */
+	.text.credits :global(p),
+	.text.credits :global(h3) {
+		font: 12px/1.6 var(--mono);
+		font-weight: 400;
+		color: var(--muted);
+		letter-spacing: 0.01em;
+		margin: 0;
+	}
 	.quote .text :global(h2),
-	.quote .text :global(h3) {
+	.quote .text :global(h3),
+	.quote .text :global(p) {
 		font-size: clamp(24px, 3.2vw, 44px);
 		line-height: 1.12;
 		font-weight: 500;
@@ -319,18 +331,33 @@ const cells = nested ? [] : layout(blocks);
 		height: 100%;
 		border: 0;
 	}
+
+	/* Galleries: 'flow' sizes by aspect ratio; gridN / strip are equal cells */
 	.gallery,
 	.row {
 		display: flex;
 		gap: clamp(8px, 1.5vw, 20px);
 		align-items: flex-start;
 	}
+	.gallery.strip .cell-flex {
+		flex: 1;
+	}
+	.gallery.grid2,
+	.gallery.grid3,
+	.gallery.grid4,
+	.gallery.grid5 {
+		display: grid;
+		gap: clamp(6px, 1vw, 14px);
+	}
+	.gallery.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.gallery.grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.gallery.grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.gallery.grid5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 	.row {
 		gap: clamp(16px, 3vw, 48px);
 		align-items: center;
 	}
 	.row.stagger {
-		margin-top: 0;
 		align-items: flex-start;
 	}
 	.row.stagger .col:nth-child(2) {
@@ -362,11 +389,17 @@ const cells = nested ? [] : layout(blocks);
 		.row .col {
 			flex: none !important;
 		}
-		.gallery {
+		.gallery.flow,
+		.gallery.strip {
 			flex-wrap: wrap;
 		}
-		.gallery .cell-flex {
+		.gallery.flow .cell-flex,
+		.gallery.strip .cell-flex {
 			flex-basis: 100% !important;
+		}
+		.gallery.grid4,
+		.gallery.grid5 {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 		.col > :global(.block:last-child) {
 			margin-bottom: clamp(24px, 3vw, 40px);

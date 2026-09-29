@@ -11,17 +11,21 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h3><strong>Harvard Graduate School of Design,</strong><br><strong>Master in Design Studies: Open Project</strong><br><strong>Operating System_1.1</strong></h3>\n<p>Sarah Oppenheimer Instructor<br>Claire GlassTA<br>Team members (in the alphabetic order）<br>Alexia Asgari, Selin Dursun, Skye Gao, Danning Liang, Quincy Kuang, Kai Zhang</p>"
+   "html": "<h3><strong>Harvard Graduate School of Design,</strong><br><strong>Master in Design Studies: Open Project</strong><br><strong>Operating System_1.1</strong></h3>\n<p>Sarah Oppenheimer Instructor<br>Claire GlassTA<br>Team members (in the alphabetic order）<br>Alexia Asgari, Selin Dursun, Skye Gao, Danning Liang, Quincy Kuang, Kai Zhang</p>",
+   "kind": "credits",
+   "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<h2>OS1.1: Architectural Knob</h2>\n<p>OS 1.1 harnesses the built infrastructure to extend our sensory registers. We have collaboratively designed an operating system: a lighting network linked by air. As mechanical wooden inputs are touched and turned, lighting outputs change and fluctuate. Manipulation of the physical apparatus directs sensory phenomena along new pathways.</p>"
+   "html": "<h2>OS1.1: Architectural Knob</h2>\n<p>OS 1.1 harnesses the built infrastructure to extend our sensory registers. We have collaboratively designed an operating system: a lighting network linked by air. As mechanical wooden inputs are touched and turned, lighting outputs change and fluctuate. Manipulation of the physical apparatus directs sensory phenomena along new pathways.</p>",
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "os-11/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "kind": "photo"
   },
   {
    "type": "video",
@@ -29,7 +33,9 @@
    "poster": "/media/os-11/QMy9FSWnnwW.jpg",
    "width": 1920,
    "height": 1080,
-   "audio": true
+   "audio": true,
+   "layout": "half-l",
+   "kind": "video"
   },
   {
    "type": "video",
@@ -37,11 +43,15 @@
    "poster": "/media/os-11/Tq3CLoKaAfX.jpg",
    "width": 1920,
    "height": 1080,
-   "audio": true
+   "audio": true,
+   "layout": "half-r",
+   "kind": "video"
   },
   {
    "type": "text",
-   "html": "<h2>With the \"architectural knob\" added, any column could be a control switch.</h2>"
+   "html": "<h2>With the \"architectural knob\" added, any column could be a control switch.</h2>",
+   "layout": "quote",
+   "kind": "quote"
   },
   {
    "type": "gallery",
@@ -50,37 +60,45 @@
      "type": "image",
      "src": "os-11/03.jpg",
      "width": 1600,
-     "height": 2400
+     "height": 2400,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "os-11/04.jpg",
      "width": 1600,
-     "height": 2400
+     "height": 2400,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "os-11/05.jpg",
      "width": 1600,
-     "height": 2400
+     "height": 2400,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "os-11/06.jpg",
      "width": 2400,
-     "height": 1600
+     "height": 1600,
+     "kind": "photo"
     },
     {
      "type": "image",
      "src": "os-11/07.jpg",
      "width": 2400,
-     "height": 1600
+     "height": 1600,
+     "kind": "photo"
     }
-   ]
+   ],
+   "kind": "gallery",
+   "layout": "grid3"
   },
   {
    "type": "text",
-   "html": "<h3>How does it work?</h3>\n<p>CNC wood + Hose clamp + Steel balls + DIY RGB Optical encoder</p>"
+   "html": "<h3>How does it work?</h3>\n<p>CNC wood + Hose clamp + Steel balls + DIY RGB Optical encoder</p>",
+   "kind": "text"
   },
   {
    "type": "row",
@@ -93,7 +111,8 @@
        "src": "os-11/08.jpg",
        "width": 1403,
        "height": 2400,
-       "caption": "Exploded View"
+       "caption": "Exploded View",
+       "kind": "white"
       }
      ]
     },
@@ -105,11 +124,14 @@
        "src": "os-11/09.jpg",
        "width": 2400,
        "height": 1430,
-       "caption": "Section view: One L-shape vinyl archway is first clamped on the column. Then the piece is clamped to the archway."
+       "caption": "Section view: One L-shape vinyl archway is first clamped on the column. Then the piece is clamped to the archway.",
+       "kind": "white"
       }
      ]
     }
-   ]
+   ],
+   "layout": "flat",
+   "kind": "row"
   },
   {
    "type": "gallery",
@@ -118,33 +140,40 @@
      "type": "image",
      "src": "os-11/10.jpg",
      "width": 1920,
-     "height": 1080
+     "height": 1080,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "os-11/11.jpg",
      "width": 1920,
-     "height": 1080
+     "height": 1080,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "os-11/12.jpg",
      "width": 1920,
-     "height": 1080
+     "height": 1080,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "os-11/13.jpg",
      "width": 1920,
-     "height": 1080
+     "height": 1080,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "os-11/14.jpg",
      "width": 1920,
-     "height": 1080
+     "height": 1080,
+     "kind": "photo"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "video",
@@ -152,29 +181,38 @@
    "poster": "/media/os-11/9vwFdJKvnSK.jpg",
    "width": 1920,
    "height": 1080,
-   "audio": false
+   "audio": false,
+   "kind": "video"
   },
   {
    "type": "text",
-   "html": "<h2>OS1.2: Universal through-hole, disassemble, optical rotary encoder</h2>"
+   "html": "<h2>OS1.2: Universal through-hole, disassemble, optical rotary encoder</h2>",
+   "layout": "section",
+   "kind": "quote"
   },
   {
    "type": "image",
    "src": "os-11/15.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "os-11/16.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "half-l",
+   "kind": "photo"
   },
   {
    "type": "image",
    "src": "os-11/17.jpg",
    "width": 2400,
-   "height": 1602
+   "height": 1602,
+   "layout": "half-r stagger",
+   "kind": "photo"
   },
   {
    "type": "video",
@@ -182,7 +220,8 @@
    "poster": "/media/os-11/2CEkrtFIjAG.jpg",
    "width": 1920,
    "height": 1080,
-   "audio": true
+   "audio": true,
+   "kind": "video"
   }
  ],
  "cover": {

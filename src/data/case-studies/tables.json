@@ -13,17 +13,23 @@
    "type": "image",
    "src": "tables/02.jpg",
    "width": 2400,
-   "height": 1600
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>"
+   "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>",
+   "kind": "credits",
+   "layout": "credits"
   },
   {
    "type": "image",
    "src": "tables/03.jpg",
    "width": 1662,
-   "height": 1166
+   "height": 1166,
+   "layout": "half-l",
+   "kind": "white"
   },
   {
    "type": "gallery",
@@ -32,63 +38,76 @@
      "type": "loop",
      "src": "/media/tables/04.mp4",
      "width": 640,
-     "height": 427
+     "height": 427,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/tables/05.mp4",
      "width": 640,
-     "height": 427
+     "height": 427,
+     "kind": "small"
     },
     {
      "type": "loop",
      "src": "/media/tables/06.mp4",
      "width": 640,
-     "height": 427
+     "height": 427,
+     "kind": "small"
     },
     {
      "type": "image",
      "src": "tables/07.jpg",
      "width": 1080,
-     "height": 721
+     "height": 721,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "tables/08.jpg",
      "width": 1080,
-     "height": 721
+     "height": 721,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "tables/09.jpg",
      "width": 1080,
-     "height": 721
+     "height": 721,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "tables/10.jpg",
      "width": 1080,
-     "height": 721
+     "height": 721,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "tables/11.jpg",
      "width": 1080,
-     "height": 720
+     "height": 720,
+     "kind": "white"
     },
     {
      "type": "image",
      "src": "tables/12.jpg",
      "width": 1080,
-     "height": 720
+     "height": 720,
+     "kind": "white"
     }
-   ]
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "image",
    "src": "tables/13.jpg",
    "width": 1080,
-   "height": 646
+   "height": 646,
+   "layout": "wide-r",
+   "kind": "photo"
   },
   {
    "type": "row",
@@ -100,7 +119,8 @@
        "type": "image",
        "src": "tables/14.jpg",
        "width": 1080,
-       "height": 720
+       "height": 720,
+       "kind": "photo"
       }
      ]
     },
@@ -111,11 +131,13 @@
        "type": "image",
        "src": "tables/15.jpg",
        "width": 1080,
-       "height": 720
+       "height": 720,
+       "kind": "photo"
       }
      ]
     }
-   ]
+   ],
+   "kind": "row"
   }
  ],
  "cover": {
