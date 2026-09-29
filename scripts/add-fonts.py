@@ -2,8 +2,8 @@
 
 Usage: python3 scripts/add-fonts.py <folder with the .otf/.ttf/.woff2 files>
 
-Looks for Regular / Book, Medium, Bold, and Italic (any naming from Pangram Pangram works)
-and writes public/fonts/NeueMontreal-{Regular,Medium,Bold,Italic}.woff2.
+Looks for Light, Regular, Italic, Semibold and Extrabold (Pangram Pangram's naming) and
+writes public/fonts/NeueMontreal-{Light,Regular,Italic,Semibold,Extrabold}.woff2.
 Needs: pip install fonttools brotli
 """
 import glob, os, re, shutil, sys
@@ -13,10 +13,11 @@ SRC = sys.argv[1]
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'public', 'fonts')
 os.makedirs(OUT, exist_ok=True)
 WANT = {
-    'Regular': re.compile(r'(regular|book)(?!.*italic)', re.I),
-    'Medium': re.compile(r'medium(?!.*italic)', re.I),
-    'Bold': re.compile(r'(?<!semi)bold(?!.*italic)', re.I),
-    'Italic': re.compile(r'^(?!.*(bold|medium|light|thin|semibold)).*italic', re.I),
+    'Light': re.compile(r'-light(?!italic)', re.I),
+    'Regular': re.compile(r'-regular', re.I),
+    'Italic': re.compile(r'-italic', re.I),
+    'Semibold': re.compile(r'-semibold(?!italic)', re.I),
+    'Extrabold': re.compile(r'-extrabold(?!italic)', re.I),
 }
 files = [f for f in glob.glob(os.path.join(SRC, '**', '*'), recursive=True) if f.lower().endswith(('.otf', '.ttf', '.woff2', '.woff'))]
 for name, rx in WANT.items():
