@@ -1,0 +1,139 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title,
+	description = 'Kai Zhang — computational & industrial designer. RISD ID, Harvard GSD. Based in Seattle.',
+} = Astro.props;
+const fullTitle = title ? `${title} — Kai Zhang` : 'Kai Zhang';
+const path = Astro.url.pathname;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{fullTitle}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<a href="/" class="wordmark">KAI ZHANG</a>
+			<nav>
+				<a href="/" aria-current={path === '/' ? 'page' : undefined}>Work</a>
+				<a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a>
+				<a href="mailto:this.kaizhang@gmail.com">Contact</a>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="site-footer">
+			<span>© {new Date().getFullYear()} Kai Zhang</span>
+			<span class="links">
+				<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a>
+				<a href="https://www.instagram.com/zalvink_/">Instagram</a>
+				<a href="https://github.com/kaizhg">GitHub</a>
+			</span>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--bg: #f4f4f2;
+		--fg: #111;
+		--muted: #777;
+		--line: #d6d6d2;
+		--accent: #2a4bff;
+		--mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+		--sans: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+		--gutter: clamp(16px, 4vw, 48px);
+		color-scheme: light;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--bg: #0e0e0e;
+			--fg: #ededea;
+			--muted: #8a8a86;
+			--line: #2a2a28;
+			--accent: #7d93ff;
+			color-scheme: dark;
+		}
+	}
+	* {
+		box-sizing: border-box;
+	}
+	html {
+		background: var(--bg);
+		color: var(--fg);
+		font-family: var(--sans);
+		-webkit-font-smoothing: antialiased;
+	}
+	body {
+		margin: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		padding-inline: var(--gutter);
+	}
+	main {
+		flex: 1;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	img {
+		max-width: 100%;
+		display: block;
+	}
+	.site-header,
+	.site-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		flex-wrap: wrap;
+		font-family: var(--mono);
+		font-size: 12px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		padding-block: 20px;
+		background: var(--bg);
+	}
+	.wordmark {
+		font-weight: 600;
+	}
+	.site-header nav,
+	.site-footer .links {
+		display: flex;
+		gap: 1.5rem;
+	}
+	.site-header nav a,
+	.site-footer a {
+		color: var(--muted);
+	}
+	.site-header nav a:hover,
+	.site-header nav a[aria-current='page'],
+	.site-footer a:hover {
+		color: var(--fg);
+	}
+	.site-footer {
+		padding-block: 40px 24px;
+		color: var(--muted);
+		border-top: 1px solid var(--line);
+		margin-top: 96px;
+	}
+</style>

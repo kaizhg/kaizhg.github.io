@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import { projects, disciplines, projectCode, type Project } from '../../data/projects';
+
+export function getStaticPaths() {
+	return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props as { project: Project };
+const i = projects.indexOf(project);
+const next = projects[(i + 1) % projects.length];
+---
+
+<Base title={project.title} description={`${project.title} — ${project.summary}`}>
+	<article>
+		<p class="code">{projectCode(project)}</p>
+		<h1>{project.title}</h1>
+
+		<dl class="facts">
+			<div><dt>Year</dt><dd>{project.year}</dd></div>
+			<div><dt>Discipline</dt><dd>{disciplines[project.discipline]}</dd></div>
+			<div><dt>Type</dt><dd>{project.summary}</dd></div>
+			{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
+		</dl>
+
+		<div class="placeholder">
+			<p>Case study is being migrated.</p>
+			<a href={project.legacyUrl}>View on the current site ↗</a>
+		</div>
+	</article>
+
+	<a class="next" href={`/work/${next.slug}/`}>
+		<span class="label">Next</span>
+		<span>{next.title} →</span>
+	</a>
+</Base>
+
+<style>
+	article {
+		padding-top: clamp(48px, 10vh, 120px);
+	}
+	.code {
+		font: 12px var(--mono);
+		letter-spacing: 0.04em;
+		color: var(--muted);
+		margin: 0 0 12px;
+	}
+	h1 {
+		font-size: clamp(36px, 6vw, 80px);
+		line-height: 1;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	.facts {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		gap: 16px;
+		margin: 48px 0;
+		padding-block: 16px;
+		border-block: 1px solid var(--line);
+	}
+	dt {
+		font: 11px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--muted);
+		margin-bottom: 4px;
+	}
+	dd {
+		margin: 0;
+	}
+	.placeholder {
+		aspect-ratio: 16 / 9;
+		max-width: 100%;
+		display: grid;
+		place-content: center;
+		text-align: center;
+		gap: 8px;
+		border: 1px dashed var(--line);
+		color: var(--muted);
+	}
+	.placeholder p {
+		margin: 0;
+	}
+	.placeholder a {
+		color: var(--accent);
+	}
+	.next {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 96px;
+		padding-block: 24px;
+		border-top: 1px solid var(--line);
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	.next .label {
+		font: 12px var(--mono);
+		color: var(--muted);
+		align-self: center;
+	}
+	.next:hover {
+		color: var(--accent);
+	}
+</style>
