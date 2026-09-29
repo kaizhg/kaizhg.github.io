@@ -29,15 +29,18 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	</section>
 
 	<section class="index" aria-label="Projects">
-		<div class="filters" role="group" aria-label="Filter by discipline">
-			<button type="button" data-filter="all" aria-pressed="true">All <sup>{projects.length}</sup></button>
-			{
-				filters.map(([key, label]) => (
-					<button type="button" data-filter={key} aria-pressed="false">
-						{label} <sup>{projects.filter((p) => p.discipline === key).length}</sup>
-					</button>
-				))
-			}
+		<div class="bar">
+			<div class="filters" role="group" aria-label="Filter by discipline">
+				<button type="button" data-filter="all" aria-pressed="true">All <sup>{projects.length}</sup></button>
+				{
+					filters.map(([key, label]) => (
+						<button type="button" data-filter={key} aria-pressed="false">
+							{label} <sup>{projects.filter((p) => p.discipline === key).length}</sup>
+						</button>
+					))
+				}
+			</div>
+			<a class="switch" href="/gallery/">Grid view →</a>
 		</div>
 
 		<ol class="list">
@@ -99,11 +102,27 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		color: var(--muted);
 		margin-top: 24px;
 	}
+	.bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-bottom: 16px;
+	}
 	.filters {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 8px;
-		margin-bottom: 16px;
+	}
+	.switch {
+		font: 12px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--muted);
+	}
+	.switch:hover {
+		color: var(--fg);
 	}
 	.filters button {
 		font: 12px var(--mono);
