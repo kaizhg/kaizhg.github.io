@@ -129,7 +129,7 @@ export const projects: Project[] = [
 	},
 ];
 
-/** Index code in the form DISCIPLINE.YEAR.SLUG, e.g. IX.2023.LARGE-LANGUAGE-OBJECTS */
+/** Index code in the form DISCIPLINE.YEAR, e.g. IX.2023 */
 export function projectCode(p: Project) {
-	return `${p.discipline}.${p.year}.${p.slug.toUpperCase()}`;
+	return `${p.discipline}.${p.year}`;
 }

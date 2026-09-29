@@ -51,12 +51,14 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 								{p.summary}
 								{p.context && <span class="context"> @ {p.context}</span>}
 							</span>
+							<span class="slot" aria-hidden="true">
+								{previews[p.slug] && (
+									<span class="thumb">
+										<img src={previews[p.slug]} alt="" decoding="async" fetchpriority="low" />
+									</span>
+								)}
+							</span>
 							<span class="arrow" aria-hidden="true">→</span>
-							{previews[p.slug] && (
-								<span class="thumb" aria-hidden="true">
-									<img src={previews[p.slug]} alt="" decoding="async" fetchpriority="low" />
-								</span>
-							)}
 						</a>
 					</li>
 				))
@@ -130,12 +132,13 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	}
 	.list a {
 		--thumb-h: 280px;
-		position: relative;
+		--row-pad: 14px;
 		display: grid;
-		grid-template-columns: minmax(14rem, 1.2fr) 2fr 2fr auto;
+		/* code | title | summary | empty slot reserved for the hover shot | arrow */
+		grid-template-columns: 5rem 1.2fr 1.6fr clamp(220px, 30%, 400px) auto;
 		gap: 1rem;
 		align-items: baseline;
-		padding: 14px 12px;
+		padding: var(--row-pad) 12px;
 		margin-inline: -12px;
 		border-bottom: 1px solid var(--line);
 		/* Row highlight: fills in fast, fades out slowly (like zarki.net) */
@@ -167,12 +170,16 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		transition: color 0.5s ease;
 	}
 
-	/* Hero shot: anchored to the row's right half, grows upward from the row's bottom edge */
+	/* Hero shot: fills the empty slot column, grows upward from the row's bottom edge */
+	.slot {
+		position: relative;
+		align-self: stretch;
+	}
 	.thumb {
 		position: absolute;
-		right: calc(12px + 1rem + 1.25em);
-		bottom: 0;
-		width: min(42%, 480px);
+		left: 0;
+		right: 0;
+		bottom: calc(-1 * var(--row-pad));
 		height: 0;
 		overflow: hidden;
 		pointer-events: none;
@@ -221,7 +228,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 			transition-duration: 0.01s;
 		}
 	}
-	@media (hover: none), (max-width: 720px) {
+	@media (hover: none) {
 		.thumb {
 			display: none;
 		}
@@ -230,6 +237,9 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		.list a {
 			grid-template-columns: 1fr auto;
 			gap: 4px 1rem;
+		}
+		.slot {
+			display: none;
 		}
 		.code {
 			grid-column: 1 / -1;
