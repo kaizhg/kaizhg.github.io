@@ -1,4 +1,8 @@
 ---
+import '@fontsource-variable/bricolage-grotesque/standard.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+
 interface Props {
 	title?: string;
 	description?: string;
@@ -16,8 +20,9 @@ const path = Astro.url.pathname;
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{fullTitle}</title>
@@ -26,7 +31,7 @@ const path = Astro.url.pathname;
 		<header class="site-header">
 			<a href="/" class="wordmark">KAI ZHANG</a>
 			<nav>
-				<a href="/" aria-current={path === '/' ? 'page' : undefined}>Work</a>
+				<a href="/" aria-current={path === '/' || path.startsWith('/list') || path.startsWith('/work') ? 'page' : undefined}>Work</a>
 				<a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a>
 				<a href="mailto:this.kaizhang@gmail.com">Contact</a>
 			</nav>
@@ -52,8 +57,8 @@ const path = Astro.url.pathname;
 		--muted: #777;
 		--line: #d6d6d2;
 		--accent: #2a4bff;
-		--mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-		--sans: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+		--mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+		--sans: 'Bricolage Grotesque Variable', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
 		--gutter: clamp(16px, 4vw, 48px);
 		color-scheme: light;
 	}
@@ -74,6 +79,8 @@ const path = Astro.url.pathname;
 		background: var(--bg);
 		color: var(--fg);
 		font-family: var(--sans);
+		font-optical-sizing: auto;
+		font-size: 15px;
 		-webkit-font-smoothing: antialiased;
 	}
 	body {
