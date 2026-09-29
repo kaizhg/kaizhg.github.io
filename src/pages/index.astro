@@ -4,13 +4,13 @@ import { getImage } from 'astro:assets';
 import { projects, disciplines, projectCode, type Discipline } from '../data/projects';
 import { getCaseStudy, workImage } from '../data/case-studies';
 
-// Hero shot per project, shown next to the cursor when a row is hovered
+// Hero shot per project, revealed above the row on hover
 const previews = Object.fromEntries(
 	await Promise.all(
 		projects.map(async (p) => {
 			const hero = getCaseStudy(p.slug)?.hero;
 			if (!hero || hero.type !== 'image') return [p.slug, null];
-			const img = await getImage({ src: workImage(hero.src), width: 720, format: 'webp' });
+			const img = await getImage({ src: workImage(hero.src), width: 960, format: 'webp' });
 			return [p.slug, img.src];
 		}),
 	),
@@ -43,7 +43,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		<ol class="list">
 			{
 				projects.map((p) => (
-					<li data-discipline={p.discipline} data-preview={previews[p.slug] ?? undefined}>
+					<li data-discipline={p.discipline}>
 						<a href={`/work/${p.slug}/`}>
 							<span class="code">{projectCode(p)}</span>
 							<span class="title">{p.title}</span>
@@ -52,51 +52,20 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 								{p.context && <span class="context"> @ {p.context}</span>}
 							</span>
 							<span class="arrow" aria-hidden="true">→</span>
+							{previews[p.slug] && (
+								<span class="thumb" aria-hidden="true">
+									<img src={previews[p.slug]} alt="" decoding="async" fetchpriority="low" />
+								</span>
+							)}
 						</a>
 					</li>
 				))
 			}
 		</ol>
 	</section>
-
-	<div class="preview" aria-hidden="true">
-		{
-			projects.map(
-				(p) => previews[p.slug] && <img src={previews[p.slug]} alt="" data-for={p.slug} decoding="async" />,
-			)
-		}
-	</div>
 </Base>
 
 <script>
-	// Hover preview: follow the cursor with the hovered project's hero shot (pointer devices only)
-	const preview = document.querySelector<HTMLDivElement>('.preview')!;
-	const shots = new Map<string, HTMLImageElement>();
-	preview.querySelectorAll<HTMLImageElement>('img').forEach((img) => shots.set(img.dataset.for!, img));
-	const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
-	let x = 0, y = 0, raf = 0;
-	const place = () => {
-		raf = 0;
-		const w = preview.offsetWidth, h = preview.offsetHeight;
-		const left = Math.min(x + 24, window.innerWidth - w - 16);
-		const top = Math.min(Math.max(y - h / 2, 16), window.innerHeight - h - 16);
-		preview.style.transform = `translate(${left}px, ${top}px)`;
-	};
-	document.querySelectorAll<HTMLLIElement>('.list li').forEach((li) => {
-		const slug = li.querySelector('a')!.getAttribute('href')!.split('/')[2];
-		li.addEventListener('mouseenter', () => {
-			if (!fine.matches || !shots.has(slug)) return;
-			shots.forEach((img, k) => img.classList.toggle('on', k === slug));
-			preview.classList.add('visible');
-		});
-		li.addEventListener('mouseleave', () => preview.classList.remove('visible'));
-	});
-	window.addEventListener('mousemove', (e) => {
-		x = e.clientX;
-		y = e.clientY;
-		if (!raf) raf = requestAnimationFrame(place);
-	});
-
 	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
 	const rows = document.querySelectorAll<HTMLLIElement>('.list li');
 	buttons.forEach((btn) =>
@@ -160,13 +129,17 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		display: none;
 	}
 	.list a {
+		--thumb-h: 280px;
+		position: relative;
 		display: grid;
 		grid-template-columns: minmax(14rem, 1.2fr) 2fr 2fr auto;
 		gap: 1rem;
 		align-items: baseline;
-		padding-block: 14px;
+		padding: 14px 12px;
+		margin-inline: -12px;
 		border-bottom: 1px solid var(--line);
-		transition: padding 0.2s ease, color 0.2s ease;
+		/* Row highlight: fills in fast, fades out slowly (like zarki.net) */
+		transition: background-color 0.5s ease, color 0.5s ease;
 	}
 	.code {
 		font: 11px var(--mono);
@@ -189,42 +162,67 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	.arrow {
 		transition: transform 0.2s ease;
 	}
-	.list a:hover {
-		padding-left: 12px;
-		color: var(--accent);
+	.code,
+	.summary {
+		transition: color 0.5s ease;
 	}
-	.list a:hover .arrow {
+
+	/* Hero shot: anchored to the row's right half, grows upward from the row's bottom edge */
+	.thumb {
+		position: absolute;
+		right: calc(12px + 1rem + 1.25em);
+		bottom: 0;
+		width: min(42%, 480px);
+		height: 0;
+		overflow: hidden;
+		pointer-events: none;
+		transition: height 0.25s cubic-bezier(0.4, 0, 0.6, 1);
+	}
+	.thumb img {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		height: var(--thumb-h);
+		object-fit: cover;
+		transform: translateY(-50%);
+		background: var(--line);
+	}
+
+	.list a:hover,
+	.list a:focus-visible {
+		background-color: var(--fg);
+		color: var(--bg);
+		outline: none;
+		transition-duration: 0.2s;
+	}
+	.list a:hover .code,
+	.list a:hover .summary,
+	.list a:focus-visible .code,
+	.list a:focus-visible .summary {
+		color: var(--bg);
+		opacity: 0.7;
+		transition-duration: 0.2s;
+	}
+	.list a:hover .arrow,
+	.list a:focus-visible .arrow {
 		transform: translateX(4px);
 	}
-	.preview {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: clamp(240px, 28vw, 420px);
-		aspect-ratio: 4 / 3;
-		pointer-events: none;
-		z-index: 20;
-		opacity: 0;
-		transition: opacity 0.2s ease;
+	.list a:hover .thumb,
+	.list a:focus-visible .thumb {
+		height: var(--thumb-h);
+		transition: height 0.2s cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
-	.preview.visible {
-		opacity: 1;
+
+	@media (prefers-reduced-motion: reduce) {
+		.list a,
+		.thumb,
+		.list a:hover .thumb {
+			transition-duration: 0.01s;
+		}
 	}
-	.preview img {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		opacity: 0;
-		transition: opacity 0.15s ease;
-		box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
-	}
-	.preview img.on {
-		opacity: 1;
-	}
-	@media (hover: none) {
-		.preview {
+	@media (hover: none), (max-width: 720px) {
+		.thumb {
 			display: none;
 		}
 	}
