@@ -184,5 +184,17 @@
    "height": 1080,
    "audio": true
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "os-11/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "os-11/hover.jpg",
+  "width": 2400,
+  "height": 1876
+ }
 }

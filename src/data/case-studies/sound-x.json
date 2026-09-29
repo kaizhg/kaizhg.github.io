@@ -15,5 +15,17 @@
    "width": 2400,
    "height": 1351
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "sound-x/cover.jpg",
+  "width": 1964,
+  "height": 1536
+ },
+ "hover": {
+  "type": "image",
+  "src": "sound-x/hover.jpg",
+  "width": 829,
+  "height": 648
+ }
 }

@@ -207,5 +207,17 @@
    "width": 1126,
    "height": 270
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "seesaw/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "seesaw/hover.jpg",
+  "width": 2400,
+  "height": 1876
+ }
 }

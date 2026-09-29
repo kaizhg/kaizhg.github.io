@@ -8,5 +8,17 @@
   "height": 1563
  },
  "locked": true,
- "blocks": []
+ "blocks": [],
+ "cover": {
+  "type": "image",
+  "src": "eyelash/cover.jpg",
+  "width": 2000,
+  "height": 1563
+ },
+ "hover": {
+  "type": "image",
+  "src": "eyelash/hover.jpg",
+  "width": 2400,
+  "height": 1876
+ }
 }

@@ -117,5 +117,17 @@
     }
    ]
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "tables/cover.jpg",
+  "width": 933,
+  "height": 730
+ },
+ "hover": {
+  "type": "image",
+  "src": "tables/hover.jpg",
+  "width": 2400,
+  "height": 1878
+ }
 }

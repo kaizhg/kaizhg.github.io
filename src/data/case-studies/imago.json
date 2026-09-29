@@ -198,5 +198,17 @@
     }
    ]
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "imago/cover.jpg",
+  "width": 1606,
+  "height": 1256
+ },
+ "hover": {
+  "type": "image",
+  "src": "imago/hover.jpg",
+  "width": 1273,
+  "height": 995
+ }
 }

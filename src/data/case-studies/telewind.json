@@ -39,5 +39,17 @@
    "height": 1320,
    "audio": false
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "telewind/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "image",
+  "src": "telewind/hover.jpg",
+  "width": 2400,
+  "height": 1876
+ }
 }

@@ -124,5 +124,17 @@
     }
    ]
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "hyperslice/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "loop",
+  "src": "/media/hyperslice/hover.mp4",
+  "width": 600,
+  "height": 469
+ }
 }

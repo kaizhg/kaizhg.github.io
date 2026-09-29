@@ -546,5 +546,17 @@
     }
    ]
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "inflatable-patterner/cover.jpg",
+  "width": 1981,
+  "height": 1549
+ },
+ "hover": {
+  "type": "loop",
+  "src": "/media/inflatable-patterner/hover.mp4",
+  "width": 800,
+  "height": 625
+ }
 }

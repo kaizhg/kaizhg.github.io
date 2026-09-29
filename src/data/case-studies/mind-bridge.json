@@ -37,5 +37,17 @@
    "width": 2400,
    "height": 1600
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "mind-bridge/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "mind-bridge/hover.jpg",
+  "width": 2400,
+  "height": 1877
+ }
 }

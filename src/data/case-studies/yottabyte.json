@@ -84,5 +84,17 @@
    "height": 1260,
    "audio": false
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "yottabyte/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "loop",
+  "src": "/media/yottabyte/hover.mp4",
+  "width": 480,
+  "height": 375
+ }
 }

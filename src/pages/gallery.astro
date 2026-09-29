@@ -4,9 +4,15 @@ import Base from '../layouts/Base.astro';
 import { projects, disciplines, projectCode, type Discipline } from '../data/projects';
 import { getCaseStudy, workImage } from '../data/case-studies';
 
+// Tile = the old site's cover; on hover it turns into the rollover image or loop
 const tiles = projects.map((p) => {
-	const hero = getCaseStudy(p.slug)?.hero;
-	return { p, img: hero && hero.type === 'image' ? workImage(hero.src) : null };
+	const s = getCaseStudy(p.slug);
+	const cover = s?.cover ?? s?.hero;
+	return {
+		p,
+		img: cover && cover.type === 'image' ? workImage(cover.src) : null,
+		hover: s?.hover ?? null,
+	};
 });
 const filters = Object.entries(disciplines) as [Discipline, string][];
 ---
@@ -37,7 +43,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 
 		<ul class="grid">
 			{
-				tiles.map(({ p, img }) => (
+				tiles.map(({ p, img, hover }) => (
 					<li data-discipline={p.discipline}>
 						<a href={`/work/${p.slug}/`}>
 							<span class="frame">
@@ -49,6 +55,19 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 										sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
 										loading={projects.indexOf(p) < 6 ? 'eager' : 'lazy'}
 									/>
+								)}
+								{hover?.type === 'image' && (
+									<Image
+										class="hover"
+										src={workImage(hover.src)}
+										alt=""
+										widths={[480, 800, 1200]}
+										sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+										loading="lazy"
+									/>
+								)}
+								{hover?.type === 'loop' && (
+									<video class="hover" src={hover.src} muted loop playsinline preload="metadata" />
 								)}
 							</span>
 							<span class="caption">
@@ -68,6 +87,16 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 </Base>
 
 <script>
+	// Rollover loops play only while hovered
+	document.querySelectorAll<HTMLVideoElement>('.grid video.hover').forEach((v) => {
+		const a = v.closest('a')!;
+		a.addEventListener('mouseenter', () => v.play().catch(() => {}));
+		a.addEventListener('mouseleave', () => {
+			v.pause();
+			v.currentTime = 0;
+		});
+	});
+
 	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
 	const tiles = document.querySelectorAll<HTMLLIElement>('.grid li');
 	buttons.forEach((btn) =>
@@ -81,7 +110,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 
 <style>
 	:root {
-		--ratio: 4 / 3;
+		--ratio: 32 / 25; /* the old site's cover crop, so nothing is cropped */
 		--cols: 3;
 	}
 	.intro {
@@ -148,7 +177,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-		gap: clamp(8px, 1.2vw, 16px);
+		gap: 0;
 	}
 	.grid li[hidden] {
 		display: none;
@@ -158,17 +187,25 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		display: block;
 	}
 	.frame {
+		position: relative;
 		display: block;
 		aspect-ratio: var(--ratio);
 		overflow: hidden;
 		background: var(--line);
 	}
-	.frame :global(img) {
+	.frame :global(img),
+	.frame :global(video) {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		display: block;
-		transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	/* Second shot / loop, faded in on hover */
+	.frame :global(.hover) {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.3s ease;
 	}
 
 	/* Text appears on hover, over a gradient at the bottom of the frame */
@@ -204,9 +241,9 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	.grid a:focus-visible .caption {
 		opacity: 1;
 	}
-	.grid a:hover .frame :global(img),
-	.grid a:focus-visible .frame :global(img) {
-		transform: scale(1.03);
+	.grid a:hover .frame :global(.hover),
+	.grid a:focus-visible .frame :global(.hover) {
+		opacity: 1;
 	}
 	.grid a:focus-visible {
 		outline: 2px solid var(--accent);
@@ -239,7 +276,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		}
 	}
 	@media (prefers-reduced-motion: reduce) {
-		.frame :global(img),
+		.frame :global(.hover),
 		.caption {
 			transition: none;
 		}

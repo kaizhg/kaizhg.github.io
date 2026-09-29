@@ -577,5 +577,17 @@
     }
    ]
   }
- ]
+ ],
+ "cover": {
+  "type": "image",
+  "src": "prismo/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "loop",
+  "src": "/media/prismo/hover.mp4",
+  "width": 432,
+  "height": 338
+ }
 }

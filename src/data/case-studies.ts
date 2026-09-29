@@ -33,6 +33,9 @@ export interface CaseStudy {
 	slug: string;
 	legacy: string;
 	hero: MediaBlock | null;
+	/** Gallery tile image and what it turns into on hover (from the old site's covers). */
+	cover?: MediaBlock | null;
+	hover?: MediaBlock | null;
 	locked: boolean;
 	blocks: Block[];
 }
