@@ -1,0 +1,88 @@
+{
+ "slug": "yottabyte",
+ "legacy": "https://kaizhang.io/yotabyte",
+ "hero": {
+  "type": "image",
+  "src": "yottabyte/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<p>Course: MAS.S64 Drawing++<br>Instructors: Zach Lieberman<br>Project Duration: 2 Weeks</p>\n<p>Speacial Thanks: Lingdong Huang</p>"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<p>Yottabyte is an interactive piece that reveals the non-stop, gigantic yet invisible data comsumption.</p>\n<p>Made in Openframeworks using C++.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "html": "<h2>Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?</h2>"
+  },
+  {
+   "type": "image",
+   "src": "yottabyte/02.jpg",
+   "width": 2400,
+   "height": 1551
+  },
+  {
+   "type": "image",
+   "src": "yottabyte/03.jpg",
+   "width": 2400,
+   "height": 1551
+  },
+  {
+   "type": "image",
+   "src": "yottabyte/04.jpg",
+   "width": 2400,
+   "height": 1551
+  },
+  {
+   "type": "image",
+   "src": "yottabyte/05.jpg",
+   "width": 2400,
+   "height": 1551
+  },
+  {
+   "type": "video",
+   "src": "/media/yottabyte/7vMS_xzEWHw.mp4",
+   "poster": "/media/yottabyte/7vMS_xzEWHw.jpg",
+   "width": 1920,
+   "height": 1084,
+   "audio": false
+  },
+  {
+   "type": "video",
+   "src": "/media/yottabyte/Mr8zUJBmJVp.mp4",
+   "poster": "/media/yottabyte/Mr8zUJBmJVp.jpg",
+   "width": 1154,
+   "height": 1080,
+   "audio": false
+  },
+  {
+   "type": "video",
+   "src": "/media/yottabyte/N5JiUfmA_Rc.mp4",
+   "poster": "/media/yottabyte/N5JiUfmA_Rc.jpg",
+   "width": 1920,
+   "height": 1260,
+   "audio": false
+  }
+ ]
+}

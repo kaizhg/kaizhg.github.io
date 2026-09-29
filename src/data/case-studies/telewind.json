@@ -1,0 +1,43 @@
+{
+ "slug": "telewind",
+ "legacy": "https://kaizhang.io/wind",
+ "hero": {
+  "type": "image",
+  "src": "telewind/02.jpg",
+  "width": 2400,
+  "height": 1600
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h2>When furniture materializes wind, and wind creates telepresence:</h2>"
+  },
+  {
+   "type": "image",
+   "src": "telewind/02.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "image",
+   "src": "telewind/03.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "image",
+   "src": "telewind/04.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "video",
+   "src": "/media/telewind/Gv2fE4WdbH-.mp4",
+   "poster": "/media/telewind/Gv2fE4WdbH-.jpg",
+   "width": 1920,
+   "height": 1320,
+   "audio": false
+  }
+ ]
+}

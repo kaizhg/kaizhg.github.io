@@ -1,0 +1,19 @@
+{
+ "slug": "sound-x",
+ "legacy": "https://kaizhang.io/sound-x-2021-light-effect-design",
+ "hero": {
+  "type": "image",
+  "src": "sound-x/01.jpg",
+  "width": 1964,
+  "height": 1536
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "sound-x/02.jpg",
+   "width": 2400,
+   "height": 1351
+  }
+ ]
+}

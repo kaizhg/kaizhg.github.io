@@ -1,0 +1,188 @@
+{
+ "slug": "os-11",
+ "legacy": "https://kaizhang.io/os-11",
+ "hero": {
+  "type": "image",
+  "src": "os-11/01.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h3><strong>Harvard Graduate School of Design,</strong><br><strong>Master in Design Studies: Open Project</strong><br><strong>Operating System_1.1</strong></h3>\n<p>Sarah Oppenheimer Instructor<br>Claire GlassTA<br>Team members (in the alphabetic order）<br>Alexia Asgari, Selin Dursun, Skye Gao, Danning Liang, Quincy Kuang, Kai Zhang</p>"
+  },
+  {
+   "type": "text",
+   "html": "<h2>OS1.1: Architectural Knob</h2>\n<p>OS 1.1 harnesses the built infrastructure to extend our sensory registers. We have collaboratively designed an operating system: a lighting network linked by air. As mechanical wooden inputs are touched and turned, lighting outputs change and fluctuate. Manipulation of the physical apparatus directs sensory phenomena along new pathways.</p>"
+  },
+  {
+   "type": "image",
+   "src": "os-11/02.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "video",
+   "src": "/media/os-11/QMy9FSWnnwW.mp4",
+   "poster": "/media/os-11/QMy9FSWnnwW.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true
+  },
+  {
+   "type": "video",
+   "src": "/media/os-11/Tq3CLoKaAfX.mp4",
+   "poster": "/media/os-11/Tq3CLoKaAfX.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true
+  },
+  {
+   "type": "text",
+   "html": "<h2>With the \"architectural knob\" added, any column could be a control switch.</h2>"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "os-11/03.jpg",
+     "width": 1600,
+     "height": 2400
+    },
+    {
+     "type": "image",
+     "src": "os-11/04.jpg",
+     "width": 1600,
+     "height": 2400
+    },
+    {
+     "type": "image",
+     "src": "os-11/05.jpg",
+     "width": 1600,
+     "height": 2400
+    },
+    {
+     "type": "image",
+     "src": "os-11/06.jpg",
+     "width": 2400,
+     "height": 1600
+    },
+    {
+     "type": "image",
+     "src": "os-11/07.jpg",
+     "width": 2400,
+     "height": 1600
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "html": "<h3>How does it work?</h3>\n<p>CNC wood + Hose clamp + Steel balls + DIY RGB Optical encoder</p>"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.375,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "os-11/08.jpg",
+       "width": 1403,
+       "height": 2400,
+       "caption": "Exploded View"
+      }
+     ]
+    },
+    {
+     "flex": 0.625,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "os-11/09.jpg",
+       "width": 2400,
+       "height": 1430,
+       "caption": "Section view: One L-shape vinyl archway is first clamped on the column. Then the piece is clamped to the archway."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "os-11/10.jpg",
+     "width": 1920,
+     "height": 1080
+    },
+    {
+     "type": "image",
+     "src": "os-11/11.jpg",
+     "width": 1920,
+     "height": 1080
+    },
+    {
+     "type": "image",
+     "src": "os-11/12.jpg",
+     "width": 1920,
+     "height": 1080
+    },
+    {
+     "type": "image",
+     "src": "os-11/13.jpg",
+     "width": 1920,
+     "height": 1080
+    },
+    {
+     "type": "image",
+     "src": "os-11/14.jpg",
+     "width": 1920,
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "src": "/media/os-11/9vwFdJKvnSK.mp4",
+   "poster": "/media/os-11/9vwFdJKvnSK.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": false
+  },
+  {
+   "type": "text",
+   "html": "<h2>OS1.2: Universal through-hole, disassemble, optical rotary encoder</h2>"
+  },
+  {
+   "type": "image",
+   "src": "os-11/15.jpg",
+   "width": 2400,
+   "height": 1602
+  },
+  {
+   "type": "image",
+   "src": "os-11/16.jpg",
+   "width": 2400,
+   "height": 1602
+  },
+  {
+   "type": "image",
+   "src": "os-11/17.jpg",
+   "width": 2400,
+   "height": 1602
+  },
+  {
+   "type": "video",
+   "src": "/media/os-11/2CEkrtFIjAG.mp4",
+   "poster": "/media/os-11/2CEkrtFIjAG.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true
+  }
+ ]
+}

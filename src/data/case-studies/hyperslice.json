@@ -1,0 +1,128 @@
+{
+ "slug": "hyperslice",
+ "legacy": "https://kaizhang.io/hyperslice",
+ "hero": {
+  "type": "image",
+  "src": "hyperslice/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "hyperslice/02.jpg",
+   "width": 2400,
+   "height": 1359
+  },
+  {
+   "type": "image",
+   "src": "hyperslice/03.jpg",
+   "width": 1920,
+   "height": 730
+  },
+  {
+   "type": "text",
+   "html": "<h3>This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections.</h3>"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "hyperslice/04.jpg",
+     "width": 512,
+     "height": 492
+    },
+    {
+     "type": "image",
+     "src": "hyperslice/05.jpg",
+     "width": 512,
+     "height": 481
+    },
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/06.mp4",
+     "width": 1000,
+     "height": 1000
+    },
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/07.mp4",
+     "width": 1000,
+     "height": 1000
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "html": "<h3>Image Interpolation Matrix</h3>\n<p>By utilizing an M by N image matrix (M: total cross section count, N: interpolation in each layer), it empowers user to parametrically blend geometries using a customized curve. This approach enhances control and facilitates seamless integration of diverse geometries.</p>"
+  },
+  {
+   "type": "image",
+   "src": "hyperslice/08.jpg",
+   "width": 2400,
+   "height": 857
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/hyperslice/09.mp4",
+       "width": 800,
+       "height": 538
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/hyperslice/10.mp4",
+       "width": 800,
+       "height": 538
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "html": "<h3>It's also possible to get cross-sections from a non-linear axis, and stack them back together to build a sub-form.</h3>"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/11.mp4",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/12.mp4",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/13.mp4",
+     "width": 480,
+     "height": 480
+    },
+    {
+     "type": "loop",
+     "src": "/media/hyperslice/14.mp4",
+     "width": 480,
+     "height": 480
+    }
+   ]
+  }
+ ]
+}

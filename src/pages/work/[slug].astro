@@ -1,32 +1,60 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/Blocks.astro';
+import Media from '../../components/Media.astro';
 import { projects, disciplines, projectCode, type Project } from '../../data/projects';
+import { getCaseStudy } from '../../data/case-studies';
 
 export function getStaticPaths() {
 	return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
 }
 
 const { project } = Astro.props as { project: Project };
+const study = getCaseStudy(project.slug);
 const i = projects.indexOf(project);
 const next = projects[(i + 1) % projects.length];
+// Skip the separate hero when the page already opens with that same image
+const first = study?.blocks[0];
+const showHero = study?.hero && !(first && 'src' in first && first.src === study.hero.src);
 ---
 
 <Base title={project.title} description={`${project.title} — ${project.summary}`}>
 	<article>
-		<p class="code">{projectCode(project)}</p>
-		<h1>{project.title}</h1>
+		<header class="head">
+			<p class="code">{projectCode(project)}</p>
+			<h1>{project.title}</h1>
+			<dl class="facts">
+				<div><dt>Year</dt><dd>{project.year}</dd></div>
+				<div><dt>Discipline</dt><dd>{disciplines[project.discipline]}</dd></div>
+				<div><dt>Type</dt><dd>{project.summary}</dd></div>
+				{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
+			</dl>
+		</header>
 
-		<dl class="facts">
-			<div><dt>Year</dt><dd>{project.year}</dd></div>
-			<div><dt>Discipline</dt><dd>{disciplines[project.discipline]}</dd></div>
-			<div><dt>Type</dt><dd>{project.summary}</dd></div>
-			{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
-		</dl>
+		{
+			showHero && study?.hero && (
+				<div class="hero">
+					<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+				</div>
+			)
+		}
 
-		<div class="placeholder">
-			<p>Case study is being migrated.</p>
-			<a href={project.legacyUrl}>View on the current site ↗</a>
-		</div>
+		{
+			study && !study.locked && study.blocks.length > 0 ? (
+				<div class="body">
+					<Blocks blocks={study.blocks} title={project.title} />
+				</div>
+			) : (
+				<div class="notice">
+					<p>
+						{study?.locked
+							? 'Details of this project are available on request.'
+							: 'Case study coming soon.'}
+					</p>
+					<a href="mailto:this.kaizhang@gmail.com">Get in touch →</a>
+				</div>
+			)
+		}
 	</article>
 
 	<a class="next" href={`/work/${next.slug}/`}>
@@ -36,7 +64,7 @@ const next = projects[(i + 1) % projects.length];
 </Base>
 
 <style>
-	article {
+	.head {
 		padding-top: clamp(48px, 10vh, 120px);
 	}
 	.code {
@@ -71,20 +99,17 @@ const next = projects[(i + 1) % projects.length];
 	dd {
 		margin: 0;
 	}
-	.placeholder {
-		aspect-ratio: 16 / 9;
-		max-width: 100%;
-		display: grid;
-		place-content: center;
-		text-align: center;
-		gap: 8px;
-		border: 1px dashed var(--line);
+	.hero {
+		margin-bottom: clamp(48px, 8vw, 120px);
+	}
+	.body {
+		max-width: 1400px;
+	}
+	.notice {
+		padding: 48px 0;
 		color: var(--muted);
 	}
-	.placeholder p {
-		margin: 0;
-	}
-	.placeholder a {
+	.notice a {
 		color: var(--accent);
 	}
 	.next {

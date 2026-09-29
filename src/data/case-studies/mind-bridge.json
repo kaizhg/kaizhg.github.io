@@ -1,0 +1,41 @@
+{
+ "slug": "mind-bridge",
+ "legacy": "https://kaizhang.io/mind-bridge",
+ "hero": {
+  "type": "image",
+  "src": "mind-bridge/01.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2>\n<p>A reflection on technology and post-covid time.</p>"
+  },
+  {
+   "type": "image",
+   "src": "mind-bridge/02.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "image",
+   "src": "mind-bridge/03.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "image",
+   "src": "mind-bridge/04.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "image",
+   "src": "mind-bridge/05.jpg",
+   "width": 2400,
+   "height": 1600
+  }
+ ]
+}

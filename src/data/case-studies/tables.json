@@ -1,0 +1,121 @@
+{
+ "slug": "tables",
+ "legacy": "https://kaizhang.io/zhang-zhoujie-digital-lab-internship",
+ "hero": {
+  "type": "image",
+  "src": "tables/01.jpg",
+  "width": 2400,
+  "height": 1878
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "tables/02.jpg",
+   "width": 2400,
+   "height": 1600
+  },
+  {
+   "type": "text",
+   "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>"
+  },
+  {
+   "type": "image",
+   "src": "tables/03.jpg",
+   "width": 1662,
+   "height": 1166
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "loop",
+     "src": "/media/tables/04.mp4",
+     "width": 640,
+     "height": 427
+    },
+    {
+     "type": "loop",
+     "src": "/media/tables/05.mp4",
+     "width": 640,
+     "height": 427
+    },
+    {
+     "type": "loop",
+     "src": "/media/tables/06.mp4",
+     "width": 640,
+     "height": 427
+    },
+    {
+     "type": "image",
+     "src": "tables/07.jpg",
+     "width": 1080,
+     "height": 721
+    },
+    {
+     "type": "image",
+     "src": "tables/08.jpg",
+     "width": 1080,
+     "height": 721
+    },
+    {
+     "type": "image",
+     "src": "tables/09.jpg",
+     "width": 1080,
+     "height": 721
+    },
+    {
+     "type": "image",
+     "src": "tables/10.jpg",
+     "width": 1080,
+     "height": 721
+    },
+    {
+     "type": "image",
+     "src": "tables/11.jpg",
+     "width": 1080,
+     "height": 720
+    },
+    {
+     "type": "image",
+     "src": "tables/12.jpg",
+     "width": 1080,
+     "height": 720
+    }
+   ]
+  },
+  {
+   "type": "image",
+   "src": "tables/13.jpg",
+   "width": 1080,
+   "height": 646
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "tables/14.jpg",
+       "width": 1080,
+       "height": 720
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "tables/15.jpg",
+       "width": 1080,
+       "height": 720
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

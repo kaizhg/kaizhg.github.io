@@ -1,6 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getImage } from 'astro:assets';
 import { projects, disciplines, projectCode, type Discipline } from '../data/projects';
+import { getCaseStudy, workImage } from '../data/case-studies';
+
+// Hero shot per project, shown next to the cursor when a row is hovered
+const previews = Object.fromEntries(
+	await Promise.all(
+		projects.map(async (p) => {
+			const hero = getCaseStudy(p.slug)?.hero;
+			if (!hero || hero.type !== 'image') return [p.slug, null];
+			const img = await getImage({ src: workImage(hero.src), width: 720, format: 'webp' });
+			return [p.slug, img.src];
+		}),
+	),
+);
 
 const filters = Object.entries(disciplines) as [Discipline, string][];
 ---
@@ -29,7 +43,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		<ol class="list">
 			{
 				projects.map((p) => (
-					<li data-discipline={p.discipline}>
+					<li data-discipline={p.discipline} data-preview={previews[p.slug] ?? undefined}>
 						<a href={`/work/${p.slug}/`}>
 							<span class="code">{projectCode(p)}</span>
 							<span class="title">{p.title}</span>
@@ -44,9 +58,45 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 			}
 		</ol>
 	</section>
+
+	<div class="preview" aria-hidden="true">
+		{
+			projects.map(
+				(p) => previews[p.slug] && <img src={previews[p.slug]} alt="" data-for={p.slug} decoding="async" />,
+			)
+		}
+	</div>
 </Base>
 
 <script>
+	// Hover preview: follow the cursor with the hovered project's hero shot (pointer devices only)
+	const preview = document.querySelector<HTMLDivElement>('.preview')!;
+	const shots = new Map<string, HTMLImageElement>();
+	preview.querySelectorAll<HTMLImageElement>('img').forEach((img) => shots.set(img.dataset.for!, img));
+	const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+	let x = 0, y = 0, raf = 0;
+	const place = () => {
+		raf = 0;
+		const w = preview.offsetWidth, h = preview.offsetHeight;
+		const left = Math.min(x + 24, window.innerWidth - w - 16);
+		const top = Math.min(Math.max(y - h / 2, 16), window.innerHeight - h - 16);
+		preview.style.transform = `translate(${left}px, ${top}px)`;
+	};
+	document.querySelectorAll<HTMLLIElement>('.list li').forEach((li) => {
+		const slug = li.querySelector('a')!.getAttribute('href')!.split('/')[2];
+		li.addEventListener('mouseenter', () => {
+			if (!fine.matches || !shots.has(slug)) return;
+			shots.forEach((img, k) => img.classList.toggle('on', k === slug));
+			preview.classList.add('visible');
+		});
+		li.addEventListener('mouseleave', () => preview.classList.remove('visible'));
+	});
+	window.addEventListener('mousemove', (e) => {
+		x = e.clientX;
+		y = e.clientY;
+		if (!raf) raf = requestAnimationFrame(place);
+	});
+
 	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
 	const rows = document.querySelectorAll<HTMLLIElement>('.list li');
 	buttons.forEach((btn) =>
@@ -145,6 +195,38 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	}
 	.list a:hover .arrow {
 		transform: translateX(4px);
+	}
+	.preview {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: clamp(240px, 28vw, 420px);
+		aspect-ratio: 4 / 3;
+		pointer-events: none;
+		z-index: 20;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	.preview.visible {
+		opacity: 1;
+	}
+	.preview img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+		transition: opacity 0.15s ease;
+		box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
+	}
+	.preview img.on {
+		opacity: 1;
+	}
+	@media (hover: none) {
+		.preview {
+			display: none;
+		}
 	}
 	@media (max-width: 720px) {
 		.list a {

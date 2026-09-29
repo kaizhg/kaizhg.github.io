@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import { workImage, type MediaBlock } from '../data/case-studies';
+
+interface Props {
+	block: MediaBlock;
+	alt?: string;
+	sizes?: string;
+	eager?: boolean;
+}
+
+const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = false } = Astro.props;
+---
+
+{
+	block.type === 'image' && (
+		<Image
+			src={workImage(block.src)}
+			alt={alt}
+			widths={[640, 1024, 1600, 2400].filter((w) => w <= block.width)}
+			sizes={sizes}
+			loading={eager ? 'eager' : 'lazy'}
+			class="media"
+		/>
+	)
+}
+{
+	block.type === 'loop' && (
+		<video
+			class="media"
+			src={block.src}
+			width={block.width}
+			height={block.height}
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+		/>
+	)
+}
+{
+	block.type === 'video' && (
+		<video
+			class="media"
+			src={block.src}
+			poster={block.poster}
+			width={block.width}
+			height={block.height}
+			controls
+			playsinline
+			preload="none"
+		/>
+	)
+}
+
+<style>
+	.media {
+		display: block;
+		width: 100%;
+		height: auto;
+		background: var(--line);
+	}
+</style>

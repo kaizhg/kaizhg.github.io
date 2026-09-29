@@ -1,0 +1,12 @@
+{
+ "slug": "eyelash",
+ "legacy": "https://kaizhang.io/at-opt-industries",
+ "hero": {
+  "type": "image",
+  "src": "eyelash/01.jpg",
+  "width": 2000,
+  "height": 1563
+ },
+ "locked": true,
+ "blocks": []
+}
