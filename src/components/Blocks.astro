@@ -32,11 +32,12 @@ const portrait = (b: MediaBlock) => ratio(b) < 0.9;
 interface Cell {
 	cls: string;
 	blocks: Block[];
+	fitAr?: number;
 }
 
 // Text that may sit beside an image: unplanned, or planned as a plain side column
 const plainText = (b?: Laid) =>
-	!!b && b.type === 'text' && (!b.layout || /^text-[lr]$/.test(b.layout)) && (b.kind === 'text' || !b.kind) &&
+	!!b && b.type === 'text' && (!b.layout || /^text-[lr]( low)?$/.test(b.layout)) && (b.kind === 'text' || !b.kind) &&
 	!/<h[23]>/.test(b.html) && b.html.replace(/<[^>]+>/g, '').length < 900;
 const sideOf = (cls?: string) => (cls && /-l\b/.test(cls) ? 'l' : cls && /-r\b/.test(cls) ? 'r' : null);
 // Text cell that shares the row with an image cell of the given class, bottom-aligned
@@ -66,8 +67,9 @@ function layout(bs: Laid[]): Cell[] {
 		const pushMedia = (cls: string) => {
 			const beside = BESIDE[cls.replace(/ stagger$/, '')];
 			// {text-r} after a right-hand picture would be pulled to its left: it keeps its own row instead
-			if (beside && plainText(next) && !(beside[1] === 'before' && next!.layout === 'text-r')) {
-				const [tcls, where] = beside;
+			if (beside && plainText(next) && !(beside[1] === 'before' && next!.layout?.startsWith('text-r'))) {
+				const [tcls0, where] = beside;
+				const tcls = tcls0 + (/\blow\b/.test(next!.layout ?? '') ? ' low' : '');
 				if (where === 'before') cells.push({ cls: tcls, blocks: [next] }, { cls, blocks: [b] });
 				else cells.push({ cls, blocks: [b] }, { cls: tcls, blocks: [next] });
 				i++;
@@ -157,6 +159,40 @@ function layout(bs: Laid[]): Cell[] {
 }
 
 const cells = nested ? [] : layout(blocks as Laid[]);
+
+// Column range of a cell class on the 12-column grid ("@3-7" = grid-column: 3 / 7)
+const RANGES: Record<string, [number, number]> = {
+	full: [1, 13], 'wide-l': [1, 9], 'wide-r': [5, 13], 'wide-c': [3, 11], 'half-l': [1, 7], 'half-r': [7, 13],
+	'narrow-l': [1, 6], 'narrow-r': [8, 13], 'narrow-c': [4, 10], 'third-l': [2, 6], 'third-r': [8, 12],
+	'small-l': [1, 5], 'small-c': [5, 9], 'small-r': [9, 13], 'tri-a': [1, 5], 'tri-b': [5, 9], 'tri-c': [9, 13],
+};
+const rangeOf = (cls: string): [number, number] | null => {
+	const m = cls.match(/@(\d+)-(\d+)/);
+	if (m) return [+m[1], +m[2]];
+	return RANGES[cls.replace(/ (stagger|low|pull)\b/g, '').trim()] ?? null;
+};
+const cellStyle = (c: Cell) => {
+	const parts: string[] = [];
+	const m = c.cls.match(/@(\d+)-(\d+)/);
+	if (m) parts.push(`grid-column: ${m[1]} / ${m[2]}`);
+	if (c.fitAr) parts.push(`--fit-ar: ${c.fitAr.toFixed(4)}`);
+	return parts.length ? parts.join('; ') : undefined;
+};
+// Two single pictures side by side on one row: give both the same height so their bottom
+// edges meet; the taller shape loses a sliver to object-fit (never more than a few percent).
+for (let i = 0; i + 1 < cells.length; i++) {
+	const a = cells[i], b = cells[i + 1];
+	const pic = (c: Cell) => c.blocks.length === 1 && (c.blocks[0].type === 'image' || c.blocks[0].type === 'loop') ? (c.blocks[0] as any) : null;
+	const pa = pic(a), pb = pic(b);
+	const ra = rangeOf(a.cls), rb = rangeOf(b.cls);
+	if (!pa || !pb || !ra || !rb || rb[0] < ra[1] || / stagger\b/.test(a.cls + b.cls)) continue;
+	const spanA = ra[1] - ra[0], spanB = rb[1] - rb[0];
+	const hA = spanA / (pa.width / pa.height), hB = spanB / (pb.width / pb.height);
+	const h = Math.min(hA, hB);
+	if (Math.abs(hA - hB) / h > 0.15) continue; // very different shapes: leave them alone
+	a.fitAr = spanA / h;
+	b.fitAr = spanB / h;
+}
 const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/.test(b.layout) ? b.layout : 'flow');
 ---
 
@@ -290,7 +326,7 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 	) : (
 		<div class="mag">
 			{cells.map((c) => (
-				<div class:list={['cell', c.cls]}>
+				<div class:list={['cell', c.cls, { fit: !!c.fitAr }]} style={cellStyle(c)}>
 					<Astro.self blocks={c.blocks} title={title} nested />
 				</div>
 			))}
@@ -394,6 +430,13 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 	.beside-l { grid-column: 1 / 5; }
 	.beside-r { grid-column: 9 / 13; }
 	.low { align-self: end; }
+	.cell.fit :global(.media) {
+		width: 100%;
+		height: auto;
+		max-height: none;
+		aspect-ratio: var(--fit-ar);
+		object-fit: cover;
+	}
 	/* Auto-paired text: directly beside its image, one consistent gap, a readable measure */
 	.pair-after-wide { grid-column: 9 / 13; }
 	.pair-after-half { grid-column: 7 / 13; }

@@ -65,7 +65,7 @@
    "src": "imago/imago_06.jpg",
    "width": 1284,
    "height": 1692,
-   "layout": "small-l",
+   "layout": "@3-6",
    "kind": "photo"
   },
   {
@@ -73,7 +73,7 @@
    "src": "imago/imago_08.jpg",
    "width": 1800,
    "height": 2400,
-   "layout": "small-c",
+   "layout": "@6-9",
    "kind": "photo"
   },
   {
@@ -81,7 +81,7 @@
    "src": "imago/imago_09.jpg",
    "width": 1080,
    "height": 1619,
-   "layout": "small-c",
+   "layout": "@7-10",
    "kind": "photo"
   },
   {
@@ -89,7 +89,7 @@
    "src": "imago/imago_10.jpg",
    "width": 1080,
    "height": 1619,
-   "layout": "small-r",
+   "layout": "@10-13",
    "kind": "photo"
   },
   {
@@ -147,8 +147,8 @@
   },
   {
    "type": "text",
-   "html": "<p>↗↗↗</p><p>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</p>",
-   "layout": "text-r",
+   "html": "<p>↖↖↖</p><p>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</p>",
+   "layout": "text-r low",
    "kind": "text"
   },
   {
