@@ -36,13 +36,9 @@ hero: large-language-objects_hero.jpg # 项目页顶部大图；没有这行就�
 
 [section] Part I: AIncense
 
-![](large-language-objects_01.jpg)
+![](large-language-objects_01.jpg) "Inspiration: Could we harness power of traditional rituals for the emerging technologies?"
 
-### ▲\
-Harnessing the power of traditional rituals for the emerging technologies.\
-▼
-
-![](large-language-objects_02.jpg)
+<!-- ![](large-language-objects_02.jpg) -->
 
 ### AIncense is a praying device powered by ChatGPT, designed to amplify self-motivation through psychological suggestion.
 

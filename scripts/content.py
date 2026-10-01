@@ -369,7 +369,8 @@ def has_audio(path):
                                 '-of', 'csv=p=0', path], capture_output=True, text=True).stdout.strip())
 
 
-MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?')  # optional [ ... ](url) wrapper
+# ![](file "caption")  or the forgivable  ![](file) "caption";  wrapped in [ ... ](url) it is a link
+MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?(?:\s+"([^"]*)")?')
 LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull)'
 HINT_RE = re.compile(r'\s+((?:' + LAYOUT_WORDS + r')(?:\s+' + LAYOUT_WORDS + r')*)$')
 
@@ -380,7 +381,7 @@ def parse_media_line(line, folder, slug):
     if not m:
         return None
     rest = line.strip()[m.end():]
-    b = media_block(folder, slug, m.group(1), m.group(2))
+    b = media_block(folder, slug, m.group(1), m.group(2) or m.group(4))
     if m.group(3):
         b['href'] = m.group(3)
     hm = HINT_RE.match(' ' + rest.strip()) if rest.strip() else None

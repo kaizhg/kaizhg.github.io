@@ -26,18 +26,7 @@
    "src": "large-language-objects/large-language-objects_01.jpg",
    "width": 2400,
    "height": 1389,
-   "kind": "photo"
-  },
-  {
-   "type": "text",
-   "html": "<h3>▲<br>Harnessing the power of traditional rituals for the emerging technologies.<br>▼</h3>",
-   "kind": "text"
-  },
-  {
-   "type": "image",
-   "src": "large-language-objects/large-language-objects_02.jpg",
-   "width": 2400,
-   "height": 1602,
+   "caption": "Inspiration: Could we harness power of traditional rituals for the emerging technologies?",
    "kind": "photo"
   },
   {
