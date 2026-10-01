@@ -93,6 +93,14 @@ function layout(bs: Laid[]): Cell[] {
 					side = sideOf(nb) === 'l' ? 'r' : 'l';
 					continue;
 				}
+				// A right-hand text followed by a left-hand picture: the picture must come first in the
+				// grid or the browser starts a new row for it; keep the picture's own classes and the text's
+				if (/^text-r\b/.test(b.layout) && next && nb && sideOf(nb) === 'l' && (next.type === 'image' || next.type === 'loop')) {
+					cells.push({ cls: next.layout!, blocks: [next] }, { cls: b.layout, blocks: [b] });
+					i++;
+					side = 'r';
+					continue;
+				}
 				cells.push({ cls: b.layout, blocks: [b] });
 			} else pushMedia(b.layout);
 			if (/-l\b/.test(b.layout)) side = 'r';

@@ -123,7 +123,7 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 
 		{
 			showHero && study?.hero && (
-				<div class:list={['hero', { wide: study.heroWidth === 'wide' }]}>
+				<div class:list={['hero', { wide: study.heroWidth === 'wide' || study.heroWidth === 'half', half: study.heroWidth === 'half' }]}>
 					{study.link ? (
 						<a href={study.link} target="_blank" rel="noopener" aria-label={`${project.title} — open link`}>
 							<Media block={study.hero} alt={project.title} sizes="100vw" eager />
@@ -285,6 +285,9 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		column-gap: clamp(12px, 1.6vw, 24px);
+	}
+	.hero.half > :global(*) {
+		grid-column: 1 / 7 !important;
 	}
 	.hero.wide > :global(*) {
 		grid-column: 1 / 9;
