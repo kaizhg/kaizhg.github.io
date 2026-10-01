@@ -62,6 +62,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 2,
    "layout": "grid4",
    "kind": "gallery"
   },
@@ -111,7 +112,7 @@
   {
    "type": "text",
    "html": "<h3>It's also possible to get cross-sections from a non-linear axis, and stack them back together to build a sub-form.</h3>",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "gallery",
@@ -149,6 +150,7 @@
      "caption": "4. Output Geometry"
     }
    ],
+   "cols": 4,
    "layout": "grid4",
    "kind": "gallery"
   }

@@ -83,6 +83,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 5,
    "layout": "grid5",
    "kind": "gallery"
   },
@@ -202,6 +203,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 4,
    "layout": "grid4",
    "kind": "gallery"
   },
@@ -237,6 +239,7 @@
      "kind": "white"
     }
    ],
+   "cols": 5,
    "layout": "grid4",
    "kind": "gallery"
   },

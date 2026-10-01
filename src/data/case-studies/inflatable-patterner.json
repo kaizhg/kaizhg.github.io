@@ -471,8 +471,8 @@
   },
   {
    "type": "text",
-   "html": "<h2><strong>If you are interested in the my thinking process, please take a look at the log<a href=\"https://kaizhg.notion.site/2023-Summer-Pneuhaus-Intern-Log-f12c62426d6a49c2ad19600da80ba9c7?pvs=74\"> HERE</a>.</strong></h2>",
-   "kind": "quote"
+   "html": "<h3><strong>If you are interested in my thinking process, please take a look at the log<a href=\"https://kaizhg.notion.site/2023-Summer-Pneuhaus-Intern-Log-f12c62426d6a49c2ad19600da80ba9c7?pvs=74\"> HERE</a>.</strong></h3>",
+   "kind": "text"
   },
   {
    "type": "image",
@@ -485,7 +485,7 @@
   {
    "type": "text",
    "html": "<h3>Below is another example of the first logic: CLOUD Pillow<br>You can check the process on my <a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#week_2\">How to Make (almost) Anything</a> site.</h3>",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "image",
@@ -532,7 +532,7 @@
   {
    "type": "text",
    "html": "<h3>↑ : Perfect machine cutting<br>↓ : Terrible human sewing</h3>",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "gallery",

@@ -166,5 +166,5 @@ export const allProjects: Project[] = [...projects, ...archive];
 
 /** Index code in the form DISCIPLINE.YEAR, e.g. IX.2023 */
 export function projectCode(p: Project) {
-	return `${p.discipline}.${p.year}`;
+	return String(p.year);
 }

@@ -153,14 +153,14 @@
    "type": "text",
    "html": "<h3>We explored two Y-Shape Polyhedron-based designs: a polar tree and a tessellation structure. The latter was chosen for best highlighting movement through its smart, space-filling mechanics.</h3>",
    "layout": "half-r",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "image",
    "src": "prismo/10.jpg",
    "width": 2400,
    "height": 2262,
-   "layout": "grid4",
+   "layout": "half-l",
    "kind": "white"
   },
   {

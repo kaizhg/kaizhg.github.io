@@ -42,6 +42,7 @@
      "caption": "Brooklyn, 2018"
     }
    ],
+   "cols": 4,
    "layout": "grid3",
    "kind": "gallery"
   },
@@ -165,6 +166,7 @@
      "kind": "white"
     }
    ],
+   "cols": 2,
    "layout": "strip",
    "kind": "gallery"
   },
@@ -212,6 +214,7 @@
      "caption": "Virginity, 2020"
     }
    ],
+   "cols": 3,
    "layout": "grid4",
    "kind": "gallery"
   },
@@ -397,6 +400,7 @@
      "kind": "white"
     }
    ],
+   "cols": 3,
    "layout": "text-l",
    "kind": "gallery"
   },

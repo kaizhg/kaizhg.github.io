@@ -76,7 +76,6 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		<footer class="site-footer">
 			<div class="foot-top">
 				<p class="foot-cta">
-					<span class="foot-label">Open to collaborations and full-time roles</span>
 					<a href="mailto:this.kaizhang@gmail.com" class="foot-mail">this.kaizhang@gmail.com ↗</a>
 				</p>
 				<nav class="foot-links" aria-label="Elsewhere">
@@ -169,7 +168,7 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		--fg: #111;
 		--muted: #777;
 		--line: #d6d6d2;
-		--accent: #2a4bff;
+		--accent: #ff4a0f; /* international orange: the engineer's signal colour */
 		--cell: #e8e8e5; /* empty cells of the Game of Life grid */
 		--mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 		--sans: 'Neue Montreal', 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
@@ -183,7 +182,7 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 			--fg: #ededea;
 			--muted: #8a8a86;
 			--line: #2a2a28;
-			--accent: #7d93ff;
+			--accent: #ff7a45;
 			--cell: #171716;
 			color-scheme: dark;
 		}
@@ -273,39 +272,6 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
 
-	/* Filters: quiet text links with counts, shared by every index page */
-	.filters {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 4px 24px;
-	}
-	.filters button {
-		font: 12px var(--mono);
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		color: var(--muted);
-		background: none;
-		border: 0;
-		border-bottom: 1px solid transparent;
-		border-radius: 0;
-		padding: 6px 0;
-		cursor: pointer;
-		transition: color 0.2s ease, border-color 0.2s ease;
-	}
-	.filters button sup {
-		font-size: 9px;
-		margin-left: 3px;
-		vertical-align: top;
-		opacity: 0.7;
-	}
-	.filters button:hover {
-		color: var(--fg);
-	}
-	.filters button[aria-pressed='true'] {
-		color: var(--fg);
-		border-bottom-color: var(--fg);
-	}
-
 	.site-footer {
 		margin-top: clamp(96px, 14vw, 180px);
 		padding-block: 40px 28px;
@@ -364,11 +330,15 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 	}
 	/* Header: wordmark left; links and icons as one evenly spaced group on the right */
 	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		background: var(--bg);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 24px;
-		padding-block: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px);
+		padding-block: clamp(18px, 2.4vw, 28px);
 		font-size: 13px;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;

@@ -156,7 +156,7 @@ function layout(bs: Laid[]): Cell[] {
 }
 
 const cells = nested ? [] : layout(blocks as Laid[]);
-const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.layout) ? b.layout : 'flow');
+const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/.test(b.layout) ? b.layout : 'flow');
 ---
 
 {
@@ -197,11 +197,53 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 					const ratios = b.items.map((it) => it.width / it.height).sort((a, c) => a - c);
 					const ar = ratios[Math.floor(ratios.length / 2)];
 					const plates = cls !== 'flow' && b.items.every((it) => (it as Laid).kind === 'white');
+					// Carousel: one slide at a time, advancing on its own, arrows to step through
+					if (cls === 'carousel') {
+						return (
+							<div class:list={['block', 'gallery', 'reveal', 'carousel', { plates }]} style={`--ar: ${ar.toFixed(4)}`} data-carousel data-interval="4000">
+								<div class="slides" role="group" aria-roledescription="carousel" aria-label={`${title} slides`}>
+									{b.items.map((it, k) => (
+										<figure class:list={['cell-flex', 'slide', { on: k === 0 }]} aria-hidden={k !== 0}>
+											<Media block={it} alt={(it as any).caption ?? `${title}, slide ${k + 1}`} sizes="(max-width: 800px) 100vw, 90vw" />
+											{(it as any).caption && <figcaption class="hover-cap">{(it as any).caption}</figcaption>}
+										</figure>
+									))}
+								</div>
+								<div class="ctl">
+									<button type="button" class="prev" aria-label="Previous slide">←</button>
+									<span class="count"><span class="cur">1</span> / {b.items.length}</span>
+									<button type="button" class="next" aria-label="Next slide">→</button>
+								</div>
+							</div>
+						);
+					}
+					// Mixed shapes: justified rows like the old site — every row fills the width at one
+					// height, nothing cropped, at most `cols` pictures per row (the old site's setting)
+					const mixed = ratios[ratios.length - 1] / ratios[0] > 1.08;
+					const perRow = (b as any).cols ?? parseInt(cls.replace('grid', ''), 10) ?? 3;
+					if (/^grid\d$/.test(cls) && !plates && mixed && perRow > 0) {
+						const rowsOf: typeof b.items[] = [];
+						for (let k = 0; k < b.items.length; k += perRow) rowsOf.push(b.items.slice(k, k + perRow));
+						return (
+							<div class="block gallery reveal justified">
+								{rowsOf.map((r) => (
+									<div class="jrow">
+										{r.map((it) => (
+											<figure class="cell-flex" style={`flex: ${(it.width / it.height).toFixed(4)} 1 0%; aspect-ratio: ${it.width} / ${it.height}`}>
+												<Media block={it} alt={(it as any).caption ?? title} sizes={`(max-width: 800px) 100vw, ${Math.round(100 / r.length)}vw`} />
+												{(it as any).caption && <figcaption class="hover-cap">{(it as any).caption}</figcaption>}
+											</figure>
+										))}
+									</div>
+								))}
+							</div>
+						);
+					}
 					return (
 						<div class:list={['block', 'gallery', 'reveal', cls, { plates }]} style={cls !== 'flow' ? `--ar: ${ar.toFixed(4)}` : undefined}>
 							{b.items.map((it) => (
 								<figure class="cell-flex" style={cls === 'flow' ? `flex: ${it.width / it.height}` : undefined}>
-									<Media block={it} alt={(it as any).caption ?? title} sizes="(max-width: 800px) 100vw, 40vw" />
+									<Media block={it} alt={(it as any).caption ?? title} sizes={cls === 'stack' ? '100vw' : /^grid\d$/.test(cls) ? `(max-width: 800px) 50vw, ${Math.round(100 / parseInt(cls.slice(4), 10))}vw` : '(max-width: 800px) 100vw, 40vw'} />
 									{(it as any).caption && <figcaption class="hover-cap">{(it as any).caption}</figcaption>}
 								</figure>
 							))}
@@ -211,10 +253,25 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 				case 'row': {
 					const media = b.columns.flatMap((c) => c.blocks);
 					const photos = media.length > 0 && media.every((m) => m.type === 'image' || m.type === 'loop' || m.type === 'video' || m.type === 'gallery');
+					// All-picture rows: size the columns from their pictures' shapes so every column
+					// ends on the same bottom edge (a column of two diagrams beside one photo, etc.)
+					const dims = (m: any): number | null => {
+						if (m.type === 'gallery') {
+							// a stacked gallery behaves like one tall picture
+							if (m.layout !== 'stack' || !m.items.every((it: any) => it.width && it.height)) return null;
+							return 1 / m.items.reduce((sum: number, it: any) => sum + it.height / it.width, 0);
+						}
+						return m.width && m.height ? m.width / m.height : null;
+					};
+					const fit = photos && b.columns.length >= 2 && b.columns.every((c) => c.blocks.every((m) => dims(m)));
+					const colFlex = (c: any) => (fit ? 1 / c.blocks.reduce((sum: number, m: any) => sum + 1 / dims(m)!, 0) : c.flex);
 					return (
-						<div class:list={['block', 'row', { media: photos, stagger: photos && b.columns.length === 2 && b.layout === 'stagger' }]}>
-							{b.columns.map((c) => (
-								<div class="col" style={`flex: ${c.flex}`}>
+						<div
+							class:list={['block', 'row', { media: photos, fit, stagger: photos && b.columns.length === 2 && b.layout === 'stagger' }]}
+							style={fit ? `--cols: ${b.columns.map((c) => `${colFlex(c).toFixed(4)}fr`).join(' ')}` : undefined}
+						>
+							{b.columns.map((c, k) => (
+								<div class="col" style={`flex: ${colFlex(c)} 1 0%; --c: ${k + 1}`}>
 									<Astro.self blocks={c.blocks} title={title} nested />
 								</div>
 							))}
@@ -248,6 +305,36 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 		{ rootMargin: '200px 0px' },
 	);
 	document.querySelectorAll<HTMLVideoElement>('video[loop]').forEach((v) => io.observe(v));
+
+	// Carousels: one timer each; a tick only advances while the carousel is on screen and
+	// not under the cursor. Arrows or a click on the slide step manually and restart the countdown.
+	const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const stops: (() => void)[] = [];
+	document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((c) => {
+		const slides = Array.from(c.querySelectorAll<HTMLElement>('.slide'));
+		const cur = c.querySelector('.cur')!;
+		const every = Number(c.dataset.interval) || 4000;
+		let i = 0, timer = 0, visible = false;
+		const go = (n: number) => {
+			slides[i].classList.remove('on');
+			slides[i].setAttribute('aria-hidden', 'true');
+			i = (n + slides.length) % slides.length;
+			slides[i].classList.add('on');
+			slides[i].removeAttribute('aria-hidden');
+			cur.textContent = String(i + 1);
+		};
+		const restart = () => {
+			clearInterval(timer);
+			if (!reduce) timer = window.setInterval(() => { if (visible && !c.matches(':hover')) go(i + 1); }, every);
+		};
+		c.querySelector('.next')!.addEventListener('click', () => { go(i + 1); restart(); });
+		c.querySelector('.prev')!.addEventListener('click', () => { go(i - 1); restart(); });
+		c.querySelector('.slides')!.addEventListener('click', () => { go(i + 1); restart(); });
+		new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.3 }).observe(c);
+		restart();
+		stops.push(() => clearInterval(timer));
+	});
+	document.addEventListener('astro:before-swap', () => stops.forEach((s) => s()), { once: true });
 	});
 </script>
 
@@ -346,6 +433,13 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 		margin-top: 10px;
 		letter-spacing: 0.02em;
 	}
+	.text :global(h2),
+	.text :global(h3) {
+		text-wrap: balance;
+	}
+	.text :global(p) {
+		text-wrap: pretty;
+	}
 	.text :global(h2) {
 		font-size: clamp(24px, 2.4vw, 34px);
 		line-height: 1.12;
@@ -433,6 +527,79 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 		gap: clamp(12px, 1.6vw, 24px);
 	}
 	.gallery.stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(12px, 1.6vw, 24px); }
+	.gallery.carousel {
+		display: block;
+		max-width: 1040px; /* a slide deck reads better a little narrower than the page */
+	}
+	.carousel .slides {
+		position: relative;
+		aspect-ratio: var(--ar, 16 / 9);
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.carousel.plates .slides {
+		background: #fff;
+	}
+	.carousel .slide {
+		position: absolute;
+		inset: 0;
+		margin: 0;
+		opacity: 0;
+		transition: opacity 0.6s ease;
+	}
+	.carousel .slide.on {
+		opacity: 1;
+	}
+	.carousel .slide :global(.media) {
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+	}
+	.carousel.plates .slide :global(.media) {
+		object-fit: contain;
+	}
+	.carousel .ctl {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		margin-top: 10px;
+		font: 11px var(--mono);
+		letter-spacing: 0.04em;
+		color: var(--muted);
+	}
+	.carousel .ctl button {
+		background: none;
+		border: 0;
+		padding: 4px 2px;
+		margin: 0;
+		font: inherit;
+		color: inherit;
+		cursor: pointer;
+		transition: color 0.2s ease;
+	}
+	.carousel .ctl button:hover {
+		color: var(--accent);
+	}
+	.gallery.justified {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.jrow {
+		display: flex;
+		gap: clamp(12px, 1.6vw, 24px);
+		align-items: flex-start;
+	}
+	.jrow .cell-flex {
+		min-width: 0;
+		overflow: hidden;
+	}
+	.jrow .cell-flex :global(.media) {
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+	}
 	.gallery.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.gallery.grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 	.gallery.grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -449,6 +616,48 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 	}
 	.row.stagger .col:nth-child(2) {
 		margin-top: clamp(32px, 7vw, 120px);
+	}
+	/* Fitted rows: a grid whose columns are sized from the pictures' shapes, so every picture
+	   shares the same top and bottom edge; captions sit in a second row underneath, so a
+	   two-line caption never pushes its picture out of line with its neighbour */
+	.row.fit:not(.stagger) {
+		display: grid;
+		grid-template-columns: var(--cols);
+		grid-template-rows: auto auto;
+		column-gap: clamp(12px, 1.6vw, 24px);
+		row-gap: 0;
+		align-items: stretch;
+	}
+	.row.fit:not(.stagger) .col,
+	.row.fit:not(.stagger) .col > :global(.media-block) {
+		display: contents;
+	}
+	.row.fit:not(.stagger) .col > :global(.media-block) > :global(.media),
+	.row.fit:not(.stagger) .col > :global(.gallery) {
+		grid-column: var(--c);
+		grid-row: 1;
+		margin-bottom: 0;
+	}
+	.row.fit:not(.stagger) .col > :global(.media-block) > :global(figcaption) {
+		grid-column: var(--c);
+		grid-row: 2;
+	}
+	.row.fit:not(.stagger) .col > :global(.media-block) > :global(.media) {
+		align-self: stretch;
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover; /* the few spare pixels come off the edge of the picture */
+	}
+	.row.fit:not(.stagger) .col > :global(.gallery.stack) {
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+	}
+	.row.fit:not(.stagger) .col :global(.gallery.stack .cell-flex) {
+		flex: 1 1 auto;
+		min-height: 0;
+		aspect-ratio: auto;
 	}
 	.col,
 	.cell-flex {
@@ -534,6 +743,16 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 		.row .col {
 			flex: none !important;
 		}
+		.row.fit:not(.stagger) {
+			display: flex;
+		}
+		.row.fit:not(.stagger) .col,
+		.row.fit:not(.stagger) .col > :global(.media-block) {
+			display: block;
+		}
+		.row.fit:not(.stagger) .col > :global(.media-block) > :global(.media) {
+			height: auto;
+		}
 		.gallery.flow,
 		.gallery.strip {
 			flex-wrap: wrap;
@@ -541,6 +760,12 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack)$/.test(b.l
 		.gallery.flow .cell-flex,
 		.gallery.strip .cell-flex {
 			flex-basis: 100% !important;
+		}
+		.jrow {
+			flex-wrap: wrap;
+		}
+		.jrow .cell-flex {
+			flex: 1 1 calc(50% - 12px) !important;
 		}
 		.gallery.grid4,
 		.gallery.grid5 {

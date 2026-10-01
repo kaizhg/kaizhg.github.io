@@ -64,8 +64,11 @@ def tag(bs):
                 # short = section label, medium = pull quote, long = it's really a paragraph in heading clothes
                 if len(t) < 36:
                     b['kind'] = 'section'
+                elif len(t) < 200 and '<h2>' in b['html'] and '<a ' not in b['html']:
+                    b['kind'] = 'quote'  # the old site's big statements (links mean a call-to-action, not a quote)
                 elif len(t) < 200:
-                    b['kind'] = 'quote'
+                    b['kind'] = 'text'  # a note between pictures: keep it modest
+                    b['html'] = b['html'].replace('<h2>', '<h3>').replace('</h2>', '</h3>')
                 else:
                     b['kind'] = 'text'
                     b['html'] = re.sub(r'</?h[23]>', lambda m: '<p>' if m.group(0) == '<h2>' or m.group(0) == '<h3>' else '</p>', b['html'])
@@ -138,7 +141,7 @@ def auto(bs):
 # ---- decisions made by eye per project: block index -> layout ----
 PLAN = {
     'large-language-objects': {7: 'wide-l', 11: 'wide-r', 12: 'half-l', 20: 'credits'},
-    'os-11': {3: 'half-l', 4: 'half-r', 5: 'quote', 9: 'grid3', 11: 'section', 12: 'full', 13: 'half-l', 14: 'half-r stagger'},
+    'os-11': {3: 'half-l', 4: 'half-r', 5: 'quote', 9: 'carousel', 11: 'section', 12: 'full', 13: 'half-l', 14: 'half-r stagger'},
     'hyperslice': {1: 'half-l', 2: 'beside-r', 3: 'grid4', 5: 'full', 8: 'grid4'},
     'imago': {0: 'small-l', 1: 'beside-r', 2: 'half-l', 3: 'grid3', 4: 'narrow-r', 8: 'wide-l', 9: 'text-l',
               10: 'half-l', 11: 'half-r', 12: 'text-r', 13: 'half-l', 14: 'section', 15: 'tri-a', 16: 'tri-b', 17: 'tri-c'},
@@ -146,9 +149,10 @@ PLAN = {
                9: 'full', 14: 'half-r', 16: 'wide-l', 18: 'small-l'},
     'tables': {0: 'full', 2: 'half-l', 3: 'grid3', 4: 'wide-r'},
     'yottabyte': {2: 'quote', 3: 'full', 4: 'half-l', 5: 'half-r', 6: 'wide-l', 7: 'full', 8: 'half-l', 9: 'half-r'},
-    'prismo': {2: 'quote', 4: 'text-l', 6: 'wide-r', 9: 'text-l', 10: 'half-r', 11: 'grid4', 14: 'grid3', 17: 'section',
+    'prismo': {2: 'quote', 4: 'text-l', 6: 'wide-r', 9: 'text-l', 10: 'half-r', 11: 'half-l', 14: 'grid3', 17: 'section',
                19: 'wide-l', 20: 'section', 21: 'full', 24: 'half-l', 25: 'half-r', 26: 'grid3'},
     'inflatable-patterner': {11: 'grid4'},
+    'eyelash': {7: 'stack'},  # the ten overview slides read full width, as on the old site
     'mind-bridge': {1: 'full', 2: 'half-l', 3: 'half-r', 4: 'full'},
     # ---- archive ----
     'vitalization': {2: 'wide-l', 3: 'wide-r stagger', 5: 'wide-c'},

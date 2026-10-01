@@ -42,7 +42,7 @@ FOLDER = {  # same mapping used when placing "From kaizhang.io" downloads
     'inflatable-generator': 'Pneuhaus', 'os-11': 'Operating System 1.1', 'large-language-objects': 'LLO',
     'pupas': 'Pupas', 'sound-x-2021-light-effect-design': 'Huawei', 'hyperslice': 'HyperSlice',
     'prismo': 'Prismo', 'zhang-zhoujie-digital-lab-internship': 'Tables', 'mind-bridge': 'Mind Bridge',
-    'seesaw': 'See X Saw', 'wind': 'Telewind', 'yotabyte': 'Yottabyte', '_covers_work': 'Thumbnail',
+    'seesaw': 'See X Saw', 'wind': 'Telewind', 'yotabyte': 'Yottabyte', 'at-opt-industries': 'Eyelash', '_covers_work': 'Thumbnail',
     '_covers_archive': 'Thumbnail',
     'barnacle-lamp': 'Barnacle Lamp', 'being-contained': 'Being Contained', 'briota-iospro': 'Briota IOSPro',
     'donut': 'Donut in haft', 'drawing': 'Drawings', 'give-light-a-hug': 'H U G', 'homovirus': 'Homovirus',
@@ -53,6 +53,7 @@ FOLDER = {  # same mapping used when placing "From kaizhang.io" downloads
     'transform': 'Transform', 'vitalization': 'Vitalization', 'wood-ii': 'Wood II', 'wood': 'Wood I',
 }
 GROUP = sys.argv[2] if len(sys.argv) > 2 else 'selected'
+ONLY = sys.argv[3] if len(sys.argv) > 3 else None  # optional: a single new slug to (re)import
 PAGES = ARCHIVE if GROUP == 'archive' else SELECTED
 COVER_KEY = '_covers_archive' if GROUP == 'archive' else '_covers_work'
 INDEX_HTML = 'archive.html' if GROUP == 'archive' else 'work.html'
@@ -272,7 +273,7 @@ def module_blocks(mod, old, media):
         return [{'type': 'gallery', 'items': items}] if items else []
     if kind == 'video':
         f = mod.find('iframe')
-        m = re.search(r'/ccv/([^/]+)/', f['src']) if f else None
+        m = re.search(r'/(?:ccv|embeds)/([^/?]+)', f['src']) if f else None
         return [media.video(m.group(1))] if m else []
     if kind == 'embed':
         f = mod.find('iframe')
@@ -315,6 +316,8 @@ def main():
     os.makedirs(DATA_OUT, exist_ok=True)
     cov = covers()
     for old, slug in PAGES.items():
+        if ONLY and slug != ONLY:
+            continue
         media = Media(slug)
         # hero: the largest of the cover / rollover images
         cands = [source_for(COVER_KEY, u) for u in cov.get(old, [])]

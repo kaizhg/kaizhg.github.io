@@ -29,7 +29,7 @@
   {
    "type": "text",
    "html": "<h3>▲<br>Harnessing the power of traditional rituals for the emerging technologies.<br>▼</h3>",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "image",
@@ -155,7 +155,7 @@
   {
    "type": "text",
    "html": "<h3>Part II: MIT HAN Lab Local Voice Assistant</h3>",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "row",

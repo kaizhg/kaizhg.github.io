@@ -3,7 +3,7 @@ import { Image, getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Blocks from '../../components/Blocks.astro';
 import Media from '../../components/Media.astro';
-import { projects, archive, allProjects, disciplines, projectCode, type Project } from '../../data/projects';
+import { projects, archive, allProjects, projectCode, type Project } from '../../data/projects';
 import { getCaseStudy, workImage, type Block } from '../../data/case-studies';
 
 export function getStaticPaths() {
@@ -77,7 +77,8 @@ const smallFacts = credits.filter((c) => c !== roleFact);
 let lead: string | null = null;
 const first = blocks[0];
 const firstText = first?.type === 'text' ? first.html.replace(/<[^>]+>/g, ' ').trim() : '';
-if (first?.type === 'text' && first.kind !== 'section' && (/<p>/.test(first.html) || firstText.length >= 40)) {
+// Statements (kind 'quote') stay in the body so they read the same on every page
+if (first?.type === 'text' && first.kind !== 'section' && first.kind !== 'quote' && (/<p>/.test(first.html) || firstText.length >= 40)) {
 	lead = first.html;
 	blocks = blocks.slice(1);
 }
@@ -97,8 +98,6 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 				<p class="code">{projectCode(project)}</p>
 				<h1>{project.title}</h1>
 				<dl class="facts">
-					<div><dt>Year</dt><dd>{project.year}</dd></div>
-					<div><dt>Discipline</dt><dd>{disciplines[project.discipline]}</dd></div>
 					<div><dt>Type</dt><dd>{project.summary}</dd></div>
 					{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
 					{smallFacts.map((c) => (

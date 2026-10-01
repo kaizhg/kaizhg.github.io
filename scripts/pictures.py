@@ -1,0 +1,181 @@
+"""Pixel pictures for the Life band. Draws them on a '.'/'#' canvas and writes
+the PICTURES table into src/components/Life.astro. Run: python3 scripts/pictures.py [--print]"""
+import re, sys
+
+class Canvas:
+    def __init__(s, w, h): s.w, s.h, s.g = w, h, [['.'] * w for _ in range(h)]
+    def set(s, x, y):
+        if 0 <= x < s.w and 0 <= y < s.h: s.g[y][x] = '#'
+    def put(s, art, x, y):
+        for j, row in enumerate(art.strip('\n').split('\n')):
+            for i, ch in enumerate(row):
+                if ch == '#': s.set(x + i, y + j)
+    def line(s, x0, y0, x1, y1):
+        dx, dy = abs(x1 - x0), -abs(y1 - y0); sx = 1 if x0 < x1 else -1; sy = 1 if y0 < y1 else -1; err = dx + dy
+        while True:
+            s.set(x0, y0)
+            if x0 == x1 and y0 == y1: break
+            e2 = 2 * err
+            if e2 >= dy: err += dy; x0 += sx
+            if e2 <= dx: err += dx; y0 += sy
+    def poly(s, pts):
+        for a, b in zip(pts, pts[1:]): s.line(*a, *b)
+    def ellipse(s, cx, cy, a, b):
+        import math
+        prev = None
+        for i in range(0, 721):
+            t = i / 720 * 2 * math.pi
+            p = (round(cx + a * math.cos(t)), round(cy + b * math.sin(t)))
+            if prev and prev != p: s.line(*prev, *p)
+            prev = p
+    def rows(s): return [''.join(r) for r in s.g]
+
+PICS = {}
+
+# ---- Seattle skyline: Great Wheel, Space Needle, Columbia Center, Smith Tower, Rainier Tower
+c = Canvas(64, 17)
+c.put("""
+...###...
+.#..#..#.
+#...#...#
+#...#...#
+#########
+#...#...#
+#...#...#
+.#..#..#.
+...###...""", 0, 8)
+c.put("""
+.....#.....
+....###....
+..#######..
+###########
+...#####...
+....#.#....
+....#.#....
+....#.#....
+...#.#.#...
+...#.#.#...
+..#..#..#..
+..#..#..#..
+.#...#...#.
+.#...#...#.
+#....#....#
+#....#....#
+#....#....#""", 12, 0)
+c.put("""
+#####
+#...#
+#.#.#
+#...#
+#.#.#
+#...#""", 25, 11)
+c.put("""
+...####...
+.########.
+##########
+#........#
+#.#.#..#.#
+#........#
+#.#.#..#.#
+#........#
+#.#.#..#.#
+#........#
+#.#.#..#.#
+#........#
+#.#.#..#.#
+#........#
+#.#.#..#.#
+##########""", 32, 1)
+c.put("""
+..##..
+.####.
+######
+#....#
+#.##.#
+#....#
+#.##.#
+#....#
+#.##.#
+#....#
+######""", 44, 6)
+c.put("""
+########
+#.#..#.#
+#.#..#.#
+#.#..#.#
+#.#..#.#
+########
+.######.
+..####..
+...##...
+...##...
+...##...
+...##...
+...##...""", 53, 4)
+c.line(0, 16, 63, 16)
+PICS['@seattle'] = c.rows()
+
+# ---- PCB: a chip with traces fanning out through 45° bends to pads and vias
+c = Canvas(60, 15)
+c.put("""
+##############
+#.#..........#
+#............#
+#............#
+#............#
+#............#
+#............#
+#............#
+##############""", 23, 3)
+pad = "###\n#.#\n###"
+via = "##\n##"
+# left pins (rows 5, 7, 9)
+c.line(22, 5, 14, 5); c.line(14, 5, 10, 1); c.line(10, 1, 5, 1); c.put(pad, 2, 0)
+c.line(22, 7, 12, 7); c.put(pad, 9, 6)
+c.line(22, 9, 16, 9); c.line(16, 9, 12, 13); c.line(12, 13, 6, 13); c.put(via, 4, 12)
+# right pins
+c.line(37, 5, 44, 5); c.line(44, 5, 47, 2); c.line(47, 2, 54, 2); c.put(pad, 55, 1)
+c.line(37, 7, 50, 7); c.put(pad, 51, 6)
+c.line(37, 9, 42, 9); c.line(42, 9, 46, 13); c.line(46, 13, 52, 13); c.put(pad, 53, 12)
+# top and bottom pins
+c.line(28, 2, 28, 0); c.line(32, 2, 32, 0)
+c.line(28, 12, 28, 14); c.line(32, 12, 32, 14)
+# stray vias
+c.put(via, 18, 11); c.put(via, 40, 0); c.put(via, 1, 8)
+PICS['@pcb'] = c.rows()
+
+# ---- Fish, swimming left
+c = Canvas(36, 12)
+c.ellipse(14, 6, 13, 5)
+c.poly([(27, 6), (33, 1), (32, 6), (33, 11), (27, 6)])
+c.line(10, 1, 15, 0); c.line(15, 0, 19, 1)          # dorsal fin
+c.line(11, 7, 14, 9); c.line(14, 9, 10, 9)           # pectoral fin
+c.line(8, 3, 7, 6); c.line(7, 6, 8, 9)               # gill
+c.set(5, 5); c.set(5, 4); c.set(4, 5)                # eye
+for x, y in [(16, 3), (20, 3), (18, 5), (22, 5), (16, 7), (20, 7)]: c.set(x, y)   # a few scales
+PICS['@fish'] = c.rows()
+
+# ---- Airship: envelope, tail fins, gondola
+c = Canvas(54, 13)
+c.ellipse(24, 5, 22, 4)
+c.line(12, 2, 12, 8); c.line(36, 2, 36, 8)           # panel seams
+c.poly([(38, 2), (47, 0), (47, 3)]); c.poly([(38, 8), (47, 10), (47, 7)])   # fins
+c.line(19, 10, 19, 11); c.line(27, 10, 27, 11)       # struts
+c.put("##########\n#........#\n##########", 18, 10)   # gondola
+c.line(2, 5, 0, 5)                                    # nose cone
+PICS['@airship'] = c.rows()
+
+for k, rows in PICS.items():
+    assert len({len(r) for r in rows}) == 1, k
+if '--print' in sys.argv:
+    for k, rows in PICS.items(): print(k, len(rows[0]), 'x', len(rows)); print('\n'.join(rows)); print()
+
+p = 'src/components/Life.astro'; s = open(p).read()
+table = "\t\tconst PICTURES: Record<string, string[]> = {\n" + ''.join(
+    f"\t\t\t'{k}': [\n" + ''.join(f"\t\t\t\t'{r}',\n" for r in rows) + "\t\t\t],\n" for k, rows in PICS.items()) + "\t\t};\n"
+s, n = re.subn(r"\t\tconst PICTURES: Record<string, string\[\]> = \{\n.*?\n\t\t\};\n", lambda m: table, s, flags=re.S)
+if not n:
+    anchor = "\t\tconst GAP = 1, LETTER_H = 7;"
+    assert anchor in s
+    s = s.replace(anchor, "\t\t// Pixel pictures (generated by scripts/pictures.py), shown between words at one cell per pixel\n" + table + anchor)
+open(p, 'w').write(s); print('written', list(PICS))

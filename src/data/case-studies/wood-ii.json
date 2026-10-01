@@ -113,6 +113,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 3,
    "layout": "grid3",
    "kind": "gallery"
   }

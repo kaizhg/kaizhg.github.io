@@ -7,8 +7,189 @@
   "width": 2000,
   "height": 1563
  },
- "locked": true,
- "blocks": [],
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h3>3D Printed Eye Lashes R&amp;D.<br>Now available at <a href=\"https://tadbeauty.com/\">TAD Beauty</a>.</h3>",
+   "kind": "text"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.615,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "eyelash/02.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.385,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/eyelash/03.mp4",
+       "width": 900,
+       "height": 899,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "eyelash/04.jpg",
+       "width": 2000,
+       "height": 2000,
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "eyelash/05.jpg",
+       "width": 1080,
+       "height": 1080,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "text",
+   "html": "<p><a href=\"https://www.optindustries.com/\">OPT Industries</a> is an advanced manufacturing company specializing in ultra-high-resolution 3D printing and material design, delivering innovative solutions for industries like cosmetics and healthcare.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "eyelash/06.jpg",
+   "width": 2400,
+   "height": 1244,
+   "kind": "photo"
+  },
+  {
+   "type": "text",
+   "kind": "text",
+   "html": "<h3>What I've achieved</h3><p>1. Geometry optimization<br>2. New support and layout<br>3. Design tools development</p><p>⬆ Yield &nbsp;·&nbsp; ⬆ Throughput &nbsp;·&nbsp; ⬆ Iteration</p>"
+  },
+  {
+   "type": "text",
+   "html": "<p>Below shows a simplified overview of works I've done.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "eyelash/07.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/08.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/09.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/10.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/11.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/12.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/13.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/14.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/15.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "eyelash/16.jpg",
+     "width": 1920,
+     "height": 1080,
+     "kind": "white"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "stack"
+  },
+  {
+   "type": "video",
+   "src": "/media/eyelash/FDey9ZSMVwu.mp4",
+   "poster": "/media/eyelash/FDey9ZSMVwu.jpg",
+   "width": 1280,
+   "height": 584,
+   "audio": true,
+   "kind": "video"
+  },
+  {
+   "type": "image",
+   "src": "eyelash/17.jpg",
+   "width": 2400,
+   "height": 1316,
+   "kind": "photo"
+  }
+ ],
  "cover": {
   "type": "image",
   "src": "eyelash/cover.jpg",

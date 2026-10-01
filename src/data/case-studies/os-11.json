@@ -92,6 +92,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 3,
    "kind": "gallery",
    "layout": "grid4"
   },
@@ -155,23 +156,9 @@
      "width": 1920,
      "height": 1080,
      "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "os-11/13.jpg",
-     "width": 1920,
-     "height": 1080,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "os-11/14.jpg",
-     "width": 1920,
-     "height": 1080,
-     "kind": "photo"
     }
    ],
-   "layout": "grid3",
+   "layout": "carousel",
    "kind": "gallery"
   },
   {

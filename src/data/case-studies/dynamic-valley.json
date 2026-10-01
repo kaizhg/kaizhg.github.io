@@ -13,7 +13,7 @@
    "type": "text",
    "html": "<h3>1. Create a conceptual visualization of the body motion</h3>",
    "layout": "text-l",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "row",
@@ -135,7 +135,7 @@
       {
        "type": "text",
        "html": "<h3>2. Cyclic Celluar Automata as a 2.5D mesh manipulation</h3>",
-       "kind": "quote"
+       "kind": "text"
       }
      ]
     },

@@ -106,6 +106,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 3,
    "kind": "gallery",
    "layout": "grid4"
   },

@@ -24,10 +24,10 @@ interface Props {
 const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 ---
 
-<ul class:list={["grid", { small }]} style={`--cols: ${cols}`}>
+<ul class:list={["grid", "reveal", { small }]} style={`--cols: ${cols}`}>
 	{
 		tiles.map(({ p, img, loop, hover }, i) => (
-			<li data-discipline={p.discipline} class="reveal" style={`transition-delay: ${(i % cols) * 60}ms`}>
+			<li data-discipline={p.discipline}>
 				<a href={`/work/${p.slug}/`}>
 					<span class="frame">
 						{img && (
@@ -125,14 +125,27 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 		aspect-ratio: var(--ratio);
 		overflow: hidden;
 		background: var(--line);
+		/* Columns land on fractional pixels; each frame runs 1px under its right and lower
+		   neighbour so no rounding seam can open between tiles (the neighbour paints on top) */
+		margin: 0 -1px -1px 0;
 	}
 	.frame :global(img),
 	.frame :global(video) {
-		width: 100%;
-		height: 100%;
+		/* One pixel larger than the frame on every side, so the scaled edge never shows a seam */
+		position: absolute;
+		inset: -1px;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
 		object-fit: cover;
 		display: block;
 		transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	/* Video is composited on its own layer and snapped to whole pixels independently of the
+	   frame, so give it a wider margin than the stills: 2px past the frame on every side */
+	.frame :global(video) {
+		inset: -2px;
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
 	}
 	.grid a:hover .frame :global(img),
 	.grid a:hover .frame :global(video) {
@@ -140,8 +153,6 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 	}
 	/* Second shot / loop, faded in on hover */
 	.frame :global(.hover) {
-		position: absolute;
-		inset: 0;
 		opacity: 0;
 		transition: opacity 0.3s ease;
 	}

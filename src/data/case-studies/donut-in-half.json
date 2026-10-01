@@ -56,6 +56,7 @@
      "kind": "photo"
     }
    ],
+   "cols": 2,
    "layout": "grid3",
    "kind": "gallery"
   },
