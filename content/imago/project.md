@@ -8,7 +8,7 @@ discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
 cover: imago_vogue25_10.jpg        # 首页封面（32:25 裁切）
 hover: imago_vogue25_08.jpg        # 鼠标悬停时换成的图或循环视频
-hero: imago_cover.jpg              # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
+hero: imago_vogue25_02.jpg         # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 hero_width: half                   # 顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左
 ---
 
@@ -37,6 +37,26 @@ hero_width: half                   # 顶部大图宽度：full（整宽）/ wide
 Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
 
 ![](imago_02.png "It's launched and available for purchase on Red (XiaoHongShu).") half-l
+
+### 2025 VOGUE China Fashion Fund & Jewelry Competition
+
+Collaborated with 唐牧冢
+
+![](imago_vogue25_08.jpg) @1-6
+
+![](imago_vogue25_05.jpg) @5-9
+
+![](imago_vogue25_06.jpg) @9-13
+
+![](imago_vogue25_07.jpg) @1-5
+
+![](imago_vogue25_10.jpg) @5-9
+
+![](imago_vogue25_15.jpg) @4-8
+
+![](imago_vogue25_04.jpg) @8-12
+
+[gallery grid3] imago_vogue25_11.jpg imago_vogue25_12.jpg imago_vogue25_13.jpg
 
 [gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
 

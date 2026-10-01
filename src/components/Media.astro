@@ -7,9 +7,10 @@ interface Props {
 	alt?: string;
 	sizes?: string;
 	eager?: boolean;
+	portrait?: boolean;
 }
 
-const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = false } = Astro.props;
+const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = false, portrait = false } = Astro.props;
 ---
 
 {
@@ -20,7 +21,7 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 			widths={[...new Set([640, 1024, 1600, 2400, block.width].filter((w) => w <= block.width))]}
 			sizes={sizes}
 			loading={eager ? 'eager' : 'lazy'}
-			class:list={['media', { alpha: /\.png$/i.test(block.src) }]}
+			class:list={['media', { alpha: /\.png$/i.test(block.src), portrait }]}
 		/>
 	)
 }

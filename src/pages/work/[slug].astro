@@ -126,10 +126,10 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 				<div class:list={['hero', { wide: study.heroWidth === 'wide' || study.heroWidth === 'half', half: study.heroWidth === 'half' }]}>
 					{study.link ? (
 						<a href={study.link} target="_blank" rel="noopener" aria-label={`${project.title} — open link`}>
-							<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+							<Media block={study.hero} alt={project.title} sizes="100vw" eager portrait={study.hero.height > study.hero.width} />
 						</a>
 					) : (
-						<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+						<Media block={study.hero} alt={project.title} sizes="100vw" eager portrait={study.hero.height > study.hero.width} />
 					)}
 				</div>
 			)
@@ -298,6 +298,10 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 		width: calc(100% + clamp(12px, 1.6vw, 24px)); /* fills the gutter too, so its right edge is column 9 */
 		max-width: none;
 		max-height: none;
+	}
+	.hero.wide :global(.media.portrait) {
+		width: auto; /* a tall picture keeps to the screen height instead of the column width */
+		max-height: 78vh;
 	}
 	@media (max-width: 800px) {
 		.hero.wide > :global(*) {

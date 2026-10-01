@@ -3,9 +3,9 @@
  "legacy": "https://kaizhang.io/pupas",
  "hero": {
   "type": "image",
-  "src": "imago/imago_cover.jpg",
-  "width": 1606,
-  "height": 1256
+  "src": "imago/imago_vogue25_02.jpg",
+  "width": 1600,
+  "height": 2400
  },
  "locked": false,
  "blocks": [
@@ -31,6 +31,95 @@
    "caption": "It's launched and available for purchase on Red (XiaoHongShu).",
    "layout": "half-l",
    "kind": "photo"
+  },
+  {
+   "type": "text",
+   "html": "<h3>2025 VOGUE China Fashion Fund &amp; Jewelry Competition</h3><p>Collaborated with 唐牧冢</p>",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_08.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@1-6",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_05.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@5-9",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_06.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@9-13",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_07.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@1-5",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_10.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@5-9",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_15.jpg",
+   "width": 1600,
+   "height": 2400,
+   "layout": "@4-8",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_vogue25_04.jpg",
+   "width": 1165,
+   "height": 2400,
+   "layout": "@8-12",
+   "kind": "photo"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_11.jpg",
+     "width": 1691,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_12.jpg",
+     "width": 1440,
+     "height": 1920,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_13.jpg",
+     "width": 1691,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
