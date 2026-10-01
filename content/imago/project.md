@@ -6,8 +6,9 @@ group: selected                    # selected 或 archive
 position: 5                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
-cover: imago_cover.jpg             # 首页封面（32:25 裁切）
-hover: imago_hover.jpg             # 鼠标悬停时换成的图或循环视频
+cover: imago_vogue25_10.jpg        # 首页封面（32:25 裁切）
+hover: imago_vogue25_08.jpg        # 鼠标悬停时换成的图或循环视频
+hero: imago_cover.jpg              # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 hero_width: half                   # 顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左
 ---
 
