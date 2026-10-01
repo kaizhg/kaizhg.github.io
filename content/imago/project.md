@@ -31,12 +31,12 @@ hero: inline                       # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-[row 0.5 0.5]
-![](imago_01.png) w=320
+[row 0.65 0.35 spread]
+![](imago_01.png) w=260
 
 Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.
 |
-![](imago_vogue25_02.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang")
+![](imago_vogue25_02.jpg "Images courtesy of Project Imago, Iris Chen and Sichen Tang")
 [/row]
 
 ### 2025 VOGUE China Fashion Fund & Jewelry Competition
@@ -44,11 +44,11 @@ Project Imago is a wearable sculpture laboratory led by graduates from Harvard U
 Collaborated with 唐牧冢
 
 [cluster]
-![](imago_vogue25_08.jpg) @2-5
-![](imago_vogue25_05.jpg) @5-7 y=5
-![](imago_vogue25_06.jpg) @7-9 y=5
-![](imago_vogue25_07.jpg) @4-6 y=11
-![](imago_vogue25_10.jpg) @6-8 y=11
+![](imago_vogue25_08.jpg) @1-5
+![](imago_vogue25_05.jpg) @5-8 y=6
+![](imago_vogue25_06.jpg) @8-11 y=6
+![](imago_vogue25_07.jpg) @3-6 y=15
+![](imago_vogue25_10.jpg) @6-9 y=15
 [/cluster]
 
 [gallery grid3 @2-12] imago_vogue25_11.jpg imago_vogue25_13.jpg imago_vogue25_14.jpg

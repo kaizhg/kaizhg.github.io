@@ -376,7 +376,7 @@ def has_audio(path):
 
 # ![](file "caption")  or the forgivable  ![](file) "caption";  wrapped in [ ... ](url) it is a link
 MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?(?:\s*"([^"]*)")?')
-LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|@\d{1,2}-\d{1,2}|y=\d{1,2}|w=\d{2,4})'
+LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|spread|@\d{1,2}-\d{1,2}|y=\d{1,2}|w=\d{2,4})'
 HINT_RE = re.compile(r'\s+((?:' + LAYOUT_WORDS + r')(?:\s+' + LAYOUT_WORDS + r')*)$')
 
 
@@ -471,12 +471,15 @@ def parse_lines(lines, folder, slug, allow_rows=True):
             if not allow_rows:
                 raise ValueError(f'{slug}: a row inside a row')
             flush()
-            m = re.match(r'\[row((?:\s+' + LAYOUT_WORDS + r')*)((?:\s+[\d.]+)*)\]\s*(.*)$', s)
+            m = re.match(r'\[row((?:\s+(?:' + LAYOUT_WORDS + r'|[\d.]+))*)\]\s*(.*)$', s)
             if not m:
                 raise ValueError(f'{slug}: 看不懂这个 [row] 行，写法是 [row] 或 [row 0.4 0.6]: {s}')
+            words = m.group(1).split()
+            row_layout = ' '.join(w for w in words if not re.fullmatch(r'[\d.]+', w))
+            row_flex = [float(w) for w in words if re.fullmatch(r'[\d.]+', w)]
             cols, cur = [], []
-            if m.group(3).strip():  # something written right after [row ...] counts as the first column's first line
-                cur.append(m.group(3).strip())
+            if m.group(2).strip():  # something written right after [row ...] counts as the first column's first line
+                cur.append(m.group(2).strip())
             i += 1
             while i < len(lines) and lines[i].strip() != '[/row]':
                 if lines[i].strip() == '|':
@@ -486,10 +489,10 @@ def parse_lines(lines, folder, slug, allow_rows=True):
                 i += 1
             cols.append(cur)
             i += 1
-            flex = [float(x) for x in m.group(2).split()] if m.group(2).strip() else [1 / len(cols)] * len(cols)
+            flex = row_flex if row_flex else [1 / len(cols)] * len(cols)
             row = {'type': 'row', 'columns': [{'flex': round(f, 4), 'blocks': parse_lines(c, folder, slug, False)} for f, c in zip(flex, cols)]}
-            if m.group(1).strip():
-                row['layout'] = m.group(1).strip()
+            if row_layout:
+                row['layout'] = row_layout
             blocks.append(row)
             continue
         if MEDIA_RE.match(s) and ' | ' in s:

@@ -345,7 +345,7 @@ const galleryClass = (b: Laid) => {
 					const colFlex = (c: any) => (fit ? 1 / c.blocks.reduce((sum: number, m: any) => sum + 1 / dims(m)!, 0) : c.flex);
 					return (
 						<div
-							class:list={['block', 'row', { media: photos, fit, stagger: photos && b.columns.length === 2 && b.layout === 'stagger' }]}
+							class:list={['block', 'row', { media: photos, fit, stagger: photos && b.columns.length === 2 && b.layout === 'stagger', spread: b.layout === 'spread' }]}
 							style={fit ? `--cols: ${b.columns.map((c) => `${colFlex(c).toFixed(4)}fr`).join(' ')}` : undefined}
 						>
 							{b.columns.map((c, k) => (
@@ -719,6 +719,25 @@ const galleryClass = (b: Laid) => {
 	}
 	.row.stagger .col:nth-child(2) {
 		margin-top: clamp(32px, 7vw, 120px);
+	}
+	/* Opener rows: the text column stretches to the picture's height; its first block (a logo)
+	   sits at the top and the rest settles on the picture's bottom edge, one measure wide */
+	.row.spread {
+		align-items: stretch;
+	}
+	.row.spread .col:first-child {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.row.spread .col:first-child > :global(.block) {
+		margin-bottom: 0;
+	}
+	.row.spread .col :global(.text) {
+		max-width: 34rem;
+	}
+	.row.spread .col:last-child :global(.media) {
+		margin-left: auto; /* the picture hugs the outer edge */
 	}
 	/* Fitted rows: a grid whose columns are sized from the pictures' shapes, so every picture
 	   shares the same top and bottom edge; captions sit in a second row underneath, so a
