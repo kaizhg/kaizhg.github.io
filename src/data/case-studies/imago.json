@@ -61,42 +61,32 @@
    "kind": "gallery"
   },
   {
-   "type": "image",
-   "src": "imago/imago_06.jpg",
-   "width": 1284,
-   "height": 1692,
-   "layout": "narrow-r",
-   "kind": "photo"
-  },
-  {
-   "type": "row",
-   "columns": [
+   "type": "gallery",
+   "items": [
     {
-     "flex": 0.5912,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "imago/imago_07.jpg",
-       "width": 2400,
-       "height": 2213,
-       "kind": "photo"
-      }
-     ]
+     "type": "image",
+     "src": "imago/imago_06.jpg",
+     "width": 1284,
+     "height": 1692,
+     "kind": "photo"
     },
     {
-     "flex": 0.4088,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "imago/imago_08.jpg",
-       "width": 1800,
-       "height": 2400,
-       "kind": "photo"
-      }
-     ]
+     "type": "image",
+     "src": "imago/imago_07.jpg",
+     "width": 2400,
+     "height": 2213,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_08.jpg",
+     "width": 1800,
+     "height": 2400,
+     "kind": "photo"
     }
    ],
-   "kind": "row"
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
@@ -142,21 +132,13 @@
        "src": "imago/imago_12.jpg",
        "width": 1406,
        "height": 1056,
+       "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
        "kind": "photo"
       }
      ]
     }
    ],
    "kind": "row"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_13.jpg",
-   "width": 2400,
-   "height": 1746,
-   "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
-   "layout": "wide-l",
-   "kind": "photo"
   },
   {
    "type": "text",

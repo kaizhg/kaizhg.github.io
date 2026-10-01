@@ -38,23 +38,25 @@ Project Imago is a wearable sculpture laboratory led by graduates from Harvard 
 
 [gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
 
-![](imago_06.jpg) narrow-r
+[gallery grid3] imago_06.jpg imago_07.jpg imago_08.jpg
+
+<!-- ![](imago_06.jpg) narrow-r
 
 [row 0.5912 0.4088]
 ![](imago_07.jpg)
 |
 ![](imago_08.jpg)
-[/row]
+[/row] -->
 
 [gallery grid3] imago_09.jpg imago_10.jpg
 
 [row 0.358 0.642]
 ![](imago_11.jpg)
 |
-![](imago_12.jpg)
+![](imago_12.jpg) "Image credits to Project Imago, Iris Chen and Sichen Tang"
 [/row]
-
-![](imago_13.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang") wide-l
+<!--
+![](imago_13.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang") wide-l -->
 
 ### This page shows some of the early studies of Project Imago, starting at 2021. {text-l}
 
