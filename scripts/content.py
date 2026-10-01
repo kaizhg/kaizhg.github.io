@@ -172,7 +172,10 @@ def parse_fm(text):
 
 
 def strip_comment(v):
-    return v if v.startswith('"') else re.sub(r'\s+#.*$', '', v).strip()
+    if v.startswith('"'):
+        m = re.match(r'^("(?:[^"\\]|\\.)*")\s*(?:#.*)?$', v)
+        return m.group(1) if m else v
+    return re.sub(r'(^|\s+)#.*$', '', v).strip()
 
 
 def unq(s):
