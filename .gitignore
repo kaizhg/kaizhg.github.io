@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 # local editor/agent config
 .claude/
+
+# Obsidian vault settings (content/ opened as a vault)
+.obsidian/

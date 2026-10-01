@@ -36,7 +36,7 @@ hero: large-language-objects_hero.jpg # 项目页顶部大图；没有这行就�
 
 [section] Part I: AIncense
 
-![](large-language-objects_01.jpg) "Inspiration: Could we harness power of traditional rituals for the emerging technologies?"
+![](large-language-objects_01.jpg)"Inspiration: Could traditional rituals inform emerging technologies?"
 
 <!-- ![](large-language-objects_02.jpg) -->
 
