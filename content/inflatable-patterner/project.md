@@ -72,7 +72,7 @@ The below animation demonstrates the adjustable nature of the complex strip's 
 
 The diagram and animation above show the general steps and the mapping between 3D geometry and 2D flattened pieces. The GIF on the right serves as a group dictionary that shows the overall assembly sequence.
 
-[gallery grid4] inflatable-patterner_41.jpg "1. Draw connect lines" inflatable-patterner_42.jpg "2. Thicken lines(Using Mesh Fattener or Multipipe by Daniel Piker)" inflatable-patterner_43.jpg "3. Dispatch complex(vertex valence > 4) and simple regions" inflatable-patterner_44.jpg "4. Divide regions into panels. The panels will be reconstructed as patch mesh for unroll purpose."
+[gallery grid4] inflatable-patterner_41.jpg "1. Draw connect lines" inflatable-patterner_42.jpg "2. Thicken lines (Using Mesh Fattener or Multipipe by Daniel Piker)" inflatable-patterner_43.jpg "3. Dispatch complex (vertex valence > 4) and simple regions" inflatable-patterner_44.jpg "4. Divide regions into panels. The panels will be reconstructed as patch mesh for unroll purpose."
 
 ![](inflatable-patterner_45.mp4)
 

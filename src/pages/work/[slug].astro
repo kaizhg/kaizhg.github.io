@@ -244,14 +244,23 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 		padding: 0;
 		list-style: none;
 		font: 13px/1.5 var(--text);
-		max-width: 30rem;
+		max-width: 32rem;
+	}
+	/* Hanging bullets: the dash sits in its own gutter so wrapped lines align with the text */
+	.role li {
+		display: grid;
+		grid-template-columns: 18px 1fr;
+		column-gap: 2px;
 	}
 	.role li + li {
-		margin-top: 4px;
+		margin-top: 6px;
 	}
 	.role li::before {
-		content: '— ';
-		color: var(--muted);
+		content: '';
+		width: 10px;
+		height: 1px;
+		background: var(--muted);
+		margin-top: calc(0.75em - 0.5px);
 	}
 	.lead :global(p) {
 		font-family: var(--text);

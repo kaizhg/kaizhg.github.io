@@ -131,25 +131,33 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 	}
 	.frame :global(img),
 	.frame :global(video) {
-		/* One pixel larger than the frame on every side, so the scaled edge never shows a seam */
+		/* One pixel larger than the frame on every side, so the edge never shows a seam.
+		   The hover zoom grows the insets rather than a transform: a transform runs on the
+		   compositor, where the clip is rounded differently from the page, and a hairline of
+		   the cover could show around a dark rollover while it ran. Insets are laid out and
+		   painted with the frame itself, so the clip is identical on every frame. */
 		position: absolute;
-		inset: -1px;
-		width: calc(100% + 2px);
-		height: calc(100% + 2px);
+		--over: 1px; /* how far past the frame the picture runs */
+		--zoom: 0%; /* extra run-out on hover, per side */
+		top: calc(0px - var(--over) - var(--zoom));
+		left: calc(0px - var(--over) - var(--zoom));
+		width: calc(100% + 2 * var(--over) + 2 * var(--zoom));
+		height: calc(100% + 2 * var(--over) + 2 * var(--zoom));
+		max-width: none;
+		max-height: none;
 		object-fit: cover;
 		display: block;
-		transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+		transition: top 1.2s, left 1.2s, width 1.2s, height 1.2s;
+		transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
 	/* Video is composited on its own layer and snapped to whole pixels independently of the
 	   frame, so give it a wider margin than the stills: 2px past the frame on every side */
 	.frame :global(video) {
-		inset: -2px;
-		width: calc(100% + 4px);
-		height: calc(100% + 4px);
+		--over: 2px;
 	}
 	.grid a:hover .frame :global(img),
 	.grid a:hover .frame :global(video) {
-		transform: scale(1.03);
+		--zoom: 1.5%;
 	}
 	/* Second shot / loop, faded in on hover */
 	.frame :global(.hover) {

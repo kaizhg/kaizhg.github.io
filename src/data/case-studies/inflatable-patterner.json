@@ -391,7 +391,7 @@
      "src": "inflatable-patterner/inflatable-patterner_42.jpg",
      "width": 1920,
      "height": 1568,
-     "caption": "2. Thicken lines(Using Mesh Fattener or Multipipe by Daniel Piker)",
+     "caption": "2. Thicken lines (Using Mesh Fattener or Multipipe by Daniel Piker)",
      "kind": "white"
     },
     {
@@ -399,7 +399,7 @@
      "src": "inflatable-patterner/inflatable-patterner_43.jpg",
      "width": 1920,
      "height": 1568,
-     "caption": "3. Dispatch complex(vertex valence > 4) and simple regions",
+     "caption": "3. Dispatch complex (vertex valence > 4) and simple regions",
      "kind": "white"
     },
     {

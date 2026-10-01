@@ -13,7 +13,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
   Instructor: Chuck Hoberman
   Duration: 6 Weeks
   Team: Kai Zhang, Quincy Kuang, Danning Liang
-  Thanks: Youtian Duan(Welding), Liu Yang(Assembly)
+  Thanks: Youtian Duan (Welding), Liu Yang (Assembly)
   Role:
     - "[1] Proposed the innovative concept of combining mirror and prismatic structures to create a transformable lighting solution."
     - "[2] Conducted research into both design directions and developed a Grasshopper C# script to streamline the design and simulation process for the team."
