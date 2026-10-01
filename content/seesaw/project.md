@@ -40,8 +40,6 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 
 See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.
 
-![](seesaw_hero.jpg) full
-
 ![](seesaw_01.jpg) half-l
 
 ![](seesaw_02.jpg) half-r stagger

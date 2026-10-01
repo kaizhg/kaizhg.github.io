@@ -36,7 +36,7 @@ hero: large-language-objects_hero.jpg # 项目页顶部大图；没有这行就�
 
 [section] Part I: AIncense
 
-![](large-language-objects_01.jpg)"Inspiration: Could traditional rituals inform emerging technologies?"
+![](large-language-objects_01.jpg "Inspiration: Could traditional rituals inform emerging technologies?") wide-r
 
 <!-- ![](large-language-objects_02.jpg) -->
 
@@ -71,7 +71,7 @@ In Fall 2024, I had a chance to revisit this project, and made a hardware design
 
 ![](large-language-objects_10.jpg "Incense PCB Iterations") half-l
 
-### Part II: MIT HAN Lab Local Voice Assistant
+[section] Part II: MIT HAN Lab Local Voice Assistant
 
 [row 0.645 0.355]
 ![](large-language-objects_11.mp4)
@@ -124,7 +124,7 @@ Project team: Quincy Kuang, Lingdong Huang, Kai Zhang, MIT HAN Lab {credits}
 This integration enables powerful technologies to operate locally, fortifying the safeguarding of personal privacy. "TinyChat" emerges as a pioneering project to explore this very concept. We crafted the TinyChat computer with a design reminiscent of classic computers, both as a tribute to the original idea of a "personal computer" and as a reminder of their historical aesthetics. This raises an interesting query: as AI software evolves, might it also transform the physical form of computers themselves?
 [/row]
 
-![](large-language-objects_17.jpg)
+![](large-language-objects_17.jpg) @2-12
 
 [row 0.315 0.685]
 All of TinyChat computer's hardware are custom designed except the keys. We wanted to craft the most compact interface for portability, personalization, and of course, the ultimate retro look.

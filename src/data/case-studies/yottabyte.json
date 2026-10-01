@@ -28,14 +28,6 @@
   },
   {
    "type": "image",
-   "src": "yottabyte/yottabyte_01.jpg",
-   "width": 2400,
-   "height": 1551,
-   "layout": "full",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
    "src": "yottabyte/yottabyte_02.jpg",
    "width": 2400,
    "height": 1551,
@@ -69,24 +61,38 @@
    "kind": "video"
   },
   {
-   "type": "video",
-   "src": "/media/yottabyte/yottabyte_06.mp4",
-   "poster": "/media/yottabyte/yottabyte_06.jpg",
-   "width": 1154,
-   "height": 1080,
-   "audio": false,
-   "layout": "half-l",
-   "kind": "video"
-  },
-  {
-   "type": "video",
-   "src": "/media/yottabyte/yottabyte_07.mp4",
-   "poster": "/media/yottabyte/yottabyte_07.jpg",
-   "width": 1280,
-   "height": 840,
-   "audio": false,
-   "layout": "half-r",
-   "kind": "video"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/yottabyte/yottabyte_06.mp4",
+       "poster": "/media/yottabyte/yottabyte_06.jpg",
+       "width": 1154,
+       "height": 1080,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/yottabyte/yottabyte_07.mp4",
+       "poster": "/media/yottabyte/yottabyte_07.jpg",
+       "width": 1280,
+       "height": 840,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   }
  ],
  "cover": {

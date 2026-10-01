@@ -45,34 +45,12 @@
    "kind": "row"
   },
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "eyelash/eyelash_03.jpg",
-       "width": 2000,
-       "height": 2000,
-       "kind": "white"
-      }
-     ]
-    },
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "eyelash/eyelash_04.jpg",
-       "width": 1080,
-       "height": 1080,
-       "kind": "photo"
-      }
-     ]
-    }
-   ],
-   "kind": "row"
+   "type": "image",
+   "src": "eyelash/eyelash_03.jpg",
+   "width": 2000,
+   "height": 2000,
+   "layout": "narrow-l",
+   "kind": "white"
   },
   {
    "type": "text",
@@ -81,9 +59,18 @@
   },
   {
    "type": "image",
+   "src": "eyelash/eyelash_04.jpg",
+   "width": 1080,
+   "height": 1080,
+   "layout": "@7-11",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
    "src": "eyelash/eyelash_05.jpg",
    "width": 2400,
    "height": 1244,
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
@@ -170,7 +157,7 @@
      "kind": "white"
     }
    ],
-   "layout": "stack",
+   "layout": "stack @2-12",
    "kind": "gallery"
   },
   {
@@ -180,6 +167,7 @@
    "width": 1280,
    "height": 584,
    "audio": true,
+   "layout": "@2-12",
    "kind": "video"
   },
   {
@@ -187,6 +175,7 @@
    "src": "eyelash/eyelash_17.jpg",
    "width": 2400,
    "height": 1316,
+   "layout": "full",
    "kind": "photo"
   }
  ],

@@ -33,8 +33,6 @@ hero: telewind_hero.jpg            # 项目页顶部大图；没有这行就用�
 
 # When furniture materializes wind, and wind creates telepresence:
 
-![](telewind_hero.jpg) full
-
 ![](telewind_01.jpg) half-l
 
 ![](telewind_02.jpg) half-r

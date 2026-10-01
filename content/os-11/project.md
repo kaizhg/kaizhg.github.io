@@ -43,7 +43,7 @@ credits_notes:                     # 不属于固定栏目的 credits 文字，�
 
 OS 1.1 harnesses the built infrastructure to extend our sensory registers. We have collaboratively designed an operating system: a lighting network linked by air. As mechanical wooden inputs are touched and turned, lighting outputs change and fluctuate. Manipulation of the physical apparatus directs sensory phenomena along new pathways.
 
-![](os-11_01.jpg)
+![](os-11_01.jpg) wide-l
 
 [video audio half-l] os-11_02.mp4
 
@@ -65,14 +65,14 @@ CNC wood + Hose clamp + Steel balls + DIY RGB Optical encoder
 
 [gallery carousel] os-11_11.jpg os-11_12.jpg os-11_13.jpg
 
-[video] os-11_14.mp4
+[video wide-r] os-11_14.mp4
 
 [section] OS1.2: Universal through-hole, disassemble, optical rotary encoder
 
-![](os-11_15.jpg) full
+![](os-11_15.jpg) @2-12
 
 ![](os-11_16.jpg) half-l
 
 ![](os-11_17.jpg) half-r stagger
 
-[video audio] os-11_18.mp4
+[video audio wide-l] os-11_18.mp4

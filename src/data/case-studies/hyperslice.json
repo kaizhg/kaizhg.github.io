@@ -11,17 +11,10 @@
  "blocks": [
   {
    "type": "image",
-   "src": "hyperslice/hyperslice_01.jpg",
-   "width": 2400,
-   "height": 1359,
-   "kind": "white"
-  },
-  {
-   "type": "image",
    "src": "hyperslice/hyperslice_02.jpg",
    "width": 1920,
    "height": 730,
-   "layout": "half-l",
+   "layout": "narrow-l",
    "kind": "white"
   },
   {
@@ -63,7 +56,6 @@
     }
    ],
    "layout": "grid4",
-   "cols": 2,
    "kind": "gallery"
   },
   {

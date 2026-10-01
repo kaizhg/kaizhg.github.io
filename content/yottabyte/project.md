@@ -41,8 +41,6 @@ Made in Openframeworks using C++.
 
 # Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?
 
-![](yottabyte_01.jpg) full
-
 ![](yottabyte_02.jpg) half-l
 
 ![](yottabyte_03.jpg) half-r
@@ -51,6 +49,8 @@ Made in Openframeworks using C++.
 
 [video full] yottabyte_05.mp4
 
-[video half-l] yottabyte_06.mp4
-
-[video half-r] yottabyte_07.mp4
+[row]
+[video] yottabyte_06.mp4
+|
+[video] yottabyte_07.mp4
+[/row]

@@ -25,6 +25,7 @@
    "src": "os-11/os-11_01.jpg",
    "width": 2400,
    "height": 1600,
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
@@ -168,6 +169,7 @@
    "width": 1280,
    "height": 720,
    "audio": false,
+   "layout": "wide-r",
    "kind": "video"
   },
   {
@@ -181,7 +183,7 @@
    "src": "os-11/os-11_15.jpg",
    "width": 2400,
    "height": 1602,
-   "layout": "full",
+   "layout": "@2-12",
    "kind": "photo"
   },
   {
@@ -207,6 +209,7 @@
    "width": 1280,
    "height": 720,
    "audio": true,
+   "layout": "wide-l",
    "kind": "video"
   }
  ],

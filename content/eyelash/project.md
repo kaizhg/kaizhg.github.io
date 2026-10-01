@@ -40,11 +40,13 @@ Now available at [TAD Beauty](https://tadbeauty.com/).
 ![](eyelash_02.mp4)
 [/row]
 
-![](eyelash_03.jpg) | ![](eyelash_04.jpg)
+![](eyelash_03.jpg) narrow-l
 
 [OPT Industries](https://www.optindustries.com/) is an advanced manufacturing company specializing in ultra-high-resolution 3D printing and material design, delivering innovative solutions for industries like cosmetics and healthcare.
 
-![](eyelash_05.jpg)
+![](eyelash_04.jpg) @7-11
+
+![](eyelash_05.jpg) wide-l
 
 ### What I've achieved
 
@@ -57,8 +59,8 @@ Now available at [TAD Beauty](https://tadbeauty.com/).
 ...
 Below shows a simplified overview of works I've done.
 
-[gallery stack] eyelash_06.jpg eyelash_07.jpg eyelash_08.jpg eyelash_09.jpg eyelash_10.jpg eyelash_11.jpg eyelash_12.jpg eyelash_13.jpg eyelash_14.jpg eyelash_15.jpg
+[gallery stack @2-12] eyelash_06.jpg eyelash_07.jpg eyelash_08.jpg eyelash_09.jpg eyelash_10.jpg eyelash_11.jpg eyelash_12.jpg eyelash_13.jpg eyelash_14.jpg eyelash_15.jpg
 
-[video audio] eyelash_16.mp4
+[video audio @2-12] eyelash_16.mp4
 
-![](eyelash_17.jpg)
+![](eyelash_17.jpg) full

@@ -14,7 +14,7 @@
    "src": "tables/tables_01.jpg",
    "width": 2400,
    "height": 1600,
-   "layout": "full",
+   "layout": "@2-12",
    "kind": "photo"
   },
   {

@@ -198,6 +198,9 @@ for (let i = 0; i + 1 < cells.length; i++) {
 	const pa = pic(a), pb = pic(b);
 	const ra = rangeOf(a.cls), rb = rangeOf(b.cls);
 	if (!pa || !pb || !ra || !rb || rb[0] < ra[1] || / stagger\b/.test(a.cls + b.cls)) continue;
+	// natural heights in column units; shapes that differ by more than a fifth are left alone
+	const nA = (ra[1] - ra[0]) / (pa.width / pa.height), nB = (rb[1] - rb[0]) / (pb.width / pb.height);
+	if (Math.abs(nA - nB) / Math.min(nA, nB) > 0.2) continue;
 	const hA = `calc(${colw(ra[1] - ra[0])} / ${(pa.width / pa.height).toFixed(4)})`;
 	const hB = `calc(${colw(rb[1] - rb[0])} / ${(pb.width / pb.height).toFixed(4)})`;
 	a.fitH = b.fitH = `min(${hA}, ${hB})`;

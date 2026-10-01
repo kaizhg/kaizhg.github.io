@@ -22,13 +22,6 @@
    "html": "<h2>What will an \"Inside-Out\" kaleidoscope look like?</h2>"
   },
   {
-   "type": "image",
-   "src": "prismo/prismo_01.jpg",
-   "width": 2400,
-   "height": 1600,
-   "kind": "photo"
-  },
-  {
    "type": "text",
    "html": "<p>Prismo lamp is a modern interpretation of the classic prismatic structure, leveraging its periodic and space-filling properties to create a unique, kinetic aesthetic.</p>",
    "layout": "text-l",
@@ -42,7 +35,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<p>Initial InspirationI was first intrigued by the prismatic structure’s movement. The mesmerizing yet unexpected movement makes me wonder how will light bounces inside this structure. A whim suddenly hit me: Why don’t combine periscope and prismatic structure and make an \"inside-out kaleidoscope\", using prismatic transformation to amplify light?</p>",
+       "html": "<h3>Initial Inspiration</h3><p>I was first intrigued by the prismatic structure’s movement. The mesmerizing yet unexpected movement makes me wonder how will light bounces inside this structure. A whim suddenly hit me: Why don’t combine periscope and prismatic structure and make an \"inside-out kaleidoscope\", using prismatic transformation to amplify light?</p>",
        "kind": "text"
       }
      ]
@@ -144,18 +137,17 @@
    "kind": "text"
   },
   {
-   "type": "text",
-   "html": "<h3>We explored two Y-Shape Polyhedron-based designs: a polar tree and a tessellation structure. The latter was chosen for best highlighting movement through its smart, space-filling mechanics.</h3>",
-   "layout": "half-r",
-   "kind": "text"
-  },
-  {
    "type": "image",
    "src": "prismo/prismo_10.jpg",
    "width": 2400,
    "height": 2262,
    "layout": "half-l",
    "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<p>We explored two Y-Shape Polyhedron-based designs: a polar tree and a tessellation structure. The latter was chosen for best highlighting movement through its smart, space-filling mechanics.</p>",
+   "kind": "text"
   },
   {
    "type": "gallery",
@@ -200,7 +192,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<p>Parametric Design<br>I wrote a C# grasshopper script to streamline the design and simulation process for 1 DOF prismatic structures, greatly improving our ability to iterate and refine the design in a timely manner.<br><br><br><strong><a href=\"/transform\">Click here to see how I improved the workflow in details</a> &gt;&gt;&gt;</strong></p>",
+       "html": "<h3>Parametric Design</h3><p>I wrote a C# grasshopper script to streamline the design and simulation process for 1 DOF prismatic structures, greatly improving our ability to iterate and refine the design in a timely manner.<br><br><br><strong><a href=\"/transform\">Click here to see how I improved the workflow in details</a> &gt;&gt;&gt;</strong></p>",
        "kind": "text"
       }
      ]
@@ -224,43 +216,36 @@
    "type": "row",
    "columns": [
     {
-     "flex": 0.725,
+     "flex": 0.5,
      "blocks": [
       {
-       "type": "gallery",
-       "items": [
-        {
-         "type": "image",
-         "src": "prismo/prismo_16.jpg",
-         "width": 2400,
-         "height": 1600,
-         "kind": "photo"
-        },
-        {
-         "type": "image",
-         "src": "prismo/prismo_17.jpg",
-         "width": 2400,
-         "height": 1600,
-         "kind": "photo"
-        }
-       ],
-       "kind": "gallery"
+       "type": "image",
+       "src": "prismo/prismo_16.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
       }
      ]
     },
     {
-     "flex": 0.275,
+     "flex": 0.5,
      "blocks": [
       {
-       "type": "text",
-       "html": "<h3>Actuation</h3><p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>",
-       "kind": "text"
+       "type": "image",
+       "src": "prismo/prismo_17.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
       }
      ]
     }
    ],
-   "layout": "grid3",
    "kind": "row"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Actuation</h3><p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>",
+   "kind": "text"
   },
   {
    "type": "gallery",
@@ -362,7 +347,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "section",
+   "layout": "grid3",
    "kind": "gallery"
   },
   {
@@ -408,9 +393,9 @@
   },
   {
    "type": "text",
-   "html": "<h3>Fabrication</h3>",
-   "layout": "wide-l",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Fabrication</h2>"
   },
   {
    "type": "gallery",
@@ -479,7 +464,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "section",
+   "layout": "grid3",
    "kind": "gallery"
   },
   {
@@ -489,7 +474,7 @@
    "width": 720,
    "height": 1280,
    "audio": false,
-   "layout": "full",
+   "layout": "@1-5",
    "kind": "video"
   },
   {
@@ -498,6 +483,7 @@
    "width": 2400,
    "height": 1313,
    "caption": "Following studies and tests",
+   "layout": "@6-13 low",
    "kind": "photo"
   },
   {
@@ -511,29 +497,38 @@
    "src": "prismo/prismo_01.jpg",
    "width": 2400,
    "height": 1600,
-   "layout": "half-l",
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
-   "type": "gallery",
-   "items": [
+   "type": "row",
+   "columns": [
     {
-     "type": "image",
-     "src": "prismo/prismo_43.jpg",
-     "width": 2400,
-     "height": 1600,
-     "kind": "photo"
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "prismo/prismo_43.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
+      }
+     ]
     },
     {
-     "type": "image",
-     "src": "prismo/prismo_44.jpg",
-     "width": 2400,
-     "height": 1600,
-     "kind": "photo"
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "prismo/prismo_44.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
+      }
+     ]
     }
    ],
-   "layout": "half-r",
-   "kind": "gallery"
+   "kind": "row"
   },
   {
    "type": "row",
@@ -563,7 +558,6 @@
      ]
     }
    ],
-   "layout": "grid3",
    "kind": "row"
   },
   {
@@ -573,6 +567,7 @@
    "width": 1280,
    "height": 720,
    "audio": false,
+   "layout": "half-l",
    "kind": "video"
   },
   {
@@ -582,6 +577,7 @@
    "width": 1280,
    "height": 720,
    "audio": false,
+   "layout": "half-r",
    "kind": "video"
   },
   {

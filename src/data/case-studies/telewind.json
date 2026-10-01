@@ -17,14 +17,6 @@
   },
   {
    "type": "image",
-   "src": "telewind/telewind_hero.jpg",
-   "width": 2400,
-   "height": 1600,
-   "layout": "full",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
    "src": "telewind/telewind_01.jpg",
    "width": 2400,
    "height": 1600,

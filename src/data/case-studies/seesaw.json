@@ -22,14 +22,6 @@
   },
   {
    "type": "image",
-   "src": "seesaw/seesaw_hero.jpg",
-   "width": 2400,
-   "height": 1602,
-   "layout": "full",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
    "src": "seesaw/seesaw_01.jpg",
    "width": 2400,
    "height": 1602,
