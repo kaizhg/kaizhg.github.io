@@ -237,6 +237,7 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		--sans: 'Neue Montreal', 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
 		--text: 'Neue Montreal Text', 'Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
 		--gutter: clamp(16px, 4vw, 48px);
+		--max: 1520px; /* content stops growing here; 1424px of columns inside the gutters */
 		color-scheme: light;
 	}
 	@media (prefers-color-scheme: dark) {
@@ -262,11 +263,14 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		-webkit-font-smoothing: antialiased;
 	}
 	body {
-		margin: 0;
+		margin: 0 auto;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		padding-inline: var(--gutter);
+		/* The page is tuned for 1440: wider screens get margins, not wider pictures */
+		max-width: var(--max);
+		box-sizing: border-box;
 	}
 	main {
 		flex: 1;
