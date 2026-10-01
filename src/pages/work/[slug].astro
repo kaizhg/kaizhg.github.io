@@ -292,7 +292,8 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 		margin-right: calc(-1 * clamp(12px, 1.6vw, 24px)); /* ends exactly where column 9 (the text beside the logo) begins */
 	}
 	.hero.wide :global(.media) {
-		width: 100%;
+		width: calc(100% + clamp(12px, 1.6vw, 24px)); /* fills the gutter too, so its right edge is column 9 */
+		max-width: none;
 		max-height: none;
 	}
 	@media (max-width: 800px) {
