@@ -65,7 +65,7 @@ In Fall 2024, I had a chance to revisit this project, and made a hardware design
 ![](large-language-objects_06.jpg)
 [/row]
 
-[gallery grid3] large-language-objects_07.jpg large-language-objects_08.jpg
+[gallery grid3 @2-11] large-language-objects_07.jpg large-language-objects_08.jpg
 
 ![](large-language-objects_09.jpg) wide-r
 
