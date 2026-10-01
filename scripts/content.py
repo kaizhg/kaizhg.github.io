@@ -316,6 +316,11 @@ def block_to_md(b, take):
             name = take(it)
             items.append(name + (f' "{it["caption"]}"' if it.get('caption') else ''))
         return [head + ' ' + ' '.join(items)]
+    if t == 'cluster':
+        out = ['[cluster]']
+        for it in b['items']:
+            out.append(media_md(it, take) + hint(it) + (f' y={it["y"]}' if it.get('y') else ''))
+        return out + ['[/cluster]']
     if t == 'row':
         cols = b['columns']
         simple = all(len(c['blocks']) == 1 and c['blocks'][0]['type'] in ('image', 'loop') for c in cols) and \
@@ -371,7 +376,7 @@ def has_audio(path):
 
 # ![](file "caption")  or the forgivable  ![](file) "caption";  wrapped in [ ... ](url) it is a link
 MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?(?:\s*"([^"]*)")?')
-LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|@\d{1,2}-\d{1,2})'
+LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|@\d{1,2}-\d{1,2}|y=\d{1,2}|w=\d{2,4})'
 HINT_RE = re.compile(r'\s+((?:' + LAYOUT_WORDS + r')(?:\s+' + LAYOUT_WORDS + r')*)$')
 
 
@@ -392,7 +397,14 @@ def parse_media_line(line, folder, slug):
         if lay == 'stagger':
             warn(f'{slug}: "stagger" 要跟宽度一起写，先按 "half-r stagger" 排了: {line.strip()}')
             lay = 'half-r stagger'
-        b['layout'] = lay
+        words = lay.split()
+        for w in list(words):  # w=320 (max width in px) and y=4 (cluster offset) are not layouts
+            if w.startswith('w='):
+                b['maxWidth'] = int(w[2:]); words.remove(w)
+            elif w.startswith('y='):
+                b['y'] = int(w[2:]); words.remove(w)
+        if words:
+            b['layout'] = ' '.join(words)
     return b
 
 
@@ -411,7 +423,7 @@ def parse_items(s, folder, slug):
     return items
 
 
-DIRECTIVE_RE = re.compile(r'\[(gallery|video|youtube|row|/row|section)\b')
+DIRECTIVE_RE = re.compile(r'\[(gallery|video|youtube|row|/row|cluster|/cluster|section)\b')
 
 
 def parse_lines(lines, folder, slug, allow_rows=True):
@@ -440,6 +452,21 @@ def parse_lines(lines, folder, slug, allow_rows=True):
             end_para(); i += 1; continue
         if s == '...':
             flush(); i += 1; continue
+        if s.startswith('[cluster'):
+            flush()
+            items = []
+            i += 1
+            while i < len(lines) and lines[i].strip() != '[/cluster]':
+                t = lines[i].strip()
+                if t:
+                    it = parse_media_line(t, folder, slug)
+                    if not it or not re.search(r'@\d+-\d+', it.get('layout', '')):
+                        raise ValueError(f'{slug}: [cluster] 里每张图都要写 @列范围，例如 ![](a.jpg) @2-5 y=3: {t}')
+                    items.append(it)
+                i += 1
+            i += 1
+            blocks.append({'type': 'cluster', 'items': items})
+            continue
         if s.startswith('[row'):
             if not allow_rows:
                 raise ValueError(f'{slug}: a row inside a row')

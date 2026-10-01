@@ -22,6 +22,7 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 			sizes={sizes}
 			loading={eager ? 'eager' : 'lazy'}
 			class:list={['media', { alpha: /\.png$/i.test(block.src), portrait }]}
+			style={block.maxWidth ? `max-width: ${block.maxWidth}px` : undefined}
 		/>
 	)
 }

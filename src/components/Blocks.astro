@@ -247,6 +247,29 @@ const galleryClass = (b: Laid) => {
 							/>
 						</div>
 					);
+				case 'cluster': {
+					// Free composition on the 12-column grid: each picture names its columns (@a-b) and a
+					// vertical offset (y=, in half-column units); heights follow the pictures' shapes.
+					const G = 0.245; // gutter as a fraction of a column (clamp(12px,1.6vw,24px) vs (W-11g)/12)
+					const unit = (1 + G) / 2; // one grid row = half a column
+					const place = (it: any) => {
+						const [, a, b] = it.layout.match(/@(\d+)-(\d+)/)!;
+						const span = +b - +a;
+						const widthCols = span + (span - 1) * G;
+						const rows = Math.max(1, Math.round(widthCols / (it.width / it.height) / unit));
+						return `grid-column: ${a} / ${b}; grid-row: ${(it.y ?? 0) + 1} / span ${rows}`;
+					};
+					return (
+						<div class="block cluster reveal">
+							{b.items.map((it) => (
+								<figure class="cell-flex" style={place(it)}>
+									<Media block={it} alt={(it as any).caption ?? title} sizes="(max-width: 800px) 100vw, 40vw" />
+									{(it as any).caption && <figcaption class="hover-cap">{(it as any).caption}</figcaption>}
+								</figure>
+							))}
+						</div>
+					);
+				}
 				case 'gallery': {
 					const cls = galleryClass(b);
 					const ratios = b.items.map((it) => it.width / it.height).sort((a, c) => a - c);
@@ -644,6 +667,23 @@ const galleryClass = (b: Laid) => {
 	.carousel .ctl button:hover {
 		color: var(--accent);
 	}
+	.cluster {
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		grid-auto-rows: calc(((100cqw - 11 * var(--gap)) / 12 + var(--gap)) / 2);
+		column-gap: var(--gap);
+		row-gap: 0;
+	}
+	.cluster .cell-flex {
+		overflow: hidden;
+		min-width: 0;
+	}
+	.cluster .cell-flex :global(.media) {
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+	}
 	.gallery.justified {
 		flex-direction: column;
 		align-items: stretch;
@@ -829,6 +869,14 @@ const galleryClass = (b: Laid) => {
 		}
 		.jrow {
 			flex-wrap: wrap;
+		}
+		.cluster {
+			display: flex;
+			flex-direction: column;
+			gap: clamp(12px, 1.6vw, 24px);
+		}
+		.cluster .cell-flex :global(.media) {
+			height: auto;
 		}
 		.jrow .cell-flex {
 			flex: 1 1 calc(50% - 12px) !important;

@@ -8,9 +8,7 @@ discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
 cover: imago_vogue25_08.jpg        # 首页封面（32:25 裁切）
 hover: imago_vogue25_10.jpg        # 鼠标悬停时换成的图或循环视频
-hero: imago_vogue25_02.jpg         # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
-hero_caption: Image credits to Project Imago, Iris Chen and Sichen Tang   # 顶部大图下面的小字说明
-hero_width: half                   # 顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左
+hero: inline                       # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
@@ -33,29 +31,25 @@ hero_width: half                   # 顶部大图宽度：full（整宽）/ wide
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-![](imago_01.png) small-l
+[row 0.5 0.5]
+![](imago_01.png) w=320
 
-Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
-
-![](imago_02.png "It's launched and available for purchase on Red (XiaoHongShu).") half-l
+Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.
+|
+![](imago_vogue25_02.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang")
+[/row]
 
 ### 2025 VOGUE China Fashion Fund & Jewelry Competition
 
 Collaborated with 唐牧冢
 
-![](imago_vogue25_08.jpg) @1-6
-
-![](imago_vogue25_05.jpg) @5-9
-
-![](imago_vogue25_06.jpg) @9-13
-
-![](imago_vogue25_07.jpg) @1-5
-
-![](imago_vogue25_10.jpg) @5-9
-
-![](imago_vogue25_15.jpg) @4-8
-
-![](imago_vogue25_04.jpg) @8-11
+[cluster]
+![](imago_vogue25_08.jpg) @2-5
+![](imago_vogue25_05.jpg) @5-7 y=5
+![](imago_vogue25_06.jpg) @7-9 y=5
+![](imago_vogue25_07.jpg) @4-6 y=11
+![](imago_vogue25_10.jpg) @6-8 y=11
+[/cluster]
 
 [gallery grid3 @2-12] imago_vogue25_11.jpg imago_vogue25_13.jpg imago_vogue25_14.jpg
 

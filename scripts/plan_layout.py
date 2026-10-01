@@ -74,10 +74,10 @@ def tag(bs):
                     b['html'] = re.sub(r'</?h[23]>', lambda m: '<p>' if m.group(0) == '<h2>' or m.group(0) == '<h3>' else '</p>', b['html'])
             else:
                 b['kind'] = 'text'
-        elif b['type'] == 'gallery':
+        elif b['type'] in ('gallery', 'cluster'):
             for it in b['items']:
                 it['kind'] = kind_of(it)
-            b['kind'] = 'gallery'
+            b['kind'] = b['type']
         elif b['type'] == 'row':
             for c in b['columns']:
                 tag(c['blocks'])

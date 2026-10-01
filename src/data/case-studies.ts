@@ -8,6 +8,10 @@ export interface ImageBlock {
 	caption?: string;
 	/** The picture is a link */
 	href?: string;
+	/** Cap the rendered width (px) */
+	maxWidth?: number;
+	/** Cluster only: vertical offset in half-column units */
+	y?: number;
 }
 export interface LoopBlock {
 	type: 'loop';
@@ -29,6 +33,7 @@ export type Block =
 	| { type: 'text'; html: string }
 	| { type: 'youtube'; id: string; start?: number }
 	| { type: 'gallery'; items: MediaBlock[] }
+	| { type: 'cluster'; items: MediaBlock[] }
 	| { type: 'row'; columns: { flex: number; blocks: Block[] }[] };
 
 export interface CaseStudy {

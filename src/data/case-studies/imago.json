@@ -1,36 +1,45 @@
 {
  "slug": "imago",
  "legacy": "https://kaizhang.io/pupas",
- "hero": {
-  "type": "image",
-  "src": "imago/imago_vogue25_02.jpg",
-  "width": 1600,
-  "height": 2400
- },
+ "hero": null,
  "locked": false,
  "blocks": [
   {
-   "type": "image",
-   "src": "imago/imago_01.png",
-   "width": 1049,
-   "height": 192,
-   "layout": "small-l",
-   "kind": "logo"
-  },
-  {
-   "type": "text",
-   "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>",
-   "layout": "beside-r",
-   "kind": "text"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_02.png",
-   "width": 2400,
-   "height": 2393,
-   "caption": "It's launched and available for purchase on Red (XiaoHongShu).",
-   "layout": "half-l",
-   "kind": "photo"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "imago/imago_01.png",
+       "width": 1049,
+       "height": 192,
+       "maxWidth": 320,
+       "kind": "logo"
+      },
+      {
+       "type": "text",
+       "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>",
+       "kind": "text"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "imago/imago_vogue25_02.jpg",
+       "width": 1600,
+       "height": 2400,
+       "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
@@ -38,60 +47,54 @@
    "kind": "text"
   },
   {
-   "type": "image",
-   "src": "imago/imago_vogue25_08.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@1-6",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_05.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@5-9",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_06.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@9-13",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_07.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@1-5",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_10.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@5-9",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_15.jpg",
-   "width": 1600,
-   "height": 2400,
-   "layout": "@4-8",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_vogue25_04.jpg",
-   "width": 1165,
-   "height": 2400,
-   "layout": "@8-11",
-   "kind": "photo"
+   "type": "cluster",
+   "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_08.jpg",
+     "width": 1600,
+     "height": 2400,
+     "layout": "@2-5",
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_05.jpg",
+     "width": 1600,
+     "height": 2400,
+     "y": 5,
+     "layout": "@5-7",
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_06.jpg",
+     "width": 1600,
+     "height": 2400,
+     "y": 5,
+     "layout": "@7-9",
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_07.jpg",
+     "width": 1600,
+     "height": 2400,
+     "y": 11,
+     "layout": "@4-6",
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_10.jpg",
+     "width": 1600,
+     "height": 2400,
+     "y": 11,
+     "layout": "@6-8",
+     "kind": "photo"
+    }
+   ],
+   "kind": "cluster"
   },
   {
    "type": "gallery",
@@ -300,6 +303,5 @@
   "width": 1600,
   "height": 2400
  },
- "heroWidth": "half",
- "heroCaption": "Image credits to Project Imago, Iris Chen and Sichen Tang"
+ "heroInline": true
 }
