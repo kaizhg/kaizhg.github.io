@@ -61,28 +61,32 @@
    "kind": "gallery"
   },
   {
-   "type": "image",
-   "src": "imago/imago_09.jpg",
-   "width": 1080,
-   "height": 1619,
-   "layout": "half-l",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_10.jpg",
-   "width": 1080,
-   "height": 1619,
-   "layout": "half-r stagger",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_17.jpg",
-   "width": 2200,
-   "height": 1467,
-   "layout": "half-r stagger",
-   "kind": "white"
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_09.jpg",
+     "width": 1080,
+     "height": 1619,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_10.jpg",
+     "width": 1080,
+     "height": 1619,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_17.jpg",
+     "width": 2200,
+     "height": 1467,
+     "kind": "white"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
@@ -104,6 +108,36 @@
    ],
    "kind": "gallery",
    "layout": "grid3"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "imago/imago_06.jpg",
+       "width": 1284,
+       "height": 1692,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "imago/imago_08.jpg",
+       "width": 1800,
+       "height": 2400,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   },
   {
    "type": "row",
@@ -188,9 +222,9 @@
    "items": [
     {
      "type": "image",
-     "src": "imago/imago_10.jpg",
-     "width": 1080,
-     "height": 1619,
+     "src": "imago/imago_19.jpg",
+     "width": 1920,
+     "height": 1440,
      "kind": "photo"
     },
     {

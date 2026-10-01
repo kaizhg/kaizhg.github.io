@@ -444,10 +444,12 @@ def parse_lines(lines, folder, slug, allow_rows=True):
             if not allow_rows:
                 raise ValueError(f'{slug}: a row inside a row')
             flush()
-            m = re.match(r'\[row((?:\s+' + LAYOUT_WORDS + r')*)((?:\s+[\d.]+)*)\]$', s)
+            m = re.match(r'\[row((?:\s+' + LAYOUT_WORDS + r')*)((?:\s+[\d.]+)*)\]\s*(.*)$', s)
             if not m:
-                raise ValueError(f'{slug}: bad row line: {s}')
+                raise ValueError(f'{slug}: 看不懂这个 [row] 行，写法是 [row] 或 [row 0.4 0.6]: {s}')
             cols, cur = [], []
+            if m.group(3).strip():  # something written right after [row ...] counts as the first column's first line
+                cur.append(m.group(3).strip())
             i += 1
             while i < len(lines) and lines[i].strip() != '[/row]':
                 if lines[i].strip() == '|':

@@ -47,14 +47,17 @@ Project Imago is a wearable sculpture laboratory led by graduates from Harvard 
 ![](imago_08.jpg)
 [/row] -->
 
-
-
-![](imago_09.jpg) half-l
-
+<!-- ![](imago_09.jpg) half-l
 ![](imago_10.jpg) half-r stagger
-![](imago_17.jpg) stagger
+![](imago_17.jpg) stagger -->
+
+[gallery grid3] imago_09.jpg imago_10.jpg imago_17.jpg
 
 [gallery grid] imago_06.jpg imago_08.jpg
+[row 0.5 0.5]![](imago_06.jpg)
+|
+![](imago_08.jpg)
+[/row]
 
 [row 0.358 0.642]
 ![](imago_11.jpg)
@@ -79,4 +82,4 @@ Our experimental surface processing technique creates lightweight, hollow-shell 
 <!-- ![](imago_18.jpg) tri-b
 ![](imago_19.jpg) tri-c -->
 
-[gallery grid3] imago_10.jpg imago_20.jpg imago_21.jpg
+[gallery grid3] imago_19.jpg imago_20.jpg imago_21.jpg
