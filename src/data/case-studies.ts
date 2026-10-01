@@ -6,6 +6,8 @@ export interface ImageBlock {
 	width: number;
 	height: number;
 	caption?: string;
+	/** The picture is a link */
+	href?: string;
 }
 export interface LoopBlock {
 	type: 'loop';
@@ -36,6 +38,8 @@ export interface CaseStudy {
 	/** Gallery tile image and what it turns into on hover (from the old site's covers). */
 	cover?: MediaBlock | null;
 	hover?: MediaBlock | null;
+	/** The hero picture links here (front-matter `link`) */
+	link?: string;
 	locked: boolean;
 	blocks: Block[];
 }

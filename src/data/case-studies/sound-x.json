@@ -8,16 +8,7 @@
   "height": 1536
  },
  "locked": false,
- "blocks": [
-  {
-   "type": "image",
-   "src": "sound-x/sound-x_01.jpg",
-   "width": 2400,
-   "height": 1351,
-   "layout": "full",
-   "kind": "photo"
-  }
- ],
+ "blocks": [],
  "cover": {
   "type": "image",
   "src": "sound-x/sound-x_cover.jpg",
@@ -29,5 +20,6 @@
   "src": "sound-x/sound-x_hover.jpg",
   "width": 829,
   "height": 648
- }
+ },
+ "link": "https://consumer.huawei.com/ph/community/details/topicId-140751/"
 }

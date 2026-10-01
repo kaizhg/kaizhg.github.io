@@ -9,6 +9,5 @@ discipline: ID
 legacy: https://kaizhang.io/sound-x-2021-light-effect-design
 cover: sound-x_cover.jpg
 hover: sound-x_hover.jpg
+link: https://consumer.huawei.com/ph/community/details/topicId-140751/
 ---
-
-![](sound-x_01.jpg) full

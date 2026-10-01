@@ -35,6 +35,7 @@ position: 8                        # 在所属组里排第几
 cover: prismo_cover.jpg
 hover: prismo_hover.mp4
 hero: prismo_hero.jpg              # 可选；写 inline 表示顶部不放大图
+link: https://example.com          # 可选，顶部大图点击跳转
 credits:                           # 可选，有哪项写哪项，会显示在标题下方
   Course: SCI-6476 Transformable Design Methods
   Instructor: Chuck Hoberman
@@ -58,7 +59,9 @@ credits:                           # 可选，有哪项写哪项，会显示在�
 
 ![](prismo_03.jpg "图的说明，鼠标悬停时显示") wide-r
 
-![](prismo_04.jpg) | ![](prismo_05.jpg)
+[![](prismo_04.jpg)](https://example.com) | ![](prismo_05.jpg)
+
+图外面套一层 `[ ](网址)` 就是可点击的图。
 
 两张图用 ` | ` 隔开写在同一行，就并排，底边自动对齐。
 
@@ -103,6 +106,8 @@ credits:                           # 可选，有哪项写哪项，会显示在�
 | `[gallery carousel]` | 轮播 |
 | `![](x.mp4)` | 循环播放的小动画（GIF 请先转 mp4，或直接给我 GIF 我来转） |
 | `[video]` | 带播放条的视频；`[video audio]` 表示有声音 |
+
+暂时不想显示的内容，用 `<!-- 这里 -->` 包起来就会被跳过，文件还留着。
 
 不确定就什么都不写。自动规则：图靠左，段落贴到图旁边，连续三张照片自动成一组，连续四张白底图自动两列。
 

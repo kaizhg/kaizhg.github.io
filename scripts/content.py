@@ -272,7 +272,8 @@ def hint(b):
 def media_md(b, take):
     name = take(b)
     cap = f' "{b["caption"]}"' if b.get('caption') else ''
-    return f'![]({name}{cap})'
+    md = f'![]({name}{cap})'
+    return f'[{md}]({b["href"]})' if b.get('href') else md
 
 
 def block_to_md(b, take):
@@ -359,7 +360,7 @@ def has_audio(path):
                                 '-of', 'csv=p=0', path], capture_output=True, text=True).stdout.strip())
 
 
-MEDIA_RE = re.compile(r'!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)')
+MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?')  # optional [ ... ](url) wrapper
 LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull)'
 HINT_RE = re.compile(r'\s+((?:' + LAYOUT_WORDS + r')(?:\s+' + LAYOUT_WORDS + r')*)$')
 
@@ -371,6 +372,8 @@ def parse_media_line(line, folder, slug):
         return None
     rest = line.strip()[m.end():]
     b = media_block(folder, slug, m.group(1), m.group(2))
+    if m.group(3):
+        b['href'] = m.group(3)
     hm = HINT_RE.match(' ' + rest.strip()) if rest.strip() else None
     if rest.strip() and not hm:
         raise ValueError(f'{slug}: cannot read "{rest.strip()}" after {m.group(1)}')
@@ -483,6 +486,7 @@ def build_one(slug):
     folder = os.path.join(CONTENT, slug)
     text = open(os.path.join(folder, 'project.md')).read()
     fm, body = parse_fm(text)
+    body = re.sub(r'<!--.*?-->', '', body, flags=re.S)  # commented-out lines are skipped
     blocks = parse_lines(body.split('\n'), folder, slug)
 
     data = {'slug': slug, 'legacy': fm.get('legacy', ''), 'hero': None, 'locked': False, 'blocks': blocks}
@@ -496,6 +500,8 @@ def build_one(slug):
         data['hero'] = media_block(folder, slug, fm['hero'])
     elif data.get('cover'):
         data['hero'] = dict(data['cover'])
+    if fm.get('link'):
+        data['link'] = fm['link']
     if fm.get('credits') or fm.get('credits_notes'):
         facts = {k: (v if isinstance(v, list) else [v]) for k, v in (fm.get('credits') or {}).items()}
         notes = fm.get('credits_notes') or []

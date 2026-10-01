@@ -168,7 +168,13 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 				case 'image':
 					return (
 						<figure class="block media-block reveal">
-							<Media block={b} alt={b.caption ?? title} sizes="(max-width: 800px) 100vw, 60vw" />
+							{b.href ? (
+								<a href={b.href} target="_blank" rel="noopener" class="media-link">
+									<Media block={b} alt={b.caption ?? title} sizes="(max-width: 800px) 100vw, 60vw" />
+								</a>
+							) : (
+								<Media block={b} alt={b.caption ?? title} sizes="(max-width: 800px) 100vw, 60vw" />
+							)}
 							{b.caption && <figcaption set:html={b.caption} />}
 						</figure>
 					);
@@ -662,6 +668,9 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 	.col,
 	.cell-flex {
 		min-width: 0;
+	}
+	.media-link {
+		display: block;
 	}
 	.cell-flex {
 		margin: 0;

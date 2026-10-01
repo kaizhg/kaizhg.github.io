@@ -124,7 +124,13 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 		{
 			showHero && study?.hero && (
 				<div class="hero">
-					<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+					{study.link ? (
+						<a href={study.link} target="_blank" rel="noopener" aria-label={`${project.title} — open link`}>
+							<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+						</a>
+					) : (
+						<Media block={study.hero} alt={project.title} sizes="100vw" eager />
+					)}
 				</div>
 			)
 		}
@@ -135,10 +141,12 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 					<Blocks blocks={blocks} title={project.title} />
 				</div>
 			) : (
-				<div class="notice">
-					<p>{study?.locked ? 'Details of this project are available on request.' : 'Case study coming soon.'}</p>
-					<a href="mailto:this.kaizhang@gmail.com">Get in touch →</a>
-				</div>
+				!showHero && (
+					<div class="notice">
+						<p>{study?.locked ? 'Details of this project are available on request.' : 'Case study coming soon.'}</p>
+						<a href="mailto:this.kaizhang@gmail.com">Get in touch →</a>
+					</div>
+				)
 			)
 		}
 	</article>
@@ -271,6 +279,10 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 	}
 	.hero :global(.media) {
 		max-height: 78vh;
+	}
+	.hero a {
+		display: inline-block;
+		max-width: 100%;
 	}
 	.body {
 		padding-bottom: clamp(24px, 4vw, 64px);
