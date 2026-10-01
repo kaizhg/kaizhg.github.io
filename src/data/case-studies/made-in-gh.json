@@ -1,0 +1,154 @@
+{
+ "slug": "made-in-gh",
+ "legacy": "https://kaizhang.io/made-in-gh",
+ "hero": {
+  "type": "loop",
+  "src": "/media/made-in-gh/01.mp4",
+  "width": 767,
+  "height": 600
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "made-in-gh/02.png",
+   "width": 2400,
+   "height": 1357,
+   "layout": "wide-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "made-in-gh/03.jpg",
+   "width": 2400,
+   "height": 2400,
+   "layout": "small-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "made-in-gh/04.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "made-in-gh/05.jpg",
+     "width": 1413,
+     "height": 1413,
+     "kind": "photo",
+     "caption": "Inspired by Zach Lieberman"
+    },
+    {
+     "type": "image",
+     "src": "made-in-gh/06.jpg",
+     "width": 1278,
+     "height": 1278,
+     "kind": "photo"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/07.mp4",
+   "width": 800,
+   "height": 800,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/08.mp4",
+   "width": 600,
+   "height": 599,
+   "layout": "half-r stagger",
+   "kind": "small"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/09.mp4",
+   "width": 800,
+   "height": 652,
+   "layout": "wide-c",
+   "kind": "photo"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/10.mp4",
+   "width": 1322,
+   "height": 1352,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/11.mp4",
+   "width": 960,
+   "height": 542,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/12.mp4",
+   "width": 1280,
+   "height": 720,
+   "layout": "wide-r",
+   "kind": "photo"
+  },
+  {
+   "type": "loop",
+   "src": "/media/made-in-gh/13.mp4",
+   "width": 800,
+   "height": 600,
+   "caption": "Cyclic Celluar Automata<br>",
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "made-in-gh/14.jpg",
+   "width": 1800,
+   "height": 2400,
+   "layout": "narrow-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "made-in-gh/15.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "wide-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "made-in-gh/16.jpg",
+   "width": 1920,
+   "height": 1080,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "made-in-gh/17.jpg",
+   "width": 2400,
+   "height": 1437,
+   "layout": "wide-r",
+   "kind": "photo"
+  }
+ ],
+ "cover": {
+  "type": "loop",
+  "src": "/media/made-in-gh/cover.mp4",
+  "width": 767,
+  "height": 600
+ },
+ "hover": null
+}

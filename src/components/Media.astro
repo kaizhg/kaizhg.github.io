@@ -55,10 +55,13 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 }
 
 <style>
+	/* Never taller than a screen: shrink to fit and keep the left edge */
 	.media {
 		display: block;
-		width: 100%;
+		width: auto;
+		max-width: 100%;
 		height: auto;
+		max-height: 82vh;
 		background: var(--line);
 	}
 </style>

@@ -1,0 +1,228 @@
+---
+/** Photo grid of project tiles: the old site's cover, turning into its rollover on hover. */
+import { Image } from 'astro:assets';
+import { projectCode, type Project } from '../data/projects';
+import { getCaseStudy, workImage } from '../data/case-studies';
+
+export const tile = (p: Project) => {
+	const s = getCaseStudy(p.slug);
+	const cover = s?.cover ?? s?.hero;
+	return {
+		p,
+		img: cover && cover.type === 'image' ? workImage(cover.src) : null,
+		loop: cover && cover.type === 'loop' ? cover.src : null,
+		hover: s?.hover ?? null,
+	};
+};
+
+interface Props {
+	tiles: ReturnType<typeof tile>[];
+	cols?: number;
+	small?: boolean;
+	eager?: number;
+}
+const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
+---
+
+<ul class:list={["grid", { small }]} style={`--cols: ${cols}`}>
+	{
+		tiles.map(({ p, img, loop, hover }, i) => (
+			<li data-discipline={p.discipline} class="reveal" style={`transition-delay: ${(i % cols) * 60}ms`}>
+				<a href={`/work/${p.slug}/`}>
+					<span class="frame">
+						{img && (
+							<Image
+								src={img}
+								alt=""
+								widths={[480, 800, 1200]}
+								sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+								loading={i < eager ? 'eager' : 'lazy'}
+							/>
+						)}
+						{loop && <video src={loop} muted loop playsinline autoplay preload="metadata" />}
+						{hover?.type === 'image' && (
+							<Image
+								class="hover"
+								src={workImage(hover.src)}
+								alt=""
+								widths={[480, 800, 1200]}
+								sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+								loading="lazy"
+							/>
+						)}
+						{hover?.type === 'loop' && (
+							<video class="hover" src={hover.src} muted loop playsinline preload="metadata" />
+						)}
+					</span>
+					<span class="caption">
+						<span class="code">{projectCode(p)}</span>
+						<span class="title">{p.title}</span>
+						<span class="summary">
+							{p.summary}
+							{p.context && <span> @ {p.context}</span>}
+						</span>
+					</span>
+				</a>
+			</li>
+		))
+	}
+</ul>
+
+<script>
+	// Rollover loops play only while hovered
+	document.addEventListener('astro:page-load', () => {
+		document.querySelectorAll<HTMLVideoElement>('.grid video.hover').forEach((v) => {
+			const a = v.closest('a')!;
+			a.addEventListener('mouseenter', () => v.play().catch(() => {}));
+			a.addEventListener('mouseleave', () => {
+				v.pause();
+				v.currentTime = 0;
+			});
+		});
+	});
+</script>
+
+<style>
+	.grid {
+		--ratio: 32 / 25; /* the old site's cover crop, so nothing is cropped */
+	}
+	.grid {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+		gap: 0;
+	}
+	.grid li[hidden] {
+		display: none;
+	}
+	.archive-label {
+		font: 500 12px/1.4 var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+		margin: clamp(48px, 7vw, 96px) 0 16px;
+		padding-top: 14px;
+		border-top: 1px solid var(--line);
+	}
+	.grid.small {
+		--cols: 4;
+	}
+	.grid.small .title {
+		font-size: 14px;
+	}
+	.grid.small .summary {
+		font-size: 12px;
+	}
+	.grid a {
+		position: relative;
+		display: block;
+	}
+	.frame {
+		position: relative;
+		display: block;
+		aspect-ratio: var(--ratio);
+		overflow: hidden;
+		background: var(--line);
+	}
+	.frame :global(img),
+	.frame :global(video) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	.grid a:hover .frame :global(img),
+	.grid a:hover .frame :global(video) {
+		transform: scale(1.03);
+	}
+	/* Second shot / loop, faded in on hover */
+	.frame :global(.hover) {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	/* Text appears on hover, over a gradient at the bottom of the frame */
+	.caption {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 2px;
+		padding: 40px 16px 14px;
+		color: #fff;
+		background: linear-gradient(to top, rgb(0 0 0 / 0.65), rgb(0 0 0 / 0) 55%);
+		opacity: 0;
+		transition: opacity 0.25s ease;
+	}
+	.code {
+		font: 11px var(--mono);
+		letter-spacing: 0.04em;
+		opacity: 0.7;
+	}
+	.title {
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+	}
+	.summary {
+		font-size: 13px;
+		opacity: 0.8;
+	}
+	.grid a:hover .caption,
+	.grid a:focus-visible .caption {
+		opacity: 1;
+	}
+	.grid a:hover .frame :global(.hover),
+	.grid a:focus-visible .frame :global(.hover) {
+		opacity: 1;
+	}
+	.grid a:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+
+	@media (max-width: 1100px) {
+		.grid {
+			--cols: 2 !important;
+		}
+		.grid.small {
+			--cols: 3 !important;
+		}
+	}
+	@media (max-width: 640px) {
+		.grid {
+			--cols: 1 !important;
+		}
+		.grid.small {
+			--cols: 2 !important;
+		}
+	}
+	/* Touch devices: no hover, so show the caption below the image instead */
+	@media (hover: none) {
+		.caption {
+			position: static;
+			opacity: 1;
+			padding: 10px 0 20px;
+			color: inherit;
+			background: none;
+		}
+		.code,
+		.summary {
+			color: var(--muted);
+			opacity: 1;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.frame :global(.hover),
+		.caption {
+			transition: none;
+		}
+	}
+</style>

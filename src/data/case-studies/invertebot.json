@@ -1,0 +1,107 @@
+{
+ "slug": "invertebot",
+ "legacy": "https://kaizhang.io/invertebot",
+ "hero": {
+  "type": "image",
+  "src": "invertebot/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<p>Course: SCI-6478 Informal Robotic<br>Instructor: Chuck Hoberman<br>Project Duration: 6 Weeks</p>\n<p>Team members: Kai Zhang, Claire Dorsett, Oskar Nilsson</p>",
+   "kind": "credits",
+   "layout": "credits"
+  },
+  {
+   "type": "text",
+   "html": "<p>My Contributions:<br>[1] Collaborated with Professor Hoberman, together we adapted the new fabrication method (3D-printed panels + Mylar) into final production.<br>[2] Used grasshopper to procedurally generate whole robot and simulate its movement.<br>[3] Defined the final aesthetic and overall details, and prepared production files.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "text",
+   "html": "<h3>This page is still under construction.</h3>",
+   "kind": "quote"
+  },
+  {
+   "type": "image",
+   "src": "invertebot/02.jpg",
+   "width": 2400,
+   "height": 1602,
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "invertebot/03.jpg",
+   "width": 2400,
+   "height": 1602,
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "invertebot/04.jpg",
+   "width": 2400,
+   "height": 1602,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "invertebot/05.jpg",
+   "width": 2400,
+   "height": 1602,
+   "layout": "wide-r",
+   "kind": "photo"
+  },
+  {
+   "type": "video",
+   "src": "/media/invertebot/AxCTUnaUULo.mp4",
+   "poster": "/media/invertebot/AxCTUnaUULo.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true,
+   "layout": "full",
+   "kind": "video"
+  },
+  {
+   "type": "text",
+   "html": "<p>Custom grasshopper design and simulation tool</p>",
+   "layout": "section",
+   "kind": "text"
+  },
+  {
+   "type": "video",
+   "src": "/media/invertebot/7L7SQVWv_G6.mp4",
+   "poster": "/media/invertebot/7L7SQVWv_G6.jpg",
+   "width": 1024,
+   "height": 528,
+   "audio": false,
+   "layout": "wide-l",
+   "kind": "video"
+  },
+  {
+   "type": "video",
+   "src": "/media/invertebot/HzXUSmcCu5Q.mp4",
+   "poster": "/media/invertebot/HzXUSmcCu5Q.jpg",
+   "width": 1080,
+   "height": 1080,
+   "audio": false,
+   "layout": "small-r stagger",
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "invertebot/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "image",
+  "src": "invertebot/hover.jpg",
+  "width": 2400,
+  "height": 1877
+ }
+}

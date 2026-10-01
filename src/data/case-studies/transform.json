@@ -1,0 +1,250 @@
+{
+ "slug": "transform",
+ "legacy": "https://kaizhang.io/transform",
+ "hero": {
+  "type": "loop",
+  "src": "/media/transform/01.mp4",
+  "width": 575,
+  "height": 450
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.305,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<h3>Abstract</h3>\n<p><br>This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.</p>\n<h3><a href=\"/prismo\">Click here to see more about the prismo lamp.</a></h3>",
+       "kind": "text"
+      }
+     ]
+    },
+    {
+     "flex": 0.695,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "transform/02.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Polar Array Design</h3>",
+   "kind": "section"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.3751,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/transform/03.mp4",
+       "width": 600,
+       "height": 600,
+       "kind": "small"
+      }
+     ]
+    },
+    {
+     "flex": 0.6249,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "transform/04.jpg",
+       "width": 2400,
+       "height": 1441,
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.295,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<p>ProblemThe conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process. <br>The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.</p>",
+       "kind": "text"
+      }
+     ]
+    },
+    {
+     "flex": 0.705,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "transform/05.jpg",
+       "width": 1920,
+       "height": 1080,
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.625,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "transform/06.jpg",
+       "width": 1442,
+       "height": 740,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.375,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<h3>Solution</h3>\n<p>Since the goal of this tool is to help people design, it has to be user-friendly and intuitive to use. I decided to use a modular component to represent each unit. This software architecture allows users directly see the connection between individual input parameters and output geometry.</p>",
+       "kind": "text"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/transform/TzfrRXHSJaq.mp4",
+       "poster": "/media/transform/TzfrRXHSJaq.jpg",
+       "width": 1920,
+       "height": 1084,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/transform/-aEyqz4PDU6.mp4",
+       "poster": "/media/transform/-aEyqz4PDU6.jpg",
+       "width": 1920,
+       "height": 1084,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.375,
+     "blocks": [
+      {
+       "type": "text",
+       "html": "<h3>Challenge</h3>\n<p>The challenge is to understand the math behind the transformation: The input angle and output angle do not map linearly. At the first attempt, I called intersect functions from RhinoCommon as a hard way to solve the geometrical equation. It works, but the intersection method is a bit clumsy computation-wise.</p>\n<p>I further broke down the geometry relationships into trigonometric equations. This change not only simplify the code and also increase computational efficiency.</p>",
+       "kind": "text"
+      }
+     ]
+    },
+    {
+     "flex": 0.625,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "transform/07.jpg",
+       "width": 1656,
+       "height": 888,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Output tests</h3>",
+   "kind": "section"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "loop",
+     "src": "/media/transform/08.mp4",
+     "width": 600,
+     "height": 412,
+     "kind": "small"
+    },
+    {
+     "type": "loop",
+     "src": "/media/transform/09.mp4",
+     "width": 800,
+     "height": 557,
+     "kind": "photo"
+    },
+    {
+     "type": "loop",
+     "src": "/media/transform/10.mp4",
+     "width": 600,
+     "height": 412,
+     "kind": "small"
+    },
+    {
+     "type": "loop",
+     "src": "/media/transform/11.mp4",
+     "width": 800,
+     "height": 549,
+     "kind": "photo"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid4"
+  },
+  {
+   "type": "video",
+   "src": "/media/transform/8P8fceQfR4q.mp4",
+   "poster": "/media/transform/8P8fceQfR4q.jpg",
+   "width": 1920,
+   "height": 1220,
+   "audio": false,
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "loop",
+  "src": "/media/transform/cover.mp4",
+  "width": 575,
+  "height": 450
+ },
+ "hover": null
+}

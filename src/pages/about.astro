@@ -1,84 +1,143 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import portrait from '../assets/about.jpg';
 ---
 
-<Base title="About">
+<Base title="About" description="Kai Zhang — computational and industrial designer. RISD ID, Harvard GSD. Based in Seattle.">
 	<section class="about">
-		<h1>Hello!</h1>
-		<div class="body">
-			<p>
-				I'm Kai Zhang, a computational and industrial designer. I studied industrial design at the
-				Rhode Island School of Design and graduated from the Harvard Graduate School of Design. I was
-				born and raised in Shenzhen, China, and I'm now based in Seattle, WA.
-			</p>
-			<p>
-				My work spans industrial design, computational design, and interaction design. I enjoy
-				sketching bizarre ideas, seeking out new aesthetic forms, solving problems with a non-linear
-				approach, and exploring new workflows.
-			</p>
-			<p>
-				In my spare time I like visiting places with high analog information density, like a PCB
-				assembly factory, a fish market, or an old urban village. They refresh my mind really well.
-			</p>
+		<div class="text">
+			<h1>Hello!</h1>
+			<div class="body">
+				<p class="first">
+					I'm Kai Zhang, a computational and industrial designer. I studied industrial design at the
+					Rhode Island School of Design and graduated from the Harvard Graduate School of Design. I was
+					born and raised in Shenzhen, China, and I'm now based in Seattle, WA.
+				</p>
+				<p>
+					My work spans industrial design, computational design, and interaction design. I enjoy
+					sketching bizarre ideas, seeking out new aesthetic forms, solving problems with a non-linear
+					approach, and exploring new workflows.
+				</p>
+				<p>
+					In my spare time I like visiting places with high analog information density, like a PCB
+					assembly factory, a fish market, or an old urban village. They refresh my mind really well.
+				</p>
+			</div>
+
+			<dl class="facts">
+				<div>
+					<dt>Education</dt>
+					<dd>Harvard GSD, MDes<br />RISD, BFA Industrial Design</dd>
+				</div>
+				<div>
+					<dt>Based in</dt>
+					<dd>Seattle, WA</dd>
+				</div>
+				<div>
+					<dt>Contact</dt>
+					<dd><a href="mailto:this.kaizhang@gmail.com">this.kaizhang@gmail.com</a></dd>
+				</div>
+				<div>
+					<dt>Elsewhere</dt>
+					<dd>
+						<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a><br />
+						<a href="https://www.instagram.com/zalvink_/">Instagram</a><br />
+						<a href="https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html">HTMAA</a>
+					</dd>
+				</div>
+			</dl>
 		</div>
 
-		<dl class="facts">
-			<div>
-				<dt>Education</dt>
-				<dd>Harvard GSD<br />RISD, Industrial Design</dd>
-			</div>
-			<div>
-				<dt>Contact</dt>
-				<dd><a href="mailto:this.kaizhang@gmail.com">this.kaizhang@gmail.com</a></dd>
-			</div>
-			<div>
-				<dt>Elsewhere</dt>
-				<dd>
-					<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a><br />
-					<a href="https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html">HTMAA</a>
-				</dd>
-			</div>
-		</dl>
+		<figure class="photo reveal">
+			<Image src={portrait} alt="Kai biking past a market in Chiang Mai" widths={[720, 1200, 1800]} sizes="(max-width: 900px) 100vw, 50vw" loading="eager" />
+			<figcaption>Biking near a local market in Chiang Mai, Thailand.</figcaption>
+		</figure>
 	</section>
 </Base>
 
 <style>
 	.about {
-		padding-top: clamp(48px, 10vh, 120px);
-		max-width: 48rem;
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		column-gap: clamp(12px, 1.6vw, 24px);
+		row-gap: 48px;
+		align-items: start;
+		padding-top: clamp(40px, 8vh, 96px);
+	}
+	.text {
+		grid-column: 1 / 6;
+		max-width: 34rem;
+	}
+	.photo {
+		grid-column: 7 / 13;
+		margin: 0;
+		position: sticky;
+		top: 32px;
+	}
+	.photo :global(img) {
+		width: 100%;
+		height: auto;
+		display: block;
+		background: var(--line);
+	}
+	figcaption {
+		font: 11px/1.5 var(--mono);
+		color: var(--muted);
+		margin-top: 10px;
+		letter-spacing: 0.02em;
 	}
 	h1 {
-		font-size: clamp(36px, 6vw, 80px);
-		font-weight: 500;
+		font-size: clamp(40px, 6vw, 88px);
+		line-height: 1;
+		font-weight: 700;
 		letter-spacing: -0.03em;
-		margin: 0 0 32px;
+		margin: 0 0 36px;
 	}
 	.body p {
 		font-family: var(--text);
-		font-size: 18px;
-		line-height: 1.55;
+		font-size: 17px;
+		line-height: 1.6;
+		margin: 0 0 1.1em;
+	}
+	.body .first {
+		font-family: var(--sans);
+		font-size: clamp(20px, 1.8vw, 26px);
+		line-height: 1.35;
+		letter-spacing: -0.01em;
+		margin-bottom: 1.2em;
 	}
 	.facts {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
-		margin-top: 48px;
-		padding-top: 24px;
+		margin: 56px 0 0;
+		padding-top: 20px;
 		border-top: 1px solid var(--line);
 	}
 	dt {
-		font: 11px var(--mono);
+		font: 10px var(--mono);
 		text-transform: uppercase;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.06em;
 		color: var(--muted);
 		margin-bottom: 6px;
 	}
 	dd {
 		margin: 0;
+		font-size: 14px;
 		line-height: 1.6;
 	}
-	dd a {
-		text-decoration: underline;
-		text-underline-offset: 3px;
+	dd a:hover {
+		color: var(--accent);
+	}
+	@media (max-width: 900px) {
+		.text,
+		.photo {
+			grid-column: 1 / -1;
+		}
+		.photo {
+			position: static;
+			order: -1;
+		}
 	}
 </style>

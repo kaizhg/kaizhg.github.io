@@ -1,18 +1,27 @@
 ---
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
+import { ClientRouter } from 'astro:transitions';
+import { archive } from '../data/projects';
 
 interface Props {
 	title?: string;
 	description?: string;
+	/** Absolute or site-relative URL of the share image; defaults to the site card. */
+	image?: string;
 }
 
 const {
 	title,
 	description = 'Kai Zhang — computational & industrial designer. RISD ID, Harvard GSD. Based in Seattle.',
+	image = '/og.png',
 } = Astro.props;
 const fullTitle = title ? `${title} — Kai Zhang` : 'Kai Zhang';
 const path = Astro.url.pathname;
+const site = Astro.site ?? new URL('https://kaizhg.github.io');
+const canonical = new URL(path, site).href;
+const ogImage = new URL(image, site).href;
+const archiveSlugs = new Set(archive.map((p) => p.slug));
 ---
 
 <html lang="en">
@@ -25,12 +34,28 @@ const path = Astro.url.pathname;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{fullTitle}</title>
+		<link rel="canonical" href={canonical} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Kai Zhang" />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={fullTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+		<link rel="preload" href="/fonts/NeueMontreal-Semibold.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/NeueMontrealText-Book.woff2" as="font" type="font/woff2" crossorigin />
+		<ClientRouter />
+		<script is:inline data-astro-rerun>document.documentElement.classList.add('js');</script>
 	</head>
 	<body>
 		<header class="site-header">
 			<a href="/" class="wordmark">Kai Zhang</a>
 			<nav>
-				<a href="/" aria-current={path === '/' || path.startsWith('/list') || path.startsWith('/work') ? 'page' : undefined}>Work</a>
+				<a href="/" aria-current={path === '/' || path.startsWith('/list') || (path.startsWith('/work') && !archiveSlugs.has(path.split('/')[2])) ? 'page' : undefined}>Work</a>
+				<a href="/archive/" aria-current={path.startsWith('/archive') || (path.startsWith('/work') && archiveSlugs.has(path.split('/')[2])) ? 'page' : undefined}>Archive</a>
 				<a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a>
 				<span class="icons">
 					<a href="https://www.linkedin.com/in/kai-zhang-653411223/" aria-label="LinkedIn" title="LinkedIn">
@@ -49,13 +74,46 @@ const path = Astro.url.pathname;
 			<slot />
 		</main>
 		<footer class="site-footer">
-			<span>© {new Date().getFullYear()} Kai Zhang</span>
-			<span class="links">
-				<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a>
-				<a href="https://www.instagram.com/zalvink_/">Instagram</a>
-				<a href="https://github.com/kaizhg">GitHub</a>
-			</span>
+			<div class="foot-top">
+				<p class="foot-cta">
+					<span class="foot-label">Open to collaborations and full-time roles</span>
+					<a href="mailto:this.kaizhang@gmail.com" class="foot-mail">this.kaizhang@gmail.com ↗</a>
+				</p>
+				<nav class="foot-links" aria-label="Elsewhere">
+					<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a>
+					<a href="https://www.instagram.com/zalvink_/">Instagram</a>
+					<a href="https://github.com/kaizhg">GitHub</a>
+				</nav>
+			</div>
+			<div class="foot-bottom">
+				<span>© {new Date().getFullYear()} Kai Zhang</span>
+				<span>Seattle, WA</span>
+			</div>
 		</footer>
+		<script>
+			// Scroll reveal: media and tiles fade up as they enter the viewport (once).
+			// Re-run after every client-side navigation so new pages get it too.
+			function reveal() {
+				const els = document.querySelectorAll<HTMLElement>('.reveal:not(.in)');
+				if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+					els.forEach((e) => e.classList.add('in'));
+					return;
+				}
+				const io = new IntersectionObserver(
+					(entries) => {
+						for (const e of entries) {
+							if (e.isIntersecting) {
+								e.target.classList.add('in');
+								io.unobserve(e.target);
+							}
+						}
+					},
+					{ rootMargin: '0px 0px -8% 0px', threshold: 0.05 },
+				);
+				els.forEach((e) => io.observe(e));
+			}
+			document.addEventListener('astro:page-load', reveal);
+		</script>
 	</body>
 </html>
 
@@ -112,6 +170,7 @@ const path = Astro.url.pathname;
 		--muted: #777;
 		--line: #d6d6d2;
 		--accent: #2a4bff;
+		--cell: #e8e8e5; /* empty cells of the Game of Life grid */
 		--mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 		--sans: 'Neue Montreal', 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
 		--text: 'Neue Montreal Text', 'Neue Montreal', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
@@ -125,6 +184,7 @@ const path = Astro.url.pathname;
 			--muted: #8a8a86;
 			--line: #2a2a28;
 			--accent: #7d93ff;
+			--cell: #171716;
 			color-scheme: dark;
 		}
 	}
@@ -157,16 +217,150 @@ const path = Astro.url.pathname;
 		max-width: 100%;
 		display: block;
 	}
+	::selection {
+		background: var(--fg);
+		color: var(--bg);
+	}
+	a:focus-visible,
+	button:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+	}
+
+	/* Scroll reveal (only once scripting is confirmed, so content never stays hidden) */
+	html.js .reveal {
+		opacity: 0;
+		transform: translateY(18px);
+		transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	html.js .reveal.in {
+		opacity: 1;
+		transform: none;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html.js .reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+	/* Entrance: page intros rise gently on arrival */
+	html.js .intro > * {
+		animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+	}
+	html.js .intro > :nth-child(2) {
+		animation-delay: 0.12s;
+	}
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(14px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html.js .intro > * {
+			animation: none;
+		}
+	}
+	/* Page transitions: a short cross-fade */
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.35s;
+		animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	/* Filters: quiet text links with counts, shared by every index page */
+	.filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 24px;
+	}
+	.filters button {
+		font: 12px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--muted);
+		background: none;
+		border: 0;
+		border-bottom: 1px solid transparent;
+		border-radius: 0;
+		padding: 6px 0;
+		cursor: pointer;
+		transition: color 0.2s ease, border-color 0.2s ease;
+	}
+	.filters button sup {
+		font-size: 9px;
+		margin-left: 3px;
+		vertical-align: top;
+		opacity: 0.7;
+	}
+	.filters button:hover {
+		color: var(--fg);
+	}
+	.filters button[aria-pressed='true'] {
+		color: var(--fg);
+		border-bottom-color: var(--fg);
+	}
+
 	.site-footer {
+		margin-top: clamp(96px, 14vw, 180px);
+		padding-block: 40px 28px;
+		border-top: 1px solid var(--line);
+	}
+	.foot-top {
 		display: flex;
 		justify-content: space-between;
-		align-items: baseline;
-		gap: 1rem;
+		align-items: flex-end;
+		gap: 32px;
 		flex-wrap: wrap;
-		font-family: var(--mono);
-		font-size: 12px;
-		letter-spacing: 0.04em;
+		margin-bottom: 56px;
+	}
+	.foot-cta {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.foot-label {
+		font: 12px var(--mono);
 		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--muted);
+	}
+	.foot-mail {
+		font-size: clamp(22px, 2.6vw, 36px);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+		transition: color 0.2s ease;
+	}
+	.foot-mail:hover {
+		color: var(--accent);
+	}
+	.foot-links {
+		display: flex;
+		gap: 24px;
+		font: 12px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	.foot-links a,
+	.foot-bottom {
+		color: var(--muted);
+	}
+	.foot-links a:hover {
+		color: var(--fg);
+	}
+	.foot-bottom {
+		display: flex;
+		justify-content: space-between;
+		font: 12px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
 	}
 	/* Header: wordmark left; links and icons as one evenly spaced group on the right */
 	.site-header {
@@ -207,24 +401,19 @@ const path = Astro.url.pathname;
 		height: 15px;
 	}
 	@media (max-width: 720px) {
+		.site-header {
+			font-size: 12px;
+		}
 		.site-header nav {
-			gap: 20px;
+			gap: 18px;
 		}
 	}
-	.site-footer .links {
-		display: flex;
-		gap: 1.5rem;
+	.site-header .wordmark {
+		white-space: nowrap;
 	}
-	.site-footer a {
-		color: var(--muted);
-	}
-	.site-footer a:hover {
-		color: var(--fg);
-	}
-	.site-footer {
-		padding-block: 40px 24px;
-		color: var(--muted);
-		border-top: 1px solid var(--line);
-		margin-top: 96px;
+	@media (max-width: 560px) {
+		.site-header .icons {
+			display: none;
+		}
 	}
 </style>

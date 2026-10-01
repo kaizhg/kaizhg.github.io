@@ -1,0 +1,49 @@
+{
+ "slug": "providence-seat",
+ "legacy": "https://kaizhang.io/providence-station-seat-redesign",
+ "hero": {
+  "type": "image",
+  "src": "providence-seat/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "providence-seat/02.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "providence-seat/03.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "providence-seat/04.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-r stagger",
+   "kind": "white"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "providence-seat/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "image",
+  "src": "providence-seat/hover.jpg",
+  "width": 1876,
+  "height": 1467
+ }
+}

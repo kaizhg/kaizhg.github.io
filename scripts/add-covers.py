@@ -5,7 +5,7 @@ animated GIF). This downloads both at full size into ../asset/Thumbnail/From kai
 writes web copies into the site, and stores them as `cover` / `hover` blocks in
 src/data/case-studies/<slug>.json. The page hero (`hero`) is left untouched.
 
-Usage: python3 scripts/add-covers.py <crawl_dir>
+Usage: python3 scripts/add-covers.py <crawl_dir> [selected|archive]
 """
 import json, os, re, subprocess, sys
 from bs4 import BeautifulSoup
@@ -25,6 +25,19 @@ SELECTED = {
     'zhang-zhoujie-digital-lab-internship': 'tables', 'mind-bridge': 'mind-bridge', 'seesaw': 'seesaw',
     'wind': 'telewind', 'yotabyte': 'yottabyte',
 }
+ARCHIVE = {
+    'transform': 'transform', 'vitalization': 'vitalization', 'drawing': 'ink-on-paper',
+    'marble-fall': 'marble-fall', 'made-in-gh': 'made-in-gh', 'briota-iospro': 'briota-iospro',
+    'give-light-a-hug': 'hug', 'invertebot': 'invertebot', 'neurodynamic': 'neurodynamic',
+    'practice': 'dynamic-valley', 'homovirus': 'homovirus',
+    'providence-station-seat-redesign': 'providence-seat', 'mix-musuem-guide': 'mix-museum-guide',
+    'donut': 'donut-in-half', 'intersect': 'intersect', 'barnacle-lamp': 'barnacle-lamp',
+    'rib-stool': 'rib-stool', 'metal': 'folded-volume', 'wood-ii': 'wood-ii', 'wood': 'wood-i',
+    'being-contained': 'being-contained', 'mix-headset': 'mix-headset', 'mirrored-river': 'mirrored-river',
+}
+GROUP = sys.argv[2] if len(sys.argv) > 2 else 'selected'
+PAGES = ARCHIVE if GROUP == 'archive' else SELECTED
+INDEX_HTML = 'archive.html' if GROUP == 'archive' else 'work.html'
 
 
 def largest(img):
@@ -66,10 +79,10 @@ def to_web(src, slug, name):
 
 
 os.makedirs(ASSET_DIR, exist_ok=True)
-soup = BeautifulSoup(open(os.path.join(CRAWL, 'work.html')).read(), 'html.parser')
+soup = BeautifulSoup(open(os.path.join(CRAWL, INDEX_HTML)).read(), 'html.parser')
 for a in soup.select('a.project-cover'):
     old = a['href'].strip('/')
-    slug = SELECTED.get(old)
+    slug = PAGES.get(old)
     if not slug:
         continue
     roll = a.select_one('.cover-rollover img')

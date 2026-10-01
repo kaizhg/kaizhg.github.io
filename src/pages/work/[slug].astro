@@ -1,24 +1,78 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Blocks from '../../components/Blocks.astro';
 import Media from '../../components/Media.astro';
-import { projects, disciplines, projectCode, type Project } from '../../data/projects';
-import { getCaseStudy, type Block } from '../../data/case-studies';
+import { projects, archive, allProjects, disciplines, projectCode, type Project } from '../../data/projects';
+import { getCaseStudy, workImage, type Block } from '../../data/case-studies';
 
 export function getStaticPaths() {
-	return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+	return allProjects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
 }
 
 const { project } = Astro.props as { project: Project };
 const study = getCaseStudy(project.slug);
-const i = projects.indexOf(project);
-const next = projects[(i + 1) % projects.length];
+const group = project.archive ? archive : projects;
+const i = group.indexOf(project);
+const next = group[(i + 1) % group.length];
+const nextStudy = getCaseStudy(next.slug);
+const nextCover = nextStudy?.cover ?? nextStudy?.hero;
+const nextImg = nextCover && nextCover.type === 'image' ? workImage(nextCover.src) : null;
 
 type Laid = Block & { kind?: string; layout?: string };
 let blocks: Laid[] = (study?.blocks ?? []) as Laid[];
-// Credits (course, team, role) at the top move into the header under the facts
-const credits: Laid[] = [];
-while (blocks[0]?.type === 'text' && blocks[0].kind === 'credits') credits.push(blocks.shift()!);
+
+// ---- Credits (course, instructor, team, role…) become structured facts in the header ----
+const KEYS: [RegExp, string][] = [
+	[/^course$/i, 'Course'],
+	[/^instructors?$/i, 'Instructor'],
+	[/^(project )?duration$/i, 'Duration'],
+	[/^(team( members?)?|project team)$/i, 'Team'],
+	[/^(my )?role$/i, 'Role'],
+	[/^(spe(?:a)?cial )?thanks$/i, 'Thanks'],
+	[/^(for|client)$/i, 'For'],
+	[/^(advisors?|collaborators?|contributors?)$/i, 'With'],
+];
+const KEY_RE = /(Course|Instructors?|Project Duration|Duration|Team members?|Project team|Team|My Role|Role|Spe(?:a)?cial Thanks|Thanks|For|Client|Advisors?|Collaborators?|Contributors?)\s*:/g;
+const canon = (k: string) => KEYS.find(([re]) => re.test(k.trim()))?.[1] ?? null;
+
+function parseCredits(html: string) {
+	let text = html
+		.replace(/<\/p>\s*<p>/g, '\n')
+		.replace(/<br\s*\/?>/g, '\n')
+		.replace(/<[^>]+>/g, '');
+	// The old site sometimes ran lines together ("MethodsInstructor:"): break before every key
+	text = text.replace(KEY_RE, (m, _k, offset: number) => (offset > 0 && text[offset - 1] !== '\n' ? '\n' + m : m));
+	const facts: { key: string; value: string[] }[] = [];
+	const rest: string[] = [];
+	let current: { key: string; value: string[] } | null = null;
+	for (const raw of text.split('\n')) {
+		const line = raw.trim();
+		if (!line) continue;
+		const m = line.match(/^([A-Za-z][A-Za-z ]{1,20}?)\s*:\s*(.*)$/);
+		const key = m ? canon(m[1]) : null;
+		if (key) {
+			current = { key, value: m![2] ? [m![2].trim()] : [] };
+			facts.push(current);
+		} else if (current) {
+			current.value.push(line); // continuation, e.g. "[1] Proposed…" under "My Role:"
+		} else {
+			rest.push(line);
+		}
+	}
+	return { facts, rest };
+}
+
+const credits: { key: string; value: string[] }[] = [];
+const creditLines: string[] = [];
+while (blocks[0]?.type === 'text' && blocks[0].kind === 'credits') {
+	const { facts, rest } = parseCredits(blocks.shift()!.html);
+	credits.push(...facts);
+	creditLines.push(...rest);
+}
+const roleFact = credits.find((c) => c.key === 'Role');
+const smallFacts = credits.filter((c) => c !== roleFact);
+
 // The opening paragraph or statement becomes the lead next to the title, magazine style
 let lead: string | null = null;
 const first = blocks[0];
@@ -32,11 +86,13 @@ const dup = blocks.findIndex((b, i) => i < 3 && 'src' in b && study?.hero && b.s
 if (dup >= 0) blocks = [...blocks.slice(0, dup), ...blocks.slice(dup + 1)];
 const showHero = !!study?.hero;
 const hasBody = study && !study.locked && blocks.length > 0;
+
+const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workImage(study.hero.src), width: 1200, format: 'jpeg' })).src : undefined;
 ---
 
-<Base title={project.title} description={`${project.title} — ${project.summary}`}>
+<Base title={project.title} description={`${project.title} — ${project.summary}`} image={shareImage}>
 	<article>
-		<header class="head">
+		<header class="head intro">
 			<div class="head-l">
 				<p class="code">{projectCode(project)}</p>
 				<h1>{project.title}</h1>
@@ -45,8 +101,23 @@ const hasBody = study && !study.locked && blocks.length > 0;
 					<div><dt>Discipline</dt><dd>{disciplines[project.discipline]}</dd></div>
 					<div><dt>Type</dt><dd>{project.summary}</dd></div>
 					{project.context && <div><dt>With</dt><dd>{project.context}</dd></div>}
+					{smallFacts.map((c) => (
+						<div><dt>{c.key}</dt><dd>{c.value.join(', ')}</dd></div>
+					))}
 				</dl>
-				{credits.map((c) => <div class="credits" set:html={c.html} />)}
+				{creditLines.length > 0 && <p class="credits">{creditLines.map((l) => <span>{l}</span>)}</p>}
+				{
+					roleFact && (
+						<div class="role">
+							<span class="role-label">Role</span>
+							<ul>
+								{roleFact.value.map((v) => (
+									<li>{v.replace(/^\[\d+\]\s*/, '')}</li>
+								))}
+							</ul>
+						</div>
+					)
+				}
 			</div>
 			{lead && <div class="head-r lead" set:html={lead} />}
 		</header>
@@ -74,8 +145,19 @@ const hasBody = study && !study.locked && blocks.length > 0;
 	</article>
 
 	<a class="next" href={`/work/${next.slug}/`}>
-		<span class="label">Next</span>
-		<span>{next.title} →</span>
+		<span class="next-text">
+			<span class="label">Next project</span>
+			<span class="next-title">{next.title}</span>
+			<span class="next-summary">{next.summary}{next.context && ` @ ${next.context}`}</span>
+			<span class="next-arrow" aria-hidden="true">→</span>
+		</span>
+		{
+			nextImg && (
+				<span class="next-img">
+					<Image src={nextImg} alt="" widths={[640, 1000, 1400]} sizes="(max-width: 800px) 100vw, 55vw" loading="lazy" />
+				</span>
+			)
+		}
 	</a>
 </Base>
 
@@ -90,10 +172,10 @@ const hasBody = study && !study.locked && blocks.length > 0;
 		margin-bottom: clamp(32px, 5vw, 64px);
 	}
 	.head-l {
-		grid-column: 1 / 6;
+		grid-column: 1 / 7;
 	}
 	.head-r {
-		grid-column: 7 / 13;
+		grid-column: 8 / 13;
 	}
 	.code {
 		font: 12px var(--mono);
@@ -111,32 +193,57 @@ const hasBody = study && !study.locked && blocks.length > 0;
 	}
 	.facts {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-		gap: 12px 16px;
+		grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+		gap: 14px 20px;
 		margin: 0;
-		padding-top: 14px;
+		padding-top: 16px;
 		border-top: 1px solid var(--line);
 		font-size: 13px;
+		line-height: 1.45;
 	}
 	dt {
 		font: 10px var(--mono);
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 		color: var(--muted);
-		margin-bottom: 4px;
+		margin-bottom: 5px;
 	}
 	dd {
 		margin: 0;
 	}
 	.credits {
-		margin-top: 16px;
-		font: 13px/1.6 var(--text);
+		display: flex;
+		flex-direction: column;
+		margin: 16px 0 0;
+		font: 13px/1.55 var(--text);
 		color: var(--muted);
 	}
-	.credits :global(p),
-	.credits :global(h3) {
-		font: inherit;
+	.role {
+		margin-top: 20px;
+		padding-top: 14px;
+		border-top: 1px solid var(--line);
+	}
+	.role-label {
+		display: block;
+		font: 10px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--muted);
+		margin-bottom: 8px;
+	}
+	.role ul {
 		margin: 0;
+		padding: 0;
+		list-style: none;
+		font: 13px/1.5 var(--text);
+		max-width: 30rem;
+	}
+	.role li + li {
+		margin-top: 4px;
+	}
+	.role li::before {
+		content: '— ';
+		color: var(--muted);
 	}
 	.lead :global(p) {
 		font-family: var(--text);
@@ -163,6 +270,9 @@ const hasBody = study && !study.locked && blocks.length > 0;
 	.hero {
 		margin-bottom: clamp(48px, 7vw, 120px);
 	}
+	.hero :global(.media) {
+		max-height: 78vh;
+	}
 	.body {
 		padding-bottom: clamp(24px, 4vw, 64px);
 	}
@@ -173,27 +283,81 @@ const hasBody = study && !study.locked && blocks.length > 0;
 	.notice a {
 		color: var(--accent);
 	}
+
+	/* Next project: title on the left, cover on the right, both react on hover */
 	.next {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 96px;
-		padding-block: 24px;
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		column-gap: clamp(12px, 1.6vw, 24px);
+		align-items: end;
+		margin-top: clamp(64px, 10vw, 140px);
+		padding-top: 28px;
 		border-top: 1px solid var(--line);
-		font-size: 20px;
-		font-weight: 600;
 	}
-	.next .label {
+	.next-text {
+		grid-column: 1 / 6;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding-bottom: 8px;
+	}
+	.label {
 		font: 12px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
 		color: var(--muted);
-		align-self: center;
 	}
-	.next:hover {
+	.next-title {
+		font-size: clamp(30px, 4vw, 56px);
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		transition: color 0.25s ease;
+	}
+	.next-summary {
+		font: 14px/1.5 var(--text);
+		color: var(--muted);
+	}
+	.next-arrow {
+		font-size: 24px;
+		margin-top: 8px;
+		transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	.next-img {
+		grid-column: 7 / 13;
+		display: block;
+		aspect-ratio: 32 / 25;
+		overflow: hidden;
+		background: var(--line);
+	}
+	.next-img :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+	.next:hover .next-title {
 		color: var(--accent);
+	}
+	.next:hover .next-arrow {
+		transform: translateX(8px);
+	}
+	.next:hover .next-img :global(img) {
+		transform: scale(1.03);
 	}
 	@media (max-width: 800px) {
 		.head-l,
-		.head-r {
+		.head-r,
+		.next-text,
+		.next-img {
 			grid-column: 1 / -1;
+		}
+		.next {
+			row-gap: 24px;
+		}
+		.next-img {
+			order: -1;
 		}
 	}
 </style>

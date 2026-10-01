@@ -1,0 +1,134 @@
+{
+ "slug": "hug",
+ "legacy": "https://kaizhang.io/give-light-a-hug",
+ "hero": {
+  "type": "image",
+  "src": "hug/01.jpg",
+  "width": 2400,
+  "height": 1800
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h2>Can we hug the light?</h2>",
+   "layout": "quote",
+   "kind": "section"
+  },
+  {
+   "type": "image",
+   "src": "hug/02.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "hug/03.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "hug/01.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "hug/04.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/05.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/06.jpg",
+     "width": 2400,
+     "height": 2387,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/07.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/08.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/09.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/10.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/11.jpg",
+     "width": 2330,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "hug/12.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid4"
+  },
+  {
+   "type": "video",
+   "src": "/media/hug/W3C5Ro5NIx3.mp4",
+   "poster": "/media/hug/W3C5Ro5NIx3.jpg",
+   "width": 720,
+   "height": 900,
+   "audio": true,
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "hug/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "image",
+  "src": "hug/hover.jpg",
+  "width": 2002,
+  "height": 1565
+ }
+}

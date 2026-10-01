@@ -1,0 +1,77 @@
+{
+ "slug": "mix-museum-guide",
+ "legacy": "https://kaizhang.io/mix-musuem-guide",
+ "hero": {
+  "type": "image",
+  "src": "mix-museum-guide/01.jpg",
+  "width": 1380,
+  "height": 1080
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "mix-museum-guide/02.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "mix-museum-guide/03.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "mix-museum-guide/04.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "half-r stagger",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "mix-museum-guide/05.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
+   "type": "video",
+   "src": "/media/mix-museum-guide/VbMiVwkkVoN.mp4",
+   "poster": "/media/mix-museum-guide/VbMiVwkkVoN.jpg",
+   "width": 1280,
+   "height": 720,
+   "audio": false,
+   "layout": "half-l",
+   "kind": "video"
+  },
+  {
+   "type": "video",
+   "src": "/media/mix-museum-guide/59a8IgPJMFT.mp4",
+   "poster": "/media/mix-museum-guide/59a8IgPJMFT.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": false,
+   "layout": "half-r stagger",
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "mix-museum-guide/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "mix-museum-guide/hover.jpg",
+  "width": 1380,
+  "height": 1080
+ }
+}

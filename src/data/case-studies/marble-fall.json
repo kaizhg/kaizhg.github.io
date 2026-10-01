@@ -1,0 +1,67 @@
+{
+ "slug": "marble-fall",
+ "legacy": "https://kaizhang.io/marble-fall",
+ "hero": {
+  "type": "image",
+  "src": "marble-fall/01.jpg",
+  "width": 2400,
+  "height": 1800
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "marble-fall/02.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "full",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "marble-fall/03.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "marble-fall/04.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "half-r stagger",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "marble-fall/05.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "video",
+   "src": "/media/marble-fall/4Qs7meYaW56.mp4",
+   "poster": "/media/marble-fall/4Qs7meYaW56.jpg",
+   "width": 1080,
+   "height": 1920,
+   "audio": true,
+   "layout": "narrow-r stagger",
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "marble-fall/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "image",
+  "src": "marble-fall/hover.jpg",
+  "width": 1920,
+  "height": 1501
+ }
+}

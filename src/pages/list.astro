@@ -71,6 +71,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 </Base>
 
 <script>
+	document.addEventListener('astro:page-load', () => {
 	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
 	const rows = document.querySelectorAll<HTMLLIElement>('.list li');
 	buttons.forEach((btn) =>
@@ -80,6 +81,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 			rows.forEach((r) => (r.hidden = f !== 'all' && r.dataset.discipline !== f));
 		}),
 	);
+	});
 </script>
 
 <style>
@@ -110,11 +112,6 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		flex-wrap: wrap;
 		margin-bottom: 16px;
 	}
-	.filters {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-	}
 	.switch {
 		font: 12px var(--mono);
 		text-transform: uppercase;
@@ -123,22 +120,6 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	}
 	.switch:hover {
 		color: var(--fg);
-	}
-	.filters button {
-		font: 12px var(--mono);
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		color: var(--muted);
-		background: none;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		padding: 6px 12px;
-		cursor: pointer;
-	}
-	.filters button[aria-pressed='true'] {
-		color: var(--bg);
-		background: var(--fg);
-		border-color: var(--fg);
 	}
 	.list {
 		list-style: none;
@@ -150,11 +131,10 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		display: none;
 	}
 	.list a {
-		--thumb-h: 280px;
 		--row-pad: 14px;
 		display: grid;
 		/* code | title | summary | empty slot reserved for the hover shot | arrow */
-		grid-template-columns: 5rem 1.2fr 1.6fr clamp(220px, 30%, 400px) auto;
+		grid-template-columns: 5rem minmax(14rem, 1fr) 1.2fr clamp(260px, 42%, 820px) auto;
 		gap: 1rem;
 		align-items: baseline;
 		padding: var(--row-pad) 12px;
@@ -189,10 +169,12 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		transition: color 0.5s ease;
 	}
 
-	/* Hero shot: fills the empty slot column, grows upward from the row's bottom edge */
+	/* Hero shot: fills the empty slot column, grows upward from the row's bottom edge.
+	   Its height follows the column width (32:25, the cover ratio) so it scales with the screen. */
 	.slot {
 		position: relative;
 		align-self: stretch;
+		container-type: inline-size;
 	}
 	.thumb {
 		position: absolute;
@@ -209,7 +191,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		left: 0;
 		top: 50%;
 		width: 100%;
-		height: var(--thumb-h);
+		height: 78.125cqw;
 		object-fit: cover;
 		transform: translateY(-50%);
 		background: var(--line);
@@ -236,7 +218,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 	}
 	.list a:hover .thumb,
 	.list a:focus-visible .thumb {
-		height: var(--thumb-h);
+		height: 78.125cqw;
 		transition: height 0.2s cubic-bezier(0.2, 0.7, 0.2, 1);
 	}
 
@@ -252,23 +234,22 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 			display: none;
 		}
 	}
+	/* Narrower screens: drop the summary, keep code | title | shot | arrow */
+	@media (max-width: 1100px) {
+		.list a {
+			grid-template-columns: 5rem minmax(0, 1fr) clamp(220px, 42%, 480px) auto;
+		}
+		.summary {
+			display: none;
+		}
+	}
 	@media (max-width: 720px) {
 		.list a {
-			grid-template-columns: 1fr auto;
-			gap: 4px 1rem;
+			grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+			gap: 1rem;
 		}
 		.slot {
 			display: none;
-		}
-		.code {
-			grid-column: 1 / -1;
-		}
-		.summary {
-			grid-column: 1;
-		}
-		.arrow {
-			grid-row: 2;
-			grid-column: 2;
 		}
 	}
 </style>

@@ -1,0 +1,46 @@
+{
+ "slug": "neurodynamic",
+ "legacy": "https://kaizhang.io/neurodynamic",
+ "hero": {
+  "type": "image",
+  "src": "neurodynamic/01.jpg",
+  "width": 2400,
+  "height": 1600
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h2>What if neurotransmitter becomes a communicative medium?</h2>",
+   "kind": "quote"
+  },
+  {
+   "type": "image",
+   "src": "neurodynamic/01.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "neurodynamic/02.jpg",
+   "width": 2400,
+   "height": 1600,
+   "layout": "wide-r",
+   "kind": "photo"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "neurodynamic/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "neurodynamic/hover.jpg",
+  "width": 2400,
+  "height": 1876
+ }
+}

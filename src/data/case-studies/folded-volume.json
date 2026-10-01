@@ -1,0 +1,32 @@
+{
+ "slug": "folded-volume",
+ "legacy": "https://kaizhang.io/metal",
+ "hero": null,
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "folded-volume/01.jpg",
+   "width": 2400,
+   "height": 1877,
+   "layout": "wide-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "folded-volume/02.jpg",
+   "width": 1800,
+   "height": 2400,
+   "layout": "small-r stagger",
+   "kind": "white"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "folded-volume/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": null,
+ "heroInline": true
+}

@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import Gallery, { tile } from '../components/Gallery.astro';
+import { archive, disciplines, type Discipline } from '../data/projects';
+
+const tiles = archive.map(tile);
+const filters = (Object.entries(disciplines) as [Discipline, string][]).filter(([k]) =>
+	archive.some((p) => p.discipline === k),
+);
+---
+
+<Base title="Archive" description="Older and smaller work by Kai Zhang.">
+	<section class="intro">
+		<h1>Archive</h1>
+		<p class="meta">Earlier and smaller work, 2018 – 2023</p>
+	</section>
+
+	<section class="index" aria-label="Archive projects">
+		<div class="bar">
+			<div class="filters" role="group" aria-label="Filter by discipline">
+				<button type="button" data-filter="all" aria-pressed="true">All <sup>{archive.length}</sup></button>
+				{
+					filters.map(([key, label]) => (
+						<button type="button" data-filter={key} aria-pressed="false">
+							{label} <sup>{archive.filter((p) => p.discipline === key).length}</sup>
+						</button>
+					))
+				}
+			</div>
+		</div>
+		<Gallery tiles={tiles} cols={4} small eager={8} />
+	</section>
+</Base>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
+	const rows = document.querySelectorAll<HTMLLIElement>('.grid li');
+	buttons.forEach((btn) =>
+		btn.addEventListener('click', () => {
+			const f = btn.dataset.filter;
+			buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+			rows.forEach((t) => (t.hidden = f !== 'all' && t.dataset.discipline !== f));
+		}),
+	);
+	});
+</script>
+
+<style>
+	.intro {
+		padding-block: clamp(48px, 10vh, 120px) 48px;
+	}
+	h1 {
+		font-size: clamp(28px, 4.2vw, 56px);
+		line-height: 1.08;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		margin: 0;
+	}
+	.meta {
+		font-family: var(--mono);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--muted);
+		margin-top: 20px;
+	}
+	.bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+</style>

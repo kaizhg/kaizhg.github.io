@@ -58,21 +58,24 @@
      "src": "seesaw/05.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "Each player controls one block. Tilt the handle to move."
     },
     {
      "type": "image",
      "src": "seesaw/06.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "The size represents weight. The heavier the longer."
     },
     {
      "type": "image",
      "src": "seesaw/07.jpg",
      "width": 584,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "Similar to a see-saw, it tilts! Try to balance it."
     }
    ],
    "layout": "grid3",
@@ -86,21 +89,24 @@
      "src": "seesaw/08.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "1/3:The block bounces back when it hits another block"
     },
     {
      "type": "image",
      "src": "seesaw/09.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "2/3:The block bounces back when it hits another block"
     },
     {
      "type": "image",
      "src": "seesaw/10.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small"
+     "kind": "small",
+     "caption": "3/3:The block bounces back when it hits another block"
     }
    ],
    "layout": "grid3",

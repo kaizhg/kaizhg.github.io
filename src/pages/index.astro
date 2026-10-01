@@ -1,19 +1,10 @@
 ---
-import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import { projects, disciplines, projectCode, type Discipline } from '../data/projects';
-import { getCaseStudy, workImage } from '../data/case-studies';
+import Gallery, { tile } from '../components/Gallery.astro';
+import Life from '../components/Life.astro';
+import { projects, disciplines, type Discipline } from '../data/projects';
 
-// Tile = the old site's cover; on hover it turns into the rollover image or loop
-const tiles = projects.map((p) => {
-	const s = getCaseStudy(p.slug);
-	const cover = s?.cover ?? s?.hero;
-	return {
-		p,
-		img: cover && cover.type === 'image' ? workImage(cover.src) : null,
-		hover: s?.hover ?? null,
-	};
-});
+const tiles = projects.map(tile);
 const filters = Object.entries(disciplines) as [Discipline, string][];
 ---
 
@@ -25,6 +16,7 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		</h1>
 		<p class="meta">RISD ID · Harvard GSD · Seattle, WA</p>
 	</section>
+	<Life />
 
 	<section class="index" aria-label="Projects">
 		<div class="bar">
@@ -41,81 +33,31 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 			<a class="switch" href="/list/">List view →</a>
 		</div>
 
-		<ul class="grid">
-			{
-				tiles.map(({ p, img, hover }) => (
-					<li data-discipline={p.discipline}>
-						<a href={`/work/${p.slug}/`}>
-							<span class="frame">
-								{img && (
-									<Image
-										src={img}
-										alt=""
-										widths={[480, 800, 1200]}
-										sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
-										loading={projects.indexOf(p) < 6 ? 'eager' : 'lazy'}
-									/>
-								)}
-								{hover?.type === 'image' && (
-									<Image
-										class="hover"
-										src={workImage(hover.src)}
-										alt=""
-										widths={[480, 800, 1200]}
-										sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
-										loading="lazy"
-									/>
-								)}
-								{hover?.type === 'loop' && (
-									<video class="hover" src={hover.src} muted loop playsinline preload="metadata" />
-								)}
-							</span>
-							<span class="caption">
-								<span class="code">{projectCode(p)}</span>
-								<span class="title">{p.title}</span>
-								<span class="summary">
-									{p.summary}
-									{p.context && <span> @ {p.context}</span>}
-								</span>
-							</span>
-						</a>
-					</li>
-				))
-			}
-		</ul>
+		<Gallery tiles={tiles} eager={6} />
 	</section>
 </Base>
 
 <script>
-	// Rollover loops play only while hovered
-	document.querySelectorAll<HTMLVideoElement>('.grid video.hover').forEach((v) => {
-		const a = v.closest('a')!;
-		a.addEventListener('mouseenter', () => v.play().catch(() => {}));
-		a.addEventListener('mouseleave', () => {
-			v.pause();
-			v.currentTime = 0;
-		});
-	});
-
+	document.addEventListener('astro:page-load', () => {
 	const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
-	const tiles = document.querySelectorAll<HTMLLIElement>('.grid li');
+	const rows = document.querySelectorAll<HTMLLIElement>('.grid li');
 	buttons.forEach((btn) =>
 		btn.addEventListener('click', () => {
 			const f = btn.dataset.filter;
 			buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-			tiles.forEach((t) => (t.hidden = f !== 'all' && t.dataset.discipline !== f));
+			rows.forEach((t) => (t.hidden = f !== 'all' && t.dataset.discipline !== f));
 		}),
 	);
+	});
 </script>
 
 <style>
-	:root {
-		--ratio: 32 / 25; /* the old site's cover crop, so nothing is cropped */
-		--cols: 3;
-	}
 	.intro {
-		padding-block: clamp(64px, 14vh, 160px) 64px;
+		padding-block: clamp(56px, 10vh, 140px) clamp(40px, 6vw, 72px);
 		max-width: 60rem;
+	}
+	.index {
+		margin-top: clamp(56px, 8vw, 112px);
 	}
 	h1 {
 		font-size: clamp(28px, 4.2vw, 56px);
@@ -140,27 +82,6 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		flex-wrap: wrap;
 		margin-bottom: 20px;
 	}
-	.filters {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-	}
-	.filters button {
-		font: 12px var(--mono);
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		color: var(--muted);
-		background: none;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		padding: 6px 12px;
-		cursor: pointer;
-	}
-	.filters button[aria-pressed='true'] {
-		color: var(--bg);
-		background: var(--fg);
-		border-color: var(--fg);
-	}
 	.switch {
 		font: 12px var(--mono);
 		text-transform: uppercase;
@@ -171,114 +92,4 @@ const filters = Object.entries(disciplines) as [Discipline, string][];
 		color: var(--fg);
 	}
 
-	.grid {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-		gap: 0;
-	}
-	.grid li[hidden] {
-		display: none;
-	}
-	.grid a {
-		position: relative;
-		display: block;
-	}
-	.frame {
-		position: relative;
-		display: block;
-		aspect-ratio: var(--ratio);
-		overflow: hidden;
-		background: var(--line);
-	}
-	.frame :global(img),
-	.frame :global(video) {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		display: block;
-	}
-	/* Second shot / loop, faded in on hover */
-	.frame :global(.hover) {
-		position: absolute;
-		inset: 0;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-	/* Text appears on hover, over a gradient at the bottom of the frame */
-	.caption {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		gap: 2px;
-		padding: 40px 16px 14px;
-		color: #fff;
-		background: linear-gradient(to top, rgb(0 0 0 / 0.65), rgb(0 0 0 / 0) 55%);
-		opacity: 0;
-		transition: opacity 0.25s ease;
-	}
-	.code {
-		font: 11px var(--mono);
-		letter-spacing: 0.04em;
-		opacity: 0.7;
-	}
-	.title {
-		font-size: 16px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.01em;
-	}
-	.summary {
-		font-size: 13px;
-		opacity: 0.8;
-	}
-	.grid a:hover .caption,
-	.grid a:focus-visible .caption {
-		opacity: 1;
-	}
-	.grid a:hover .frame :global(.hover),
-	.grid a:focus-visible .frame :global(.hover) {
-		opacity: 1;
-	}
-	.grid a:focus-visible {
-		outline: 2px solid var(--accent);
-		outline-offset: 2px;
-	}
-
-	@media (max-width: 1100px) {
-		:root {
-			--cols: 2;
-		}
-	}
-	@media (max-width: 640px) {
-		:root {
-			--cols: 1;
-		}
-	}
-	/* Touch devices: no hover, so show the caption below the image instead */
-	@media (hover: none) {
-		.caption {
-			position: static;
-			opacity: 1;
-			padding: 10px 0 20px;
-			color: inherit;
-			background: none;
-		}
-		.code,
-		.summary {
-			color: var(--muted);
-			opacity: 1;
-		}
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.frame :global(.hover),
-		.caption {
-			transition: none;
-		}
-	}
 </style>

@@ -1,0 +1,73 @@
+{
+ "slug": "mix-headset",
+ "legacy": "https://kaizhang.io/mix-headset",
+ "hero": {
+  "type": "image",
+  "src": "mix-headset/01.jpg",
+  "width": 1838,
+  "height": 1438
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<p>Some very basic modeling and rendering that I did back in sophomore year.<br>Just for archive purpose. I took Microsoft Hololens as the reference.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/02.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "full",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/03.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "half-l",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/04.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/05.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "wide-r",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/06.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "mix-headset/07.jpg",
+   "width": 2400,
+   "height": 1500,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "mix-headset/cover.jpg",
+  "width": 1838,
+  "height": 1438
+ },
+ "hover": null
+}

@@ -26,9 +26,9 @@
   },
   {
    "type": "text",
-   "html": "<h3>This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections.</h3>",
+   "html": "<p>This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections.</p>",
    "layout": "beside-r",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "gallery",
@@ -121,28 +121,32 @@
      "src": "/media/hyperslice/11.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small"
+     "kind": "small",
+     "caption": "1. Input Geometry"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/12.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small"
+     "kind": "small",
+     "caption": "2. Non-linear Slicing Axis"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/13.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small"
+     "kind": "small",
+     "caption": "3. Cross-section"
     },
     {
      "type": "loop",
      "src": "/media/hyperslice/14.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small"
+     "kind": "small",
+     "caption": "4. Output Geometry"
     }
    ],
    "layout": "grid4",

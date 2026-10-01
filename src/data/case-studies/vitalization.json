@@ -1,0 +1,60 @@
+{
+ "slug": "vitalization",
+ "legacy": "https://kaizhang.io/vitalization",
+ "hero": {
+  "type": "image",
+  "src": "vitalization/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<p>Course: Neural Bodies, Spring 2023<br>Instructor:  Andrew Witt<br>Project Duration: 2 Weeks</p>",
+   "kind": "credits",
+   "layout": "credits"
+  },
+  {
+   "type": "text",
+   "html": "<h3>This project aims to explore the vitality of complex piping and cable systems by transforming them into organic, fleshy, and alive structure using runwayML.</h3>\n<p>The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "vitalization/02.jpg",
+   "width": 2400,
+   "height": 1553,
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "vitalization/03.jpg",
+   "width": 2400,
+   "height": 1553,
+   "layout": "wide-r stagger",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Final Drawing</h3>",
+   "kind": "section"
+  },
+  {
+   "type": "image",
+   "src": "vitalization/04.jpg",
+   "width": 2317,
+   "height": 2160,
+   "layout": "wide-c",
+   "kind": "photo"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "vitalization/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": null
+}

@@ -93,7 +93,7 @@
     }
    ],
    "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid4"
   },
   {
    "type": "text",
@@ -130,7 +130,6 @@
      ]
     }
    ],
-   "layout": "flat",
    "kind": "row"
   },
   {

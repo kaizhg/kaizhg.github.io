@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Not found" description="This page does not exist.">
+	<section class="nf">
+		<p class="code">404</p>
+		<h1>Nothing here.</h1>
+		<p class="lead">The page you're looking for was moved or never existed.</p>
+		<p class="links">
+			<a href="/">Selected work →</a>
+			<a href="/archive/">Archive →</a>
+			<a href="/about/">About →</a>
+		</p>
+	</section>
+</Base>
+
+<style>
+	.nf {
+		padding-block: clamp(80px, 22vh, 240px) 80px;
+		max-width: 40rem;
+	}
+	.code {
+		font: 12px var(--mono);
+		letter-spacing: 0.04em;
+		color: var(--muted);
+		margin: 0 0 16px;
+	}
+	h1 {
+		font-size: clamp(36px, 6vw, 80px);
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		margin: 0 0 24px;
+	}
+	.lead {
+		font: 18px/1.5 var(--text);
+		color: var(--muted);
+		margin: 0 0 40px;
+	}
+	.links {
+		display: flex;
+		gap: 28px;
+		flex-wrap: wrap;
+		font: 13px var(--mono);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		margin: 0;
+	}
+	.links a:hover {
+		color: var(--accent);
+	}
+</style>

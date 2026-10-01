@@ -1,0 +1,146 @@
+{
+ "slug": "wood-i",
+ "legacy": "https://kaizhang.io/wood",
+ "hero": {
+  "type": "image",
+  "src": "wood-i/01.jpg",
+  "width": 2400,
+  "height": 1800
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "wood-i/01.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/02.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/03.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/04.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "wide-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/05.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "small-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/06.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "wood-i/07.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "wood-i/08.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/09.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/10.jpg",
+     "width": 2388,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/11.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/12.jpg",
+     "width": 2309,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/13.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/14.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/15.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "wood-i/16.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "wood-i/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": null
+}

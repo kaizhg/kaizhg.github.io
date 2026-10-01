@@ -1,0 +1,369 @@
+{
+ "slug": "briota-iospro",
+ "legacy": "https://kaizhang.io/briota-iospro",
+ "hero": {
+  "type": "image",
+  "src": "briota-iospro/01.jpg",
+  "width": 971,
+  "height": 759
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "briota-iospro/02.jpg",
+   "width": 1860,
+   "height": 1047,
+   "layout": "full",
+   "kind": "white"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "briota-iospro/03.jpg",
+     "width": 1920,
+     "height": 1118,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/04.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/05.jpg",
+     "width": 1961,
+     "height": 1103,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/06.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid4"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "briota-iospro/07.jpg",
+     "width": 2400,
+     "height": 1251,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/08.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/09.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/10.jpg",
+     "width": 2050,
+     "height": 1154,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/11.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/12.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/13.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/14.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/15.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/16.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/17.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/18.jpg",
+     "width": 2400,
+     "height": 1341,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/19.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/20.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/21.jpg",
+     "width": 2140,
+     "height": 1204,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/22.jpg",
+     "width": 1860,
+     "height": 1047,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/23.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid5"
+  },
+  {
+   "type": "image",
+   "src": "briota-iospro/24.jpg",
+   "width": 2000,
+   "height": 1125,
+   "kind": "white"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "briota-iospro/25.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/26.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/27.jpg",
+     "width": 2400,
+     "height": 1262,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/28.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/29.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/30.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid3"
+  },
+  {
+   "type": "image",
+   "src": "briota-iospro/31.jpg",
+   "width": 2000,
+   "height": 1125,
+   "kind": "white"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "briota-iospro/32.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/33.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/34.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/35.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/36.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/37.jpg",
+     "width": 2400,
+     "height": 1273,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/38.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/39.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/40.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/41.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/42.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/43.jpg",
+     "width": 1800,
+     "height": 1013,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/44.jpg",
+     "width": 2400,
+     "height": 1350,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/45.jpg",
+     "width": 1630,
+     "height": 917,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/46.jpg",
+     "width": 1320,
+     "height": 743,
+     "kind": "white"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid5"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "briota-iospro/cover.jpg",
+  "width": 2400,
+  "height": 1876
+ },
+ "hover": {
+  "type": "image",
+  "src": "briota-iospro/hover.jpg",
+  "width": 971,
+  "height": 759
+ }
+}

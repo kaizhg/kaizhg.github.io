@@ -1,0 +1,201 @@
+{
+ "slug": "homovirus",
+ "legacy": "https://kaizhang.io/homovirus",
+ "hero": {
+  "type": "loop",
+  "src": "/media/homovirus/01.mp4",
+  "width": 800,
+  "height": 500
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "homovirus/02.jpg",
+   "width": 2400,
+   "height": 1606,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.505,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "homovirus/03.jpg",
+       "width": 1697,
+       "height": 2400,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.495,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/homovirus/G8JYgoPPebA.mp4",
+       "poster": "/media/homovirus/G8JYgoPPebA.jpg",
+       "width": 1920,
+       "height": 1200,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "homovirus/04.jpg",
+   "width": 2400,
+   "height": 1883,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "homovirus/05.jpg",
+   "width": 2400,
+   "height": 1798,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "homovirus/06.jpg",
+   "width": 2400,
+   "height": 1436,
+   "layout": "wide-r",
+   "kind": "photo"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Self-Organizing Study</h3>",
+   "layout": "section",
+   "kind": "section"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "loop",
+     "src": "/media/homovirus/07.mp4",
+     "width": 600,
+     "height": 450,
+     "kind": "small"
+    },
+    {
+     "type": "loop",
+     "src": "/media/homovirus/08.mp4",
+     "width": 600,
+     "height": 541,
+     "kind": "small"
+    },
+    {
+     "type": "loop",
+     "src": "/media/homovirus/09.mp4",
+     "width": 800,
+     "height": 623,
+     "kind": "photo"
+    }
+   ],
+   "layout": "strip",
+   "kind": "gallery"
+  },
+  {
+   "type": "video",
+   "src": "/media/homovirus/TfuuFwm27ef.mp4",
+   "poster": "/media/homovirus/TfuuFwm27ef.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true,
+   "layout": "wide-l",
+   "kind": "video"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5546,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "homovirus/10.jpg",
+       "width": 2113,
+       "height": 2400,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.4454,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "homovirus/11.jpg",
+       "width": 1697,
+       "height": 2400,
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "homovirus/12.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "wide-r",
+   "kind": "photo"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.3755,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "homovirus/13.jpg",
+       "width": 1070,
+       "height": 1258,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.6245,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "homovirus/14.jpg",
+       "width": 2400,
+       "height": 1697,
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "homovirus/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": {
+  "type": "loop",
+  "src": "/media/homovirus/hover.mp4",
+  "width": 462,
+  "height": 361
+ }
+}

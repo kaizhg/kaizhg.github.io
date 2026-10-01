@@ -1,0 +1,174 @@
+{
+ "slug": "rib-stool",
+ "legacy": "https://kaizhang.io/rib-stool",
+ "hero": {
+  "type": "image",
+  "src": "rib-stool/01.png",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "html": "<h3>Intentionally create a rib in the vacuum forming process, and use it as a structural reinforcement.</h3>",
+   "kind": "quote"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "rib-stool/02.jpg",
+     "width": 1800,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/03.jpg",
+     "width": 1800,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "kind": "gallery",
+   "layout": "grid3"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "rib-stool/04.jpg",
+     "width": 2392,
+     "height": 2392,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/05.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/06.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/07.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/08.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/09.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/10.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/11.jpg",
+     "width": 2328,
+     "height": 2328,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/12.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "layout": "wide-l",
+   "kind": "gallery"
+  },
+  {
+   "type": "image",
+   "src": "rib-stool/13.png",
+   "width": 2400,
+   "height": 1800,
+   "layout": "wide-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "rib-stool/14.png",
+   "width": 2400,
+   "height": 1800,
+   "kind": "photo"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.585,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "rib-stool/15.jpg",
+       "width": 1800,
+       "height": 2400,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.415,
+     "blocks": [
+      {
+       "type": "gallery",
+       "items": [
+        {
+         "type": "image",
+         "src": "rib-stool/16.jpg",
+         "width": 2391,
+         "height": 2400,
+         "kind": "photo"
+        },
+        {
+         "type": "image",
+         "src": "rib-stool/17.jpg",
+         "width": 2400,
+         "height": 2400,
+         "kind": "photo"
+        }
+       ],
+       "kind": "gallery"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "rib-stool/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": null
+}

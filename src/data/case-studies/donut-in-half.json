@@ -1,0 +1,107 @@
+{
+ "slug": "donut-in-half",
+ "legacy": "https://kaizhang.io/donut",
+ "hero": {
+  "type": "image",
+  "src": "donut-in-half/01.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "image",
+   "src": "donut-in-half/02.jpg",
+   "width": 2400,
+   "height": 1800,
+   "layout": "full",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "donut-in-half/03.jpg",
+   "width": 2400,
+   "height": 1800,
+   "kind": "photo"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "donut-in-half/04.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "donut-in-half/05.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "donut-in-half/06.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "donut-in-half/07.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "donut-in-half/08.jpg",
+     "width": 2400,
+     "height": 1800,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "donut-in-half/09.jpg",
+     "width": 2400,
+     "height": 1800,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "donut-in-half/10.jpg",
+     "width": 2400,
+     "height": 1800,
+     "kind": "photo"
+    }
+   ],
+   "layout": "wide-c",
+   "kind": "gallery"
+  },
+  {
+   "type": "video",
+   "src": "/media/donut-in-half/Vc6cnUHN2Ts.mp4",
+   "poster": "/media/donut-in-half/Vc6cnUHN2Ts.jpg",
+   "width": 1920,
+   "height": 1080,
+   "audio": true,
+   "kind": "video"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "donut-in-half/cover.jpg",
+  "width": 2400,
+  "height": 1877
+ },
+ "hover": null
+}

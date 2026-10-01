@@ -94,7 +94,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>AIncense 2.0<br>(Locally deployed LLM)</h3>\n<p>In Fall 2024, I had a chance to revisit this project, and made a hardware design that truly enables this interaction. With the support from MIT HAN Lab, I was able to make a smart incense that locally communicates with Large Language. Please click the following links to see detail for the 2nd Iteration:</p>\n<h3><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final\">&gt;&gt;&gt; Overview</a></strong><br><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final_tracking\">&gt;&gt;&gt; Process Documentation</a></strong></h3>",
+       "html": "<h3>AIncense 2.0 (Locally deployed LLM)</h3>\n<p>In Fall 2024, I had a chance to revisit this project, and made a hardware design that truly enables this interaction. With the support from MIT HAN Lab, I was able to make a smart incense that locally communicates with Large Language. Please click the following links to see detail for the 2nd Iteration:</p>\n<h3><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final\">&gt;&gt;&gt; Overview</a></strong><br><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final_tracking\">&gt;&gt;&gt; Process Documentation</a></strong></h3>",
        "kind": "text"
       }
      ]
@@ -132,7 +132,8 @@
      "kind": "white"
     }
    ],
-   "kind": "gallery"
+   "kind": "gallery",
+   "layout": "grid3"
   },
   {
    "type": "image",

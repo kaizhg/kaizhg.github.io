@@ -10,7 +10,7 @@ Cell vocabulary (12-column grid):
   full | wide-l wide-r | half-l half-r | narrow-l narrow-r | third-l third-r
   small-l small-c small-r | tri-a tri-b tri-c | text-l text-r | beside-l beside-r
   quote | section | credits | skip           (+ ' stagger' modifier; ' pull' = render before the previous cell)
-Gallery layouts: grid2 grid3 grid4 grid5 strip.   Row layouts: flat (no stagger).
+Gallery layouts: grid2 grid3 grid4 grid5 strip.   Row layouts: stagger (offset 2nd column).
 
 Usage: python3 scripts/plan-layout.py
 """
@@ -56,11 +56,19 @@ def tag(bs):
     """Annotate kinds recursively; galleries/rows get sensible inner layouts."""
     for b in bs:
         if b['type'] == 'text':
+            b['html'] = re.sub(r'(?<![.:!?\u2026\u2014)\]])\s*<br>\s*(?=[a-z(])', ' ', b['html'])
             t = text_of(b['html'])
             if CREDITS.match(t):
                 b['kind'] = 'credits'
             elif re.search(r'<h[23]>', b['html']) and not re.search(r'<p>|<ul>|<ol>', b['html']):
-                b['kind'] = 'section' if len(t) < 36 else 'quote'
+                # short = section label, medium = pull quote, long = it's really a paragraph in heading clothes
+                if len(t) < 36:
+                    b['kind'] = 'section'
+                elif len(t) < 200:
+                    b['kind'] = 'quote'
+                else:
+                    b['kind'] = 'text'
+                    b['html'] = re.sub(r'</?h[23]>', lambda m: '<p>' if m.group(0) == '<h2>' or m.group(0) == '<h3>' else '</p>', b['html'])
             else:
                 b['kind'] = 'text'
         elif b['type'] == 'gallery':
@@ -73,13 +81,39 @@ def tag(bs):
                 for g in c['blocks']:
                     if g['type'] == 'gallery' and len(g['items']) >= 4:
                         g['layout'] = 'grid3' if len(g['items']) >= 7 else 'grid2'
-            media = [g for c in b['columns'] for g in c['blocks']]
-            if len(b['columns']) == 2 and all(g['type'] in ('image', 'loop', 'video') for g in media) \
-                    and any(g.get('kind') in ('white', 'small') for g in media):
-                b['layout'] = 'flat'
-            b['kind'] = 'row'
+                    elif g['type'] == 'gallery' and all(it['width'] / it['height'] > 1.6 for it in g['items']):
+                        g['layout'] = 'stack'  # wide drawings side by side would be tiny
+            b['kind'] = 'row'  # rows are top-aligned; set layout 'stagger' in PLAN to offset the second column
         else:
             b['kind'] = kind_of(b)
+
+
+def merge_runs(bs):
+    """Runs of similar unplanned images become one gallery: slide decks (white, landscape,
+    4+) as two-up grids, series of product photos (3+, same orientation) as three-up grids.
+    A viewer scans a series faster as a grid than as a stack of full-width pictures."""
+    out, i = [], 0
+    def plain(b):
+        return b['type'] == 'image' and 'layout' not in b and not b.get('caption')
+    while i < len(bs):
+        b = bs[i]
+        if plain(b):
+            j = i
+            kind = b['kind']
+            land = b['width'] >= b['height']
+            while j < len(bs) and plain(bs[j]) and bs[j]['kind'] == kind and (bs[j]['width'] >= bs[j]['height']) == land \
+                    and abs(bs[j]['width'] / bs[j]['height'] - b['width'] / b['height']) < 0.2:
+                j += 1
+            n = j - i
+            if (kind == 'white' and land and n >= 4) or (kind == 'photo' and n >= 3):
+                items = bs[i:j]
+                out.append({'type': 'gallery', 'items': items, 'kind': 'gallery',
+                            'layout': 'grid2' if kind == 'white' else 'grid3'})
+                i = j
+                continue
+        out.append(b)
+        i += 1
+    return out
 
 
 def auto(bs):
@@ -92,9 +126,13 @@ def auto(bs):
             b['layout'] = 'credits'
         elif k == 'logo':
             b['layout'] = 'small-l'
-        elif b['type'] == 'gallery' and len(b['items']) >= 4:
+        elif b['type'] == 'gallery' and len(b['items']) >= 2:
             n = len(b['items'])
-            b['layout'] = 'grid5' if n >= 10 else 'grid4' if n >= 7 or n == 4 else 'grid3'
+            cols = 5 if n >= 10 else 4 if n >= 7 or n == 4 else 3 if n >= 3 else 2
+            # Portrait pictures are tall: give them one more column so no row is a screen high
+            if sum(1 for it in b['items'] if it['height'] > it['width']) > n / 2 and n >= 2:
+                cols = min(cols + 1, 5)
+            b['layout'] = f'grid{cols}'
 
 
 # ---- decisions made by eye per project: block index -> layout ----
@@ -110,13 +148,47 @@ PLAN = {
     'yottabyte': {2: 'quote', 3: 'full', 4: 'half-l', 5: 'half-r', 6: 'wide-l', 7: 'full', 8: 'half-l', 9: 'half-r'},
     'prismo': {2: 'quote', 4: 'text-l', 6: 'wide-r', 9: 'text-l', 10: 'half-r', 11: 'grid4', 14: 'grid3', 17: 'section',
                19: 'wide-l', 20: 'section', 21: 'full', 24: 'half-l', 25: 'half-r', 26: 'grid3'},
-    'inflatable-patterner': {1: 'text-l', 2: 'wide-r', 3: 'text-l', 5: 'text-r', 6: 'grid4', 8: 'wide-l', 9: 'text-r',
-                             10: 'grid5', 11: 'text-l', 12: 'half-r', 13: 'text-l', 15: 'text-r', 17: 'text-l',
-                             18: 'narrow-r', 19: 'text-l', 21: 'quote', 22: 'grid4'},
+    'inflatable-patterner': {11: 'grid4'},
     'mind-bridge': {1: 'full', 2: 'half-l', 3: 'half-r', 4: 'full'},
+    # ---- archive ----
+    'vitalization': {2: 'wide-l', 3: 'wide-r stagger', 5: 'wide-c'},
+    'ink-on-paper': {1: 'grid3', 2: 'grid3', 3: 'grid3', 4: 'grid2', 6: 'strip', 7: 'grid4', 8: 'strip', 9: 'grid5', 10: 'text-l'},
+    'marble-fall': {0: 'full', 1: 'half-l', 2: 'half-r stagger', 3: 'half-l', 4: 'narrow-r stagger'},
+    'made-in-gh': {0: 'wide-l', 1: 'small-r stagger', 2: 'grid3', 3: 'half-l', 4: 'half-r stagger', 5: 'wide-c', 6: 'half-l',
+                   7: 'half-r stagger', 8: 'wide-r', 9: 'half-l', 10: 'narrow-r stagger', 11: 'wide-l', 12: 'full', 13: 'wide-r'},
+    'briota-iospro': {},  # slide deck: rhythm generated below
+    'hug': {0: 'quote', 1: 'wide-l', 2: 'wide-r stagger', 3: 'full'},
+    'invertebot': {5: 'full', 6: 'wide-r', 7: 'full', 8: 'section', 9: 'wide-l', 10: 'small-r stagger'},
+    'neurodynamic': {1: 'full', 2: 'wide-r'},
+    'dynamic-valley': {0: 'text-l', 2: 'grid3', 5: 'wide-c'},
+    'homovirus': {0: 'full', 2: 'half-l', 3: 'half-r stagger', 4: 'wide-r', 5: 'section', 6: 'strip', 7: 'wide-l', 9: 'wide-r'},
+    'providence-seat': {0: 'full', 1: 'wide-l', 2: 'wide-r stagger'},
+    'mix-museum-guide': {0: 'full', 1: 'half-l', 2: 'half-r stagger', 3: 'wide-l', 4: 'half-l', 5: 'half-r stagger'},
+    'donut-in-half': {0: 'full', 2: 'grid3', 3: 'wide-c'},
+    'intersect': {0: 'grid5', 1: 'grid4', 2: 'grid4', 4: 'wide-l', 5: 'half-r stagger', 6: 'full'},
+    'barnacle-lamp': {0: 'full', 1: 'half-l', 2: 'narrow-r stagger', 3: 'wide-l', 4: 'half-r stagger', 5: 'half-l',
+                      6: 'wide-r stagger', 7: 'full', 8: 'half-l', 9: 'half-r stagger'},
+    'rib-stool': {2: 'wide-l', 3: 'wide-r stagger'},
+    'wood-ii': {0: 'full', 2: 'wide-l', 3: 'grid3'},
+    'wood-i': {0: 'full', 1: 'half-l', 2: 'half-r stagger', 3: 'wide-l', 4: 'small-r stagger', 5: 'half-l', 6: 'half-r stagger', 7: 'grid3'},
+    'mix-headset': {1: 'full', 2: 'half-l', 3: 'half-r stagger', 4: 'wide-r', 5: 'half-l', 6: 'half-r stagger'},
+    'mirrored-river': {1: 'full'},
     'telewind': {1: 'full', 2: 'half-l', 3: 'half-r', 4: 'full'},
     'sound-x': {0: 'full'},
 }
+
+
+def split_gallery_rows(bs):
+    """A row that squeezes a gallery of 4+ pictures into one column becomes sequential blocks:
+    the pictures get a full-width grid instead of thumbnails nobody can read."""
+    out = []
+    for b in bs:
+        if b['type'] == 'row' and 'layout' not in b and any(g['type'] == 'gallery' and len(g['items']) >= 4 for c in b['columns'] for g in c['blocks']):
+            for c in b['columns']:
+                out += c['blocks']
+        else:
+            out.append(b)
+    return out
 
 
 def split_credit_rows(bs):
@@ -130,17 +202,41 @@ def split_credit_rows(bs):
     return out
 
 
+# Pages that open with two pictures close together instead of a lone hero: the hero becomes
+# the first block (left) and the next image sits beside it, dropped down a little.
+HERO_INLINE = {'folded-volume': ('wide-l', 'small-r stagger'), 'being-contained': ('wide-l', 'small-r stagger')}
+# Slide decks: title slides go full width as section breaks; the rest are read two-up (merge_runs)
+DECKS = {'briota-iospro': {0, 22, 29}}  # indices of title slides
+
 for f in sorted(glob.glob(os.path.join(DATA, '*.json'))):
     d = json.load(open(f))
     blocks = d['blocks']
+    if d['slug'] in HERO_INLINE and d.get('hero') and not d.get('heroInline'):
+        blocks.insert(0, dict(d['hero']))
+        d['hero'] = None
+        d['heroInline'] = True
+    if d['slug'] in HERO_INLINE:
+        for i, lay in zip(range(2), HERO_INLINE[d['slug']]):
+            PLAN.setdefault(d['slug'], {})[i] = lay
+    if d['slug'] in DECKS:
+        for i in DECKS[d['slug']]:
+            PLAN.setdefault(d['slug'], {})[i] = 'full'
+    if d.get('heroInline'):
+        d['hero'] = None  # the hero lives in the blocks on these pages
     for b in blocks:  # start clean so the script is re-runnable
         b.pop('layout', None)
         b.pop('kind', None)
     blocks = split_credit_rows(blocks)
-    for i, lay in PLAN.get(d['slug'], {}).items():  # indices refer to the blocks after the split
+    for i, lay in PLAN.get(d['slug'], {}).items():  # indices refer to the credit-split blocks
         if i < len(blocks):
             blocks[i]['layout'] = lay
+    blocks = split_gallery_rows(blocks)  # only rows without a planned layout are split
     tag(blocks)
+    if d['slug'] in DECKS:  # every board in a deck is a slide, photos included
+        for b in blocks:
+            if b['type'] == 'image':
+                b['kind'] = 'white'
+    blocks = merge_runs(blocks)
     auto(blocks)
     d['blocks'] = blocks
     json.dump(d, open(f, 'w'), indent=1, ensure_ascii=False)

@@ -5,7 +5,7 @@ to a file in ../asset (original if the library had it, otherwise the "From kaizh
 web-sized media into the site, and emits src/data/case-studies/<slug>.json with the page's blocks
 in their original order.
 
-Usage: python3 scripts/import-legacy.py <crawl_dir>
+Usage: python3 scripts/import-legacy.py <crawl_dir> [selected|archive]
 """
 import html as htmllib, json, os, re, shutil, subprocess, sys
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -28,12 +28,34 @@ SELECTED = {
     'zhang-zhoujie-digital-lab-internship': 'tables', 'mind-bridge': 'mind-bridge', 'seesaw': 'seesaw',
     'wind': 'telewind', 'yotabyte': 'yottabyte',
 }
+ARCHIVE = {
+    'transform': 'transform', 'vitalization': 'vitalization', 'drawing': 'ink-on-paper',
+    'marble-fall': 'marble-fall', 'made-in-gh': 'made-in-gh', 'briota-iospro': 'briota-iospro',
+    'give-light-a-hug': 'hug', 'invertebot': 'invertebot', 'neurodynamic': 'neurodynamic',
+    'practice': 'dynamic-valley', 'homovirus': 'homovirus',
+    'providence-station-seat-redesign': 'providence-seat', 'mix-musuem-guide': 'mix-museum-guide',
+    'donut': 'donut-in-half', 'intersect': 'intersect', 'barnacle-lamp': 'barnacle-lamp',
+    'rib-stool': 'rib-stool', 'metal': 'folded-volume', 'wood-ii': 'wood-ii', 'wood': 'wood-i',
+    'being-contained': 'being-contained', 'mix-headset': 'mix-headset', 'mirrored-river': 'mirrored-river',
+}
 FOLDER = {  # same mapping used when placing "From kaizhang.io" downloads
     'inflatable-generator': 'Pneuhaus', 'os-11': 'Operating System 1.1', 'large-language-objects': 'LLO',
     'pupas': 'Pupas', 'sound-x-2021-light-effect-design': 'Huawei', 'hyperslice': 'HyperSlice',
     'prismo': 'Prismo', 'zhang-zhoujie-digital-lab-internship': 'Tables', 'mind-bridge': 'Mind Bridge',
     'seesaw': 'See X Saw', 'wind': 'Telewind', 'yotabyte': 'Yottabyte', '_covers_work': 'Thumbnail',
+    '_covers_archive': 'Thumbnail',
+    'barnacle-lamp': 'Barnacle Lamp', 'being-contained': 'Being Contained', 'briota-iospro': 'Briota IOSPro',
+    'donut': 'Donut in haft', 'drawing': 'Drawings', 'give-light-a-hug': 'H U G', 'homovirus': 'Homovirus',
+    'intersect': 'Intersect', 'invertebot': 'InverteBot', 'made-in-gh': 'GH?', 'marble-fall': 'MarbleFall',
+    'metal': 'Metal I', 'mirrored-river': 'Mirrored River', 'mix-headset': 'MIX Headset',
+    'mix-musuem-guide': 'MIX Museum Guide', 'neurodynamic': 'Neurodynamic', 'practice': 'Dynamic Valley',
+    'providence-station-seat-redesign': 'Providence Station Seat', 'rib-stool': 'Rib Stool',
+    'transform': 'Transform', 'vitalization': 'Vitalization', 'wood-ii': 'Wood II', 'wood': 'Wood I',
 }
+GROUP = sys.argv[2] if len(sys.argv) > 2 else 'selected'
+PAGES = ARCHIVE if GROUP == 'archive' else SELECTED
+COVER_KEY = '_covers_archive' if GROUP == 'archive' else '_covers_work'
+INDEX_HTML = 'archive.html' if GROUP == 'archive' else 'work.html'
 UUID = re.compile(r'([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})')
 
 report = json.load(open(os.path.join(CRAWL, 'report.json')))
@@ -43,7 +65,7 @@ videos = {v['id']: v for v in json.load(open(os.path.join(CRAWL, 'videos.json'))
 
 def source_for(old_slug, uuid):
     """Best local file for an image uuid: library original, else the From kaizhang.io copy, else crawl cache."""
-    for key in (old_slug, '_covers_work'):
+    for key in (old_slug, COVER_KEY):
         rows = {r['uuid']: r for r in report.get(key, {}).get('images', [])}
         if uuid not in rows:
             continue
@@ -51,7 +73,7 @@ def source_for(old_slug, uuid):
         if r['match'] and os.path.exists(r['match']):
             return r['match']
         order = {im['uuid']: n for n, im in enumerate(manifest[key]['images'], 1)}
-        prefix = 'cover-work' if key == '_covers_work' else key
+        prefix = 'cover-' + key.split('_')[-1] if key.startswith('_covers') else key
         ext = os.path.splitext(r['local'])[1].lower()
         p = os.path.join(ASSET, FOLDER[key], 'From kaizhang.io', f'{prefix}_{order[uuid]:02d}{ext}')
         return p if os.path.exists(p) else r['local']
@@ -276,7 +298,7 @@ def module_blocks(mod, old, media):
 
 def covers():
     """old slug -> [cover uuid, rollover uuid] from the Selected index."""
-    s = BeautifulSoup(open(os.path.join(CRAWL, 'work.html')).read(), 'html.parser')
+    s = BeautifulSoup(open(os.path.join(CRAWL, INDEX_HTML)).read(), 'html.parser')
     out = {}
     for a in s.select('a.project-cover'):
         uu = []
@@ -292,10 +314,10 @@ def covers():
 def main():
     os.makedirs(DATA_OUT, exist_ok=True)
     cov = covers()
-    for old, slug in SELECTED.items():
+    for old, slug in PAGES.items():
         media = Media(slug)
         # hero: the largest of the cover / rollover images
-        cands = [source_for('_covers_work', u) for u in cov.get(old, [])]
+        cands = [source_for(COVER_KEY, u) for u in cov.get(old, [])]
         cands = [c for c in cands if c and os.path.exists(c) and min(Image.open(c).size) >= 400]
         hero = None
         if cands:

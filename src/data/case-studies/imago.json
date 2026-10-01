@@ -116,7 +116,8 @@
      "kind": "photo"
     }
    ],
-   "kind": "gallery"
+   "kind": "gallery",
+   "layout": "grid3"
   },
   {
    "type": "row",
@@ -159,7 +160,7 @@
   },
   {
    "type": "text",
-   "html": "<h3>This page shows some of the early studies of Project Imago,<br>starting at 2021.</h3>",
+   "html": "<h3>This page shows some of the early studies of Project Imago, starting at 2021.</h3>",
    "layout": "text-l",
    "kind": "quote"
   },
@@ -181,9 +182,9 @@
   },
   {
    "type": "text",
-   "html": "<h2>↗↗↗</h2>\n<h3>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</h3>",
+   "html": "<p>↗↗↗</p>\n<p>Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas.</p>",
    "layout": "text-r",
-   "kind": "quote"
+   "kind": "text"
   },
   {
    "type": "image",
@@ -241,7 +242,8 @@
      "kind": "photo"
     }
    ],
-   "kind": "gallery"
+   "kind": "gallery",
+   "layout": "grid2"
   }
  ],
  "cover": {
