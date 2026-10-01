@@ -388,6 +388,8 @@ def parse_media_line(line, folder, slug):
     if rest.strip() and not hm:
         raise ValueError(f'{slug}: cannot read "{rest.strip()}" after {m.group(1)}')
     if hm:
+        if hm.group(1) == 'stagger':
+            raise ValueError(f'{slug}: stagger 要跟宽度一起写，例如 "half-r stagger": {line.strip()}')
         b['layout'] = hm.group(1)
     return b
 
@@ -457,6 +459,8 @@ def parse_lines(lines, folder, slug, allow_rows=True):
             blocks.append({'type': 'row', 'columns': [{'flex': round(1 / len(parts), 4), 'blocks': [parse_media_line(p, folder, slug)]} for p in parts]})
             i += 1
             continue
+        if s.startswith('![]') and not MEDIA_RE.match(s):
+            raise ValueError(f'{slug}: 图片的写法是 ![](文件名)，这一行少了括号: {s}')
         if MEDIA_RE.match(s) or DIRECTIVE_RE.match(s) and not s.startswith('[section'):
             flush()
             blocks.append(parse_block_line(s, folder, slug))

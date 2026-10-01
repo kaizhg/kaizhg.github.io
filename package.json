@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "node scripts/sync-media.mjs && astro dev",
+    "edit": "node scripts/edit.mjs",
     "build": "node scripts/sync-media.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro"
