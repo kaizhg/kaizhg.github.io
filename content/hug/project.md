@@ -37,8 +37,8 @@ hero: hug_hero.jpg                 # 项目页顶部大图；没有这行就用�
 
 ![](hug_02.jpg) wide-r stagger
 
-![](hug_hero.jpg) full
+[section] Making
 
-[gallery grid4 cols=3] hug_03.jpg hug_04.jpg hug_05.jpg hug_06.jpg hug_07.jpg hug_08.jpg hug_09.jpg hug_10.jpg hug_11.jpg
+[gallery grid3 cols=3] hug_03.jpg hug_04.jpg hug_05.jpg hug_06.jpg hug_07.jpg hug_08.jpg hug_09.jpg hug_10.jpg hug_11.jpg
 
-[video audio] hug_12.mp4
+[video audio wide-c] hug_12.mp4

@@ -32,8 +32,14 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid3",
+   "layout": "grid2 @3-11",
    "kind": "gallery"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Process</h2>"
   },
   {
    "type": "gallery",
@@ -102,66 +108,52 @@
      "kind": "photo"
     }
    ],
-   "layout": "wide-l",
+   "layout": "grid3",
+   "cols": 3,
    "kind": "gallery"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Outcome</h2>"
   },
   {
    "type": "image",
    "src": "rib-stool/rib-stool_12.png",
    "width": 2400,
    "height": 1800,
-   "layout": "wide-r stagger",
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
-   "type": "image",
-   "src": "rib-stool/rib-stool_13.png",
-   "width": 2400,
-   "height": 1800,
-   "kind": "photo"
-  },
-  {
-   "type": "row",
-   "columns": [
+   "type": "gallery",
+   "items": [
     {
-     "flex": 0.585,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "rib-stool/rib-stool_14.jpg",
-       "width": 1800,
-       "height": 2400,
-       "kind": "photo"
-      }
-     ]
+     "type": "image",
+     "src": "rib-stool/rib-stool_14.jpg",
+     "width": 1800,
+     "height": 2400,
+     "kind": "photo"
     },
     {
-     "flex": 0.415,
-     "blocks": [
-      {
-       "type": "gallery",
-       "items": [
-        {
-         "type": "image",
-         "src": "rib-stool/rib-stool_15.jpg",
-         "width": 2391,
-         "height": 2400,
-         "kind": "photo"
-        },
-        {
-         "type": "image",
-         "src": "rib-stool/rib-stool_16.jpg",
-         "width": 2400,
-         "height": 2400,
-         "kind": "photo"
-        }
-       ],
-       "kind": "gallery"
-      }
-     ]
+     "type": "image",
+     "src": "rib-stool/rib-stool_15.jpg",
+     "width": 2391,
+     "height": 2400,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "rib-stool/rib-stool_16.jpg",
+     "width": 2400,
+     "height": 2400,
+     "kind": "photo"
     }
    ],
-   "kind": "row"
+   "layout": "@2-12",
+   "cols": 3,
+   "kind": "gallery"
   }
  ],
  "cover": {

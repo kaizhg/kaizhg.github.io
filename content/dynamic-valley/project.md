@@ -47,7 +47,7 @@ hero: dynamic-valley_hero.mp4      # 项目页顶部大图；没有这行就用�
 [/row]
 
 [row 0.26 0.74]
-### 2. Cyclic Celluar Automata as a 2.5D mesh manipulation
+### 2. Cyclic Cellular Automata as a 2.5D mesh manipulation
 |
 ![](dynamic-valley_11.mp4)
 [/row]

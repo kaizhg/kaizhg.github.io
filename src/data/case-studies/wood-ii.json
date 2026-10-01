@@ -11,32 +11,25 @@
  "blocks": [
   {
    "type": "image",
-   "src": "wood-ii/wood-ii_hero.jpg",
+   "src": "wood-ii/wood-ii_01.jpg",
    "width": 2400,
-   "height": 1920,
-   "layout": "full",
+   "height": 1602,
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
-   "type": "gallery",
-   "items": [
-    {
-     "type": "image",
-     "src": "wood-ii/wood-ii_01.jpg",
-     "width": 2400,
-     "height": 1602,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
-     "src": "wood-ii/wood-ii_02.jpg",
-     "width": 1602,
-     "height": 2400,
-     "kind": "photo"
-    }
-   ],
-   "layout": "grid2",
-   "kind": "gallery"
+   "type": "image",
+   "src": "wood-ii/wood-ii_02.jpg",
+   "width": 1602,
+   "height": 2400,
+   "layout": "small-r",
+   "kind": "photo"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Process</h2>"
   },
   {
    "type": "image",

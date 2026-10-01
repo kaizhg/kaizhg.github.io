@@ -37,6 +37,8 @@ hero: marble-fall_hero.jpg         # 项目页顶部大图；没有这行就用�
 
 ![](marble-fall_03.jpg) half-r stagger
 
-![](marble-fall_04.jpg) half-l
-
-[video audio narrow-r stagger] marble-fall_05.mp4
+[row]
+![](marble-fall_04.jpg)
+|
+[video audio] marble-fall_05.mp4
+[/row]

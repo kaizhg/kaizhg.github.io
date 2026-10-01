@@ -34,22 +34,36 @@
    "kind": "white"
   },
   {
-   "type": "image",
-   "src": "marble-fall/marble-fall_04.jpg",
-   "width": 2400,
-   "height": 1600,
-   "layout": "half-l",
-   "kind": "photo"
-  },
-  {
-   "type": "video",
-   "src": "/media/marble-fall/marble-fall_05.mp4",
-   "poster": "/media/marble-fall/marble-fall_05.jpg",
-   "width": 720,
-   "height": 1280,
-   "audio": true,
-   "layout": "narrow-r stagger",
-   "kind": "video"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "marble-fall/marble-fall_04.jpg",
+       "width": 2400,
+       "height": 1600,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/marble-fall/marble-fall_05.mp4",
+       "poster": "/media/marble-fall/marble-fall_05.jpg",
+       "width": 720,
+       "height": 1280,
+       "audio": true,
+       "kind": "video"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   }
  ],
  "cover": {

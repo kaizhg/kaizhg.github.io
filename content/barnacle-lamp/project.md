@@ -47,4 +47,4 @@ cover: barnacle-lamp_cover.jpg     # 首页封面（32:25 裁切）
 
 ![](barnacle-lamp_09.jpg) half-l
 
-![](barnacle-lamp_10.jpg) half-r stagger
+![](barnacle-lamp_10.jpg) half-r

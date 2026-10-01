@@ -43,7 +43,6 @@
     }
    ],
    "layout": "grid3",
-   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -123,7 +122,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid2",
+   "layout": "grid2 @3-11",
    "kind": "gallery"
   },
   {
@@ -131,7 +130,7 @@
    "src": "ink-on-paper/ink-on-paper_12.jpg",
    "width": 1242,
    "height": 1573,
-   "caption": "Duomo di milano, 2020<br>",
+   "caption": "Duomo di Milano, 2020",
    "kind": "white"
   },
   {
@@ -166,8 +165,8 @@
      "kind": "white"
     }
    ],
-   "layout": "strip",
-   "cols": 2,
+   "layout": "grid4",
+   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -214,9 +213,9 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid4",
-   "cols": 3,
-   "kind": "gallery"
+   "cols": 5,
+   "kind": "gallery",
+   "layout": "grid4"
   },
   {
    "type": "gallery",
@@ -253,8 +252,15 @@
      "kind": "white"
     }
    ],
-   "layout": "strip",
-   "kind": "gallery"
+   "cols": 4,
+   "kind": "gallery",
+   "layout": "grid4"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Stickers</h2>"
   },
   {
    "type": "gallery",
@@ -297,6 +303,12 @@
    ],
    "layout": "grid5",
    "kind": "gallery"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Sketchbook</h2>"
   },
   {
    "type": "gallery",
@@ -400,9 +412,9 @@
      "kind": "white"
     }
    ],
-   "layout": "text-l",
-   "cols": 3,
-   "kind": "gallery"
+   "cols": 4,
+   "kind": "gallery",
+   "layout": "grid5"
   },
   {
    "type": "text",

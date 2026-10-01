@@ -32,12 +32,10 @@
    "kind": "photo"
   },
   {
-   "type": "image",
-   "src": "hug/hug_hero.jpg",
-   "width": 2400,
-   "height": 1800,
-   "layout": "full",
-   "kind": "photo"
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Making</h2>"
   },
   {
    "type": "gallery",
@@ -106,7 +104,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid4",
+   "layout": "grid3",
    "cols": 3,
    "kind": "gallery"
   },
@@ -117,6 +115,7 @@
    "width": 720,
    "height": 900,
    "audio": true,
+   "layout": "wide-c",
    "kind": "video"
   }
  ],

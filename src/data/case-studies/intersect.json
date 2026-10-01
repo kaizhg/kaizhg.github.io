@@ -10,6 +10,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Pattern studies</h2>"
+  },
+  {
    "type": "gallery",
    "items": [
     {
@@ -86,6 +92,12 @@
    "layout": "grid5",
    "cols": 5,
    "kind": "gallery"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Models</h2>"
   },
   {
    "type": "gallery",
@@ -208,6 +220,12 @@
    "kind": "gallery"
   },
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Design</h2>"
+  },
+  {
    "type": "gallery",
    "items": [
     {
@@ -240,7 +258,7 @@
     }
    ],
    "layout": "grid4",
-   "cols": 5,
+   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -289,34 +307,25 @@
    "kind": "white"
   },
   {
-   "type": "row",
-   "columns": [
+   "type": "gallery",
+   "items": [
     {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "intersect/intersect_36.jpg",
-       "width": 1553,
-       "height": 2400,
-       "kind": "white"
-      }
-     ]
+     "type": "image",
+     "src": "intersect/intersect_36.jpg",
+     "width": 1553,
+     "height": 2400,
+     "kind": "white"
     },
     {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "intersect/intersect_37.jpg",
-       "width": 1100,
-       "height": 1700,
-       "kind": "white"
-      }
-     ]
+     "type": "image",
+     "src": "intersect/intersect_37.jpg",
+     "width": 1100,
+     "height": 1700,
+     "kind": "white"
     }
    ],
-   "kind": "row"
+   "layout": "grid2 @3-11",
+   "kind": "gallery"
   }
  ],
  "cover": {

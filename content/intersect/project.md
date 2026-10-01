@@ -29,11 +29,17 @@ cover: intersect_cover.jpg         # 首页封面（32:25 裁切）
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
+[section] Pattern studies
+
 [gallery grid5 cols=5] intersect_01.jpg intersect_02.jpg intersect_03.jpg intersect_04.jpg intersect_05.jpg intersect_06.jpg intersect_07.jpg intersect_08.jpg intersect_09.jpg intersect_10.jpg
+
+[section] Models
 
 [gallery grid4 cols=4] intersect_11.jpg intersect_12.jpg intersect_13.jpg intersect_14.jpg intersect_15.jpg intersect_16.jpg intersect_17.jpg intersect_18.jpg intersect_19.jpg intersect_20.jpg intersect_21.jpg intersect_22.jpg intersect_23.jpg intersect_24.jpg intersect_25.jpg intersect_26.jpg
 
-[gallery grid4 cols=5] intersect_27.jpg intersect_28.jpg intersect_29.jpg intersect_30.jpg
+[section] Design
+
+[gallery grid4 cols=4] intersect_27.jpg intersect_28.jpg intersect_29.jpg intersect_30.jpg
 
 [gallery grid2] intersect_31.jpg intersect_32.jpg
 
@@ -43,4 +49,4 @@ cover: intersect_cover.jpg         # 首页封面（32:25 裁切）
 
 ![](intersect_35.jpg) full
 
-![](intersect_36.jpg) | ![](intersect_37.jpg)
+[gallery grid2 @3-11] intersect_36.jpg intersect_37.jpg

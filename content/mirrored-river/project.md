@@ -31,6 +31,6 @@ cover: mirrored-river_cover.jpg    # 首页封面（32:25 裁切）
 
 ### A river made out of stone, heavy metal, and lives.
 
-### [Click here to see more about this project.](https://cmao58.wixsite.com/mirroredriver)
+[See more about this project →](https://cmao58.wixsite.com/mirroredriver)
 
 ![](mirrored-river_01.jpg) full

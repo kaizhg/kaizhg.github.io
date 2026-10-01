@@ -86,7 +86,7 @@
    "src": "barnacle-lamp/barnacle-lamp_10.jpg",
    "width": 2400,
    "height": 1553,
-   "layout": "half-r stagger",
+   "layout": "half-r",
    "kind": "photo"
   }
  ],

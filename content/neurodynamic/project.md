@@ -33,6 +33,4 @@ hero: neurodynamic_hero.jpg        # 项目页顶部大图；没有这行就用�
 
 # What if neurotransmitter becomes a communicative medium?
 
-![](neurodynamic_hero.jpg) full
-
 ![](neurodynamic_01.jpg) wide-r

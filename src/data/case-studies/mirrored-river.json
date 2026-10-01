@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h3>A river made out of stone, heavy metal, and lives.</h3><h3><a href=\"https://cmao58.wixsite.com/mirroredriver\">Click here to see more about this project.</a></h3>",
+   "html": "<h3>A river made out of stone, heavy metal, and lives.</h3><p><a href=\"https://cmao58.wixsite.com/mirroredriver\">See more about this project →</a></p>",
    "kind": "text"
   },
   {

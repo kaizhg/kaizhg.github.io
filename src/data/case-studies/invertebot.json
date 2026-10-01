@@ -12,32 +12,38 @@
   {
    "type": "text",
    "kind": "credits",
-   "html": "<p>Course: SCI-6478 Informal Robotic</p><p>Instructor: Chuck Hoberman</p><p>Duration: 6 Weeks</p><p>Team: Kai Zhang, Claire Dorsett, Oskar Nilsson</p>",
+   "html": "<p>Course: SCI-6478 Informal Robotic</p><p>Instructor: Chuck Hoberman</p><p>Duration: 6 Weeks</p><p>Team: Kai Zhang, Claire Dorsett, Oskar Nilsson</p><p>Role: Collaborated with Professor Hoberman to adapt the new fabrication method (3D-printed panels + Mylar) into the final production.<br>Used Grasshopper to procedurally generate the whole robot and simulate its movement.<br>Defined the final aesthetic and overall details, and prepared the production files.</p>",
    "layout": "credits"
   },
   {
-   "type": "text",
-   "html": "<p>My Contributions:<br>[1] Collaborated with Professor Hoberman, together we adapted the new fabrication method (3D-printed panels + Mylar) into final production.<br>[2] Used grasshopper to procedurally generate whole robot and simulate its movement.<br>[3] Defined the final aesthetic and overall details, and prepared production files.</p>",
-   "kind": "text"
-  },
-  {
-   "type": "text",
-   "html": "<h3>This page is still under construction.</h3>",
-   "kind": "text"
-  },
-  {
-   "type": "image",
-   "src": "invertebot/invertebot_01.jpg",
-   "width": 2400,
-   "height": 1602,
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "invertebot/invertebot_02.jpg",
-   "width": 2400,
-   "height": 1602,
-   "kind": "white"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "invertebot/invertebot_01.jpg",
+       "width": 2400,
+       "height": 1602,
+       "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "invertebot/invertebot_02.jpg",
+       "width": 2400,
+       "height": 1602,
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   },
   {
    "type": "image",
@@ -72,24 +78,38 @@
    "html": "<h2>Custom grasshopper design and simulation tool</h2>"
   },
   {
-   "type": "video",
-   "src": "/media/invertebot/invertebot_06.mp4",
-   "poster": "/media/invertebot/invertebot_06.jpg",
-   "width": 1024,
-   "height": 528,
-   "audio": false,
-   "layout": "wide-l",
-   "kind": "video"
-  },
-  {
-   "type": "video",
-   "src": "/media/invertebot/invertebot_07.mp4",
-   "poster": "/media/invertebot/invertebot_07.jpg",
-   "width": 1080,
-   "height": 1080,
-   "audio": false,
-   "layout": "small-r stagger",
-   "kind": "video"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/invertebot/invertebot_06.mp4",
+       "poster": "/media/invertebot/invertebot_06.jpg",
+       "width": 1024,
+       "height": 528,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "video",
+       "src": "/media/invertebot/invertebot_07.mp4",
+       "poster": "/media/invertebot/invertebot_07.jpg",
+       "width": 1080,
+       "height": 1080,
+       "audio": false,
+       "kind": "video"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   }
  ],
  "cover": {

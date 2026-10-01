@@ -11,14 +11,6 @@
  "blocks": [
   {
    "type": "image",
-   "src": "wood-i/wood-i_hero.jpg",
-   "width": 2400,
-   "height": 1800,
-   "layout": "full",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
    "src": "wood-i/wood-i_01.jpg",
    "width": 2400,
    "height": 1800,
@@ -30,7 +22,7 @@
    "src": "wood-i/wood-i_02.jpg",
    "width": 2400,
    "height": 1800,
-   "layout": "half-r stagger",
+   "layout": "half-r",
    "kind": "photo"
   },
   {
@@ -62,8 +54,14 @@
    "src": "wood-i/wood-i_06.jpg",
    "width": 2400,
    "height": 1800,
-   "layout": "half-r stagger",
+   "layout": "half-r",
    "kind": "photo"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Process</h2>"
   },
   {
    "type": "gallery",

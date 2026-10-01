@@ -22,6 +22,7 @@
    "src": "donut-in-half/donut-in-half_02.jpg",
    "width": 2400,
    "height": 1800,
+   "layout": "wide-l",
    "kind": "photo"
   },
   {
@@ -56,8 +57,8 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid3",
-   "cols": 2,
+   "layout": "grid4",
+   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -85,7 +86,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "wide-c",
+   "layout": "grid3",
    "kind": "gallery"
   },
   {

@@ -48,7 +48,7 @@ hero: made-in-gh_hero.mp4          # 项目页顶部大图；没有这行就用�
 
 ![](made-in-gh_11.mp4) wide-r
 
-![](made-in-gh_12.mp4 "Cyclic Celluar Automata<br>") half-l
+![](made-in-gh_12.mp4 "Cyclic Cellular Automata") half-l
 
 ![](made-in-gh_13.jpg) narrow-r stagger
 

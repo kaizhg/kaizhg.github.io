@@ -30,11 +30,9 @@ hero: wood-i_hero.jpg              # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-![](wood-i_hero.jpg) full
-
 ![](wood-i_01.jpg) half-l
 
-![](wood-i_02.jpg) half-r stagger
+![](wood-i_02.jpg) half-r
 
 ![](wood-i_03.jpg) wide-l
 
@@ -42,6 +40,8 @@ hero: wood-i_hero.jpg              # 项目页顶部大图；没有这行就用�
 
 ![](wood-i_05.jpg) half-l
 
-![](wood-i_06.jpg) half-r stagger
+![](wood-i_06.jpg) half-r
+
+[section] Process
 
 [gallery grid3] wood-i_07.jpg wood-i_08.jpg wood-i_09.jpg wood-i_10.jpg wood-i_11.jpg wood-i_12.jpg wood-i_13.jpg wood-i_14.jpg wood-i_15.jpg

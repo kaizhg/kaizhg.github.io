@@ -31,10 +31,10 @@ cover: donut-in-half_cover.jpg     # 首页封面（32:25 裁切）
 
 ![](donut-in-half_01.jpg) full
 
-![](donut-in-half_02.jpg)
+![](donut-in-half_02.jpg) wide-l
 
-[gallery grid3 cols=2] donut-in-half_03.jpg donut-in-half_04.jpg donut-in-half_05.jpg donut-in-half_06.jpg
+[gallery grid4 cols=4] donut-in-half_03.jpg donut-in-half_04.jpg donut-in-half_05.jpg donut-in-half_06.jpg
 
-[gallery wide-c] donut-in-half_07.jpg donut-in-half_08.jpg donut-in-half_09.jpg
+[gallery grid3] donut-in-half_07.jpg donut-in-half_08.jpg donut-in-half_09.jpg
 
 [video audio] donut-in-half_10.mp4

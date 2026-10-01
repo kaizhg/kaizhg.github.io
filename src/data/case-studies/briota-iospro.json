@@ -47,14 +47,7 @@
      "width": 2000,
      "height": 1125,
      "kind": "white"
-    }
-   ],
-   "layout": "grid4",
-   "kind": "gallery"
-  },
-  {
-   "type": "gallery",
-   "items": [
+    },
     {
      "type": "image",
      "src": "briota-iospro/briota-iospro_06.jpg",
@@ -175,15 +168,14 @@
      "kind": "white"
     }
    ],
-   "layout": "grid5",
+   "layout": "carousel",
    "kind": "gallery"
   },
   {
-   "type": "image",
-   "src": "briota-iospro/briota-iospro_23.jpg",
-   "width": 2000,
-   "height": 1125,
-   "kind": "white"
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Appendix</h2>"
   },
   {
    "type": "gallery",
@@ -229,21 +221,14 @@
      "width": 2400,
      "height": 1350,
      "kind": "white"
-    }
-   ],
-   "layout": "grid3",
-   "kind": "gallery"
-  },
-  {
-   "type": "image",
-   "src": "briota-iospro/briota-iospro_30.jpg",
-   "width": 2000,
-   "height": 1125,
-   "kind": "white"
-  },
-  {
-   "type": "gallery",
-   "items": [
+    },
+    {
+     "type": "image",
+     "src": "briota-iospro/briota-iospro_30.jpg",
+     "width": 2000,
+     "height": 1125,
+     "kind": "white"
+    },
     {
      "type": "image",
      "src": "briota-iospro/briota-iospro_31.jpg",
@@ -350,7 +335,7 @@
      "kind": "white"
     }
    ],
-   "layout": "grid5",
+   "layout": "carousel",
    "kind": "gallery"
   }
  ],

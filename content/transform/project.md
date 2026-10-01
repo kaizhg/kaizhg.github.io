@@ -35,7 +35,7 @@ hero: transform_hero.mp4           # 项目页顶部大图；没有这行就用�
 
 This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.
 
-### [Click here to see more about the prismo lamp.](/prismo)
+[See more about the Prismo lamp →](/work/prismo/)
 |
 ![](transform_01.jpg)
 [/row]
@@ -49,7 +49,9 @@ This project is part of the development process of prismo, a transformable lamp 
 [/row]
 
 [row 0.295 0.705]
-ProblemThe conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process.\
+### Problem
+
+The conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process.\
 The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.
 |
 ![](transform_04.jpg)
@@ -81,6 +83,6 @@ I further broke down the geometry relationships into trigonometric equations. Th
 
 [section] Output tests
 
-[gallery grid4 cols=3] transform_09.mp4 transform_10.mp4 transform_11.mp4 transform_12.mp4
+[gallery grid4 cols=4] transform_09.mp4 transform_10.mp4 transform_11.mp4 transform_12.mp4
 
-[video] transform_13.mp4
+[video wide-c] transform_13.mp4

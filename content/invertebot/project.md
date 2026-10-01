@@ -14,6 +14,10 @@ credits:                           # 显示在标题下方，有哪项写哪项�
   Instructor: Chuck Hoberman
   Duration: 6 Weeks
   Team: Kai Zhang, Claire Dorsett, Oskar Nilsson
+  Role:
+    - Collaborated with Professor Hoberman to adapt the new fabrication method (3D-printed panels + Mylar) into the final production.
+    - Used Grasshopper to procedurally generate the whole robot and simulate its movement.
+    - Defined the final aesthetic and overall details, and prepared the production files.
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
@@ -36,16 +40,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-My Contributions:\
-[1] Collaborated with Professor Hoberman, together we adapted the new fabrication method (3D-printed panels + Mylar) into final production.\
-[2] Used grasshopper to procedurally generate whole robot and simulate its movement.\
-[3] Defined the final aesthetic and overall details, and prepared production files.
-
-### This page is still under construction.
-
-![](invertebot_01.jpg)
-
-![](invertebot_02.jpg)
+![](invertebot_01.jpg) | ![](invertebot_02.jpg)
 
 ![](invertebot_03.jpg) full
 
@@ -55,6 +50,8 @@ My Contributions:\
 
 [section] Custom grasshopper design and simulation tool
 
-[video wide-l] invertebot_06.mp4
-
-[video small-r stagger] invertebot_07.mp4
+[row]
+[video] invertebot_06.mp4
+|
+[video] invertebot_07.mp4
+[/row]

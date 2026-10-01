@@ -104,8 +104,9 @@
      "kind": "photo"
     }
    ],
-   "layout": "strip",
-   "kind": "gallery"
+   "cols": 3,
+   "kind": "gallery",
+   "layout": "grid3"
   },
   {
    "type": "video",
@@ -118,34 +119,26 @@
    "kind": "video"
   },
   {
-   "type": "row",
-   "columns": [
+   "type": "gallery",
+   "items": [
     {
-     "flex": 0.5546,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "homovirus/homovirus_11.jpg",
-       "width": 2113,
-       "height": 2400,
-       "kind": "photo"
-      }
-     ]
+     "type": "image",
+     "src": "homovirus/homovirus_11.jpg",
+     "width": 2113,
+     "height": 2400,
+     "kind": "photo"
     },
     {
-     "flex": 0.4454,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "homovirus/homovirus_12.jpg",
-       "width": 1697,
-       "height": 2400,
-       "kind": "white"
-      }
-     ]
+     "type": "image",
+     "src": "homovirus/homovirus_12.jpg",
+     "width": 1697,
+     "height": 2400,
+     "kind": "white"
     }
    ],
-   "kind": "row"
+   "layout": "@3-11",
+   "cols": 2,
+   "kind": "gallery"
   },
   {
    "type": "image",

@@ -47,15 +47,11 @@ hero: homovirus_hero.mp4           # 项目页顶部大图；没有这行就用�
 
 [section] Self-Organizing Study
 
-[gallery strip] homovirus_07.mp4 homovirus_08.mp4 homovirus_09.mp4
+[gallery cols=3] homovirus_07.mp4 homovirus_08.mp4 homovirus_09.mp4
 
 [video audio wide-l] homovirus_10.mp4
 
-[row 0.5546 0.4454]
-![](homovirus_11.jpg)
-|
-![](homovirus_12.jpg)
-[/row]
+[gallery @3-11 cols=2] homovirus_11.jpg homovirus_12.jpg
 
 ![](homovirus_13.jpg) wide-r
 

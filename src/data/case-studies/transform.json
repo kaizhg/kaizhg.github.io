@@ -17,12 +17,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Abstract</h3><p>This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.</p>",
-       "kind": "text"
-      },
-      {
-       "type": "text",
-       "html": "<h3><a href=\"/prismo\">Click here to see more about the prismo lamp.</a></h3>",
+       "html": "<h3>Abstract</h3><p>This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.</p><p><a href=\"/work/prismo/\">See more about the Prismo lamp →</a></p>",
        "kind": "text"
       }
      ]
@@ -86,7 +81,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<p>ProblemThe conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process.<br>The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.</p>",
+       "html": "<h3>Problem</h3><p>The conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process.<br>The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.</p>",
        "kind": "text"
       }
      ]
@@ -235,7 +230,7 @@
     }
    ],
    "layout": "grid4",
-   "cols": 3,
+   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -245,6 +240,7 @@
    "width": 1920,
    "height": 1220,
    "audio": false,
+   "layout": "wide-c",
    "kind": "video"
   }
  ],
