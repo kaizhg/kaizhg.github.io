@@ -123,7 +123,7 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 
 		{
 			showHero && study?.hero && (
-				<div class="hero">
+				<div class:list={['hero', { wide: study.heroWidth === 'wide' }]}>
 					{study.link ? (
 						<a href={study.link} target="_blank" rel="noopener" aria-label={`${project.title} — open link`}>
 							<Media block={study.hero} alt={project.title} sizes="100vw" eager />
@@ -279,6 +279,25 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 	}
 	.hero :global(.media) {
 		max-height: 78vh;
+	}
+	/* Two-thirds hero: same columns as the body, so text beside it below lines up with its edge */
+	.hero.wide {
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		column-gap: clamp(12px, 1.6vw, 24px);
+	}
+	.hero.wide > :global(*) {
+		grid-column: 1 / 9;
+		min-width: 0;
+	}
+	.hero.wide :global(.media) {
+		width: 100%;
+		max-height: none;
+	}
+	@media (max-width: 800px) {
+		.hero.wide > :global(*) {
+			grid-column: 1 / -1;
+		}
 	}
 	.hero a {
 		display: inline-block;

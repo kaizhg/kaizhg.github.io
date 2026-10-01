@@ -8,6 +8,7 @@ discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
 cover: imago_cover.jpg             # 首页封面（32:25 裁切）
 hover: imago_hover.jpg             # 鼠标悬停时换成的图或循环视频
+hero_width: wide                   # 顶部大图宽度：full（整宽）或 wide（三分之二，靠左）
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
@@ -32,29 +33,25 @@ hover: imago_hover.jpg             # 鼠标悬停时换成的图或循环视频
 
 ![](imago_01.png) small-l
 
-Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
+Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
 
 ![](imago_02.png "It's launched and available for purchase on Red (XiaoHongShu).") half-l
 
 [gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
 
-![](imago_06.jpg) narrow-r
+![](imago_06.jpg) small-l
 
-[row 0.5912 0.4088]
-![](imago_07.jpg)
-|
-![](imago_08.jpg)
-[/row]
+![](imago_08.jpg) small-c
 
-[gallery grid3] imago_09.jpg imago_10.jpg
+![](imago_09.jpg) small-c
+
+![](imago_10.jpg) small-r
 
 [row 0.358 0.642]
 ![](imago_11.jpg)
 |
-![](imago_12.jpg)
+![](imago_12.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang")
 [/row]
-
-![](imago_13.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang") wide-l
 
 ### This page shows some of the early studies of Project Imago, starting at 2021. {text-l}
 
@@ -70,10 +67,4 @@ Our experimental surface processing technique creates lightweight, hollow-shell 
 
 [section] Other Digital Explorations
 
-![](imago_17.jpg) tri-a
-
-![](imago_18.jpg) tri-b
-
-![](imago_19.jpg) tri-c
-
-[gallery grid2] imago_20.jpg imago_21.jpg
+[gallery grid3] imago_19.jpg imago_20.jpg imago_21.jpg

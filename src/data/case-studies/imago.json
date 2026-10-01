@@ -19,7 +19,7 @@
   },
   {
    "type": "text",
-   "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>",
+   "html": "<p>Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.</p>",
    "layout": "beside-r",
    "kind": "text"
   },
@@ -65,59 +65,32 @@
    "src": "imago/imago_06.jpg",
    "width": 1284,
    "height": 1692,
-   "layout": "narrow-r",
+   "layout": "small-l",
    "kind": "photo"
   },
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5912,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "imago/imago_07.jpg",
-       "width": 2400,
-       "height": 2213,
-       "kind": "photo"
-      }
-     ]
-    },
-    {
-     "flex": 0.4088,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "imago/imago_08.jpg",
-       "width": 1800,
-       "height": 2400,
-       "kind": "photo"
-      }
-     ]
-    }
-   ],
-   "kind": "row"
+   "type": "image",
+   "src": "imago/imago_08.jpg",
+   "width": 1800,
+   "height": 2400,
+   "layout": "small-c",
+   "kind": "photo"
   },
   {
-   "type": "gallery",
-   "items": [
-    {
-     "type": "image",
-     "src": "imago/imago_09.jpg",
-     "width": 1080,
-     "height": 1619,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
-     "src": "imago/imago_10.jpg",
-     "width": 1080,
-     "height": 1619,
-     "kind": "photo"
-    }
-   ],
-   "layout": "grid3",
-   "kind": "gallery"
+   "type": "image",
+   "src": "imago/imago_09.jpg",
+   "width": 1080,
+   "height": 1619,
+   "layout": "small-c",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_10.jpg",
+   "width": 1080,
+   "height": 1619,
+   "layout": "small-r",
+   "kind": "photo"
   },
   {
    "type": "row",
@@ -142,21 +115,13 @@
        "src": "imago/imago_12.jpg",
        "width": 1406,
        "height": 1056,
+       "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
        "kind": "photo"
       }
      ]
     }
    ],
    "kind": "row"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_13.jpg",
-   "width": 2400,
-   "height": 1746,
-   "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
-   "layout": "wide-l",
-   "kind": "photo"
   },
   {
    "type": "text",
@@ -201,32 +166,15 @@
    "html": "<h2>Other Digital Explorations</h2>"
   },
   {
-   "type": "image",
-   "src": "imago/imago_17.jpg",
-   "width": 2200,
-   "height": 1467,
-   "layout": "tri-a",
-   "kind": "white"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_18.jpg",
-   "width": 1920,
-   "height": 1200,
-   "layout": "tri-b",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_19.jpg",
-   "width": 1920,
-   "height": 1440,
-   "layout": "tri-c",
-   "kind": "photo"
-  },
-  {
    "type": "gallery",
    "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_19.jpg",
+     "width": 1920,
+     "height": 1440,
+     "kind": "photo"
+    },
     {
      "type": "image",
      "src": "imago/imago_20.jpg",
@@ -242,7 +190,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid2",
+   "layout": "grid3",
    "kind": "gallery"
   }
  ],
@@ -257,5 +205,6 @@
   "src": "imago/imago_hover.jpg",
   "width": 1273,
   "height": 995
- }
+ },
+ "heroWidth": "wide"
 }

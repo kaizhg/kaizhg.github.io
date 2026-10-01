@@ -40,6 +40,8 @@ export interface CaseStudy {
 	hover?: MediaBlock | null;
 	/** The hero picture links here (front-matter `link`) */
 	link?: string;
+	/** 'wide' = two thirds of the page, left; default full */
+	heroWidth?: 'full' | 'wide';
 	locked: boolean;
 	blocks: Block[];
 }
