@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/hyperslice",
  "hero": {
   "type": "image",
-  "src": "hyperslice/01.jpg",
+  "src": "hyperslice/hyperslice_cover.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,14 +11,14 @@
  "blocks": [
   {
    "type": "image",
-   "src": "hyperslice/02.jpg",
+   "src": "hyperslice/hyperslice_01.jpg",
    "width": 2400,
    "height": 1359,
    "kind": "white"
   },
   {
    "type": "image",
-   "src": "hyperslice/03.jpg",
+   "src": "hyperslice/hyperslice_02.jpg",
    "width": 1920,
    "height": 730,
    "layout": "half-l",
@@ -35,45 +35,45 @@
    "items": [
     {
      "type": "image",
-     "src": "hyperslice/04.jpg",
+     "src": "hyperslice/hyperslice_03.jpg",
      "width": 512,
      "height": 492,
      "kind": "small"
     },
     {
      "type": "image",
-     "src": "hyperslice/05.jpg",
+     "src": "hyperslice/hyperslice_04.jpg",
      "width": 512,
      "height": 481,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/hyperslice/06.mp4",
+     "src": "/media/hyperslice/hyperslice_05.mp4",
      "width": 1000,
      "height": 1000,
      "kind": "photo"
     },
     {
      "type": "loop",
-     "src": "/media/hyperslice/07.mp4",
+     "src": "/media/hyperslice/hyperslice_06.mp4",
      "width": 1000,
      "height": 1000,
      "kind": "photo"
     }
    ],
-   "cols": 2,
    "layout": "grid4",
+   "cols": 2,
    "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Image Interpolation Matrix</h3>\n<p>By utilizing an M by N image matrix (M: total cross section count, N: interpolation in each layer), it empowers user to parametrically blend geometries using a customized curve. This approach enhances control and facilitates seamless integration of diverse geometries.</p>",
+   "html": "<h3>Image Interpolation Matrix</h3><p>By utilizing an M by N image matrix (M: total cross section count, N: interpolation in each layer), it empowers user to parametrically blend geometries using a customized curve. This approach enhances control and facilitates seamless integration of diverse geometries.</p>",
    "kind": "text"
   },
   {
    "type": "image",
-   "src": "hyperslice/08.jpg",
+   "src": "hyperslice/hyperslice_07.jpg",
    "width": 2400,
    "height": 857,
    "layout": "full",
@@ -87,7 +87,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/hyperslice/09.mp4",
+       "src": "/media/hyperslice/hyperslice_08.mp4",
        "width": 800,
        "height": 538,
        "kind": "photo"
@@ -99,7 +99,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/hyperslice/10.mp4",
+       "src": "/media/hyperslice/hyperslice_09.mp4",
        "width": 800,
        "height": 538,
        "kind": "photo"
@@ -119,52 +119,52 @@
    "items": [
     {
      "type": "loop",
-     "src": "/media/hyperslice/11.mp4",
+     "src": "/media/hyperslice/hyperslice_10.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small",
-     "caption": "1. Input Geometry"
+     "caption": "1. Input Geometry",
+     "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/hyperslice/12.mp4",
+     "src": "/media/hyperslice/hyperslice_11.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small",
-     "caption": "2. Non-linear Slicing Axis"
+     "caption": "2. Non-linear Slicing Axis",
+     "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/hyperslice/13.mp4",
+     "src": "/media/hyperslice/hyperslice_12.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small",
-     "caption": "3. Cross-section"
+     "caption": "3. Cross-section",
+     "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/hyperslice/14.mp4",
+     "src": "/media/hyperslice/hyperslice_13.mp4",
      "width": 480,
      "height": 480,
-     "kind": "small",
-     "caption": "4. Output Geometry"
+     "caption": "4. Output Geometry",
+     "kind": "small"
     }
    ],
-   "cols": 4,
    "layout": "grid4",
+   "cols": 4,
    "kind": "gallery"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "hyperslice/cover.jpg",
+  "src": "hyperslice/hyperslice_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "loop",
-  "src": "/media/hyperslice/hover.mp4",
+  "src": "/media/hyperslice/hyperslice_hover.mp4",
   "width": 600,
-  "height": 469
+  "height": 470
  }
 }

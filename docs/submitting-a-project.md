@@ -1,83 +1,113 @@
-# 投稿格式：怎么给网站加一个新项目
+# 项目内容怎么改：`content/` 文件夹
 
-把一个文件夹丢进 `Website_Portfolio/asset/_inbox/`，告诉我一声，我导入、排版、给你看，你说上线就上线。
-改已有项目也一样：建同名文件夹，只放要换的东西和一个 `project.md`，写清楚改哪里。
-
-## 文件夹长这样
+网站的全部内容都在 `site/content/` 里，一个项目一个文件夹，名字就是网址里的 slug：
 
 ```
-asset/_inbox/barnacle-lamp/
-  project.md            项目信息 + 正文（下面有模板）
-  cover.jpg             首页封面。会按 32:25 裁切，主体放中间
-  hover.jpg             鼠标悬停时的第二张（可选，可以是 .gif）
-  01.jpg                正文图，按出现顺序编号
-  02.png                透明背景用 PNG
-  03.gif                动图会自动转成循环视频
-  04.mp4                视频
+content/prismo/
+  project.md          这个项目的全部文字和排版
+  prismo_cover.jpg    首页封面（按 32:25 裁切，主体放中间）
+  prismo_hover.mp4    鼠标悬停时的第二张（图或循环视频，可选）
+  prismo_hero.jpg     项目页顶部大图（可选，不写就用封面）
+  prismo_01.jpg       正文媒体，按出现顺序编号
+  prismo_02.png       透明背景用 PNG
+  prismo_07.mp4       视频（同名 .jpg 是它的封面帧）
+  _sheet.jpg          所有文件的缩略图一览，带文件名，方便我们对话时指图
 ```
 
-图片不用自己缩，但请 ≤ 2400px 长边、单张 ≤ 5 MB；视频 ≤ 1080p、尽量 ≤ 30 MB。
-文件名只用小写字母、数字、横线。
+**改文字**：直接改 `project.md`，存盘。
+**换图 / 加图**：把文件放进文件夹（名字照编号规则，或者随便起名也行，只要 md 里写对），在 md 里引用。
+**新项目**：复制一个文件夹改名，改 `project.md`，放图。
+**删项目**：删文件夹。
+改完告诉我一声，我跑一遍生成、看一眼排版、上线。你也可以自己跑：`python3 scripts/content.py build` 然后 `npm run build`。
 
-## project.md 模板
+图片 ≤ 2400px 长边、≤ 5 MB；视频 ≤ 1080p、尽量 ≤ 30 MB。文件名只用小写字母、数字、横线、下划线。
+
+## project.md 怎么写
 
 ```markdown
 ---
-title: Barnacle Lamp
-year: 2024
-summary: Transformable lamp          # 一句话，首页 tile 和列表里显示
-context: OPT Industries              # 可选，显示为 "@ OPT Industries"
-group: selected                      # selected 或 archive
-position: 3                          # 可选，在 Selected 里排第几
-credits:                             # 可选，有哪项写哪项
-  Course: Design Studio
-  Instructor: Jane Doe
+title: Prismo
+year: 2022
+summary: Transformable lamp        # 一句话，首页 tile 和列表显示
+context: Harvard GSD               # 可选，显示为 "@ Harvard GSD"
+group: selected                    # selected 或 archive
+position: 8                        # 在所属组里排第几
+cover: prismo_cover.jpg
+hover: prismo_hover.mp4
+hero: prismo_hero.jpg              # 可选；写 inline 表示顶部不放大图
+credits:                           # 可选，有哪项写哪项，会显示在标题下方
+  Course: SCI-6476 Transformable Design Methods
+  Instructor: Chuck Hoberman
   Team: A, B, C
-  Role: Hardware, firmware
-  Thanks: Someone
+  Role:
+    - Proposed the concept
+    - Wrote the Grasshopper C# tool
 ---
 
-# How to procedurally generate DMF files for inflatable structures?
+# What will an "Inside-Out" kaleidoscope look like?
 
-开头这一段会放在标题右边，作为导语。两三句就够。
+一个井号是 statement，整页大字，全站样式统一。
 
-![](01.jpg)
+开头这一段会放在标题右边，作为导语。
 
-一张图单独一行，排版自动。想指定大小，在图后面加一个词：
+![](prismo_01.jpg)
 
-![](02.jpg) wide
+一张图单独一行，排版自动。想指定位置，在图后面加一个词：
 
-可用的词：full（整宽）、wide、half、narrow。不写就是自动。
+![](prismo_02.jpg) half-l
 
-![](03.jpg) ![](04.jpg)
+![](prismo_03.jpg "图的说明，鼠标悬停时显示") wide-r
 
-两张图写在同一行，就并排，底边会自动对齐。
+![](prismo_04.jpg) | ![](prismo_05.jpg)
 
-caption: 图的说明文字，紧跟在图的下一行，鼠标悬停时显示。
+两张图用 ` | ` 隔开写在同一行，就并排，底边自动对齐。
 
 ## 小节标题
 
-两个井号是小节标题，会显示成一行小字加分隔线。
+两个井号是正文里的标题，三个井号小一级。标题后面的段落属于同一块，会一起排。
 
-> 一句引用式的大字，整页统一样式
+段落之间空一行。想在段落里强制换行，在行尾放一个反斜杠 \
+像这样。
 
-[gallery cols=3] 05.jpg 06.jpg 07.jpg 08.jpg 09.jpg
-[carousel] 10.jpg 11.jpg 12.jpg
-[video] 13.mp4
-[youtube] https://www.youtube.com/watch?v=xxxx
+[section] Fabrication
+
+`[section]` 是一行小字标签加分隔线，用来分章节。
+
+[gallery cols=3] prismo_06.jpg prismo_07.jpg prismo_08.jpg prismo_09.jpg "这张有说明" prismo_10.jpg
+[gallery carousel] prismo_11.jpg prismo_12.jpg prismo_13.jpg
+[video] prismo_14.mp4
+[youtube start=7] https://www.youtube.com/watch?v=kxqCKvFvQow
+![](prismo_15.mp4)
+
+[row 0.4 0.6]
+### 左边是一段文字
+右边是图。`[row]` 里每一列用单独一行 `|` 隔开，数字是列宽比例，不写就均分。
+|
+![](prismo_16.jpg)
+[/row]
 ```
 
-## 规则就这几条
+## 排版词（都可选）
 
-- 图片默认靠左，段落会自动贴到旁边的图右侧。
-- `[gallery]` 里图片比例不同时，自动按原网站那种"每行等高、整行铺满"排；比例相同就是整齐网格。`cols` 是每行最多几张。
-- `[carousel]` 一次显示一张，自动播放，带左右箭头。
-- 标题用 `#`，正文直接写，链接用 `[文字](网址)`。
-- 不确定的就别写排版词，自动规则通常是对的，不对我再调。
+| 写法 | 效果 |
+|---|---|
+| `full` | 整宽 |
+| `wide-l` `wide-r` `wide-c` | 三分之二宽，靠左 / 右 / 居中 |
+| `half-l` `half-r` | 一半宽 |
+| `narrow-l` `narrow-r` | 五分之二宽 |
+| `small-l` `small-r` | 三分之一宽 |
+| 后面再加 `stagger` | 比旁边那张往下错开一截 |
+| 段落末尾加 `{text-l}` 或 `{text-r}` | 文字固定在左 / 右栏 |
+| `[gallery]` 后加 `cols=N` | 每行最多几张；比例不同的图自动按等高行排，相同的排网格 |
+| `[gallery stack]` | 一张一行、整宽 |
+| `[gallery carousel]` | 轮播 |
+| `![](x.mp4)` | 循环播放的小动画（GIF 请先转 mp4，或直接给我 GIF 我来转） |
+| `[video]` | 带播放条的视频；`[video audio]` 表示有声音 |
 
-## 之后的流程
+不确定就什么都不写。自动规则：图靠左，段落贴到图旁边，连续三张照片自动成一组，连续四张白底图自动两列。
 
-1. 你：文件夹放好，在聊天里说"新项目 barnacle-lamp 放进 inbox 了"。
-2. 我：导入、跑排版、在本地给你看截图或链接。
-3. 你：看完说改哪里，或者直接说上线。
-4. 我：推上去，两分钟后在 kaizhg.github.io 生效。
+## 文件夹之外
+
+- 顺序：改 `position`。Selected 和 Archive 各自从 1 数。
+- 关于页、首页那句话、Life band 的词：还是找我改，它们不在 content 里。
+- 不要动 `src/` 里的 json，那是从 md 生成的，下次生成会覆盖。

@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/homovirus",
  "hero": {
   "type": "loop",
-  "src": "/media/homovirus/01.mp4",
+  "src": "/media/homovirus/homovirus_hero.mp4",
   "width": 800,
   "height": 500
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "homovirus/02.jpg",
+   "src": "homovirus/homovirus_01.jpg",
    "width": 2400,
    "height": 1606,
    "layout": "full",
@@ -21,11 +21,11 @@
    "type": "row",
    "columns": [
     {
-     "flex": 0.505,
+     "flex": 0.5,
      "blocks": [
       {
        "type": "image",
-       "src": "homovirus/03.jpg",
+       "src": "homovirus/homovirus_02.jpg",
        "width": 1697,
        "height": 2400,
        "kind": "photo"
@@ -33,14 +33,14 @@
      ]
     },
     {
-     "flex": 0.495,
+     "flex": 0.5,
      "blocks": [
       {
        "type": "video",
-       "src": "/media/homovirus/G8JYgoPPebA.mp4",
-       "poster": "/media/homovirus/G8JYgoPPebA.jpg",
-       "width": 1920,
-       "height": 1200,
+       "src": "/media/homovirus/homovirus_03.mp4",
+       "poster": "/media/homovirus/homovirus_03.jpg",
+       "width": 1280,
+       "height": 800,
        "audio": false,
        "kind": "video"
       }
@@ -51,7 +51,7 @@
   },
   {
    "type": "image",
-   "src": "homovirus/04.jpg",
+   "src": "homovirus/homovirus_04.jpg",
    "width": 2400,
    "height": 1883,
    "layout": "half-l",
@@ -59,7 +59,7 @@
   },
   {
    "type": "image",
-   "src": "homovirus/05.jpg",
+   "src": "homovirus/homovirus_05.jpg",
    "width": 2400,
    "height": 1798,
    "layout": "half-r stagger",
@@ -67,7 +67,7 @@
   },
   {
    "type": "image",
-   "src": "homovirus/06.jpg",
+   "src": "homovirus/homovirus_06.jpg",
    "width": 2400,
    "height": 1436,
    "layout": "wide-r",
@@ -75,32 +75,32 @@
   },
   {
    "type": "text",
-   "html": "<h3>Self-Organizing Study</h3>",
+   "kind": "section",
    "layout": "section",
-   "kind": "section"
+   "html": "<h2>Self-Organizing Study</h2>"
   },
   {
    "type": "gallery",
    "items": [
     {
      "type": "loop",
-     "src": "/media/homovirus/07.mp4",
+     "src": "/media/homovirus/homovirus_07.mp4",
      "width": 600,
      "height": 450,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/homovirus/08.mp4",
+     "src": "/media/homovirus/homovirus_08.mp4",
      "width": 600,
-     "height": 541,
+     "height": 542,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/homovirus/09.mp4",
+     "src": "/media/homovirus/homovirus_09.mp4",
      "width": 800,
-     "height": 623,
+     "height": 624,
      "kind": "photo"
     }
    ],
@@ -109,10 +109,10 @@
   },
   {
    "type": "video",
-   "src": "/media/homovirus/TfuuFwm27ef.mp4",
-   "poster": "/media/homovirus/TfuuFwm27ef.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/homovirus/homovirus_10.mp4",
+   "poster": "/media/homovirus/homovirus_10.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": true,
    "layout": "wide-l",
    "kind": "video"
@@ -125,7 +125,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "homovirus/10.jpg",
+       "src": "homovirus/homovirus_11.jpg",
        "width": 2113,
        "height": 2400,
        "kind": "photo"
@@ -137,7 +137,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "homovirus/11.jpg",
+       "src": "homovirus/homovirus_12.jpg",
        "width": 1697,
        "height": 2400,
        "kind": "white"
@@ -149,7 +149,7 @@
   },
   {
    "type": "image",
-   "src": "homovirus/12.jpg",
+   "src": "homovirus/homovirus_13.jpg",
    "width": 2400,
    "height": 1800,
    "layout": "wide-r",
@@ -163,7 +163,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "homovirus/13.jpg",
+       "src": "homovirus/homovirus_14.jpg",
        "width": 1070,
        "height": 1258,
        "kind": "photo"
@@ -175,7 +175,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "homovirus/14.jpg",
+       "src": "homovirus/homovirus_15.jpg",
        "width": 2400,
        "height": 1697,
        "kind": "photo"
@@ -188,14 +188,14 @@
  ],
  "cover": {
   "type": "image",
-  "src": "homovirus/cover.jpg",
+  "src": "homovirus/homovirus_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "loop",
-  "src": "/media/homovirus/hover.mp4",
+  "src": "/media/homovirus/homovirus_hover.mp4",
   "width": 462,
-  "height": 361
+  "height": 362
  }
 }

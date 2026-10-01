@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/seesaw",
  "hero": {
   "type": "image",
-  "src": "seesaw/02.jpg",
+  "src": "seesaw/seesaw_hero.jpg",
   "width": 2400,
   "height": 1602
  },
@@ -11,18 +11,18 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<p>Course: Interaction Intelligence, Spring 2023<br>Instructor:  Marcelo Coelho<br>Project Duration: 4 Weeks<br>Team members: Kai Zhang, Tatiana Estrina</p>",
    "kind": "credits",
+   "html": "<p>Course: Interaction Intelligence, Spring 2023</p><p>Instructor: Marcelo Coelho</p><p>Duration: 4 Weeks</p><p>Team: Kai Zhang, Tatiana Estrina</p>",
    "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2>\n<p>See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.</p>",
+   "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2><p>See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.</p>",
    "kind": "text"
   },
   {
    "type": "image",
-   "src": "seesaw/02.jpg",
+   "src": "seesaw/seesaw_hero.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "full",
@@ -30,7 +30,7 @@
   },
   {
    "type": "image",
-   "src": "seesaw/03.jpg",
+   "src": "seesaw/seesaw_01.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "half-l",
@@ -38,7 +38,7 @@
   },
   {
    "type": "image",
-   "src": "seesaw/04.jpg",
+   "src": "seesaw/seesaw_02.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "half-r stagger",
@@ -46,36 +46,36 @@
   },
   {
    "type": "text",
-   "html": "<h3>How to play</h3>",
+   "kind": "section",
    "layout": "section",
-   "kind": "section"
+   "html": "<h2>How to play</h2>"
   },
   {
    "type": "gallery",
    "items": [
     {
      "type": "image",
-     "src": "seesaw/05.jpg",
+     "src": "seesaw/seesaw_03.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small",
-     "caption": "Each player controls one block. Tilt the handle to move."
+     "caption": "Each player controls one block. Tilt the handle to move.",
+     "kind": "small"
     },
     {
      "type": "image",
-     "src": "seesaw/06.jpg",
+     "src": "seesaw/seesaw_04.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small",
-     "caption": "The size represents weight. The heavier the longer."
+     "caption": "The size represents weight. The heavier the longer.",
+     "kind": "small"
     },
     {
      "type": "image",
-     "src": "seesaw/07.jpg",
+     "src": "seesaw/seesaw_05.jpg",
      "width": 584,
      "height": 463,
-     "kind": "small",
-     "caption": "Similar to a see-saw, it tilts! Try to balance it."
+     "caption": "Similar to a see-saw, it tilts! Try to balance it.",
+     "kind": "small"
     }
    ],
    "layout": "grid3",
@@ -86,27 +86,27 @@
    "items": [
     {
      "type": "image",
-     "src": "seesaw/08.jpg",
+     "src": "seesaw/seesaw_06.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small",
-     "caption": "1/3:The block bounces back when it hits another block"
+     "caption": "1/3:The block bounces back when it hits another block",
+     "kind": "small"
     },
     {
      "type": "image",
-     "src": "seesaw/09.jpg",
+     "src": "seesaw/seesaw_07.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small",
-     "caption": "2/3:The block bounces back when it hits another block"
+     "caption": "2/3:The block bounces back when it hits another block",
+     "kind": "small"
     },
     {
      "type": "image",
-     "src": "seesaw/10.jpg",
+     "src": "seesaw/seesaw_08.jpg",
      "width": 585,
      "height": 463,
-     "kind": "small",
-     "caption": "3/3:The block bounces back when it hits another block"
+     "caption": "3/3:The block bounces back when it hits another block",
+     "kind": "small"
     }
    ],
    "layout": "grid3",
@@ -114,13 +114,13 @@
   },
   {
    "type": "text",
-   "html": "<h3>Controller development</h3>",
+   "kind": "section",
    "layout": "section",
-   "kind": "section"
+   "html": "<h2>Controller development</h2>"
   },
   {
    "type": "image",
-   "src": "seesaw/11.png",
+   "src": "seesaw/seesaw_09.png",
    "width": 2400,
    "height": 686,
    "caption": "Iteration Process",
@@ -135,7 +135,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "seesaw/12.jpg",
+       "src": "seesaw/seesaw_10.jpg",
        "width": 2400,
        "height": 1440,
        "kind": "white"
@@ -147,7 +147,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>First iteration: see-saw</h3>\n<p>The initial controller simply merged a conventional game controller with a see-saw. While the interaction was natural, it failed to foster collaboration---players only use their individual controllers to play the game.</p>",
+       "html": "<h3>First iteration: see-saw</h3><p>The initial controller simply merged a conventional game controller with a see-saw. While the interaction was natural, it failed to foster collaboration---players only use their individual controllers to play the game.</p>",
        "kind": "text"
       }
      ]
@@ -163,7 +163,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Second iteration: cross</h3>\n<p>To promote physical interaction, we combined two see-saws into a cross-shaped controller. This distinctive design encourages players to engage with each other's bodies, adding an extra element of fun. However, the basic cardboard prototype restricts independent movement for players.</p>",
+       "html": "<h3>Second iteration: cross</h3><p>To promote physical interaction, we combined two see-saws into a cross-shaped controller. This distinctive design encourages players to engage with each other's bodies, adding an extra element of fun. However, the basic cardboard prototype restricts independent movement for players.</p>",
        "kind": "text"
       }
      ]
@@ -173,7 +173,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "seesaw/13.jpg",
+       "src": "seesaw/seesaw_11.jpg",
        "width": 2400,
        "height": 1440,
        "kind": "white"
@@ -191,8 +191,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/seesaw/UeZQGAURe-J.mp4",
-       "poster": "/media/seesaw/UeZQGAURe-J.jpg",
+       "src": "/media/seesaw/seesaw_12.mp4",
+       "poster": "/media/seesaw/seesaw_12.jpg",
        "width": 1920,
        "height": 1080,
        "audio": true,
@@ -205,8 +205,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/seesaw/6tL4UcHE9mF.mp4",
-       "poster": "/media/seesaw/6tL4UcHE9mF.jpg",
+       "src": "/media/seesaw/seesaw_13.mp4",
+       "poster": "/media/seesaw/seesaw_13.jpg",
        "width": 1920,
        "height": 1080,
        "audio": true,
@@ -219,12 +219,12 @@
   },
   {
    "type": "text",
-   "html": "<h3>Third and fourth iteration: free rotation</h3>\n<p>The solution to the movement problem was to introduce an extra degree of freedom. The third prototype effectively used a rod and a slightly larger hole, but it lacked a polished look and feel. To elevate the user experience, I added two bearings on each handle, resulting in smoother rotation and a premium feel. You can clearly tell the difference when you grab it in your hands.</p>",
+   "html": "<h3>Third and fourth iteration: free rotation</h3><p>The solution to the movement problem was to introduce an extra degree of freedom. The third prototype effectively used a rod and a slightly larger hole, but it lacked a polished look and feel. To elevate the user experience, I added two bearings on each handle, resulting in smoother rotation and a premium feel. You can clearly tell the difference when you grab it in your hands.</p>",
    "kind": "text"
   },
   {
    "type": "image",
-   "src": "seesaw/14.jpg",
+   "src": "seesaw/seesaw_14.jpg",
    "width": 2400,
    "height": 2341,
    "layout": "half-r",
@@ -237,7 +237,7 @@
   },
   {
    "type": "image",
-   "src": "seesaw/15.jpg",
+   "src": "seesaw/seesaw_15.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "wide-l",
@@ -251,7 +251,7 @@
   },
   {
    "type": "image",
-   "src": "seesaw/16.jpg",
+   "src": "seesaw/seesaw_16.jpg",
    "width": 1126,
    "height": 270,
    "layout": "small-l",
@@ -260,13 +260,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "seesaw/cover.jpg",
+  "src": "seesaw/seesaw_cover.jpg",
   "width": 2400,
   "height": 1876
  },
  "hover": {
   "type": "image",
-  "src": "seesaw/hover.jpg",
+  "src": "seesaw/seesaw_hover.jpg",
   "width": 2400,
   "height": 1876
  }

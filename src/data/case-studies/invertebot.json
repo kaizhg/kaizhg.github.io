@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/invertebot",
  "hero": {
   "type": "image",
-  "src": "invertebot/01.jpg",
+  "src": "invertebot/invertebot_hero.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,8 +11,8 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<p>Course: SCI-6478 Informal Robotic<br>Instructor: Chuck Hoberman<br>Project Duration: 6 Weeks</p>\n<p>Team members: Kai Zhang, Claire Dorsett, Oskar Nilsson</p>",
    "kind": "credits",
+   "html": "<p>Course: SCI-6478 Informal Robotic</p><p>Instructor: Chuck Hoberman</p><p>Duration: 6 Weeks</p><p>Team: Kai Zhang, Claire Dorsett, Oskar Nilsson</p>",
    "layout": "credits"
   },
   {
@@ -27,21 +27,21 @@
   },
   {
    "type": "image",
-   "src": "invertebot/02.jpg",
+   "src": "invertebot/invertebot_01.jpg",
    "width": 2400,
    "height": 1602,
    "kind": "photo"
   },
   {
    "type": "image",
-   "src": "invertebot/03.jpg",
+   "src": "invertebot/invertebot_02.jpg",
    "width": 2400,
    "height": 1602,
    "kind": "white"
   },
   {
    "type": "image",
-   "src": "invertebot/04.jpg",
+   "src": "invertebot/invertebot_03.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "full",
@@ -49,7 +49,7 @@
   },
   {
    "type": "image",
-   "src": "invertebot/05.jpg",
+   "src": "invertebot/invertebot_04.jpg",
    "width": 2400,
    "height": 1602,
    "layout": "wide-r",
@@ -57,24 +57,24 @@
   },
   {
    "type": "video",
-   "src": "/media/invertebot/AxCTUnaUULo.mp4",
-   "poster": "/media/invertebot/AxCTUnaUULo.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/invertebot/invertebot_05.mp4",
+   "poster": "/media/invertebot/invertebot_05.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": true,
    "layout": "full",
    "kind": "video"
   },
   {
    "type": "text",
-   "html": "<p>Custom grasshopper design and simulation tool</p>",
+   "kind": "quote",
    "layout": "section",
-   "kind": "text"
+   "html": "<h2>Custom grasshopper design and simulation tool</h2>"
   },
   {
    "type": "video",
-   "src": "/media/invertebot/7L7SQVWv_G6.mp4",
-   "poster": "/media/invertebot/7L7SQVWv_G6.jpg",
+   "src": "/media/invertebot/invertebot_06.mp4",
+   "poster": "/media/invertebot/invertebot_06.jpg",
    "width": 1024,
    "height": 528,
    "audio": false,
@@ -83,8 +83,8 @@
   },
   {
    "type": "video",
-   "src": "/media/invertebot/HzXUSmcCu5Q.mp4",
-   "poster": "/media/invertebot/HzXUSmcCu5Q.jpg",
+   "src": "/media/invertebot/invertebot_07.mp4",
+   "poster": "/media/invertebot/invertebot_07.jpg",
    "width": 1080,
    "height": 1080,
    "audio": false,
@@ -94,13 +94,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "invertebot/cover.jpg",
+  "src": "invertebot/invertebot_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "image",
-  "src": "invertebot/hover.jpg",
+  "src": "invertebot/invertebot_hover.jpg",
   "width": 2400,
   "height": 1877
  }

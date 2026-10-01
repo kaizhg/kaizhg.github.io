@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/mind-bridge",
  "hero": {
   "type": "image",
-  "src": "mind-bridge/01.jpg",
+  "src": "mind-bridge/mind-bridge_cover.jpg",
   "width": 2400,
   "height": 1876
  },
@@ -11,12 +11,12 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2>\n<p>A reflection on technology and post-covid time.</p>",
+   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2><p>A reflection on technology and post-covid time.</p>",
    "kind": "text"
   },
   {
    "type": "image",
-   "src": "mind-bridge/02.jpg",
+   "src": "mind-bridge/mind-bridge_01.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "full",
@@ -24,7 +24,7 @@
   },
   {
    "type": "image",
-   "src": "mind-bridge/03.jpg",
+   "src": "mind-bridge/mind-bridge_02.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-l",
@@ -32,7 +32,7 @@
   },
   {
    "type": "image",
-   "src": "mind-bridge/04.jpg",
+   "src": "mind-bridge/mind-bridge_03.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-r",
@@ -40,7 +40,7 @@
   },
   {
    "type": "image",
-   "src": "mind-bridge/05.jpg",
+   "src": "mind-bridge/mind-bridge_04.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "full",
@@ -49,13 +49,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "mind-bridge/cover.jpg",
+  "src": "mind-bridge/mind-bridge_cover.jpg",
   "width": 2400,
   "height": 1876
  },
  "hover": {
   "type": "image",
-  "src": "mind-bridge/hover.jpg",
+  "src": "mind-bridge/mind-bridge_hover.jpg",
   "width": 2400,
   "height": 1877
  }

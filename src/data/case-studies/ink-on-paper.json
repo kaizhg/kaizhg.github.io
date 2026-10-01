@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/drawing",
  "hero": {
   "type": "image",
-  "src": "ink-on-paper/cover.jpg",
+  "src": "ink-on-paper/ink-on-paper_cover.jpg",
   "width": 1759,
   "height": 1375
  },
@@ -19,31 +19,31 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/01.jpg",
+     "src": "ink-on-paper/ink-on-paper_01.jpg",
      "width": 1782,
      "height": 2400,
-     "kind": "photo",
-     "caption": "Sunflowers, 2019"
+     "caption": "Sunflowers, 2019",
+     "kind": "photo"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/02.jpg",
+     "src": "ink-on-paper/ink-on-paper_02.jpg",
      "width": 1800,
      "height": 2400,
-     "kind": "white",
-     "caption": "Inspired by Death Burger, 2019"
+     "caption": "Inspired by Death Burger, 2019",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/03.jpg",
+     "src": "ink-on-paper/ink-on-paper_03.jpg",
      "width": 1800,
      "height": 2400,
-     "kind": "photo",
-     "caption": "Brooklyn, 2018"
+     "caption": "Brooklyn, 2018",
+     "kind": "photo"
     }
    ],
-   "cols": 4,
    "layout": "grid3",
+   "cols": 4,
    "kind": "gallery"
   },
   {
@@ -51,27 +51,27 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/04.jpg",
+     "src": "ink-on-paper/ink-on-paper_04.jpg",
      "width": 1920,
      "height": 2400,
-     "kind": "white",
-     "caption": "Childhood, 2019"
+     "caption": "Childhood, 2019",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/05.jpg",
+     "src": "ink-on-paper/ink-on-paper_05.jpg",
      "width": 1824,
      "height": 2400,
-     "kind": "white",
-     "caption": "2019"
+     "caption": "2019",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/06.jpg",
+     "src": "ink-on-paper/ink-on-paper_06.jpg",
      "width": 1838,
      "height": 2400,
-     "kind": "white",
-     "caption": "HOID Sketch, 2019"
+     "caption": "HOID Sketch, 2019",
+     "kind": "white"
     }
    ],
    "layout": "grid3",
@@ -82,21 +82,21 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/07.jpg",
+     "src": "ink-on-paper/ink-on-paper_07.jpg",
      "width": 1387,
      "height": 1943,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/08.jpg",
+     "src": "ink-on-paper/ink-on-paper_08.jpg",
      "width": 1786,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/09.jpg",
+     "src": "ink-on-paper/ink-on-paper_09.jpg",
      "width": 1744,
      "height": 2400,
      "kind": "photo"
@@ -110,14 +110,14 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/10.jpg",
+     "src": "ink-on-paper/ink-on-paper_10.jpg",
      "width": 1663,
      "height": 2400,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/11.jpg",
+     "src": "ink-on-paper/ink-on-paper_11.jpg",
      "width": 1692,
      "height": 2400,
      "kind": "photo"
@@ -128,7 +128,7 @@
   },
   {
    "type": "image",
-   "src": "ink-on-paper/12.jpg",
+   "src": "ink-on-paper/ink-on-paper_12.jpg",
    "width": 1242,
    "height": 1573,
    "caption": "Duomo di milano, 2020<br>",
@@ -139,35 +139,35 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/13.jpg",
+     "src": "ink-on-paper/ink-on-paper_13.jpg",
      "width": 2000,
      "height": 2000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/14.jpg",
+     "src": "ink-on-paper/ink-on-paper_14.jpg",
      "width": 2000,
      "height": 2000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/15.jpg",
+     "src": "ink-on-paper/ink-on-paper_15.jpg",
      "width": 2000,
      "height": 2000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/16.jpg",
+     "src": "ink-on-paper/ink-on-paper_16.jpg",
      "width": 2000,
      "height": 2000,
      "kind": "white"
     }
    ],
-   "cols": 2,
    "layout": "strip",
+   "cols": 2,
    "kind": "gallery"
   },
   {
@@ -175,47 +175,47 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/17.jpg",
+     "src": "ink-on-paper/ink-on-paper_17.jpg",
      "width": 1800,
      "height": 2400,
-     "kind": "white",
-     "caption": "Bowling Demon, 2020"
+     "caption": "Bowling Demon, 2020",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/18.jpg",
+     "src": "ink-on-paper/ink-on-paper_18.jpg",
      "width": 1918,
      "height": 2400,
-     "kind": "white",
-     "caption": "Happy Valentine, 2020"
+     "caption": "Happy Valentine, 2020",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/19.jpg",
+     "src": "ink-on-paper/ink-on-paper_19.jpg",
      "width": 1849,
      "height": 2400,
-     "kind": "photo",
-     "caption": "颓, 2020"
+     "caption": "颓, 2020",
+     "kind": "photo"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/20.jpg",
+     "src": "ink-on-paper/ink-on-paper_20.jpg",
      "width": 959,
      "height": 1666,
-     "kind": "photo",
-     "caption": "Untitled, 2020"
+     "caption": "Untitled, 2020",
+     "kind": "photo"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/21.jpg",
+     "src": "ink-on-paper/ink-on-paper_21.jpg",
      "width": 2400,
      "height": 2093,
-     "kind": "photo",
-     "caption": "Virginity, 2020"
+     "caption": "Virginity, 2020",
+     "kind": "photo"
     }
    ],
-   "cols": 3,
    "layout": "grid4",
+   "cols": 3,
    "kind": "gallery"
   },
   {
@@ -223,31 +223,31 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/22.jpg",
+     "src": "ink-on-paper/ink-on-paper_22.jpg",
      "width": 1800,
      "height": 2400,
-     "kind": "white",
-     "caption": "Pressure, 2020"
+     "caption": "Pressure, 2020",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/23.jpg",
+     "src": "ink-on-paper/ink-on-paper_23.jpg",
      "width": 1776,
      "height": 1776,
-     "kind": "white",
-     "caption": "Wanxia Village, 2020"
+     "caption": "Wanxia Village, 2020",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/24.jpg",
+     "src": "ink-on-paper/ink-on-paper_24.jpg",
      "width": 2360,
      "height": 2244,
-     "kind": "white",
-     "caption": "Random machine, 2019"
+     "caption": "Random machine, 2019",
+     "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/25.jpg",
+     "src": "ink-on-paper/ink-on-paper_25.jpg",
      "width": 1944,
      "height": 2396,
      "kind": "white"
@@ -261,35 +261,35 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/26.png",
+     "src": "ink-on-paper/ink-on-paper_26.png",
      "width": 1000,
      "height": 1000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/27.png",
+     "src": "ink-on-paper/ink-on-paper_27.png",
      "width": 1000,
      "height": 1000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/28.png",
+     "src": "ink-on-paper/ink-on-paper_28.png",
      "width": 1000,
      "height": 1000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/29.png",
+     "src": "ink-on-paper/ink-on-paper_29.png",
      "width": 1000,
      "height": 1000,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/30.png",
+     "src": "ink-on-paper/ink-on-paper_30.png",
      "width": 1920,
      "height": 1978,
      "kind": "photo"
@@ -303,105 +303,105 @@
    "items": [
     {
      "type": "image",
-     "src": "ink-on-paper/31.jpg",
+     "src": "ink-on-paper/ink-on-paper_31.jpg",
      "width": 1284,
      "height": 1797,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/32.jpg",
+     "src": "ink-on-paper/ink-on-paper_32.jpg",
      "width": 1274,
      "height": 1644,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/33.jpg",
+     "src": "ink-on-paper/ink-on-paper_33.jpg",
      "width": 1284,
      "height": 1900,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/34.jpg",
+     "src": "ink-on-paper/ink-on-paper_34.jpg",
      "width": 1284,
      "height": 1648,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/35.jpg",
+     "src": "ink-on-paper/ink-on-paper_35.jpg",
      "width": 1284,
      "height": 1832,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/36.jpg",
+     "src": "ink-on-paper/ink-on-paper_36.jpg",
      "width": 1084,
      "height": 1064,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/37.jpg",
+     "src": "ink-on-paper/ink-on-paper_37.jpg",
      "width": 1284,
      "height": 1759,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/38.jpg",
+     "src": "ink-on-paper/ink-on-paper_38.jpg",
      "width": 1273,
      "height": 1715,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/39.jpg",
+     "src": "ink-on-paper/ink-on-paper_39.jpg",
      "width": 1244,
      "height": 1726,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/40.jpg",
+     "src": "ink-on-paper/ink-on-paper_40.jpg",
      "width": 1801,
      "height": 2400,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/41.jpg",
+     "src": "ink-on-paper/ink-on-paper_41.jpg",
      "width": 1944,
      "height": 2200,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/42.jpg",
+     "src": "ink-on-paper/ink-on-paper_42.jpg",
      "width": 1242,
      "height": 1645,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/43.jpg",
+     "src": "ink-on-paper/ink-on-paper_43.jpg",
      "width": 1284,
      "height": 1368,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "ink-on-paper/44.jpg",
+     "src": "ink-on-paper/ink-on-paper_44.jpg",
      "width": 1089,
      "height": 1452,
      "kind": "white"
     }
    ],
-   "cols": 3,
    "layout": "text-l",
+   "cols": 3,
    "kind": "gallery"
   },
   {
@@ -412,9 +412,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "ink-on-paper/cover.jpg",
+  "src": "ink-on-paper/ink-on-paper_cover.jpg",
   "width": 1759,
   "height": 1375
- },
- "hover": null
+ }
 }

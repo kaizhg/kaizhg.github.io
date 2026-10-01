@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/mirrored-river",
  "hero": {
   "type": "image",
-  "src": "mirrored-river/01.jpg",
+  "src": "mirrored-river/mirrored-river_cover.jpg",
   "width": 1380,
   "height": 1080
  },
@@ -11,12 +11,12 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h3>A river made out of stone, heavy metal, and lives.</h3>\n<h3><a href=\"https://cmao58.wixsite.com/mirroredriver\">Click here to see more about this project.</a></h3>",
+   "html": "<h3>A river made out of stone, heavy metal, and lives.</h3><h3><a href=\"https://cmao58.wixsite.com/mirroredriver\">Click here to see more about this project.</a></h3>",
    "kind": "text"
   },
   {
    "type": "image",
-   "src": "mirrored-river/02.jpg",
+   "src": "mirrored-river/mirrored-river_01.jpg",
    "width": 1920,
    "height": 1080,
    "layout": "full",
@@ -25,9 +25,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "mirrored-river/cover.jpg",
+  "src": "mirrored-river/mirrored-river_cover.jpg",
   "width": 1380,
   "height": 1080
- },
- "hover": null
+ }
 }

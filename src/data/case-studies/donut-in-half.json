@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/donut",
  "hero": {
   "type": "image",
-  "src": "donut-in-half/01.jpg",
+  "src": "donut-in-half/donut-in-half_cover.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "donut-in-half/02.jpg",
+   "src": "donut-in-half/donut-in-half_01.jpg",
    "width": 2400,
    "height": 1800,
    "layout": "full",
@@ -19,7 +19,7 @@
   },
   {
    "type": "image",
-   "src": "donut-in-half/03.jpg",
+   "src": "donut-in-half/donut-in-half_02.jpg",
    "width": 2400,
    "height": 1800,
    "kind": "photo"
@@ -29,35 +29,35 @@
    "items": [
     {
      "type": "image",
-     "src": "donut-in-half/04.jpg",
+     "src": "donut-in-half/donut-in-half_03.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "donut-in-half/05.jpg",
+     "src": "donut-in-half/donut-in-half_04.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "donut-in-half/06.jpg",
+     "src": "donut-in-half/donut-in-half_05.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "donut-in-half/07.jpg",
+     "src": "donut-in-half/donut-in-half_06.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "cols": 2,
    "layout": "grid3",
+   "cols": 2,
    "kind": "gallery"
   },
   {
@@ -65,21 +65,21 @@
    "items": [
     {
      "type": "image",
-     "src": "donut-in-half/08.jpg",
+     "src": "donut-in-half/donut-in-half_07.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "donut-in-half/09.jpg",
+     "src": "donut-in-half/donut-in-half_08.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "donut-in-half/10.jpg",
+     "src": "donut-in-half/donut-in-half_09.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
@@ -90,19 +90,18 @@
   },
   {
    "type": "video",
-   "src": "/media/donut-in-half/Vc6cnUHN2Ts.mp4",
-   "poster": "/media/donut-in-half/Vc6cnUHN2Ts.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/donut-in-half/donut-in-half_10.mp4",
+   "poster": "/media/donut-in-half/donut-in-half_10.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": true,
    "kind": "video"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "donut-in-half/cover.jpg",
+  "src": "donut-in-half/donut-in-half_cover.jpg",
   "width": 2400,
   "height": 1877
- },
- "hover": null
+ }
 }

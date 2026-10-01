@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/wind",
  "hero": {
   "type": "image",
-  "src": "telewind/02.jpg",
+  "src": "telewind/telewind_hero.jpg",
   "width": 2400,
   "height": 1600
  },
@@ -11,12 +11,13 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>When furniture materializes wind, and wind creates telepresence:</h2>",
-   "kind": "quote"
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>When furniture materializes wind, and wind creates telepresence:</h2>"
   },
   {
    "type": "image",
-   "src": "telewind/02.jpg",
+   "src": "telewind/telewind_hero.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "full",
@@ -24,7 +25,7 @@
   },
   {
    "type": "image",
-   "src": "telewind/03.jpg",
+   "src": "telewind/telewind_01.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-l",
@@ -32,7 +33,7 @@
   },
   {
    "type": "image",
-   "src": "telewind/04.jpg",
+   "src": "telewind/telewind_02.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-r",
@@ -40,8 +41,8 @@
   },
   {
    "type": "video",
-   "src": "/media/telewind/Gv2fE4WdbH-.mp4",
-   "poster": "/media/telewind/Gv2fE4WdbH-.jpg",
+   "src": "/media/telewind/telewind_03.mp4",
+   "poster": "/media/telewind/telewind_03.jpg",
    "width": 1920,
    "height": 1320,
    "audio": false,
@@ -51,13 +52,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "telewind/cover.jpg",
+  "src": "telewind/telewind_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "image",
-  "src": "telewind/hover.jpg",
+  "src": "telewind/telewind_hover.jpg",
   "width": 2400,
   "height": 1876
  }

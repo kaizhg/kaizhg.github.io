@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/zhang-zhoujie-digital-lab-internship",
  "hero": {
   "type": "image",
-  "src": "tables/01.jpg",
+  "src": "tables/tables_hero.jpg",
   "width": 2400,
   "height": 1878
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "tables/02.jpg",
+   "src": "tables/tables_01.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "full",
@@ -20,12 +20,12 @@
   {
    "type": "text",
    "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>",
-   "kind": "credits",
-   "layout": "credits"
+   "layout": "credits",
+   "kind": "credits"
   },
   {
    "type": "image",
-   "src": "tables/03.jpg",
+   "src": "tables/tables_02.jpg",
    "width": 1662,
    "height": 1166,
    "layout": "half-l",
@@ -36,63 +36,63 @@
    "items": [
     {
      "type": "loop",
-     "src": "/media/tables/04.mp4",
+     "src": "/media/tables/tables_03.mp4",
      "width": 640,
-     "height": 427,
+     "height": 428,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/tables/05.mp4",
+     "src": "/media/tables/tables_04.mp4",
      "width": 640,
-     "height": 427,
+     "height": 428,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/tables/06.mp4",
+     "src": "/media/tables/tables_05.mp4",
      "width": 640,
-     "height": 427,
+     "height": 428,
      "kind": "small"
     },
     {
      "type": "image",
-     "src": "tables/07.jpg",
+     "src": "tables/tables_06.jpg",
      "width": 1080,
      "height": 721,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "tables/08.jpg",
+     "src": "tables/tables_07.jpg",
      "width": 1080,
      "height": 721,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "tables/09.jpg",
+     "src": "tables/tables_08.jpg",
      "width": 1080,
      "height": 721,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "tables/10.jpg",
+     "src": "tables/tables_09.jpg",
      "width": 1080,
      "height": 721,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "tables/11.jpg",
+     "src": "tables/tables_10.jpg",
      "width": 1080,
      "height": 720,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "tables/12.jpg",
+     "src": "tables/tables_11.jpg",
      "width": 1080,
      "height": 720,
      "kind": "white"
@@ -103,7 +103,7 @@
   },
   {
    "type": "image",
-   "src": "tables/13.jpg",
+   "src": "tables/tables_12.jpg",
    "width": 1080,
    "height": 646,
    "layout": "wide-r",
@@ -117,7 +117,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "tables/14.jpg",
+       "src": "tables/tables_13.jpg",
        "width": 1080,
        "height": 720,
        "kind": "photo"
@@ -129,7 +129,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "tables/15.jpg",
+       "src": "tables/tables_14.jpg",
        "width": 1080,
        "height": 720,
        "kind": "photo"
@@ -142,13 +142,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "tables/cover.jpg",
+  "src": "tables/tables_cover.jpg",
   "width": 933,
   "height": 730
  },
  "hover": {
   "type": "image",
-  "src": "tables/hover.jpg",
+  "src": "tables/tables_hover.jpg",
   "width": 2400,
   "height": 1878
  }

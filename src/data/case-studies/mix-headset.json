@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/mix-headset",
  "hero": {
   "type": "image",
-  "src": "mix-headset/01.jpg",
+  "src": "mix-headset/mix-headset_cover.jpg",
   "width": 1838,
   "height": 1438
  },
@@ -16,7 +16,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/02.jpg",
+   "src": "mix-headset/mix-headset_01.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "full",
@@ -24,7 +24,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/03.jpg",
+   "src": "mix-headset/mix-headset_02.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "half-l",
@@ -32,7 +32,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/04.jpg",
+   "src": "mix-headset/mix-headset_03.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "half-r stagger",
@@ -40,7 +40,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/05.jpg",
+   "src": "mix-headset/mix-headset_04.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "wide-r",
@@ -48,7 +48,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/06.jpg",
+   "src": "mix-headset/mix-headset_05.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "half-l",
@@ -56,7 +56,7 @@
   },
   {
    "type": "image",
-   "src": "mix-headset/07.jpg",
+   "src": "mix-headset/mix-headset_06.jpg",
    "width": 2400,
    "height": 1500,
    "layout": "half-r stagger",
@@ -65,9 +65,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "mix-headset/cover.jpg",
+  "src": "mix-headset/mix-headset_cover.jpg",
   "width": 1838,
   "height": 1438
- },
- "hover": null
+ }
 }

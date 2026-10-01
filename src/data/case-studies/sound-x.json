@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/sound-x-2021-light-effect-design",
  "hero": {
   "type": "image",
-  "src": "sound-x/01.jpg",
+  "src": "sound-x/sound-x_cover.jpg",
   "width": 1964,
   "height": 1536
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "sound-x/02.jpg",
+   "src": "sound-x/sound-x_01.jpg",
    "width": 2400,
    "height": 1351,
    "layout": "full",
@@ -20,13 +20,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "sound-x/cover.jpg",
+  "src": "sound-x/sound-x_cover.jpg",
   "width": 1964,
   "height": 1536
  },
  "hover": {
   "type": "image",
-  "src": "sound-x/hover.jpg",
+  "src": "sound-x/sound-x_hover.jpg",
   "width": 829,
   "height": 648
  }

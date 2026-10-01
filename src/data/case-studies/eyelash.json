@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/at-opt-industries",
  "hero": {
   "type": "image",
-  "src": "eyelash/01.jpg",
+  "src": "eyelash/eyelash_cover.jpg",
   "width": 2000,
   "height": 1563
  },
@@ -22,7 +22,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "eyelash/02.jpg",
+       "src": "eyelash/eyelash_01.jpg",
        "width": 2400,
        "height": 1600,
        "kind": "photo"
@@ -34,9 +34,9 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/eyelash/03.mp4",
+       "src": "/media/eyelash/eyelash_02.mp4",
        "width": 900,
-       "height": 899,
+       "height": 900,
        "kind": "photo"
       }
      ]
@@ -52,7 +52,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "eyelash/04.jpg",
+       "src": "eyelash/eyelash_03.jpg",
        "width": 2000,
        "height": 2000,
        "kind": "white"
@@ -64,7 +64,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "eyelash/05.jpg",
+       "src": "eyelash/eyelash_04.jpg",
        "width": 1080,
        "height": 1080,
        "kind": "photo"
@@ -81,15 +81,15 @@
   },
   {
    "type": "image",
-   "src": "eyelash/06.jpg",
+   "src": "eyelash/eyelash_05.jpg",
    "width": 2400,
    "height": 1244,
    "kind": "photo"
   },
   {
    "type": "text",
-   "kind": "text",
-   "html": "<h3>What I've achieved</h3><p>1. Geometry optimization<br>2. New support and layout<br>3. Design tools development</p><p>⬆ Yield &nbsp;·&nbsp; ⬆ Throughput &nbsp;·&nbsp; ⬆ Iteration</p>"
+   "html": "<h3>What I've achieved</h3><p>1. Geometry optimization<br>2. New support and layout<br>3. Design tools development</p><p>⬆ Yield  ·  ⬆ Throughput  ·  ⬆ Iteration</p>",
+   "kind": "text"
   },
   {
    "type": "text",
@@ -101,82 +101,82 @@
    "items": [
     {
      "type": "image",
-     "src": "eyelash/07.jpg",
+     "src": "eyelash/eyelash_06.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/08.jpg",
+     "src": "eyelash/eyelash_07.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/09.jpg",
+     "src": "eyelash/eyelash_08.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/10.jpg",
+     "src": "eyelash/eyelash_09.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/11.jpg",
+     "src": "eyelash/eyelash_10.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/12.jpg",
+     "src": "eyelash/eyelash_11.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/13.jpg",
+     "src": "eyelash/eyelash_12.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/14.jpg",
+     "src": "eyelash/eyelash_13.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/15.jpg",
+     "src": "eyelash/eyelash_14.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "eyelash/16.jpg",
+     "src": "eyelash/eyelash_15.jpg",
      "width": 1920,
      "height": 1080,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "stack"
+   "layout": "stack",
+   "kind": "gallery"
   },
   {
    "type": "video",
-   "src": "/media/eyelash/FDey9ZSMVwu.mp4",
-   "poster": "/media/eyelash/FDey9ZSMVwu.jpg",
+   "src": "/media/eyelash/eyelash_16.mp4",
+   "poster": "/media/eyelash/eyelash_16.jpg",
    "width": 1280,
    "height": 584,
    "audio": true,
@@ -184,7 +184,7 @@
   },
   {
    "type": "image",
-   "src": "eyelash/17.jpg",
+   "src": "eyelash/eyelash_17.jpg",
    "width": 2400,
    "height": 1316,
    "kind": "photo"
@@ -192,13 +192,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "eyelash/cover.jpg",
+  "src": "eyelash/eyelash_cover.jpg",
   "width": 2000,
   "height": 1563
  },
  "hover": {
   "type": "image",
-  "src": "eyelash/hover.jpg",
+  "src": "eyelash/eyelash_hover.jpg",
   "width": 2400,
   "height": 1876
  }

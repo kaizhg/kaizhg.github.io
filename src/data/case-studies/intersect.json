@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/intersect",
  "hero": {
   "type": "image",
-  "src": "intersect/01.jpg",
+  "src": "intersect/intersect_cover.jpg",
   "width": 2367,
   "height": 1852
  },
@@ -14,77 +14,77 @@
    "items": [
     {
      "type": "image",
-     "src": "intersect/02.jpg",
+     "src": "intersect/intersect_01.jpg",
      "width": 1638,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/03.jpg",
+     "src": "intersect/intersect_02.jpg",
      "width": 1634,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/04.jpg",
+     "src": "intersect/intersect_03.jpg",
      "width": 1582,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/05.jpg",
+     "src": "intersect/intersect_04.jpg",
      "width": 1544,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/06.jpg",
+     "src": "intersect/intersect_05.jpg",
      "width": 1578,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/07.jpg",
+     "src": "intersect/intersect_06.jpg",
      "width": 1586,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/08.jpg",
+     "src": "intersect/intersect_07.jpg",
      "width": 1586,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/09.jpg",
+     "src": "intersect/intersect_08.jpg",
      "width": 1546,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/10.jpg",
+     "src": "intersect/intersect_09.jpg",
      "width": 1539,
      "height": 2400,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "intersect/11.jpg",
+     "src": "intersect/intersect_10.jpg",
      "width": 1614,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "cols": 5,
    "layout": "grid5",
+   "cols": 5,
    "kind": "gallery"
   },
   {
@@ -92,119 +92,119 @@
    "items": [
     {
      "type": "image",
-     "src": "intersect/12.jpg",
+     "src": "intersect/intersect_11.jpg",
      "width": 2400,
      "height": 1802,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/13.jpg",
+     "src": "intersect/intersect_12.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/14.jpg",
+     "src": "intersect/intersect_13.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/15.jpg",
+     "src": "intersect/intersect_14.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/16.jpg",
+     "src": "intersect/intersect_15.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/17.jpg",
+     "src": "intersect/intersect_16.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/18.jpg",
+     "src": "intersect/intersect_17.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/19.jpg",
+     "src": "intersect/intersect_18.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/20.jpg",
+     "src": "intersect/intersect_19.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/21.jpg",
+     "src": "intersect/intersect_20.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/22.jpg",
+     "src": "intersect/intersect_21.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/23.jpg",
+     "src": "intersect/intersect_22.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/24.jpg",
+     "src": "intersect/intersect_23.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/25.jpg",
+     "src": "intersect/intersect_24.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/26.jpg",
+     "src": "intersect/intersect_25.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "intersect/27.jpg",
+     "src": "intersect/intersect_26.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     }
    ],
+   "layout": "grid4",
    "cols": 4,
-   "layout": "grid4",
    "kind": "gallery"
   },
   {
@@ -212,35 +212,35 @@
    "items": [
     {
      "type": "image",
-     "src": "intersect/28.jpg",
+     "src": "intersect/intersect_27.jpg",
      "width": 2400,
      "height": 1670,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "intersect/29.jpg",
+     "src": "intersect/intersect_28.jpg",
      "width": 2400,
      "height": 1670,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "intersect/30.jpg",
+     "src": "intersect/intersect_29.jpg",
      "width": 2400,
      "height": 1670,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "intersect/31.jpg",
+     "src": "intersect/intersect_30.jpg",
      "width": 2400,
      "height": 1670,
      "kind": "white"
     }
    ],
-   "cols": 5,
    "layout": "grid4",
+   "cols": 5,
    "kind": "gallery"
   },
   {
@@ -248,25 +248,25 @@
    "items": [
     {
      "type": "image",
-     "src": "intersect/32.jpg",
+     "src": "intersect/intersect_31.jpg",
      "width": 2400,
      "height": 1658,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "intersect/33.jpg",
+     "src": "intersect/intersect_32.jpg",
      "width": 2400,
      "height": 1658,
      "kind": "photo"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid2"
+   "layout": "grid2",
+   "kind": "gallery"
   },
   {
    "type": "image",
-   "src": "intersect/34.jpg",
+   "src": "intersect/intersect_33.jpg",
    "width": 2400,
    "height": 1326,
    "layout": "wide-l",
@@ -274,7 +274,7 @@
   },
   {
    "type": "image",
-   "src": "intersect/35.jpg",
+   "src": "intersect/intersect_34.jpg",
    "width": 2400,
    "height": 1800,
    "layout": "half-r stagger",
@@ -282,7 +282,7 @@
   },
   {
    "type": "image",
-   "src": "intersect/36.jpg",
+   "src": "intersect/intersect_35.jpg",
    "width": 2400,
    "height": 1338,
    "layout": "full",
@@ -296,7 +296,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "intersect/37.jpg",
+       "src": "intersect/intersect_36.jpg",
        "width": 1553,
        "height": 2400,
        "kind": "white"
@@ -308,7 +308,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "intersect/38.jpg",
+       "src": "intersect/intersect_37.jpg",
        "width": 1100,
        "height": 1700,
        "kind": "white"
@@ -321,9 +321,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "intersect/cover.jpg",
+  "src": "intersect/intersect_cover.jpg",
   "width": 2367,
   "height": 1852
- },
- "hover": null
+ }
 }

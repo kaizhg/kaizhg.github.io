@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/yotabyte",
  "hero": {
   "type": "image",
-  "src": "yottabyte/01.jpg",
+  "src": "yottabyte/yottabyte_cover.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,24 +11,24 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<p>Course: MAS.S64 Drawing++<br>Instructors: Zach Lieberman<br>Project Duration: 2 Weeks</p>\n<p>Speacial Thanks: Lingdong Huang</p>",
    "kind": "credits",
+   "html": "<p>Course: MAS.S64 Drawing++</p><p>Instructor: Zach Lieberman</p><p>Duration: 2 Weeks</p><p>Thanks: Lingdong Huang</p>",
    "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<p>Yottabyte is an interactive piece that reveals the non-stop, gigantic yet invisible data comsumption.</p>\n<p>Made in Openframeworks using C++.</p>",
+   "html": "<p>Yottabyte is an interactive piece that reveals the non-stop, gigantic yet invisible data comsumption.</p><p>Made in Openframeworks using C++.</p>",
    "kind": "text"
   },
   {
    "type": "text",
-   "html": "<h2>Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?</h2>",
+   "kind": "quote",
    "layout": "quote",
-   "kind": "quote"
+   "html": "<h2>Will we be aware when we consume 1,000,000,000,000,000,000,000,000 bytes?</h2>"
   },
   {
    "type": "image",
-   "src": "yottabyte/02.jpg",
+   "src": "yottabyte/yottabyte_01.jpg",
    "width": 2400,
    "height": 1551,
    "layout": "full",
@@ -36,7 +36,7 @@
   },
   {
    "type": "image",
-   "src": "yottabyte/03.jpg",
+   "src": "yottabyte/yottabyte_02.jpg",
    "width": 2400,
    "height": 1551,
    "layout": "half-l",
@@ -44,7 +44,7 @@
   },
   {
    "type": "image",
-   "src": "yottabyte/04.jpg",
+   "src": "yottabyte/yottabyte_03.jpg",
    "width": 2400,
    "height": 1551,
    "layout": "half-r",
@@ -52,7 +52,7 @@
   },
   {
    "type": "image",
-   "src": "yottabyte/05.jpg",
+   "src": "yottabyte/yottabyte_04.jpg",
    "width": 2400,
    "height": 1551,
    "layout": "wide-l",
@@ -60,18 +60,18 @@
   },
   {
    "type": "video",
-   "src": "/media/yottabyte/7vMS_xzEWHw.mp4",
-   "poster": "/media/yottabyte/7vMS_xzEWHw.jpg",
-   "width": 1920,
-   "height": 1084,
+   "src": "/media/yottabyte/yottabyte_05.mp4",
+   "poster": "/media/yottabyte/yottabyte_05.jpg",
+   "width": 1280,
+   "height": 722,
    "audio": false,
    "layout": "full",
    "kind": "video"
   },
   {
    "type": "video",
-   "src": "/media/yottabyte/Mr8zUJBmJVp.mp4",
-   "poster": "/media/yottabyte/Mr8zUJBmJVp.jpg",
+   "src": "/media/yottabyte/yottabyte_06.mp4",
+   "poster": "/media/yottabyte/yottabyte_06.jpg",
    "width": 1154,
    "height": 1080,
    "audio": false,
@@ -80,10 +80,10 @@
   },
   {
    "type": "video",
-   "src": "/media/yottabyte/N5JiUfmA_Rc.mp4",
-   "poster": "/media/yottabyte/N5JiUfmA_Rc.jpg",
-   "width": 1920,
-   "height": 1260,
+   "src": "/media/yottabyte/yottabyte_07.mp4",
+   "poster": "/media/yottabyte/yottabyte_07.jpg",
+   "width": 1280,
+   "height": 840,
    "audio": false,
    "layout": "half-r",
    "kind": "video"
@@ -91,14 +91,14 @@
  ],
  "cover": {
   "type": "image",
-  "src": "yottabyte/cover.jpg",
+  "src": "yottabyte/yottabyte_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "loop",
-  "src": "/media/yottabyte/hover.mp4",
+  "src": "/media/yottabyte/yottabyte_hover.mp4",
   "width": 480,
-  "height": 375
+  "height": 376
  }
 }

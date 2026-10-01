@@ -6,7 +6,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "folded-volume/01.jpg",
+   "src": "folded-volume/folded-volume_01.jpg",
    "width": 2400,
    "height": 1877,
    "layout": "wide-l",
@@ -14,7 +14,7 @@
   },
   {
    "type": "image",
-   "src": "folded-volume/02.jpg",
+   "src": "folded-volume/folded-volume_02.jpg",
    "width": 1800,
    "height": 2400,
    "layout": "small-r stagger",
@@ -23,10 +23,9 @@
  ],
  "cover": {
   "type": "image",
-  "src": "folded-volume/cover.jpg",
+  "src": "folded-volume/folded-volume_cover.jpg",
   "width": 2400,
   "height": 1877
  },
- "hover": null,
  "heroInline": true
 }

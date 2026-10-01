@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/briota-iospro",
  "hero": {
   "type": "image",
-  "src": "briota-iospro/01.jpg",
+  "src": "briota-iospro/briota-iospro_hero.jpg",
   "width": 971,
   "height": 759
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "briota-iospro/02.jpg",
+   "src": "briota-iospro/briota-iospro_01.jpg",
    "width": 1860,
    "height": 1047,
    "layout": "full",
@@ -22,165 +22,165 @@
    "items": [
     {
      "type": "image",
-     "src": "briota-iospro/03.jpg",
+     "src": "briota-iospro/briota-iospro_02.jpg",
      "width": 1920,
      "height": 1118,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/04.jpg",
+     "src": "briota-iospro/briota-iospro_03.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/05.jpg",
+     "src": "briota-iospro/briota-iospro_04.jpg",
      "width": 1961,
      "height": 1103,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/06.jpg",
+     "src": "briota-iospro/briota-iospro_05.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid4"
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
    "items": [
     {
      "type": "image",
-     "src": "briota-iospro/07.jpg",
+     "src": "briota-iospro/briota-iospro_06.jpg",
      "width": 2400,
      "height": 1251,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/08.jpg",
+     "src": "briota-iospro/briota-iospro_07.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/09.jpg",
+     "src": "briota-iospro/briota-iospro_08.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/10.jpg",
+     "src": "briota-iospro/briota-iospro_09.jpg",
      "width": 2050,
      "height": 1154,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/11.jpg",
+     "src": "briota-iospro/briota-iospro_10.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/12.jpg",
+     "src": "briota-iospro/briota-iospro_11.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/13.jpg",
+     "src": "briota-iospro/briota-iospro_12.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/14.jpg",
+     "src": "briota-iospro/briota-iospro_13.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/15.jpg",
+     "src": "briota-iospro/briota-iospro_14.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/16.jpg",
+     "src": "briota-iospro/briota-iospro_15.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/17.jpg",
+     "src": "briota-iospro/briota-iospro_16.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/18.jpg",
+     "src": "briota-iospro/briota-iospro_17.jpg",
      "width": 2400,
      "height": 1341,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/19.jpg",
+     "src": "briota-iospro/briota-iospro_18.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/20.jpg",
+     "src": "briota-iospro/briota-iospro_19.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/21.jpg",
+     "src": "briota-iospro/briota-iospro_20.jpg",
      "width": 2140,
      "height": 1204,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/22.jpg",
+     "src": "briota-iospro/briota-iospro_21.jpg",
      "width": 1860,
      "height": 1047,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "briota-iospro/23.jpg",
+     "src": "briota-iospro/briota-iospro_22.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid5"
+   "layout": "grid5",
+   "kind": "gallery"
   },
   {
    "type": "image",
-   "src": "briota-iospro/24.jpg",
+   "src": "briota-iospro/briota-iospro_23.jpg",
    "width": 2000,
    "height": 1125,
    "kind": "white"
@@ -190,53 +190,53 @@
    "items": [
     {
      "type": "image",
-     "src": "briota-iospro/25.jpg",
+     "src": "briota-iospro/briota-iospro_24.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/26.jpg",
+     "src": "briota-iospro/briota-iospro_25.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/27.jpg",
+     "src": "briota-iospro/briota-iospro_26.jpg",
      "width": 2400,
      "height": 1262,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/28.jpg",
+     "src": "briota-iospro/briota-iospro_27.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/29.jpg",
+     "src": "briota-iospro/briota-iospro_28.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/30.jpg",
+     "src": "briota-iospro/briota-iospro_29.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "image",
-   "src": "briota-iospro/31.jpg",
+   "src": "briota-iospro/briota-iospro_30.jpg",
    "width": 2000,
    "height": 1125,
    "kind": "white"
@@ -246,123 +246,123 @@
    "items": [
     {
      "type": "image",
-     "src": "briota-iospro/32.jpg",
+     "src": "briota-iospro/briota-iospro_31.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/33.jpg",
+     "src": "briota-iospro/briota-iospro_32.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/34.jpg",
+     "src": "briota-iospro/briota-iospro_33.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/35.jpg",
+     "src": "briota-iospro/briota-iospro_34.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/36.jpg",
+     "src": "briota-iospro/briota-iospro_35.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/37.jpg",
+     "src": "briota-iospro/briota-iospro_36.jpg",
      "width": 2400,
      "height": 1273,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/38.jpg",
+     "src": "briota-iospro/briota-iospro_37.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/39.jpg",
+     "src": "briota-iospro/briota-iospro_38.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/40.jpg",
+     "src": "briota-iospro/briota-iospro_39.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/41.jpg",
+     "src": "briota-iospro/briota-iospro_40.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/42.jpg",
+     "src": "briota-iospro/briota-iospro_41.jpg",
      "width": 2000,
      "height": 1125,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/43.jpg",
+     "src": "briota-iospro/briota-iospro_42.jpg",
      "width": 1800,
      "height": 1013,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/44.jpg",
+     "src": "briota-iospro/briota-iospro_43.jpg",
      "width": 2400,
      "height": 1350,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/45.jpg",
+     "src": "briota-iospro/briota-iospro_44.jpg",
      "width": 1630,
      "height": 917,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "briota-iospro/46.jpg",
+     "src": "briota-iospro/briota-iospro_45.jpg",
      "width": 1320,
      "height": 743,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid5"
+   "layout": "grid5",
+   "kind": "gallery"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "briota-iospro/cover.jpg",
+  "src": "briota-iospro/briota-iospro_cover.jpg",
   "width": 2400,
   "height": 1876
  },
  "hover": {
   "type": "image",
-  "src": "briota-iospro/hover.jpg",
+  "src": "briota-iospro/briota-iospro_hover.jpg",
   "width": 971,
   "height": 759
  }

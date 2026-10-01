@@ -1,0 +1,318 @@
+[
+ {
+  "slug": "eyelash",
+  "title": "3D Printed Eyelash",
+  "year": 2024,
+  "discipline": "ID",
+  "summary": "3D printed lash product",
+  "context": "OPT Industries",
+  "legacyUrl": "https://kaizhang.io/at-opt-industries"
+ },
+ {
+  "slug": "os-11",
+  "title": "Operating System 1.1",
+  "year": 2024,
+  "discipline": "IX",
+  "summary": "Interactive installation",
+  "legacyUrl": "https://kaizhang.io/os-11"
+ },
+ {
+  "slug": "large-language-objects",
+  "title": "Large Language Objects",
+  "year": 2023,
+  "discipline": "IX",
+  "summary": "Physical interface design for LLMs",
+  "context": "MIT HAN Lab",
+  "legacyUrl": "https://kaizhang.io/large-language-objects"
+ },
+ {
+  "slug": "inflatable-patterner",
+  "title": "Inflatable Patterner",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Grasshopper C# development",
+  "context": "Pneuhaus",
+  "legacyUrl": "https://kaizhang.io/inflatable-generator"
+ },
+ {
+  "slug": "imago",
+  "title": "Project Imago",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Contemporary generative jewelry",
+  "legacyUrl": "https://kaizhang.io/pupas"
+ },
+ {
+  "slug": "hyperslice",
+  "title": "HyperSlice",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Image-interpolation-based 3D modeling workflow",
+  "legacyUrl": "https://kaizhang.io/hyperslice"
+ },
+ {
+  "slug": "seesaw",
+  "title": "See/Saw",
+  "year": 2023,
+  "discipline": "IX",
+  "summary": "1D balancing game and controller",
+  "legacyUrl": "https://kaizhang.io/seesaw"
+ },
+ {
+  "slug": "prismo",
+  "title": "Prismo",
+  "year": 2022,
+  "discipline": "ID",
+  "summary": "Transformable lamp",
+  "legacyUrl": "https://kaizhang.io/prismo"
+ },
+ {
+  "slug": "yottabyte",
+  "title": "Yottabyte",
+  "year": 2022,
+  "discipline": "IX",
+  "summary": "Interactive art on data consumption",
+  "legacyUrl": "https://kaizhang.io/yotabyte"
+ },
+ {
+  "slug": "mind-bridge",
+  "title": "Mind Bridge",
+  "year": 2021,
+  "discipline": "ID",
+  "summary": "Wearable dataport",
+  "legacyUrl": "https://kaizhang.io/mind-bridge"
+ },
+ {
+  "slug": "telewind",
+  "title": "TeleWind",
+  "year": 2021,
+  "discipline": "IX",
+  "summary": "Responsive telepresence furniture",
+  "legacyUrl": "https://kaizhang.io/wind"
+ },
+ {
+  "slug": "sound-x",
+  "title": "Sound X 2021 Design R&D",
+  "year": 2020,
+  "discipline": "ID",
+  "summary": "Light effect design",
+  "context": "Huawei CBG",
+  "legacyUrl": "https://kaizhang.io/sound-x-2021-light-effect-design"
+ },
+ {
+  "slug": "tables",
+  "title": "Tables?",
+  "year": 2019,
+  "discipline": "CD",
+  "summary": "Generative furniture study",
+  "context": "Zhang Zhoujie Digital Lab",
+  "legacyUrl": "https://kaizhang.io/zhang-zhoujie-digital-lab-internship"
+ },
+ {
+  "slug": "transform",
+  "title": "Transform",
+  "year": 2022,
+  "discipline": "CD",
+  "summary": "Grasshopper plugin for 1 DOF prismatic structures",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/transform"
+ },
+ {
+  "slug": "vitalization",
+  "title": "Vitalization",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Generative study",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/vitalization"
+ },
+ {
+  "slug": "ink-on-paper",
+  "title": "Ink on Paper",
+  "year": 1999,
+  "discipline": "AR",
+  "summary": "Drawings and sketches",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/drawing"
+ },
+ {
+  "slug": "marble-fall",
+  "title": "Marble Fall",
+  "year": 2021,
+  "discipline": "IX",
+  "summary": "Multi-player AR game on wave function collapse",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/marble-fall"
+ },
+ {
+  "slug": "made-in-gh",
+  "title": "Made in GH",
+  "year": 2022,
+  "discipline": "CD",
+  "summary": "Explorations inside Grasshopper",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/made-in-gh"
+ },
+ {
+  "slug": "briota-iospro",
+  "title": "Briota IOSPro",
+  "year": 2023,
+  "discipline": "ID",
+  "summary": "Impulse oscillometry product design",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/briota-iospro"
+ },
+ {
+  "slug": "hug",
+  "title": "H U G",
+  "year": 2022,
+  "discipline": "ID",
+  "summary": "Pneumatic lamp and lightweight structure studies",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/give-light-a-hug"
+ },
+ {
+  "slug": "invertebot",
+  "title": "InverteBot",
+  "year": 2023,
+  "discipline": "ID",
+  "summary": "\"Informal\" robot from a transformable prismatic structure",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/invertebot"
+ },
+ {
+  "slug": "neurodynamic",
+  "title": "Neurodynamic",
+  "year": 2019,
+  "discipline": "ID",
+  "summary": "Speculative wearable",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/neurodynamic"
+ },
+ {
+  "slug": "dynamic-valley",
+  "title": "Dynamic Valley",
+  "year": 2022,
+  "discipline": "CD",
+  "summary": "Mesh manipulation and motion visualization",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/practice"
+ },
+ {
+  "slug": "homovirus",
+  "title": "Homovirus",
+  "year": 2020,
+  "discipline": "CD",
+  "summary": "Digital sculpture and self-organizing behavior",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/homovirus"
+ },
+ {
+  "slug": "providence-seat",
+  "title": "Providence Station Seat",
+  "year": 2019,
+  "discipline": "ID",
+  "summary": "Public seating redesign",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/providence-station-seat-redesign"
+ },
+ {
+  "slug": "mix-museum-guide",
+  "title": "MIX Museum Guide",
+  "year": 2018,
+  "discipline": "IX",
+  "summary": "Mixed reality museum guide",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/mix-musuem-guide"
+ },
+ {
+  "slug": "donut-in-half",
+  "title": "Donut in Half",
+  "year": 2022,
+  "discipline": "ID",
+  "summary": "Object study",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/donut"
+ },
+ {
+  "slug": "intersect",
+  "title": "Intersect",
+  "year": 2022,
+  "discipline": "ID",
+  "summary": "Public restroom design",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/intersect"
+ },
+ {
+  "slug": "barnacle-lamp",
+  "title": "Barnacle Lamp",
+  "year": 2019,
+  "discipline": "ID",
+  "summary": "Lamp",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/barnacle-lamp"
+ },
+ {
+  "slug": "rib-stool",
+  "title": "Rib Stool",
+  "year": 2022,
+  "discipline": "ID",
+  "summary": "Lightweight stool",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/rib-stool"
+ },
+ {
+  "slug": "folded-volume",
+  "title": "Folded Volume",
+  "year": 2018,
+  "discipline": "ID",
+  "summary": "Sheet metal working",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/metal"
+ },
+ {
+  "slug": "wood-ii",
+  "title": "Wood II",
+  "year": 2019,
+  "discipline": "ID",
+  "summary": "Wood manipulation with machine tools",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/wood-ii"
+ },
+ {
+  "slug": "wood-i",
+  "title": "Wood I",
+  "year": 2018,
+  "discipline": "ID",
+  "summary": "Wood manipulation with hand tools",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/wood"
+ },
+ {
+  "slug": "being-contained",
+  "title": "Being Contained",
+  "year": 2018,
+  "discipline": "AR",
+  "summary": "Beginning hot glass",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/being-contained"
+ },
+ {
+  "slug": "mix-headset",
+  "title": "MIX Headset",
+  "year": 2018,
+  "discipline": "ID",
+  "summary": "SolidWorks practice",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/mix-headset"
+ },
+ {
+  "slug": "mirrored-river",
+  "title": "Mirrored River",
+  "year": 2019,
+  "discipline": "AR",
+  "summary": "Sculpture",
+  "archive": true,
+  "legacyUrl": "https://kaizhang.io/mirrored-river"
+ }
+]

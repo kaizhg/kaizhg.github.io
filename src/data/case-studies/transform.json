@@ -3,8 +3,8 @@
  "legacy": "https://kaizhang.io/transform",
  "hero": {
   "type": "loop",
-  "src": "/media/transform/01.mp4",
-  "width": 575,
+  "src": "/media/transform/transform_hero.mp4",
+  "width": 576,
   "height": 450
  },
  "locked": false,
@@ -17,7 +17,12 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Abstract</h3>\n<p><br>This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.</p>\n<h3><a href=\"/prismo\">Click here to see more about the prismo lamp.</a></h3>",
+       "html": "<h3>Abstract</h3><p>This project is part of the development process of prismo, a transformable lamp based on the prismatic structure. This parametric tool provides convenience for users to intuitively edit 1 DOF prismatic structure’s aggregation and simulate its movement in real time. With the help of this tool, I was able to iterate multiple designs and test their movement purely in the digital environment, which greatly speeds up the development process.</p>",
+       "kind": "text"
+      },
+      {
+       "type": "text",
+       "html": "<h3><a href=\"/prismo\">Click here to see more about the prismo lamp.</a></h3>",
        "kind": "text"
       }
      ]
@@ -27,7 +32,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "transform/02.jpg",
+       "src": "transform/transform_01.jpg",
        "width": 2400,
        "height": 1600,
        "kind": "photo"
@@ -39,8 +44,9 @@
   },
   {
    "type": "text",
-   "html": "<h3>Polar Array Design</h3>",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Polar Array Design</h2>"
   },
   {
    "type": "row",
@@ -50,7 +56,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/transform/03.mp4",
+       "src": "/media/transform/transform_02.mp4",
        "width": 600,
        "height": 600,
        "kind": "small"
@@ -62,7 +68,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "transform/04.jpg",
+       "src": "transform/transform_03.jpg",
        "width": 2400,
        "height": 1441,
        "kind": "white"
@@ -80,7 +86,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<p>ProblemThe conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process. <br>The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.</p>",
+       "html": "<p>ProblemThe conventional workflow working with prismatic structure is labor-intensive and time-consuming: Noticing the low efficiency, I realized there is a strong need for a digital parametric tool that could be used to accelerate the design iteration process.<br>The tool should enable designers to design and simulate movement in the digital environment to freely (and more efficiently) explore more potential opportunities.</p>",
        "kind": "text"
       }
      ]
@@ -90,7 +96,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "transform/05.jpg",
+       "src": "transform/transform_04.jpg",
        "width": 1920,
        "height": 1080,
        "kind": "white"
@@ -108,7 +114,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "transform/06.jpg",
+       "src": "transform/transform_05.jpg",
        "width": 1442,
        "height": 740,
        "kind": "photo"
@@ -120,7 +126,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Solution</h3>\n<p>Since the goal of this tool is to help people design, it has to be user-friendly and intuitive to use. I decided to use a modular component to represent each unit. This software architecture allows users directly see the connection between individual input parameters and output geometry.</p>",
+       "html": "<h3>Solution</h3><p>Since the goal of this tool is to help people design, it has to be user-friendly and intuitive to use. I decided to use a modular component to represent each unit. This software architecture allows users directly see the connection between individual input parameters and output geometry.</p>",
        "kind": "text"
       }
      ]
@@ -136,8 +142,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/transform/TzfrRXHSJaq.mp4",
-       "poster": "/media/transform/TzfrRXHSJaq.jpg",
+       "src": "/media/transform/transform_06.mp4",
+       "poster": "/media/transform/transform_06.jpg",
        "width": 1920,
        "height": 1084,
        "audio": false,
@@ -150,8 +156,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/transform/-aEyqz4PDU6.mp4",
-       "poster": "/media/transform/-aEyqz4PDU6.jpg",
+       "src": "/media/transform/transform_07.mp4",
+       "poster": "/media/transform/transform_07.jpg",
        "width": 1920,
        "height": 1084,
        "audio": false,
@@ -170,7 +176,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Challenge</h3>\n<p>The challenge is to understand the math behind the transformation: The input angle and output angle do not map linearly. At the first attempt, I called intersect functions from RhinoCommon as a hard way to solve the geometrical equation. It works, but the intersection method is a bit clumsy computation-wise.</p>\n<p>I further broke down the geometry relationships into trigonometric equations. This change not only simplify the code and also increase computational efficiency.</p>",
+       "html": "<h3>Challenge</h3><p>The challenge is to understand the math behind the transformation: The input angle and output angle do not map linearly. At the first attempt, I called intersect functions from RhinoCommon as a hard way to solve the geometrical equation. It works, but the intersection method is a bit clumsy computation-wise.</p><p>I further broke down the geometry relationships into trigonometric equations. This change not only simplify the code and also increase computational efficiency.</p>",
        "kind": "text"
       }
      ]
@@ -180,7 +186,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "transform/07.jpg",
+       "src": "transform/transform_08.jpg",
        "width": 1656,
        "height": 888,
        "kind": "photo"
@@ -192,49 +198,50 @@
   },
   {
    "type": "text",
-   "html": "<h3>Output tests</h3>",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Output tests</h2>"
   },
   {
    "type": "gallery",
    "items": [
     {
      "type": "loop",
-     "src": "/media/transform/08.mp4",
+     "src": "/media/transform/transform_09.mp4",
      "width": 600,
      "height": 412,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/transform/09.mp4",
+     "src": "/media/transform/transform_10.mp4",
      "width": 800,
-     "height": 557,
+     "height": 558,
      "kind": "photo"
     },
     {
      "type": "loop",
-     "src": "/media/transform/10.mp4",
+     "src": "/media/transform/transform_11.mp4",
      "width": 600,
      "height": 412,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/transform/11.mp4",
+     "src": "/media/transform/transform_12.mp4",
      "width": 800,
-     "height": 549,
+     "height": 550,
      "kind": "photo"
     }
    ],
+   "layout": "grid4",
    "cols": 3,
-   "kind": "gallery",
-   "layout": "grid4"
+   "kind": "gallery"
   },
   {
    "type": "video",
-   "src": "/media/transform/8P8fceQfR4q.mp4",
-   "poster": "/media/transform/8P8fceQfR4q.jpg",
+   "src": "/media/transform/transform_13.mp4",
+   "poster": "/media/transform/transform_13.jpg",
    "width": 1920,
    "height": 1220,
    "audio": false,
@@ -243,9 +250,8 @@
  ],
  "cover": {
   "type": "loop",
-  "src": "/media/transform/cover.mp4",
-  "width": 575,
+  "src": "/media/transform/transform_cover.mp4",
+  "width": 576,
   "height": 450
- },
- "hover": null
+ }
 }

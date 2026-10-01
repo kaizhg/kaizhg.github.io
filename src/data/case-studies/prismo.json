@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/prismo",
  "hero": {
   "type": "image",
-  "src": "prismo/01.jpg",
+  "src": "prismo/prismo_cover.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,25 +11,19 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<p>Course: SCI-6476 Transformable Design MethodsInstructor: Chuck HobermanProject Duration: 6 Weeks<br>Team members: Kai Zhang, Quincy Kuang, Danning LiangSpeacial Thanks: Youtian Duan(Welding), Liu Yang(Assembly)</p>",
    "kind": "credits",
+   "html": "<p>Course: SCI-6476 Transformable Design Methods</p><p>Instructor: Chuck Hoberman</p><p>Duration: 6 Weeks</p><p>Team: Kai Zhang, Quincy Kuang, Danning Liang</p><p>Thanks: Youtian Duan(Welding), Liu Yang(Assembly)</p><p>Role: [1] Proposed the innovative concept of combining mirror and prismatic structures to create a transformable lighting solution.<br>[2] Conducted research into both design directions and developed a Grasshopper C# script to streamline the design and simulation process for the team.<br>[3] Defined the aesthetic and specifications of the final product.<br>[4] Worked closely with two other team members to address the challenges in the actuation, lighting, and connection design.</p>",
    "layout": "credits"
   },
   {
    "type": "text",
-   "html": "<p>My Role:<br>[1] Proposed the innovative concept of combining mirror and prismatic structures to create a transformable lighting solution.<br>[2] Conducted research into both design directions and developed a Grasshopper C# script to streamline the design and simulation process for the team.<br>[3] Defined the aesthetic and specifications of the final product.<br>[4] Worked closely with two other team members to address the challenges in the actuation, lighting, and connection design.</p>",
-   "kind": "credits",
-   "layout": "credits"
-  },
-  {
-   "type": "text",
-   "html": "<h2>What will an \"Inside-Out\" kaleidoscope look like?</h2>",
+   "kind": "quote",
    "layout": "quote",
-   "kind": "quote"
+   "html": "<h2>What will an \"Inside-Out\" kaleidoscope look like?</h2>"
   },
   {
    "type": "image",
-   "src": "prismo/02.jpg",
+   "src": "prismo/prismo_01.jpg",
    "width": 2400,
    "height": 1600,
    "kind": "photo"
@@ -58,7 +52,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/prismo/03.mp4",
+       "src": "/media/prismo/prismo_02.mp4",
        "width": 600,
        "height": 600,
        "kind": "small"
@@ -70,7 +64,7 @@
   },
   {
    "type": "image",
-   "src": "prismo/04.jpg",
+   "src": "prismo/prismo_03.jpg",
    "width": 1920,
    "height": 694,
    "layout": "wide-r",
@@ -84,8 +78,8 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/prismo/05.mp4",
-       "width": 337,
+       "src": "/media/prismo/prismo_04.mp4",
+       "width": 338,
        "height": 600,
        "kind": "small"
       }
@@ -96,8 +90,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/prismo/LnxroyvZTC5.mp4",
-       "poster": "/media/prismo/LnxroyvZTC5.jpg",
+       "src": "/media/prismo/prismo_05.mp4",
+       "poster": "/media/prismo/prismo_05.jpg",
        "width": 1920,
        "height": 1080,
        "audio": true,
@@ -113,39 +107,39 @@
    "items": [
     {
      "type": "image",
-     "src": "prismo/06.jpg",
+     "src": "prismo/prismo_06.jpg",
      "width": 2284,
      "height": 2284,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/07.jpg",
+     "src": "prismo/prismo_07.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/08.jpg",
+     "src": "prismo/prismo_08.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/09.jpg",
+     "src": "prismo/prismo_09.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid4"
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Base Geometry</h3>\n<p>The first step was to identify the optimal base geometry. The geometry needed to be tessellatable, and we explored several options including the Truncated Rhombic Dodecahedron, the Rhombic Dodecahedron, and the Prismatic Polyhedron.<br>We chose the basic Prismatic Polyhedron with 1 degree of freedom (DOF) for the following reasons: given our limited time and resources, a 1 DOF structure was easier to actuate, allowing us to focus more on design refinements rather than technical challenges; the 1 DOF structure was more straightforward for audiences to understand, as people tend to appreciate things they can easily grasp.</p>",
+   "html": "<h3>Base Geometry</h3><p>The first step was to identify the optimal base geometry. The geometry needed to be tessellatable, and we explored several options including the Truncated Rhombic Dodecahedron, the Rhombic Dodecahedron, and the Prismatic Polyhedron.<br>We chose the basic Prismatic Polyhedron with 1 degree of freedom (DOF) for the following reasons: given our limited time and resources, a 1 DOF structure was easier to actuate, allowing us to focus more on design refinements rather than technical challenges; the 1 DOF structure was more straightforward for audiences to understand, as people tend to appreciate things they can easily grasp.</p>",
    "layout": "text-l",
    "kind": "text"
   },
@@ -157,7 +151,7 @@
   },
   {
    "type": "image",
-   "src": "prismo/10.jpg",
+   "src": "prismo/prismo_10.jpg",
    "width": 2400,
    "height": 2262,
    "layout": "half-l",
@@ -168,35 +162,35 @@
    "items": [
     {
      "type": "loop",
-     "src": "/media/prismo/11.mp4",
+     "src": "/media/prismo/prismo_11.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/prismo/12.mp4",
+     "src": "/media/prismo/prismo_12.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/prismo/13.mp4",
+     "src": "/media/prismo/prismo_13.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/prismo/14.mp4",
+     "src": "/media/prismo/prismo_14.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid4"
+   "layout": "grid4",
+   "kind": "gallery"
   },
   {
    "type": "row",
@@ -216,7 +210,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/prismo/15.mp4",
+       "src": "/media/prismo/prismo_15.mp4",
        "width": 800,
        "height": 450,
        "kind": "photo"
@@ -237,14 +231,14 @@
        "items": [
         {
          "type": "image",
-         "src": "prismo/16.jpg",
+         "src": "prismo/prismo_16.jpg",
          "width": 2400,
          "height": 1600,
          "kind": "photo"
         },
         {
          "type": "image",
-         "src": "prismo/17.jpg",
+         "src": "prismo/prismo_17.jpg",
          "width": 2400,
          "height": 1600,
          "kind": "photo"
@@ -259,7 +253,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Actuation</h3>\n<p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>",
+       "html": "<h3>Actuation</h3><p>The lamp’s movement is driven by the actuation of its base parallelogram. By fixing one side of the parallelogram to the base, we were able to drive the whole structure by actuating the non-fixed side using a servo motor.</p>",
        "kind": "text"
       }
      ]
@@ -273,32 +267,32 @@
    "items": [
     {
      "type": "loop",
-     "src": "/media/prismo/18.mp4",
+     "src": "/media/prismo/prismo_18.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/prismo/19.mp4",
+     "src": "/media/prismo/prismo_19.mp4",
      "width": 600,
      "height": 338,
      "kind": "small"
     },
     {
      "type": "loop",
-     "src": "/media/prismo/20.mp4",
-     "width": 337,
+     "src": "/media/prismo/prismo_20.mp4",
+     "width": 338,
      "height": 600,
      "kind": "small"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "text",
-   "html": "<h3>Connection and Material</h3>\n<p>This was also one of the main challenges of realizing this product. There were three major factors: weight, reflectivity, and connection type:</p>\n<p>[1] Since the whole structure is only driven by a single 35 kg servo motor, the main body of the top moving part has to be as light as possible.<br>[2] The inside material should be reflective enough for light to bounce multiple times. We found out the more light gets bounced the better the kaleidoscope effect it gets.<br>[3] The gap between each panel should be as small as possible to avoid light escape, and the connection should have as little friction as possible to ensure a smooth movement.</p>\n<p>The acrylic mirror has the most reflective surface. However, hinges and fasteners are required for connecting laser cut mirror panel. There are mainly three drawbacks of using hinges and fasteners: 1. The assembly process, which requires fastening more than 1000 screws/rivets by hand, is extremely tedious and not flexible enough for maintenance and placing LED strip; 2. Hinge requires leaving huge gap between panels to avoid self-interference; 3. The lamp doesn’t look clean with this many fasteners exposed.<br>Taken all consideration, we decided to 3D print the panel because we were able to integrate mechanical hinge into the individual panel.</p>",
+   "html": "<h3>Connection and Material</h3><p>This was also one of the main challenges of realizing this product. There were three major factors: weight, reflectivity, and connection type:</p><p>[1] Since the whole structure is only driven by a single 35 kg servo motor, the main body of the top moving part has to be as light as possible.<br>[2] The inside material should be reflective enough for light to bounce multiple times. We found out the more light gets bounced the better the kaleidoscope effect it gets.<br>[3] The gap between each panel should be as small as possible to avoid light escape, and the connection should have as little friction as possible to ensure a smooth movement.</p><p>The acrylic mirror has the most reflective surface. However, hinges and fasteners are required for connecting laser cut mirror panel. There are mainly three drawbacks of using hinges and fasteners: 1. The assembly process, which requires fastening more than 1000 screws/rivets by hand, is extremely tedious and not flexible enough for maintenance and placing LED strip; 2. Hinge requires leaving huge gap between panels to avoid self-interference; 3. The lamp doesn’t look clean with this many fasteners exposed.<br>Taken all consideration, we decided to 3D print the panel because we were able to integrate mechanical hinge into the individual panel.</p>",
    "kind": "text"
   },
   {
@@ -306,63 +300,63 @@
    "items": [
     {
      "type": "image",
-     "src": "prismo/21.jpg",
+     "src": "prismo/prismo_21.jpg",
      "width": 2273,
      "height": 2273,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/22.jpg",
+     "src": "prismo/prismo_22.jpg",
      "width": 2374,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/23.jpg",
+     "src": "prismo/prismo_23.jpg",
      "width": 2300,
      "height": 2300,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/24.jpg",
+     "src": "prismo/prismo_24.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/25.jpg",
+     "src": "prismo/prismo_25.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/26.jpg",
+     "src": "prismo/prismo_26.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/27.jpg",
+     "src": "prismo/prismo_27.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/28.jpg",
+     "src": "prismo/prismo_28.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/29.jpg",
+     "src": "prismo/prismo_29.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
@@ -379,7 +373,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Panel and Base</h3>\n<p>The panels of the lamp are fabricated through SLS printing which resulted in a clean black matte finish. Given the short time frame, we didn’t fully optimize the panel but there is space for shrinking the edge and acquiring a sleeker look. The movement of the panels is enabled through mechanical hinges which are integrated into the panel designs.</p>\n<p>The first panel, which is the fixed side of the base parallelogram, is integrated into the base. We spitted the base in halves to clamp the stand as well as to create space for placing the circuit board.</p>",
+       "html": "<h3>Panel and Base</h3><p>The panels of the lamp are fabricated through SLS printing which resulted in a clean black matte finish. Given the short time frame, we didn’t fully optimize the panel but there is space for shrinking the edge and acquiring a sleeker look. The movement of the panels is enabled through mechanical hinges which are integrated into the panel designs.</p><p>The first panel, which is the fixed side of the base parallelogram, is integrated into the base. We spitted the base in halves to clamp the stand as well as to create space for placing the circuit board.</p>",
        "kind": "text"
       }
      ]
@@ -392,14 +386,14 @@
        "items": [
         {
          "type": "image",
-         "src": "prismo/30.png",
+         "src": "prismo/prismo_30.png",
          "width": 706,
          "height": 1669,
          "kind": "photo"
         },
         {
          "type": "image",
-         "src": "prismo/31.png",
+         "src": "prismo/prismo_31.png",
          "width": 1920,
          "height": 1457,
          "kind": "photo"
@@ -423,63 +417,63 @@
    "items": [
     {
      "type": "image",
-     "src": "prismo/32.jpg",
+     "src": "prismo/prismo_32.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/33.jpg",
+     "src": "prismo/prismo_33.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/34.jpg",
+     "src": "prismo/prismo_34.jpg",
      "width": 2312,
      "height": 2312,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/35.jpg",
+     "src": "prismo/prismo_35.jpg",
      "width": 2123,
      "height": 2123,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/36.jpg",
+     "src": "prismo/prismo_36.jpg",
      "width": 2180,
      "height": 2180,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/37.jpg",
+     "src": "prismo/prismo_37.jpg",
      "width": 2372,
      "height": 2372,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/38.jpg",
+     "src": "prismo/prismo_38.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/39.jpg",
+     "src": "prismo/prismo_39.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/40.jpg",
+     "src": "prismo/prismo_40.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
@@ -490,17 +484,17 @@
   },
   {
    "type": "video",
-   "src": "/media/prismo/2jB8JQT5ebx.mp4",
-   "poster": "/media/prismo/2jB8JQT5ebx.jpg",
-   "width": 1080,
-   "height": 1920,
+   "src": "/media/prismo/prismo_41.mp4",
+   "poster": "/media/prismo/prismo_41.jpg",
+   "width": 720,
+   "height": 1280,
    "audio": false,
    "layout": "full",
    "kind": "video"
   },
   {
    "type": "image",
-   "src": "prismo/41.jpg",
+   "src": "prismo/prismo_42.jpg",
    "width": 2400,
    "height": 1313,
    "caption": "Following studies and tests",
@@ -508,12 +502,13 @@
   },
   {
    "type": "text",
-   "html": "<h3>Final Product</h3>",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Final Product</h2>"
   },
   {
    "type": "image",
-   "src": "prismo/02.jpg",
+   "src": "prismo/prismo_01.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-l",
@@ -524,14 +519,14 @@
    "items": [
     {
      "type": "image",
-     "src": "prismo/42.jpg",
+     "src": "prismo/prismo_43.jpg",
      "width": 2400,
      "height": 1600,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/43.jpg",
+     "src": "prismo/prismo_44.jpg",
      "width": 2400,
      "height": 1600,
      "kind": "photo"
@@ -548,7 +543,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "prismo/44.jpg",
+       "src": "prismo/prismo_45.jpg",
        "width": 2400,
        "height": 1600,
        "kind": "photo"
@@ -560,7 +555,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "prismo/45.jpg",
+       "src": "prismo/prismo_46.jpg",
        "width": 2400,
        "height": 2400,
        "kind": "white"
@@ -573,17 +568,17 @@
   },
   {
    "type": "video",
-   "src": "/media/prismo/D-GN8N_iNs3.mp4",
-   "poster": "/media/prismo/D-GN8N_iNs3.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/prismo/prismo_47.mp4",
+   "poster": "/media/prismo/prismo_47.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": false,
    "kind": "video"
   },
   {
    "type": "video",
-   "src": "/media/prismo/BQzRHotmRzF.mp4",
-   "poster": "/media/prismo/BQzRHotmRzF.jpg",
+   "src": "/media/prismo/prismo_48.mp4",
+   "poster": "/media/prismo/prismo_48.jpg",
    "width": 1280,
    "height": 720,
    "audio": false,
@@ -594,39 +589,39 @@
    "items": [
     {
      "type": "image",
-     "src": "prismo/46.jpg",
+     "src": "prismo/prismo_49.jpg",
      "width": 2400,
      "height": 1800,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/47.jpg",
+     "src": "prismo/prismo_50.jpg",
      "width": 2400,
      "height": 1901,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "prismo/48.jpg",
+     "src": "prismo/prismo_51.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid3",
+   "kind": "gallery"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "prismo/cover.jpg",
+  "src": "prismo/prismo_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "loop",
-  "src": "/media/prismo/hover.mp4",
+  "src": "/media/prismo/prismo_hover.mp4",
   "width": 432,
   "height": 338
  }

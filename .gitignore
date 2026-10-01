@@ -1,5 +1,7 @@
 # build output
 dist/
+# videos are copied here from content/ at build time
+public/media/
 # generated types
 .astro/
 

@@ -2,7 +2,7 @@ import type { ImageMetadata } from 'astro';
 
 export interface ImageBlock {
 	type: 'image';
-	src: string; // path under src/assets/work/
+	src: string; // <slug>/<file> under content/
 	width: number;
 	height: number;
 	caption?: string;
@@ -41,7 +41,7 @@ export interface CaseStudy {
 }
 
 const studies = import.meta.glob<CaseStudy>('./case-studies/*.json', { eager: true, import: 'default' });
-const images = import.meta.glob<ImageMetadata>('../assets/work/**/*.{jpg,png}', {
+const images = import.meta.glob<ImageMetadata>('../../content/**/*.{jpg,jpeg,png}', {
 	eager: true,
 	import: 'default',
 });
@@ -51,7 +51,7 @@ export function getCaseStudy(slug: string): CaseStudy | undefined {
 }
 
 export function workImage(src: string): ImageMetadata {
-	const img = images[`../assets/work/${src}`];
+	const img = images[`../../content/${src}`];
 	if (!img) throw new Error(`Missing work image: ${src}`);
 	return img;
 }

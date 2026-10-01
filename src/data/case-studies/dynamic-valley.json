@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/practice",
  "hero": {
   "type": "loop",
-  "src": "/media/dynamic-valley/01.mp4",
+  "src": "/media/dynamic-valley/dynamic-valley_hero.mp4",
   "width": 692,
   "height": 542
  },
@@ -23,8 +23,8 @@
      "blocks": [
       {
        "type": "video",
-       "src": "/media/dynamic-valley/PtK6f-cQX7L.mp4",
-       "poster": "/media/dynamic-valley/PtK6f-cQX7L.jpg",
+       "src": "/media/dynamic-valley/dynamic-valley_01.mp4",
+       "poster": "/media/dynamic-valley/dynamic-valley_01.jpg",
        "width": 1920,
        "height": 1080,
        "audio": true,
@@ -37,7 +37,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "dynamic-valley/02.jpg",
+       "src": "dynamic-valley/dynamic-valley_02.jpg",
        "width": 1670,
        "height": 1216,
        "kind": "white"
@@ -52,42 +52,42 @@
    "items": [
     {
      "type": "image",
-     "src": "dynamic-valley/03.jpg",
+     "src": "dynamic-valley/dynamic-valley_03.jpg",
      "width": 1920,
      "height": 1244,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "dynamic-valley/04.jpg",
+     "src": "dynamic-valley/dynamic-valley_04.jpg",
      "width": 2400,
      "height": 1555,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "dynamic-valley/05.jpg",
+     "src": "dynamic-valley/dynamic-valley_05.jpg",
      "width": 2400,
      "height": 1555,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "dynamic-valley/06.jpg",
+     "src": "dynamic-valley/dynamic-valley_06.jpg",
      "width": 2400,
      "height": 1555,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "dynamic-valley/07.jpg",
+     "src": "dynamic-valley/dynamic-valley_07.jpg",
      "width": 2400,
      "height": 1555,
      "kind": "white"
     },
     {
      "type": "image",
-     "src": "dynamic-valley/08.jpg",
+     "src": "dynamic-valley/dynamic-valley_08.jpg",
      "width": 2400,
      "height": 1555,
      "kind": "white"
@@ -104,7 +104,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "dynamic-valley/09.jpg",
+       "src": "dynamic-valley/dynamic-valley_09.jpg",
        "width": 2400,
        "height": 2119,
        "kind": "white"
@@ -116,7 +116,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/dynamic-valley/10.mp4",
+       "src": "/media/dynamic-valley/dynamic-valley_10.mp4",
        "width": 1280,
        "height": 720,
        "kind": "photo"
@@ -144,7 +144,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/dynamic-valley/11.mp4",
+       "src": "/media/dynamic-valley/dynamic-valley_11.mp4",
        "width": 800,
        "height": 600,
        "kind": "photo"
@@ -156,7 +156,7 @@
   },
   {
    "type": "loop",
-   "src": "/media/dynamic-valley/12.mp4",
+   "src": "/media/dynamic-valley/dynamic-valley_12.mp4",
    "width": 960,
    "height": 542,
    "layout": "wide-c",
@@ -165,9 +165,8 @@
  ],
  "cover": {
   "type": "loop",
-  "src": "/media/dynamic-valley/cover.mp4",
+  "src": "/media/dynamic-valley/dynamic-valley_cover.mp4",
   "width": 692,
   "height": 542
- },
- "hover": null
+ }
 }

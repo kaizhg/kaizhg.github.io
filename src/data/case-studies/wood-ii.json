@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/wood-ii",
  "hero": {
   "type": "image",
-  "src": "wood-ii/01.jpg",
+  "src": "wood-ii/wood-ii_hero.jpg",
   "width": 2400,
   "height": 1920
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "wood-ii/01.jpg",
+   "src": "wood-ii/wood-ii_hero.jpg",
    "width": 2400,
    "height": 1920,
    "layout": "full",
@@ -22,25 +22,25 @@
    "items": [
     {
      "type": "image",
-     "src": "wood-ii/02.jpg",
+     "src": "wood-ii/wood-ii_01.jpg",
      "width": 2400,
      "height": 1602,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/03.jpg",
+     "src": "wood-ii/wood-ii_02.jpg",
      "width": 1602,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid2"
+   "layout": "grid2",
+   "kind": "gallery"
   },
   {
    "type": "image",
-   "src": "wood-ii/04.jpg",
+   "src": "wood-ii/wood-ii_03.jpg",
    "width": 2400,
    "height": 1350,
    "layout": "wide-l",
@@ -51,78 +51,77 @@
    "items": [
     {
      "type": "image",
-     "src": "wood-ii/05.jpg",
+     "src": "wood-ii/wood-ii_04.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/06.jpg",
+     "src": "wood-ii/wood-ii_05.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/07.jpg",
+     "src": "wood-ii/wood-ii_06.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/08.jpg",
+     "src": "wood-ii/wood-ii_07.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/09.jpg",
+     "src": "wood-ii/wood-ii_08.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/10.jpg",
+     "src": "wood-ii/wood-ii_09.jpg",
      "width": 2374,
      "height": 2374,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/11.jpg",
+     "src": "wood-ii/wood-ii_10.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/12.jpg",
+     "src": "wood-ii/wood-ii_11.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "wood-ii/13.jpg",
+     "src": "wood-ii/wood-ii_12.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "cols": 3,
    "layout": "grid3",
+   "cols": 3,
    "kind": "gallery"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "wood-ii/cover.jpg",
+  "src": "wood-ii/wood-ii_cover.jpg",
   "width": 2400,
   "height": 1877
- },
- "hover": null
+ }
 }

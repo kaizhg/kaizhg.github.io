@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/barnacle-lamp",
  "hero": {
   "type": "image",
-  "src": "barnacle-lamp/01.jpg",
+  "src": "barnacle-lamp/barnacle-lamp_cover.jpg",
   "width": 2400,
   "height": 1877
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "barnacle-lamp/02.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_01.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "full",
@@ -19,7 +19,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/03.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_02.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "half-l",
@@ -27,7 +27,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/04.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_03.jpg",
    "width": 1958,
    "height": 2400,
    "layout": "narrow-r stagger",
@@ -35,7 +35,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/05.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_04.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "wide-l",
@@ -43,7 +43,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/06.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_05.jpg",
    "width": 2400,
    "height": 1961,
    "layout": "half-r stagger",
@@ -51,7 +51,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/07.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_06.jpg",
    "width": 2400,
    "height": 2392,
    "layout": "half-l",
@@ -59,7 +59,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/08.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_07.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "wide-r stagger",
@@ -67,7 +67,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/09.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_08.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "full",
@@ -75,7 +75,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/10.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_09.jpg",
    "width": 2400,
    "height": 1550,
    "layout": "half-l",
@@ -83,7 +83,7 @@
   },
   {
    "type": "image",
-   "src": "barnacle-lamp/11.jpg",
+   "src": "barnacle-lamp/barnacle-lamp_10.jpg",
    "width": 2400,
    "height": 1553,
    "layout": "half-r stagger",
@@ -92,9 +92,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "barnacle-lamp/cover.jpg",
+  "src": "barnacle-lamp/barnacle-lamp_cover.jpg",
   "width": 2400,
   "height": 1877
- },
- "hover": null
+ }
 }

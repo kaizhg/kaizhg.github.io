@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/mix-musuem-guide",
  "hero": {
   "type": "image",
-  "src": "mix-museum-guide/01.jpg",
+  "src": "mix-museum-guide/mix-museum-guide_hero.jpg",
   "width": 1380,
   "height": 1080
  },
@@ -11,7 +11,7 @@
  "blocks": [
   {
    "type": "image",
-   "src": "mix-museum-guide/02.jpg",
+   "src": "mix-museum-guide/mix-museum-guide_01.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "full",
@@ -19,7 +19,7 @@
   },
   {
    "type": "image",
-   "src": "mix-museum-guide/03.jpg",
+   "src": "mix-museum-guide/mix-museum-guide_02.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-l",
@@ -27,7 +27,7 @@
   },
   {
    "type": "image",
-   "src": "mix-museum-guide/04.jpg",
+   "src": "mix-museum-guide/mix-museum-guide_03.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "half-r stagger",
@@ -35,7 +35,7 @@
   },
   {
    "type": "image",
-   "src": "mix-museum-guide/05.jpg",
+   "src": "mix-museum-guide/mix-museum-guide_04.jpg",
    "width": 2400,
    "height": 1600,
    "layout": "wide-l",
@@ -43,8 +43,8 @@
   },
   {
    "type": "video",
-   "src": "/media/mix-museum-guide/VbMiVwkkVoN.mp4",
-   "poster": "/media/mix-museum-guide/VbMiVwkkVoN.jpg",
+   "src": "/media/mix-museum-guide/mix-museum-guide_05.mp4",
+   "poster": "/media/mix-museum-guide/mix-museum-guide_05.jpg",
    "width": 1280,
    "height": 720,
    "audio": false,
@@ -53,10 +53,10 @@
   },
   {
    "type": "video",
-   "src": "/media/mix-museum-guide/59a8IgPJMFT.mp4",
-   "poster": "/media/mix-museum-guide/59a8IgPJMFT.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/mix-museum-guide/mix-museum-guide_06.mp4",
+   "poster": "/media/mix-museum-guide/mix-museum-guide_06.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": false,
    "layout": "half-r stagger",
    "kind": "video"
@@ -64,13 +64,13 @@
  ],
  "cover": {
   "type": "image",
-  "src": "mix-museum-guide/cover.jpg",
+  "src": "mix-museum-guide/mix-museum-guide_cover.jpg",
   "width": 2400,
   "height": 1876
  },
  "hover": {
   "type": "image",
-  "src": "mix-museum-guide/hover.jpg",
+  "src": "mix-museum-guide/mix-museum-guide_hover.jpg",
   "width": 1380,
   "height": 1080
  }

@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/rib-stool",
  "hero": {
   "type": "image",
-  "src": "rib-stool/01.png",
+  "src": "rib-stool/rib-stool_hero.png",
   "width": 2400,
   "height": 1877
  },
@@ -19,84 +19,84 @@
    "items": [
     {
      "type": "image",
-     "src": "rib-stool/02.jpg",
+     "src": "rib-stool/rib-stool_01.jpg",
      "width": 1800,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/03.jpg",
+     "src": "rib-stool/rib-stool_02.jpg",
      "width": 1800,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "gallery",
    "items": [
     {
      "type": "image",
-     "src": "rib-stool/04.jpg",
+     "src": "rib-stool/rib-stool_03.jpg",
      "width": 2392,
      "height": 2392,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/05.jpg",
+     "src": "rib-stool/rib-stool_04.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/06.jpg",
+     "src": "rib-stool/rib-stool_05.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/07.jpg",
+     "src": "rib-stool/rib-stool_06.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/08.jpg",
+     "src": "rib-stool/rib-stool_07.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/09.jpg",
+     "src": "rib-stool/rib-stool_08.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/10.jpg",
+     "src": "rib-stool/rib-stool_09.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/11.jpg",
+     "src": "rib-stool/rib-stool_10.jpg",
      "width": 2328,
      "height": 2328,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "rib-stool/12.jpg",
+     "src": "rib-stool/rib-stool_11.jpg",
      "width": 2400,
      "height": 2400,
      "kind": "photo"
@@ -107,7 +107,7 @@
   },
   {
    "type": "image",
-   "src": "rib-stool/13.png",
+   "src": "rib-stool/rib-stool_12.png",
    "width": 2400,
    "height": 1800,
    "layout": "wide-r stagger",
@@ -115,7 +115,7 @@
   },
   {
    "type": "image",
-   "src": "rib-stool/14.png",
+   "src": "rib-stool/rib-stool_13.png",
    "width": 2400,
    "height": 1800,
    "kind": "photo"
@@ -128,7 +128,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "rib-stool/15.jpg",
+       "src": "rib-stool/rib-stool_14.jpg",
        "width": 1800,
        "height": 2400,
        "kind": "photo"
@@ -143,14 +143,14 @@
        "items": [
         {
          "type": "image",
-         "src": "rib-stool/16.jpg",
+         "src": "rib-stool/rib-stool_15.jpg",
          "width": 2391,
          "height": 2400,
          "kind": "photo"
         },
         {
          "type": "image",
-         "src": "rib-stool/17.jpg",
+         "src": "rib-stool/rib-stool_16.jpg",
          "width": 2400,
          "height": 2400,
          "kind": "photo"
@@ -166,9 +166,8 @@
  ],
  "cover": {
   "type": "image",
-  "src": "rib-stool/cover.jpg",
+  "src": "rib-stool/rib-stool_cover.jpg",
   "width": 2400,
   "height": 1877
- },
- "hover": null
+ }
 }

@@ -3,7 +3,7 @@
  "legacy": "https://kaizhang.io/large-language-objects",
  "hero": {
   "type": "image",
-  "src": "large-language-objects/01.jpg",
+  "src": "large-language-objects/large-language-objects_hero.jpg",
   "width": 2400,
   "height": 1945
  },
@@ -11,17 +11,19 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2><strong>Engaging with Large Language Models through Tangible Experiences:</strong></h2>",
-   "kind": "quote"
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2><strong>Engaging with Large Language Models through Tangible Experiences:</strong></h2>"
   },
   {
    "type": "text",
-   "html": "<h3>Part I: AIncense</h3>",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Part I: AIncense</h2>"
   },
   {
    "type": "image",
-   "src": "large-language-objects/02.jpg",
+   "src": "large-language-objects/large-language-objects_01.jpg",
    "width": 2400,
    "height": 1389,
    "kind": "photo"
@@ -33,14 +35,14 @@
   },
   {
    "type": "image",
-   "src": "large-language-objects/03.jpg",
+   "src": "large-language-objects/large-language-objects_02.jpg",
    "width": 2400,
    "height": 1602,
    "kind": "photo"
   },
   {
    "type": "text",
-   "html": "<h3>AIncense is a praying device powered by ChatGPT, designed to amplify self-motivation through psychological suggestion.</h3>\n<p>AIncense integrates the comprehensive capabilities of ChatGPT to revolutionize and expand our perception of religious authority. This innovative platform empowers users to foster a routine of self-empowerment and inspiration. Whether making a wish, confessing, or navigating daily life, AIncense provides a unique space for personal reflection and growth.</p>",
+   "html": "<h3>AIncense is a praying device powered by ChatGPT, designed to amplify self-motivation through psychological suggestion.</h3><p>AIncense integrates the comprehensive capabilities of ChatGPT to revolutionize and expand our perception of religious authority. This innovative platform empowers users to foster a routine of self-empowerment and inspiration. Whether making a wish, confessing, or navigating daily life, AIncense provides a unique space for personal reflection and growth.</p>",
    "kind": "text"
   },
   {
@@ -51,7 +53,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/04.jpg",
+       "src": "large-language-objects/large-language-objects_03.jpg",
        "width": 2400,
        "height": 1602,
        "kind": "photo"
@@ -63,7 +65,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/05.jpg",
+       "src": "large-language-objects/large-language-objects_04.jpg",
        "width": 1602,
        "height": 2400,
        "kind": "photo"
@@ -75,7 +77,7 @@
   },
   {
    "type": "image",
-   "src": "large-language-objects/06.jpg",
+   "src": "large-language-objects/large-language-objects_05.jpg",
    "width": 2400,
    "height": 1302,
    "layout": "wide-l",
@@ -94,7 +96,12 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>AIncense 2.0 (Locally deployed LLM)</h3>\n<p>In Fall 2024, I had a chance to revisit this project, and made a hardware design that truly enables this interaction. With the support from MIT HAN Lab, I was able to make a smart incense that locally communicates with Large Language. Please click the following links to see detail for the 2nd Iteration:</p>\n<h3><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final\">&gt;&gt;&gt; Overview</a></strong><br><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final_tracking\">&gt;&gt;&gt; Process Documentation</a></strong></h3>",
+       "html": "<h3>AIncense 2.0 (Locally deployed LLM)</h3><p>In Fall 2024, I had a chance to revisit this project, and made a hardware design that truly enables this interaction. With the support from MIT HAN Lab, I was able to make a smart incense that locally communicates with Large Language. Please click the following links to see detail for the 2nd Iteration:</p>",
+       "kind": "text"
+      },
+      {
+       "type": "text",
+       "html": "<h3><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final\">&gt;&gt;&gt; Overview</a></strong><br><strong><a href=\"https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html#final_tracking\">&gt;&gt;&gt; Process Documentation</a></strong></h3>",
        "kind": "text"
       }
      ]
@@ -104,7 +111,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/07.jpg",
+       "src": "large-language-objects/large-language-objects_06.jpg",
        "width": 1800,
        "height": 1800,
        "kind": "photo"
@@ -119,25 +126,25 @@
    "items": [
     {
      "type": "image",
-     "src": "large-language-objects/08.jpg",
+     "src": "large-language-objects/large-language-objects_07.jpg",
      "width": 1600,
      "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "large-language-objects/09.jpg",
+     "src": "large-language-objects/large-language-objects_08.jpg",
      "width": 1828,
      "height": 1905,
      "kind": "white"
     }
    ],
-   "kind": "gallery",
-   "layout": "grid3"
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "image",
-   "src": "large-language-objects/10.jpg",
+   "src": "large-language-objects/large-language-objects_09.jpg",
    "width": 1920,
    "height": 1080,
    "layout": "wide-r",
@@ -145,7 +152,7 @@
   },
   {
    "type": "image",
-   "src": "large-language-objects/11.jpg",
+   "src": "large-language-objects/large-language-objects_10.jpg",
    "width": 2400,
    "height": 1548,
    "caption": "Incense PCB Iterations",
@@ -165,7 +172,7 @@
      "blocks": [
       {
        "type": "loop",
-       "src": "/media/large-language-objects/12.mp4",
+       "src": "/media/large-language-objects/large-language-objects_11.mp4",
        "width": 800,
        "height": 450,
        "kind": "photo"
@@ -177,7 +184,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>A modular design for edge computing</h3>\n<p>This device envisions how modularity works for edge computing hardware. The base computing module is powered by Nvidia Jetson Orin Nano, while the top module could be easily changed according to the need. Here presents a speakerphone module as example.<br><br>The client and technical support for this project is MIT HAN Lab, founded by Professor Song Han. HAN lab stands at the forefront of cutting-edge research, encompassing a wide spectrum of topics from LLM and genAI to TinyML and hardware design.</p>",
+       "html": "<h3>A modular design for edge computing</h3><p>This device envisions how modularity works for edge computing hardware. The base computing module is powered by Nvidia Jetson Orin Nano, while the top module could be easily changed according to the need. Here presents a speakerphone module as example.<br><br>The client and technical support for this project is MIT HAN Lab, founded by Professor Song Han. HAN lab stands at the forefront of cutting-edge research, encompassing a wide spectrum of topics from LLM and genAI to TinyML and hardware design.</p>",
        "kind": "text"
       }
      ]
@@ -193,7 +200,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Technology</h3>\n<p>This voice assistant and TinyChat computer uses the TinyChatEngine software from MIT HAN Lab. It runs Meta's latest LLaMA-2 model at 30 tokens / second on NVIDIA Jetson Orin Nano and can easily support different models and hardware. For more details on the software side please visit MIT HAN Lab. All of Tinychat computer's hardware are custom designed except the keys. We wanted to craft the most compact interface for portability and personalization</p>",
+       "html": "<h3>Technology</h3><p>This voice assistant and TinyChat computer uses the TinyChatEngine software from MIT HAN Lab. It runs Meta's latest LLaMA-2 model at 30 tokens / second on NVIDIA Jetson Orin Nano and can easily support different models and hardware. For more details on the software side please visit MIT HAN Lab. All of Tinychat computer's hardware are custom designed except the keys. We wanted to craft the most compact interface for portability and personalization</p>",
        "kind": "text"
       }
      ]
@@ -203,7 +210,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/13.jpg",
+       "src": "large-language-objects/large-language-objects_12.jpg",
        "width": 1500,
        "height": 1332,
        "kind": "white"
@@ -221,7 +228,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/14.jpg",
+       "src": "large-language-objects/large-language-objects_13.jpg",
        "width": 1519,
        "height": 1500,
        "kind": "white"
@@ -233,7 +240,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Design Decision:<br>Off-the-shelf speaker module</h3>\n<p>Some design decisions were made as we (Spatial Dynamics, a local industrial design consultancy studio who commissioned me for this project) only had one week to deliver the prototype.</p>\n<p>For instance, we disassembled an existing speakerphone product from Amazon, and integrated the speakerphone unit into our design. Although using existing component raised certain limitations, this saved us quiet a lot time from building the hardware from scratch. </p>",
+       "html": "<h3>Design Decision:<br>Off-the-shelf speaker module</h3><p>Some design decisions were made as we (Spatial Dynamics, a local industrial design consultancy studio who commissioned me for this project) only had one week to deliver the prototype.</p><p>For instance, we disassembled an existing speakerphone product from Amazon, and integrated the speakerphone unit into our design. Although using existing component raised certain limitations, this saved us quiet a lot time from building the hardware from scratch.</p>",
        "kind": "text"
       }
      ]
@@ -245,11 +252,11 @@
    "type": "row",
    "columns": [
     {
-     "flex": 0.4778,
+     "flex": 0.5,
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/15.jpg",
+       "src": "large-language-objects/large-language-objects_14.jpg",
        "width": 2000,
        "height": 1333,
        "kind": "photo"
@@ -257,11 +264,11 @@
      ]
     },
     {
-     "flex": 0.5222,
+     "flex": 0.5,
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/16.jpg",
+       "src": "large-language-objects/large-language-objects_15.jpg",
        "width": 2400,
        "height": 1464,
        "kind": "photo"
@@ -278,8 +285,9 @@
   },
   {
    "type": "text",
-   "html": "<h3>Part III: Tiny Chat Computer</h3>",
-   "kind": "section"
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Part III: Tiny Chat Computer</h2>"
   },
   {
    "type": "text",
@@ -295,7 +303,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/17.jpg",
+       "src": "large-language-objects/large-language-objects_16.jpg",
        "width": 2400,
        "height": 1800,
        "kind": "photo"
@@ -307,7 +315,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>Private personal computing</h3>\n<p>This integration enables powerful technologies to operate locally, fortifying the safeguarding of personal privacy. \"TinyChat\" emerges as a pioneering project to explore this very concept. We crafted the TinyChat computer with a design reminiscent of classic computers, both as a tribute to the original idea of a \"personal computer\" and as a reminder of their historical aesthetics. This raises an interesting query: as AI software evolves, might it also transform the physical form of computers themselves?</p>",
+       "html": "<h3>Private personal computing</h3><p>This integration enables powerful technologies to operate locally, fortifying the safeguarding of personal privacy. \"TinyChat\" emerges as a pioneering project to explore this very concept. We crafted the TinyChat computer with a design reminiscent of classic computers, both as a tribute to the original idea of a \"personal computer\" and as a reminder of their historical aesthetics. This raises an interesting query: as AI software evolves, might it also transform the physical form of computers themselves?</p>",
        "kind": "text"
       }
      ]
@@ -317,7 +325,7 @@
   },
   {
    "type": "image",
-   "src": "large-language-objects/18.jpg",
+   "src": "large-language-objects/large-language-objects_17.jpg",
    "width": 2400,
    "height": 1108,
    "kind": "white"
@@ -340,7 +348,7 @@
      "blocks": [
       {
        "type": "image",
-       "src": "large-language-objects/19.jpg",
+       "src": "large-language-objects/large-language-objects_18.jpg",
        "width": 2400,
        "height": 1800,
        "kind": "white"
@@ -352,23 +360,23 @@
   },
   {
    "type": "video",
-   "src": "/media/large-language-objects/VxQCHaqBEid.mp4",
-   "poster": "/media/large-language-objects/VxQCHaqBEid.jpg",
-   "width": 1920,
-   "height": 1080,
+   "src": "/media/large-language-objects/large-language-objects_19.mp4",
+   "poster": "/media/large-language-objects/large-language-objects_19.jpg",
+   "width": 1280,
+   "height": 720,
    "audio": true,
    "kind": "video"
   }
  ],
  "cover": {
   "type": "image",
-  "src": "large-language-objects/cover.jpg",
+  "src": "large-language-objects/large-language-objects_cover.jpg",
   "width": 2400,
   "height": 1877
  },
  "hover": {
   "type": "image",
-  "src": "large-language-objects/hover.jpg",
+  "src": "large-language-objects/large-language-objects_hover.jpg",
   "width": 2400,
   "height": 1876
  }
