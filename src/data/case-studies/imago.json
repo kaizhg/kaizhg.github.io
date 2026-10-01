@@ -28,7 +28,7 @@
    "src": "imago/imago_02.png",
    "width": 2400,
    "height": 2393,
-   "caption": "It's launched and available for purchase on Red (XiaoHongShu).",
+   "caption": "It's launched and available on Red (XiaoHongShu).",
    "layout": "half-l",
    "kind": "photo"
   },
@@ -61,6 +61,30 @@
    "kind": "gallery"
   },
   {
+   "type": "image",
+   "src": "imago/imago_09.jpg",
+   "width": 1080,
+   "height": 1619,
+   "layout": "half-l",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_10.jpg",
+   "width": 1080,
+   "height": 1619,
+   "layout": "half-r stagger",
+   "kind": "photo"
+  },
+  {
+   "type": "image",
+   "src": "imago/imago_17.jpg",
+   "width": 2200,
+   "height": 1467,
+   "layout": "half-r stagger",
+   "kind": "white"
+  },
+  {
    "type": "gallery",
    "items": [
     {
@@ -72,42 +96,14 @@
     },
     {
      "type": "image",
-     "src": "imago/imago_07.jpg",
-     "width": 2400,
-     "height": 2213,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
      "src": "imago/imago_08.jpg",
      "width": 1800,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "layout": "grid3",
-   "kind": "gallery"
-  },
-  {
-   "type": "gallery",
-   "items": [
-    {
-     "type": "image",
-     "src": "imago/imago_09.jpg",
-     "width": 1080,
-     "height": 1619,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
-     "src": "imago/imago_10.jpg",
-     "width": 1080,
-     "height": 1619,
-     "kind": "photo"
-    }
-   ],
-   "layout": "grid3",
-   "kind": "gallery"
+   "kind": "gallery",
+   "layout": "grid3"
   },
   {
    "type": "row",
@@ -147,20 +143,25 @@
    "kind": "text"
   },
   {
-   "type": "image",
-   "src": "imago/imago_14.jpg",
-   "width": 2400,
-   "height": 1600,
-   "layout": "half-l",
-   "kind": "white"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_15.jpg",
-   "width": 2400,
-   "height": 1600,
-   "layout": "half-r",
-   "kind": "white"
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_14.jpg",
+     "width": 2400,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_15.jpg",
+     "width": 2400,
+     "height": 1600,
+     "kind": "white"
+    }
+   ],
+   "layout": "grid2",
+   "kind": "gallery"
   },
   {
    "type": "text",
@@ -173,7 +174,7 @@
    "src": "imago/imago_16.png",
    "width": 2000,
    "height": 1500,
-   "layout": "half-l",
+   "layout": "full",
    "kind": "white"
   },
   {
@@ -183,32 +184,15 @@
    "html": "<h2>Other Digital Explorations</h2>"
   },
   {
-   "type": "image",
-   "src": "imago/imago_17.jpg",
-   "width": 2200,
-   "height": 1467,
-   "layout": "tri-a",
-   "kind": "white"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_18.jpg",
-   "width": 1920,
-   "height": 1200,
-   "layout": "tri-b",
-   "kind": "photo"
-  },
-  {
-   "type": "image",
-   "src": "imago/imago_19.jpg",
-   "width": 1920,
-   "height": 1440,
-   "layout": "tri-c",
-   "kind": "photo"
-  },
-  {
    "type": "gallery",
    "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_10.jpg",
+     "width": 1080,
+     "height": 1619,
+     "kind": "photo"
+    },
     {
      "type": "image",
      "src": "imago/imago_20.jpg",
@@ -224,7 +208,7 @@
      "kind": "photo"
     }
    ],
-   "layout": "grid2",
+   "layout": "grid3",
    "kind": "gallery"
   }
  ],

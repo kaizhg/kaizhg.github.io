@@ -2,7 +2,7 @@
 // the Astro dev server so the browser at http://127.0.0.1:4321 reloads by itself.
 //   npm run edit
 import { spawn, spawnSync } from 'node:child_process';
-import { existsSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, statSync, writeFileSync, unlinkSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -10,14 +10,23 @@ const site = dirname(dirname(fileURLToPath(import.meta.url)));
 const content = join(site, 'content');
 const py = 'python3';
 
+const errFile = join(site, 'public', 'edit-errors.json');
+let notes = {};
+const report = () => writeFileSync(errFile, JSON.stringify(notes));
 const build = (slug) => {
 	const r = spawnSync(py, ['scripts/content.py', 'build', ...(slug ? [slug] : [])], { cwd: site, encoding: 'utf8' });
+	const warnings = (r.stderr || '').split('\n').filter((l) => l.startsWith('! ')).map((l) => l.slice(2));
 	if (r.status !== 0) {
-		const msg = (r.stderr || '').trim().split('\n').pop();
-		console.log(`\x1b[31m✗ ${slug ?? 'content'}: ${msg}\x1b[0m`);
+		const msg = (r.stderr || '').trim().split('\n').pop().replace(/^\w+Error: /, '');
+		console.log(`\x1b[31m✗ ${msg}\x1b[0m`);
+		notes[slug ?? '*'] = { error: msg };
+		report();
 		return false;
 	}
-	console.log(`\x1b[32m✓ ${slug ?? 'all projects'} regenerated\x1b[0m`);
+	for (const k of Object.keys(notes)) if (!slug || k === slug || k === '*') delete notes[k];
+	if (warnings.length) notes[slug ?? '*'] = { warnings };
+	report();
+	console.log(`\x1b[32m✓ ${slug ?? 'all projects'} regenerated\x1b[0m` + (warnings.length ? `\n\x1b[33m${warnings.join('\n')}\x1b[0m` : ''));
 	return true;
 };
 const syncMedia = () => spawnSync('node', ['scripts/sync-media.mjs'], { cwd: site, stdio: 'inherit' });
@@ -55,4 +64,4 @@ setInterval(() => {
 	for (const key of last.keys()) if (!now.has(key)) build();
 	last = now;
 }, 1000);
-process.on('SIGINT', () => { dev.kill('SIGINT'); process.exit(0); });
+process.on('SIGINT', () => { dev.kill('SIGINT'); try { unlinkSync(errFile); } catch {} process.exit(0); });

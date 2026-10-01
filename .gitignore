@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # Obsidian vault settings (content/ opened as a vault)
 .obsidian/
+
+# written by npm run edit while a project.md has a problem
+public/edit-errors.json

@@ -34,11 +34,10 @@ hover: imago_hover.jpg             # 鼠标悬停时换成的图或循环视频
 
 Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
 
-![](imago_02.png "It's launched and available for purchase on Red (XiaoHongShu).") half-l
+![](imago_02.png "It's launched and available on Red (XiaoHongShu).") half-l
 
 [gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
 
-[gallery grid3] imago_06.jpg imago_07.jpg imago_08.jpg
 
 <!-- ![](imago_06.jpg) narrow-r
 
@@ -48,7 +47,14 @@ Project Imago is a wearable sculpture laboratory led by graduates from Harvard 
 ![](imago_08.jpg)
 [/row] -->
 
-[gallery grid3] imago_09.jpg imago_10.jpg
+
+
+![](imago_09.jpg) half-l
+
+![](imago_10.jpg) half-r stagger
+![](imago_17.jpg) stagger
+
+[gallery grid] imago_06.jpg imago_08.jpg
 
 [row 0.358 0.642]
 ![](imago_11.jpg)
@@ -60,22 +66,17 @@ Project Imago is a wearable sculpture laboratory led by graduates from Harvard 
 
 ### This page shows some of the early studies of Project Imago, starting at 2021. {text-l}
 
-![](imago_14.jpg) half-l
-
-![](imago_15.jpg) half-r
+[gallery grid2] imago_14.jpg imago_15.jpg
 
 ↗↗↗
 
 Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas. {text-r}
 
-![](imago_16.png) half-l
+![](imago_16.png) full
 
 [section] Other Digital Explorations
 
-![](imago_17.jpg) tri-a
+<!-- ![](imago_18.jpg) tri-b
+![](imago_19.jpg) tri-c -->
 
-![](imago_18.jpg) tri-b
-
-![](imago_19.jpg) tri-c
-
-[gallery grid2] imago_20.jpg imago_21.jpg
+[gallery grid3] imago_10.jpg imago_20.jpg imago_21.jpg

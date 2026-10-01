@@ -386,12 +386,22 @@ def parse_media_line(line, folder, slug):
         b['href'] = m.group(3)
     hm = HINT_RE.match(' ' + rest.strip()) if rest.strip() else None
     if rest.strip() and not hm:
-        raise ValueError(f'{slug}: cannot read "{rest.strip()}" after {m.group(1)}')
+        warn(f'{slug}: 看不懂图片后面的 "{rest.strip()}"，先忽略，按自动排: {m.group(1)}')
     if hm:
-        if hm.group(1) == 'stagger':
-            raise ValueError(f'{slug}: stagger 要跟宽度一起写，例如 "half-r stagger": {line.strip()}')
-        b['layout'] = hm.group(1)
+        lay = hm.group(1)
+        if lay == 'stagger':
+            warn(f'{slug}: "stagger" 要跟宽度一起写，先按 "half-r stagger" 排了: {line.strip()}')
+            lay = 'half-r stagger'
+        b['layout'] = lay
     return b
+
+
+def warn(msg):
+    WARNINGS.append(msg)
+    print('! ' + msg, file=sys.stderr)
+
+
+WARNINGS: list = []
 
 
 def parse_items(s, folder, slug):
@@ -547,9 +557,11 @@ def parse_block_line(s, folder, slug):
     s = s.strip()
     if MEDIA_RE.match(s):
         return parse_media_line(s, folder, slug)
-    m = re.match(r'\[gallery((?:\s+' + LAYOUT_WORDS + r')*)(?:\s+cols=(\d))?\]\s*(.*)$', s)
+    m = re.match(r'\[gallery((?:\s+' + LAYOUT_WORDS + r')*)(?:\s+cols=(\d))?((?:\s+[\w=-]+)*)\]\s*(.*)$', s)
+    if m and m.group(3).strip():
+        warn(f'{slug}: [gallery] 里看不懂 "{m.group(3).strip()}"，先忽略: {s[:60]}')
     if m:
-        g = {'type': 'gallery', 'items': parse_items(m.group(3), folder, slug)}
+        g = {'type': 'gallery', 'items': parse_items(m.group(4), folder, slug)}
         if m.group(1).strip():
             g['layout'] = m.group(1).strip()
         if m.group(2):

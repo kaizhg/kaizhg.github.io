@@ -49,6 +49,22 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		<link rel="preload" href="/fonts/NeueMontrealText-Book.woff2" as="font" type="font/woff2" crossorigin />
 		<ClientRouter />
 		<script is:inline data-astro-rerun>document.documentElement.classList.add('js');</script>
+		<script is:inline data-astro-rerun>
+			// Edit mode (npm run edit): show problems found in project.md at the top of the page
+			if (location.hostname === '127.0.0.1' || location.hostname === 'localhost') {
+				const slug = (location.pathname.match(/^\/work\/([^/]+)/) || [])[1];
+				fetch('/edit-errors.json?' + Date.now()).then((r) => (r.ok ? r.json() : {})).then((n) => {
+					const hit = n[slug] || n['*'];
+					document.getElementById('edit-note')?.remove();
+					if (!hit) return;
+					const el = document.createElement('div');
+					el.id = 'edit-note';
+					el.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:99;padding:10px 24px;font:13px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;background:' + (hit.error ? '#ff4a0f' : '#f2d94e') + ';color:' + (hit.error ? '#fff' : '#111');
+					el.textContent = hit.error ? 'project.md 有问题，页面还是上一次的版本：\n' + hit.error : hit.warnings.join('\n');
+					document.body.prepend(el);
+				}).catch(() => {});
+			}
+		</script>
 	</head>
 	<body>
 		<header class="site-header">
