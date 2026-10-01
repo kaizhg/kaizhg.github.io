@@ -49,6 +49,8 @@ Collaborated with 唐牧冢
 ![](imago_vogue25_06.jpg) @8-11 y=6
 ![](imago_vogue25_07.jpg) @3-6 y=15
 ![](imago_vogue25_10.jpg) @6-9 y=15
+![](imago_vogue25_15.jpg) @7-10 y=24
+![](imago_vogue25_04.jpg) @10-12 y=25
 [/cluster]
 
 [gallery grid3 @2-12] imago_vogue25_11.jpg imago_vogue25_13.jpg imago_vogue25_14.jpg

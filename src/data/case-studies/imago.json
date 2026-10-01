@@ -93,6 +93,24 @@
      "y": 15,
      "layout": "@6-9",
      "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_15.jpg",
+     "width": 1600,
+     "height": 2400,
+     "y": 24,
+     "layout": "@7-10",
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_vogue25_04.jpg",
+     "width": 1165,
+     "height": 2400,
+     "y": 25,
+     "layout": "@10-12",
+     "kind": "photo"
     }
    ],
    "kind": "cluster"
