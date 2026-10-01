@@ -64,7 +64,7 @@
      "width": 1600,
      "height": 2400,
      "y": 6,
-     "layout": "@5-8",
+     "layout": "@5-9",
      "kind": "photo"
     },
     {
@@ -73,7 +73,7 @@
      "width": 1600,
      "height": 2400,
      "y": 6,
-     "layout": "@8-11",
+     "layout": "@9-13",
      "kind": "photo"
     },
     {
@@ -81,8 +81,8 @@
      "src": "imago/imago_vogue25_07.jpg",
      "width": 1600,
      "height": 2400,
-     "y": 15,
-     "layout": "@3-6",
+     "y": 18,
+     "layout": "@3-7",
      "kind": "photo"
     },
     {
@@ -90,8 +90,8 @@
      "src": "imago/imago_vogue25_10.jpg",
      "width": 1600,
      "height": 2400,
-     "y": 15,
-     "layout": "@6-9",
+     "y": 18,
+     "layout": "@7-11",
      "kind": "photo"
     },
     {
@@ -99,8 +99,8 @@
      "src": "imago/imago_vogue25_15.jpg",
      "width": 1600,
      "height": 2400,
-     "y": 24,
-     "layout": "@7-10",
+     "y": 30,
+     "layout": "@6-10",
      "kind": "photo"
     },
     {
@@ -108,8 +108,8 @@
      "src": "imago/imago_vogue25_04.jpg",
      "width": 1165,
      "height": 2400,
-     "y": 25,
-     "layout": "@10-12",
+     "y": 30,
+     "layout": "@10-13",
      "kind": "photo"
     }
    ],
@@ -154,7 +154,7 @@
    "src": "imago/imago_06.jpg",
    "width": 1284,
    "height": 1692,
-   "layout": "@3-6",
+   "layout": "@2-6",
    "kind": "photo"
   },
   {
@@ -162,7 +162,7 @@
    "src": "imago/imago_08.jpg",
    "width": 1800,
    "height": 2400,
-   "layout": "@6-9",
+   "layout": "@6-10",
    "kind": "photo"
   },
   {
@@ -170,7 +170,7 @@
    "src": "imago/imago_09.jpg",
    "width": 1080,
    "height": 1619,
-   "layout": "@7-10",
+   "layout": "@5-9",
    "kind": "photo"
   },
   {
@@ -178,7 +178,7 @@
    "src": "imago/imago_10.jpg",
    "width": 1080,
    "height": 1619,
-   "layout": "@10-13",
+   "layout": "@9-13",
    "kind": "photo"
   },
   {

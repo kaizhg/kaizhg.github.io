@@ -45,25 +45,25 @@ Collaborated with 唐牧冢
 
 [cluster]
 ![](imago_vogue25_08.jpg) @1-5
-![](imago_vogue25_05.jpg) @5-8 y=6
-![](imago_vogue25_06.jpg) @8-11 y=6
-![](imago_vogue25_07.jpg) @3-6 y=15
-![](imago_vogue25_10.jpg) @6-9 y=15
-![](imago_vogue25_15.jpg) @7-10 y=24
-![](imago_vogue25_04.jpg) @10-12 y=25
+![](imago_vogue25_05.jpg) @5-9 y=6
+![](imago_vogue25_06.jpg) @9-13 y=6
+![](imago_vogue25_07.jpg) @3-7 y=18
+![](imago_vogue25_10.jpg) @7-11 y=18
+![](imago_vogue25_15.jpg) @6-10 y=30
+![](imago_vogue25_04.jpg) @10-13 y=30
 [/cluster]
 
 [gallery grid3 @2-12] imago_vogue25_11.jpg imago_vogue25_13.jpg imago_vogue25_14.jpg
 
 [section] Project Imago 2023 Spring
 
-![](imago_06.jpg) @3-6
+![](imago_06.jpg) @2-6
 
-![](imago_08.jpg) @6-9
+![](imago_08.jpg) @6-10
 
-![](imago_09.jpg) @7-10
+![](imago_09.jpg) @5-9
 
-![](imago_10.jpg) @10-13
+![](imago_10.jpg) @9-13
 
 [row 0.358 0.642]
 ![](imago_11.jpg)

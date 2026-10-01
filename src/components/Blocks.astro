@@ -252,12 +252,20 @@ const galleryClass = (b: Laid) => {
 					// vertical offset (y=, in half-column units); heights follow the pictures' shapes.
 					const G = 0.245; // gutter as a fraction of a column (clamp(12px,1.6vw,24px) vs (W-11g)/12)
 					const unit = (1 + G) / 2; // one grid row = half a column
-					const place = (it: any) => {
+					const rowsOf = (it: any) => {
 						const [, a, b] = it.layout.match(/@(\d+)-(\d+)/)!;
 						const span = +b - +a;
-						const widthCols = span + (span - 1) * G;
-						const rows = Math.max(1, Math.round(widthCols / (it.width / it.height) / unit));
-						return `grid-column: ${a} / ${b}; grid-row: ${(it.y ?? 0) + 1} / span ${rows}`;
+						return Math.max(1, Math.round((span + (span - 1) * G) / (it.width / it.height) / unit));
+					};
+					// pictures that start on the same row share one height: the widest one sets it
+					const tier = (it: any) => b.items.filter((o: any) => (o.y ?? 0) === (it.y ?? 0));
+					const place = (it: any) => {
+						const [, a, b2] = it.layout.match(/@(\d+)-(\d+)/)!;
+						const widest = tier(it).reduce((w: any, o: any) => {
+							const sp = (o: any) => { const m = o.layout.match(/@(\d+)-(\d+)/); return +m[2] - +m[1]; };
+							return sp(o) > sp(w) ? o : w;
+						}, it);
+						return `grid-column: ${a} / ${b2}; grid-row: ${(it.y ?? 0) + 1} / span ${rowsOf(widest)}`;
 					};
 					return (
 						<div class="block cluster reveal">
@@ -425,7 +433,7 @@ const galleryClass = (b: Laid) => {
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		column-gap: clamp(12px, 1.6vw, 24px);
-		row-gap: clamp(36px, 4.5vw, 72px);
+		row-gap: clamp(24px, 2.6vw, 40px); /* pictures stack closer; text cells add their own air */
 		align-items: start;
 	}
 	.cell {
