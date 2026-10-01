@@ -31,7 +31,7 @@ hero: inline                       # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-[row 0.65 0.35 spread]
+[row 0.68 0.32 spread]
 ![](imago_01.png) w=260
 
 Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.

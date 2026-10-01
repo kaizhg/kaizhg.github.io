@@ -739,6 +739,16 @@ const galleryClass = (b: Laid) => {
 	.row.spread .col:last-child :global(.media) {
 		margin-left: auto; /* the picture hugs the outer edge */
 	}
+	.row.spread .col:last-child :global(.media-block) {
+		position: relative;
+	}
+	.row.spread .col:last-child :global(figcaption) {
+		position: absolute; /* hangs below the picture without adding to the row's height */
+		left: 0;
+		right: 0;
+		top: 100%;
+		text-align: right;
+	}
 	/* Fitted rows: a grid whose columns are sized from the pictures' shapes, so every picture
 	   shares the same top and bottom edge; captions sit in a second row underneath, so a
 	   two-line caption never pushes its picture out of line with its neighbour */

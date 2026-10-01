@@ -8,7 +8,7 @@
    "type": "row",
    "columns": [
     {
-     "flex": 0.65,
+     "flex": 0.68,
      "blocks": [
       {
        "type": "image",
@@ -26,7 +26,7 @@
      ]
     },
     {
-     "flex": 0.35,
+     "flex": 0.32,
      "blocks": [
       {
        "type": "image",
