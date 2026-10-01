@@ -51,7 +51,7 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 		<script is:inline data-astro-rerun>document.documentElement.classList.add('js');</script>
 		<script is:inline data-astro-rerun>
 			// Edit mode (npm run edit): show problems found in project.md at the top of the page
-			if (location.hostname === '127.0.0.1' || location.hostname === 'localhost') {
+			if (location.port === '4321') {
 				const slug = (location.pathname.match(/^\/work\/([^/]+)/) || [])[1];
 				fetch('/edit-errors.json?' + Date.now()).then((r) => (r.ok ? r.json() : {})).then((n) => {
 					const hit = n[slug] || n['*'];

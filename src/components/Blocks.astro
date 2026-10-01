@@ -65,7 +65,8 @@ function layout(bs: Laid[]): Cell[] {
 		// the text joins the same row, aligned to the image's bottom edge (magazine style)
 		const pushMedia = (cls: string) => {
 			const beside = BESIDE[cls.replace(/ stagger$/, '')];
-			if (beside && plainText(next)) {
+			// {text-r} after a right-hand picture would be pulled to its left: it keeps its own row instead
+			if (beside && plainText(next) && !(beside[1] === 'before' && next!.layout === 'text-r')) {
 				const [tcls, where] = beside;
 				if (where === 'before') cells.push({ cls: tcls, blocks: [next] }, { cls, blocks: [b] });
 				else cells.push({ cls, blocks: [b] }, { cls: tcls, blocks: [next] });
