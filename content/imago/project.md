@@ -32,54 +32,40 @@ hover: imago_hover.jpg             # 鼠标悬停时换成的图或循环视频
 
 ![](imago_01.png) small-l
 
-Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
+Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery. {beside-r}
 
-![](imago_02.png "It's launched and available on Red (XiaoHongShu).") half-l
+![](imago_02.png "It's launched and available on Red (XiaoHongShu).") narrow-r
 
-[gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
+[gallery grid3] imago_03.jpg imago_05.jpg imago_06.jpg
 
+![](imago_07.jpg) half-l
 
-<!-- ![](imago_06.jpg) narrow-r
+![](imago_08.jpg) half-r stagger
 
-[row 0.5912 0.4088]
-![](imago_07.jpg)
-|
-![](imago_08.jpg)
-[/row] -->
+![](imago_10.jpg) wide-l
 
-<!-- ![](imago_09.jpg) half-l
-![](imago_10.jpg) half-r stagger
-![](imago_17.jpg) stagger -->
+![](imago_09.jpg) half-l
 
-[gallery grid3] imago_09.jpg imago_10.jpg imago_17.jpg
+![](imago_11.jpg) narrow-r stagger
 
-[gallery grid] imago_06.jpg imago_08.jpg
-[row 0.5 0.5]![](imago_06.jpg)
-|
-![](imago_08.jpg)
-[/row]
+![](imago_12.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang") narrow-l
 
-[row 0.358 0.642]
-![](imago_11.jpg)
-|
-![](imago_12.jpg) "Image credits to Project Imago, Iris Chen and Sichen Tang"
-[/row]
-<!--
-![](imago_13.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang") wide-l -->
-
-### This page shows some of the early studies of Project Imago, starting at 2021. {text-l}
+### This page shows some of the early studies of Project Imago, starting at 2021. {text-r}
 
 [gallery grid2] imago_14.jpg imago_15.jpg
 
 ↗↗↗
 
-Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas. {text-r}
+Our experimental surface processing technique creates lightweight, hollow-shell jewelry. This design ensures comfortable wear and embodies the dynamic contrast of decay and vitality inherent in pupas. {text-l}
 
-![](imago_16.png) full
+![](imago_16.png) narrow-r
 
 [section] Other Digital Explorations
 
-<!-- ![](imago_18.jpg) tri-b
-![](imago_19.jpg) tri-c -->
+![](imago_18.jpg) half-l
 
-[gallery grid3] imago_19.jpg imago_20.jpg imago_21.jpg
+![](imago_17.jpg) half-r stagger
+
+![](imago_19.jpg) wide-l
+
+![](imago_21.jpg) small-r stagger
