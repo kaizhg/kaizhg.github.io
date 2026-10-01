@@ -42,6 +42,7 @@ export interface CaseStudy {
 	link?: string;
 	/** 'wide' = two thirds of the page, 'half' = half, both left; default full */
 	heroWidth?: 'full' | 'wide' | 'half';
+	heroCaption?: string;
 	locked: boolean;
 	blocks: Block[];
 }

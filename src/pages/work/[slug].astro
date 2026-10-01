@@ -131,6 +131,7 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 					) : (
 						<Media block={study.hero} alt={project.title} sizes="100vw" eager portrait={study.hero.height > study.hero.width} />
 					)}
+					{study.heroCaption && <p class="hero-cap">{study.heroCaption}</p>}
 				</div>
 			)
 		}
@@ -288,6 +289,16 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 	}
 	.hero.half > :global(*) {
 		grid-column: 1 / 7 !important;
+	}
+	.hero-cap {
+		font: 11px/1.5 var(--mono);
+		color: var(--muted);
+		letter-spacing: 0.02em;
+		margin: 10px 0 0;
+	}
+	.hero.wide > :global(.hero-cap) {
+		grid-column: 1 / -1 !important;
+		margin-right: 0;
 	}
 	.hero.wide > :global(*) {
 		grid-column: 1 / 9;

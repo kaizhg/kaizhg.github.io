@@ -32,7 +32,7 @@ const portrait = (b: MediaBlock) => ratio(b) < 0.9;
 interface Cell {
 	cls: string;
 	blocks: Block[];
-	fitAr?: number;
+	fitH?: string;
 }
 
 // Text that may sit beside an image: unplanned, or planned as a plain side column
@@ -161,7 +161,8 @@ function layout(bs: Laid[]): Cell[] {
 			continue;
 		}
 
-		cells.push({ cls: 'full', blocks: [b] });
+		// a gallery may ask for a column range: "[gallery grid3 @2-12]"
+		cells.push({ cls: (b.type === 'gallery' && b.layout?.match(/@\d+-\d+/)?.[0]) || 'full', blocks: [b] });
 	}
 	return cells;
 }
@@ -179,29 +180,32 @@ const rangeOf = (cls: string): [number, number] | null => {
 	if (m) return [+m[1], +m[2]];
 	return RANGES[cls.replace(/ (stagger|low|pull)\b/g, '').trim()] ?? null;
 };
+// Width of a span of columns, in container units: n columns plus the gutters between them
+const colw = (span: number) => `((100cqw - 11 * var(--gap)) / 12 * ${span} + ${span - 1} * var(--gap))`;
 const cellStyle = (c: Cell) => {
 	const parts: string[] = [];
 	const m = c.cls.match(/@(\d+)-(\d+)/);
 	if (m) parts.push(`grid-column: ${m[1]} / ${m[2]}`);
-	if (c.fitAr) parts.push(`--fit-ar: ${c.fitAr.toFixed(4)}`);
+	if (c.fitH) parts.push(`--fit-h: ${c.fitH}`);
 	return parts.length ? parts.join('; ') : undefined;
 };
-// Two single pictures side by side on one row: give both the same height so their bottom
-// edges meet; the taller shape loses a sliver to object-fit (never more than a few percent).
+// Two single pictures side by side on one row get exactly the same height: the lower of the
+// two natural heights, computed from real column widths (gutters included) so nothing drifts.
+// The taller shape loses a sliver to object-fit.
 for (let i = 0; i + 1 < cells.length; i++) {
 	const a = cells[i], b = cells[i + 1];
 	const pic = (c: Cell) => c.blocks.length === 1 && (c.blocks[0].type === 'image' || c.blocks[0].type === 'loop') ? (c.blocks[0] as any) : null;
 	const pa = pic(a), pb = pic(b);
 	const ra = rangeOf(a.cls), rb = rangeOf(b.cls);
 	if (!pa || !pb || !ra || !rb || rb[0] < ra[1] || / stagger\b/.test(a.cls + b.cls)) continue;
-	const spanA = ra[1] - ra[0], spanB = rb[1] - rb[0];
-	const hA = spanA / (pa.width / pa.height), hB = spanB / (pb.width / pb.height);
-	const h = Math.min(hA, hB);
-	if (Math.abs(hA - hB) / h > 0.15) continue; // very different shapes: leave them alone
-	a.fitAr = spanA / h;
-	b.fitAr = spanB / h;
+	const hA = `calc(${colw(ra[1] - ra[0])} / ${(pa.width / pa.height).toFixed(4)})`;
+	const hB = `calc(${colw(rb[1] - rb[0])} / ${(pb.width / pb.height).toFixed(4)})`;
+	a.fitH = b.fitH = `min(${hA}, ${hB})`;
 }
-const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/.test(b.layout) ? b.layout : 'flow');
+const galleryClass = (b: Laid) => {
+	const l = (b.layout ?? '').replace(/@\d+-\d+/, '').trim();
+	return /^(grid\d|strip|stack|carousel)$/.test(l) ? l : 'flow';
+};
 ---
 
 {
@@ -334,7 +338,7 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 	) : (
 		<div class="mag">
 			{cells.map((c) => (
-				<div class:list={['cell', c.cls, { fit: !!c.fitAr }]} style={cellStyle(c)}>
+				<div class:list={['cell', c.cls, { fit: !!c.fitH }]} style={cellStyle(c)}>
 					<Astro.self blocks={c.blocks} title={title} nested />
 				</div>
 			))}
@@ -392,7 +396,9 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 <style>
 	/* ---------- magazine grid (top level) ---------- */
 	.mag {
+		--gap: clamp(12px, 1.6vw, 24px);
 		--pair-gap: clamp(32px, 4vw, 64px);
+		container-type: inline-size;
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		column-gap: clamp(12px, 1.6vw, 24px);
@@ -440,9 +446,8 @@ const galleryClass = (b: Laid) => (b.layout && /^(grid\d|strip|stack|carousel)$/
 	.low { align-self: end; }
 	.cell.fit :global(.media) {
 		width: 100%;
-		height: auto;
+		height: var(--fit-h);
 		max-height: none;
-		aspect-ratio: var(--fit-ar);
 		object-fit: cover;
 	}
 	/* Auto-paired text: directly beside its image, one consistent gap, a readable measure */

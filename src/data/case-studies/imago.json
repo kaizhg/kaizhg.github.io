@@ -105,49 +105,27 @@
     },
     {
      "type": "image",
-     "src": "imago/imago_vogue25_12.jpg",
-     "width": 1440,
-     "height": 1920,
+     "src": "imago/imago_vogue25_13.jpg",
+     "width": 1691,
+     "height": 2400,
      "kind": "photo"
     },
     {
      "type": "image",
-     "src": "imago/imago_vogue25_13.jpg",
+     "src": "imago/imago_vogue25_14.jpg",
      "width": 1691,
      "height": 2400,
      "kind": "photo"
     }
    ],
-   "layout": "grid3",
+   "layout": "grid3 @2-12",
    "kind": "gallery"
   },
   {
-   "type": "gallery",
-   "items": [
-    {
-     "type": "image",
-     "src": "imago/imago_03.jpg",
-     "width": 1280,
-     "height": 1707,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
-     "src": "imago/imago_04.jpg",
-     "width": 1280,
-     "height": 1707,
-     "kind": "photo"
-    },
-    {
-     "type": "image",
-     "src": "imago/imago_05.jpg",
-     "width": 1280,
-     "height": 1707,
-     "kind": "photo"
-    }
-   ],
-   "layout": "grid3",
-   "kind": "gallery"
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Project Imago 2023 Spring</h2>"
   },
   {
    "type": "image",
@@ -204,13 +182,40 @@
        "src": "imago/imago_12.jpg",
        "width": 1406,
        "height": 1056,
-       "caption": "Image credits to Project Imago, Iris Chen and Sichen Tang",
        "kind": "photo"
       }
      ]
     }
    ],
    "kind": "row"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "imago/imago_03.jpg",
+     "width": 1280,
+     "height": 1707,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_04.jpg",
+     "width": 1280,
+     "height": 1707,
+     "kind": "photo"
+    },
+    {
+     "type": "image",
+     "src": "imago/imago_05.jpg",
+     "width": 1280,
+     "height": 1707,
+     "kind": "photo"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
   },
   {
    "type": "text",
@@ -285,15 +290,16 @@
  ],
  "cover": {
   "type": "image",
-  "src": "imago/imago_vogue25_10.jpg",
+  "src": "imago/imago_vogue25_08.jpg",
   "width": 1600,
   "height": 2400
  },
  "hover": {
   "type": "image",
-  "src": "imago/imago_vogue25_08.jpg",
+  "src": "imago/imago_vogue25_10.jpg",
   "width": 1600,
   "height": 2400
  },
- "heroWidth": "half"
+ "heroWidth": "half",
+ "heroCaption": "Image credits to Project Imago, Iris Chen and Sichen Tang"
 }

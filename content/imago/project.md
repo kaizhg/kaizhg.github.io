@@ -6,9 +6,10 @@ group: selected                    # selected 或 archive
 position: 5                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
-cover: imago_vogue25_10.jpg        # 首页封面（32:25 裁切）
-hover: imago_vogue25_08.jpg        # 鼠标悬停时换成的图或循环视频
+cover: imago_vogue25_08.jpg        # 首页封面（32:25 裁切）
+hover: imago_vogue25_10.jpg        # 鼠标悬停时换成的图或循环视频
 hero: imago_vogue25_02.jpg         # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
+hero_caption: Image credits to Project Imago, Iris Chen and Sichen Tang   # 顶部大图下面的小字说明
 hero_width: half                   # 顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左
 ---
 
@@ -56,9 +57,9 @@ Collaborated with 唐牧冢
 
 ![](imago_vogue25_04.jpg) @8-11
 
-[gallery grid3] imago_vogue25_11.jpg imago_vogue25_12.jpg imago_vogue25_13.jpg
+[gallery grid3 @2-12] imago_vogue25_11.jpg imago_vogue25_13.jpg imago_vogue25_14.jpg
 
-[gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
+[section] Project Imago 2023 Spring
 
 ![](imago_06.jpg) @3-6
 
@@ -71,8 +72,10 @@ Collaborated with 唐牧冢
 [row 0.358 0.642]
 ![](imago_11.jpg)
 |
-![](imago_12.jpg "Image credits to Project Imago, Iris Chen and Sichen Tang")
+![](imago_12.jpg)
 [/row]
+
+[gallery grid3] imago_03.jpg imago_04.jpg imago_05.jpg
 
 ### This page shows some of the early studies of Project Imago, starting at 2021. {text-l}
 
