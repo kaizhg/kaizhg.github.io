@@ -7,17 +7,19 @@ import portrait from '../assets/about.jpg';
 <Base title="About" description="Kai Zhang — computational and industrial designer. RISD ID, Harvard GSD. Based in Seattle.">
 	<section class="about">
 		<div class="text">
-			<h1>Hello!</h1>
+			<h1>
+				I'm Kai Zhang, a computational and industrial designer. Born and raised in Shenzhen, now
+				based in Seattle.
+			</h1>
 			<div class="body">
-				<p class="first">
-					I'm Kai Zhang, a computational and industrial designer. I studied industrial design at the
-					Rhode Island School of Design and graduated from the Harvard Graduate School of Design. I was
-					born and raised in Shenzhen, China, and I'm now based in Seattle, WA.
+				<p>
+					I studied industrial design at the Rhode Island School of Design and graduated from the
+					Harvard Graduate School of Design. My work spans industrial, computational, and interaction
+					design: objects, tools, and interfaces between matter and computation.
 				</p>
 				<p>
-					My work spans industrial design, computational design, and interaction design. I enjoy
-					sketching bizarre ideas, seeking out new aesthetic forms, solving problems with a non-linear
-					approach, and exploring new workflows.
+					I enjoy sketching bizarre ideas, seeking out new aesthetic forms, solving problems with a
+					non-linear approach, and exploring new workflows.
 				</p>
 				<p>
 					In my spare time I like visiting places with high analog information density, like a PCB
@@ -36,14 +38,18 @@ import portrait from '../assets/about.jpg';
 				</div>
 				<div>
 					<dt>Contact</dt>
-					<dd><a href="mailto:this.kaizhang@gmail.com">this.kaizhang@gmail.com</a></dd>
+					<dd>
+						<a href="mailto:this.kaizhang@gmail.com">this.kaizhang@gmail.com</a><br />
+						<span class="muted">Write for a résumé.</span>
+					</dd>
 				</div>
 				<div>
 					<dt>Elsewhere</dt>
 					<dd>
 						<a href="https://www.linkedin.com/in/kai-zhang-653411223/">LinkedIn</a><br />
 						<a href="https://www.instagram.com/zalvink_/">Instagram</a><br />
-						<a href="https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html">HTMAA</a>
+						<a href="https://github.com/kaizhg">GitHub</a><br />
+						<a href="https://fab.cba.mit.edu/classes/863.23/Harvard/people/Kai/index.html">HTMAA 2023, MIT</a>
 					</dd>
 				</div>
 			</dl>
@@ -51,7 +57,10 @@ import portrait from '../assets/about.jpg';
 
 		<figure class="photo reveal">
 			<Image src={portrait} alt="Kai biking past a market in Chiang Mai" widths={[720, 1200, 1800]} sizes="(max-width: 900px) 100vw, 50vw" loading="eager" />
-			<figcaption>Biking near a local market in Chiang Mai, Thailand.</figcaption>
+			<figcaption>
+				Biking near a local market in Chiang Mai, Thailand. I was having a relaxing time; I don't know
+				why my face looks so serious.
+			</figcaption>
 		</figure>
 	</section>
 </Base>
@@ -86,13 +95,16 @@ import portrait from '../assets/about.jpg';
 		color: var(--muted);
 		margin-top: 10px;
 		letter-spacing: 0.02em;
+		max-width: 44rem;
 	}
+	/* Same voice as the statement on a project page */
 	h1 {
-		font-size: clamp(40px, 6vw, 88px);
-		line-height: 1;
-		font-weight: 700;
-		letter-spacing: -0.03em;
-		margin: 0 0 36px;
+		font-size: clamp(24px, 2.6vw, 38px);
+		line-height: 1.15;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		margin: 0 0 32px;
+		text-wrap: balance;
 	}
 	.body p {
 		font-family: var(--text);
@@ -100,12 +112,8 @@ import portrait from '../assets/about.jpg';
 		line-height: 1.6;
 		margin: 0 0 1.1em;
 	}
-	.body .first {
-		font-family: var(--sans);
-		font-size: clamp(20px, 1.8vw, 26px);
-		line-height: 1.35;
-		letter-spacing: -0.01em;
-		margin-bottom: 1.2em;
+	.muted {
+		color: var(--muted);
 	}
 	.facts {
 		display: grid;

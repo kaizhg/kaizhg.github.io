@@ -128,6 +128,16 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 				els.forEach((e) => io.observe(e));
 			}
 			document.addEventListener('astro:page-load', reveal);
+			// Pictures with a blurred stand-in stay blurred until their file has decoded
+			document.addEventListener('astro:page-load', () => {
+				document.querySelectorAll<HTMLImageElement>('img[data-fade]').forEach((img) => {
+					if (img.complete && img.naturalWidth) return;
+					img.classList.add('is-loading');
+					const done = () => img.classList.remove('is-loading');
+					img.addEventListener('load', done, { once: true });
+					img.addEventListener('error', done, { once: true });
+				});
+			});
 		</script>
 		<div id="lightbox" hidden>
 			<img alt="" />

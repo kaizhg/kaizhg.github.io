@@ -5,7 +5,8 @@
   "type": "image",
   "src": "inflatable-patterner/inflatable-patterner_cover.jpg",
   "width": 1981,
-  "height": 1549
+  "height": 1549,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBv/EACEQAAICAQQCAwAAAAAAAAAAAAECAAMRBBIhURMiMmFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AOwtYWakVtu27Tgg45jSX+TdW7ZsQkHsiW1OWrYHlWJP3kSGRKfd2A9i2ScYzKjREzVaptRaBSmax8rDwD+dxFmEutMl60sXbYoZeiMxEiqAiIgf/9k="
  },
  "locked": false,
  "blocks": [
@@ -25,6 +26,7 @@
    "src": "inflatable-patterner/inflatable-patterner_01.jpg",
    "width": 2400,
    "height": 1350,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgb/xAAlEAACAQMDAgcAAAAAAAAAAAABAgMABBEFEzESIQYyUVJhgcH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQT/xAAbEQEAAgIDAAAAAAAAAAAAAAABAAIDERITIf/aAAwDAQACEQMRAD8AX0VoXSR5JIDdNJswGVCyg8nt+1vxFp0NvfRNFbqWnyCqJywxxS2k2iWF9HcO7OFBIHyRiqF/db8kGwoSOJHGG5y3pWjHZxmyPrV9nManbPat0PAwHu7Yz9UVV1pjcWPV5WU5YZ7MKKP/2Q==",
    "caption": "Inflatable Structure example 1: Cloud Lights by Pneuhaus",
    "kind": "photo"
   },
@@ -44,6 +46,7 @@
        "src": "inflatable-patterner/inflatable-patterner_02.jpg",
        "width": 2400,
        "height": 2040,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBv/EAB0QAAICAgMBAAAAAAAAAAAAAAABAhEhMSIyUWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7VydtaFvZH2Y+gajK3TBIrlrHoA04oiiAD//2Q==",
        "caption": "Some input tests",
        "kind": "white"
       }
@@ -57,6 +60,7 @@
        "src": "/media/inflatable-patterner/inflatable-patterner_03.mp4",
        "width": 1600,
        "height": 1360,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUGA//EACQQAAIBBAIBBAMAAAAAAAAAAAECAwAEERIFMVEGEyEjQYGh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABkRAAMBAQEAAAAAAAAAAAAAAAABEQIhA//aAAwDAQACEQMRAD8A13IX6WEKsyl3dtUQdsamXHO3drPHHccfgyDKqrksf5VDleOXkrYJu0ciHaORe1NZK5kuIL105a4KSxL9b4JLeMH8VXGU1wt5LDc0bGxvYr6H3ItgQcMrDBU+DSp3pWGVePe4m2DTvsNu8dA/ulJtJOIk5eFquU1rBcFTPDHJr8jdQcUpS2GHUFAH/9k=",
        "caption": "Developable Panels",
        "kind": "photo"
       }
@@ -78,6 +82,7 @@
      "src": "inflatable-patterner/inflatable-patterner_04.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAEDAgb/xAAeEAADAAEEAwAAAAAAAAAAAAAAAREhAhIxUWGR0f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD3DaSyc73ZEvDZdSymswy2ri3rtAbJ34CaU7X6AFAAAAAAAAAAAAf/2Q==",
      "caption": "1. Draw input boundaries",
      "kind": "white"
     },
@@ -86,6 +91,7 @@
      "src": "inflatable-patterner/inflatable-patterner_05.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwb/xAAdEAADAQABBQAAAAAAAAAAAAAAARECIQMxQVFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APcNww+opfHsu81cGEna8t6+9gOqdXAJnAAD/9k=",
      "caption": "2. Extract skeleton",
      "kind": "white"
     },
@@ -94,6 +100,7 @@
      "src": "inflatable-patterner/inflatable-patterner_06.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAAjEAACAgEEAQUBAAAAAAAAAAABAgADBAUREjEiEyFRUnHR/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAbEQACAwEBAQAAAAAAAAAAAAAAAQIDESEScf/aAAwDAQACEQMRAD8A7ayxKkL2MFUdkyi2rJ6pSup349jo7fIEl1LGbIpHEcuPafYf2ZlK5IVqauXl7EivZ/wsZJddOM/Oc+aOqVeP2+m3RcmRULKm3UxINPxDi1kMRudvEdACJRW5OKcljFPN4WoiJ2YIiIAAAAAAAAAAB//Z",
      "caption": "3. Construct mountain",
      "kind": "white"
     },
@@ -102,6 +109,7 @@
      "src": "inflatable-patterner/inflatable-patterner_07.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAAhEAACAgEEAgMAAAAAAAAAAAABAgADEQQhMUEFEkJRcf/EABcBAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAbEQACAgMBAAAAAAAAAAAAAAAAAQIREiExQf/aAAwDAQACEQMRAD8A7d3WtCzsFUbknqUm8mgu9ErZgOTvn9xLGrqNtRAUOPkh7Ez0011atWljFX6WvDkfRY8Sc5ST0UhhTyNSuxbUDoQVYZBESPS0mmoKQBjhV4AidrmybrwmiAREQD//2Q==",
      "caption": "4. Get contours",
      "kind": "white"
     },
@@ -110,6 +118,7 @@
      "src": "inflatable-patterner/inflatable-patterner_08.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIDBAb/xAAfEAACAgIBBQAAAAAAAAAAAAAAAQIRAzEhBBMzQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9w2oq26Ri+pW4xbivZWfG8kKW1yYxu/E3P7wkB0xkpxuLtAnDj7caX//2Q==",
      "caption": "5. Triangular remesh",
      "kind": "white"
     },
@@ -118,6 +127,7 @@
      "src": "inflatable-patterner/inflatable-patterner_09.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIDBAb/xAAcEAADAQADAQEAAAAAAAAAAAAAAQIRAyFBYbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9vVKVreIyfO96nr6Xyw6SzzwwSe4p1/gHTFK1qBPFDhdvtgCwAAAAAAAAAAAAAAB/9k=",
      "caption": "6. Add volumne",
      "kind": "white"
     },
@@ -126,6 +136,7 @@
      "src": "inflatable-patterner/inflatable-patterner_10.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAb/xAAfEAACAQMFAQAAAAAAAAAAAAAAAQIDBBESIUFRYYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7ec1BZk8FDuXq2isek7im5xTW7XHZnhhZSp6p+8fANcJqccoELek6cXqe746AFoAAAAAAAA//9k=",
      "caption": "7. Subdivide and simulate inflation",
      "kind": "white"
     },
@@ -134,6 +145,7 @@
      "src": "inflatable-patterner/inflatable-patterner_11.jpg",
      "width": 1920,
      "height": 1509,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAUDBAb/xAAjEAACAgECBgMAAAAAAAAAAAABAgADBBESBRUxQVFxBpGx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGhEAAwEBAQEAAAAAAAAAAAAAAAECESEDYf/aAAwDAQACEQMRAD8A7W++vHrNlrBVEiXfIrFdnqx0NCMASz6E+pR4tgtnYwWt9lqHch7a+DJeNVmIzry9TkNqDfYdQB+fUbzmWtYsqXP0t4mVVmUC2k6g9R3B8RMHCuH8vxyhfe7ncxHT0IhVm8Debw3YiJgYIiJEf//Z",
      "caption": "8. Finalize pattern",
      "kind": "white"
     }
@@ -146,6 +158,7 @@
    "src": "/media/inflatable-patterner/inflatable-patterner_12.mp4",
    "width": 1312,
    "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAmEAABAwQABQUBAAAAAAAAAAABAAIDBAUREgYhMVFhExRBcYGx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABwRAQADAAMBAQAAAAAAAAAAAAEAAhEDITEiQf/aAAwDAQACEQMRAD8A6S8XKSjdHFAG+o8ZyRnA+llyV95bXClY4GXTfUtb0U+KGubVQyAHUsxkeDz/AKpOdYtPcOmk3x03dv8ASvWuVHNmj5rxmHb+y3YbtJcBLFUNaJYvlvQhFm8IMcaqokAOgZjn5PL9wEU+QC3UlcxydLNDHOzSZjXt7EKqbLQE5NOD+lESinkUsnjLUFPFTRiOCNsJ/9k=",
    "caption": "360 View of the final panels",
    "kind": "photo"
   },
@@ -157,6 +170,7 @@
      "src": "inflatable-patterner/inflatable-patterner_13.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBv/EABwQAAICAwEBAAAAAAAAAAAAAAABAhEDElEhIv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AO4BlLLJZtFB13pelu5O2EopqT+fQUAoAAAAAAAAP//Z",
      "kind": "white"
     },
     {
@@ -164,6 +178,7 @@
      "src": "inflatable-patterner/inflatable-patterner_14.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBv/EABwQAAICAgMAAAAAAAAAAAAAAAABAhEDEiExQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDuG6VsJpq07Rnk3eSMVGLxtPa+yoKSbuq85AoAAAAAAAAAAAAAAAB//9k=",
      "kind": "white"
     },
     {
@@ -171,6 +186,7 @@
      "src": "inflatable-patterner/inflatable-patterner_15.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAEDBv/EAB4QAAMAAgIDAQAAAAAAAAAAAAABAgMRE0ESITFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A7gk3Nb8XvRlmyvlnFxVar6+kv0u3NalNtdL0iwagAgAAAAAAD//Z",
      "kind": "white"
     },
     {
@@ -178,6 +194,7 @@
      "src": "inflatable-patterner/inflatable-patterner_16.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIDAQQG/8QAIBAAAwACAQQDAAAAAAAAAAAAAAECAxExBBJBUUJhof/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDtMrpPlTPtcjFXjTU+2a2bqcq6h41jTSa1Pa26XvfCLqTVaadv8NRYvBDHfxpru+gZRMxcqp0wAAAP/9k=",
      "kind": "white"
     },
     {
@@ -185,6 +202,7 @@
      "src": "inflatable-patterner/inflatable-patterner_17.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBv/EABoQAQADAQEBAAAAAAAAAAAAAAABAhEiEoH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7gStNr3tSacxmWmd34pTfAf/2Q==",
      "kind": "white"
     },
     {
@@ -192,6 +210,7 @@
      "src": "inflatable-patterner/inflatable-patterner_18.jpg",
      "width": 1920,
      "height": 1580,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBv/EAB4QAAICAgIDAAAAAAAAAAAAAAABAhEDIRIxQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A7gNpduiM55lmUYwXDW35KLGrt7fthYKbk9RdfQaAQAAAAAAAAB//2Q==",
      "kind": "white"
     }
    ],
@@ -203,6 +222,7 @@
    "src": "inflatable-patterner/inflatable-patterner_19.jpg",
    "width": 2400,
    "height": 1350,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACAQAAIBBAIDAQAAAAAAAAAAAAECEQADBBIhUQUUIkH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABoRAAMAAwEAAAAAAAAAAAAAAAABAgMSIUH/2gAMAwEAAhEDEQA/AIeDtlNoqgMIAJIAJ/BTy4B9oWuXTTcsB2YqAt1lsLodW3Bkd1qbl4svyYYqomOqrmd2kmwLbuqIWftYuaODB5UkUU55DGOUjMXhgS0xRQqFENRXp//Z",
    "caption": "Inflatable Structure example 2: Grove by Pneuhaus<br>",
    "kind": "photo"
   },
@@ -219,6 +239,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_20.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAECAwb/xAAfEAACAgEEAwAAAAAAAAAAAAAAEQEhAhIxMoFBYWL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7aZSpk1U1O6QyVN9GFffL2BsiW6SBMVafYAsw/KJppOd2wALEJ22AAAAAAAAAAA//9k=",
      "kind": "small"
     },
     {
@@ -226,6 +247,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_21.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMGBf/EACUQAAEEAgEDBAMAAAAAAAAAAAIAARESBBQDBTFhExUhIiSRsv/EABcBAAMBAAAAAAAAAAAAAAAAAAACAwH/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQIRITH/2gAMAwEAAhEDEQA/ANjk5A44i7iRkZVERb5d1L3Hi09ipxalI+1piITqT47Y47V4s1PTm1vELgCPGXH3zW/J8xE/0qxCpDJaaTFyRyQJ2AgICqQH3Z0Uum62uWraLPe82t5lFN8YrKZWMOUAs5mBAVhMH+RdSbpvDpa1uSLXvP2tMz+0RGsNK4uMOMBMxkZGViM+7ugACIs9A//Z",
      "kind": "small"
     },
     {
@@ -233,6 +255,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_22.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBv/EABwQAQACAgMBAAAAAAAAAAAAAAABESExAiJhkf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDtxnlc4i49Ttus6oGxIvU/FAAAB//Z",
      "kind": "small"
     },
     {
@@ -240,6 +263,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_23.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EACcQAAIBBAACCwAAAAAAAAAAAAABAgMEERITIRUiMTNBQlFScZGh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERAkH/2gAMAwEAAhEDEQA/AO3BFeTuKtxG1t41KaxvOvjqpeCT9c/hNLpRt3EeT7tUH2Y9/wB8/g1Od9GsCa040HOlW2npjWq/Mn//2Q==",
      "kind": "small"
     },
     {
@@ -247,6 +271,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_24.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAIBAwb/xAAdEAADAQABBQAAAAAAAAAAAAAAARECMRITQYGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO3BG9LLVsZiucPq+AbARjS03LEALJ7ebwAA/9k=",
      "kind": "small"
     },
     {
@@ -254,6 +279,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_25.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAQFBgL/xAAlEAABAwMDAwUAAAAAAAAAAAABAAIRAwQSITFBBRMUFTJRcYH/xAAXAQEAAwAAAAAAAAAAAAAAAAAAAQID/8QAGhEAAwEAAwAAAAAAAAAAAAAAAAERAiExQf/aAAwDAQACEQMRAD8A265zbljk3L4nVQOtXDre3puOfZL4qlhggRprwJ5VL4lJ7O+6k8VhxDe1H3v+zK0ziqjj01aKu6LXdXt6hGZoh8UnPMkiNdeRPKKjUcBYEAgggEHcFRPSrDPPw6GW/sCIibXQJYAAAABEUA//2Q==",
      "kind": "small"
     },
     {
@@ -261,6 +287,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_26.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQG/8QAHhABAAMAAgIDAAAAAAAAAAAAAQACEQMSUWEhMUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9vI7V3OxvjZTkG+0ED99+pmcNbg9KVx8bA6ImfGpa1XPj6xiBZpWzrUWSAGBhEQGIiB//9k=",
      "kind": "small"
     },
     {
@@ -268,6 +295,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_27.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUDBgH/xAAkEAACAgIBAwQDAAAAAAAAAAABAgADBBESEyFRBhQiMUFhsf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/xAAbEQADAAIDAAAAAAAAAAAAAAAAARECEgMhQf/aAAwDAQACEQMRAD8A7eY+7x+XHr1b8cxI3qPNs+WJTYlahVaws2i2zoKP6ZE6SuAQ2PUHtCgcj8Br7/Pb9y+HDVWxdo+zuokP07kMLLsN7FYVgFCH5A+dHxElljq4O54VMjBxcpw+Rj12MOwLL3mqVV1oERFVQNAAfURBWCHgpqFnUFaBP//Z",
      "kind": "small"
     },
     {
@@ -275,6 +303,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_28.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwb/xAAeEAACAgICAwAAAAAAAAAAAAAAAQIREiFBUTGRof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD23gKSb0TLc8elZM5JKNq03brhAdQTF7rjgAbism+zMF8oAAope7AAAAAAAAAAAAf/2Q==",
      "kind": "small"
     },
     {
@@ -282,6 +311,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_29.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAQFBgED/8QAJhAAAgEDAwQBBQAAAAAAAAAAAQIDAAQRBRITFCExMmFBUXGRsf/EABcBAQADAAAAAAAAAAAAAAAAAAABAgP/xAAcEQEBAAEFAQAAAAAAAAAAAAABABECAxIhMVH/2gAMAwEAAhEDEQA/ANq7rGhZ2CqPJJwBUeDULa4l44nJJztOCA2POD9ah6qepuOnEhRYIzOxH3Hrn4qukuBwW8V7CCry85K5xxnz+ia107eSenVp6VV6fcrFeyWQYvCQGgcnPYjJXP8AKVRMMpR0+BrmaZgWMybHUnsRXmdKtiWzvIMYiALeq/FKU5P2XYNKt4CSu7PLyr39TjGPx3OFX2X/2Q==",
      "kind": "small"
     },
     {
@@ -289,6 +319,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_30.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwb/xAAaEAEBAQEBAQEAAAAAAAAAAAABAAIRISIy/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APbyimTrYdfYI++EHSSQRDRxOlM4zn85CQEg1JIP/9k=",
      "kind": "small"
     },
     {
@@ -296,6 +327,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_31.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMGAQIF/8QAHhABAAICAwADAAAAAAAAAAAAAQADAgQRITEFIkH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAEQIBIf/aAAwDAQACEQMRAD8Au8w5AgoL4L7ItrZr1KG25TE66OVfwJwtrZt2vlqOdfLHJAqHIXD7C5PHnQzecd0Z5VjiImA0tqrvra7cMc8H3HI5JHr6evrK0U4Vr6h3ERsREE//2Q==",
      "kind": "small"
     },
     {
@@ -303,6 +335,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_32.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBv/EAB8QAAIBBAIDAAAAAAAAAAAAAAASEQECQYETUSFC8f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDtyXoy6nE9C9kqkNiTPzw+q7n6BsCbGSjw2YAFEpRm3IAAf//Z",
      "kind": "small"
     },
     {
@@ -310,6 +343,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_33.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAMEBv/EACMQAAEDBAEEAwAAAAAAAAAAAAABERMEEhRRMQIDFUEFscH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAwH/xAAaEQEBAAIDAAAAAAAAAAAAAAABABExAgMS/9oADAMBAAIRAxEAPwDblXyVLmYsqS8N6fT7JKybE7uM01q2Psyl1UnwLpAnTK3KzXXff4V4dfomQ3bEENHNidrJaa1L22CaYYUxT8XR52ZCk3L+n21L/9k=",
      "kind": "small"
     },
     {
@@ -317,6 +351,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_34.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAECAwb/xAAgEAACAQQBBQAAAAAAAAAAAAAAARECEiExkQMzQVGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO2bSUvAupflck6nbZjm6iY0wNgJTr6ADSah5QtXpcAAAAAAFAAH/9k=",
      "kind": "small"
     },
     {
@@ -324,6 +359,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_35.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQGA//EACgQAAICAQMCBAcAAAAAAAAAAAECAAMRBAUxEjITFSGSMzRBQlJhsf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//EABkRAQEAAwEAAAAAAAAAAAAAAAEAAgMRMf/aAAwDAQACEQMRAD8A2tliVVtZYwRFGSxOAJONy0RGRq6PeJy37Hk2pz+I/omaU3eLtpI0nTk9IJ9Ofvm2vWZHWpbJHWxAyMGU8EHIMSHZPkn7fjP2dvP0/UTLI48pW2VpdW1dqh0YYKkZBnAbZoV40dHsERAp5KhEWtAqKC//2Q==",
      "kind": "small"
     },
     {
@@ -331,6 +367,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_36.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAbEAEBAAMAAwAAAAAAAAAAAAAAAQIRITFBYf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDt1blq/PazPKazmvMnJQaAgA//2Q==",
      "kind": "small"
     },
     {
@@ -338,6 +375,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_37.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQGAv/EACMQAAICAgEDBQEAAAAAAAAAAAECAAMEEQUSITETQVFhkcH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAP/xAAYEQEBAQEBAAAAAAAAAAAAAAABADECIf/aAAwDAQACEQMRAD8A28jv5KqjKWgqxJ6eph4XfiVkAgg9wexmbysNsbmqVw7PUeuo2JTbogaPZQf3XxNOAdhfLSxOa2L1qzKUJAJU+R9RM5upE/GI3KLnCxg6jRX2I0R/YiIplRWxEQq//9k=",
      "kind": "small"
     },
     {
@@ -345,6 +383,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_38.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBv/EABwQAAMAAwEBAQAAAAAAAAAAAAABEQIhMRIyQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDtqKl1mc/pb0ukSXu+VG5QN1P9BMFMUALEIpJoAAklxAAAAAAAAD//2Q==",
      "kind": "small"
     },
     {
@@ -352,6 +391,7 @@
      "src": "/media/inflatable-patterner/inflatable-patterner_39.mp4",
      "width": 480,
      "height": 480,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIFBgT/xAAiEAACAQMDBQEAAAAAAAAAAAABAgMABBESITEFBhRBUcH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAP/xAAZEQEBAQEBAQAAAAAAAAAAAAABABEhAgP/2gAMAwEAAhEDEQA/ANm80aSxxs2HkzpH3HNHnijOJJUU/GYCqHuNy3VLJNbxxIC0rpyqk4/K4YLSA9TW58Y+FI5hV3OQdsA778+62PloMD3LVx3EMrFY5Y3YDJCsCRSq7tuGCPpaPEq6yWDMBudzyaVn6MUJrFraF5Hd4wzOmhifa/KNawPbeO0SmHGNGNsUpRrVC0sbeyDC2jEYfn//2Q==",
      "kind": "small"
     }
    ],
@@ -368,6 +408,7 @@
    "src": "/media/inflatable-patterner/inflatable-patterner_40.mp4",
    "width": 600,
    "height": 432,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAARABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEDAgQG/8QAHhAAAwEAAgMBAQAAAAAAAAAAAQIDAAQSESExQUL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO32rZ3ryBGdOgA8sR91l4tYqBVkUfQP3VngqpDxbpQf0ffnUTxnot3jVu3X2GzZceBkWej96N9OMH//2Q==",
    "kind": "small"
   },
   {
@@ -383,6 +424,7 @@
      "src": "inflatable-patterner/inflatable-patterner_41.jpg",
      "width": 1920,
      "height": 1568,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAiEAACAgEEAQUAAAAAAAAAAAAAAQIREgMhMVEjMkGRofD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7htJW3SKPUbTcEmo87kSl5d/TFcdsplLCalzK3t1+QG0ZZK/lAy0bhJxb2Tr65AG2Ku63IxXXtQAAP/Z",
      "caption": "1. Draw connect lines",
      "kind": "white"
     },
@@ -391,6 +433,7 @@
      "src": "inflatable-patterner/inflatable-patterner_42.jpg",
      "width": 1920,
      "height": 1568,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAUDBAb/xAAnEAACAgIBAgUFAQAAAAAAAAABAgMEABESBRMUITFBUSJSYbHh8f/EABgBAAIDAAAAAAAAAAAAAAAAAAECAAME/8QAHBEBAQEAAQUAAAAAAAAAAAAAAQADEgIRITFR/9oADAMBAAIRAxEAPwDtZ5468ZkmcIo9zk6fqcrq8tJUeCIbd239X4GYL9yNurKki84q4J4fc+v8zTa5L4OeMJxNlzINegX3/Wa88fApMFfoXEu1hKo4nemX4OMidGsvVt9l9cJCFI+DryOMp2z4dXY9QSu+EgFjviJe5rXLBp1y6sYl2qlQNeQB9fLGMTk/YQ065m7piXnoDf8AMYxgAAAAABVpf//Z",
      "caption": "2. Thicken lines (Using Mesh Fattener or Multipipe by Daniel Piker)",
      "kind": "white"
     },
@@ -399,6 +442,7 @@
      "src": "inflatable-patterner/inflatable-patterner_43.jpg",
      "width": 1920,
      "height": 1568,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAApEAACAQMDAgQHAAAAAAAAAAABAgMABBESEyEFMRQiQXFCUaGxssHx/8QAGAEAAgMAAAAAAAAAAAAAAAAAAAECAwT/xAAbEQADAQEAAwAAAAAAAAAAAAAAARECAxIhMf/aAAwDAQACEQMRAD8A7aWVIYy8rBVHcmqbdQaVJJLQI8UQ8zNkZPqBUN1chupojqWjhUsFHxPwB96qNdS+EuUK6WnZpARyAuDn8frWjHL0mx1Q2bO6S7gEqDHJBHyIpWZ0l2tpjExGCQrADGCRkH9Uqvpnx1F8DSjhq7EW9u6BuYIz7/yhtoSQTGvClQMcYPcYpSoViGxEZNzQNWAMFYH/2Q==",
      "caption": "3. Dispatch complex (vertex valence > 4) and simple regions",
      "kind": "white"
     },
@@ -407,6 +451,7 @@
      "src": "inflatable-patterner/inflatable-patterner_44.jpg",
      "width": 1920,
      "height": 1568,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAQFAQMG/8QAKRAAAgEDAwMBCQAAAAAAAAAAAQIDAAQREiExBRMUIkJhcYGRobGywf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAwL/xAAaEQACAwEBAAAAAAAAAAAAAAAAAQIDERIh/9oADAMBAAIRAxEAPwDtpZY4Yy8rhFHJJqA/UpJUmlskSSGEepnJGo8kCtN5dK3V0VxqjgUsFHtPsB+ahteTeJcxlND3DNKp5ATBz+v3q8ax6sLyxu0vbcSoMHJVlznSRyKVUdGd7Scwuy6WYIwAxhiMg/PcfSlTsjzLwGsZc+NCLjviMdzBXV7ic/yhtYSwJjXZSgGNsHkYpSs6xGTbQmXumNdeAIH/2Q==",
      "caption": "4. Divide regions into panels. The panels will be reconstructed as patch mesh for unroll purpose.",
      "kind": "white"
     }
@@ -419,6 +464,7 @@
    "src": "/media/inflatable-patterner/inflatable-patterner_45.mp4",
    "width": 800,
    "height": 636,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAGRABAQEBAQEAAAAAAAAAAAAAAQARMSFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANsvoQdU+kTa8gSgr0yQWSQAAAACSQf/2Q==",
    "kind": "photo"
   },
   {
@@ -437,6 +483,7 @@
        "src": "/media/inflatable-patterner/inflatable-patterner_46.mp4",
        "width": 800,
        "height": 602,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECEQMSISIxQf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A20nSF8qDVsmWNTS1LoosEqVt7Ol6wBQAAAAgAAD/2Q==",
        "kind": "photo"
       }
      ]
@@ -452,6 +499,7 @@
          "src": "inflatable-patterner/inflatable-patterner_47.jpg",
          "width": 1920,
          "height": 1110,
+         "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAXEAEAAwAAAAAAAAAAAAAAAAAAESGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJAAB//Z",
          "kind": "white"
         },
         {
@@ -459,6 +507,7 @@
          "src": "inflatable-patterner/inflatable-patterner_48.jpg",
          "width": 1920,
          "height": 1110,
+         "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAFRABAQAAAAAAAAAAAAAAAAAAABH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ACgA//9k=",
          "kind": "white"
         }
        ],
@@ -480,6 +529,7 @@
    "src": "inflatable-patterner/inflatable-patterner_49.jpg",
    "width": 1800,
    "height": 2400,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABIDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQL/xAAlEAACAQMCBQUAAAAAAAAAAAABAgMABBESIQUTIjFxQVGBk7H/xAAXAQEBAQEAAAAAAAAAAAAAAAABAgAD/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERElH/2gAMAwEAAhEDEQA/AIordLwqI4whVcNvt5q2vD+WumO4VnIyE7Z8VNZRQvZyambExbJUYOM13ZCGW0Ig6Wjcr1HuM/tQrWQZlU4LYI2OaVpycOt3lZnfDMSTt60p5o1jwXM5TCXscTrsY3Tb4NQxS3MWvlyMA7a2Kptn370pXPbtarI4negAcxPrFKUoAAAAOr6H/9k=",
    "caption": "One example of the closed planar boundaries geometry - a cloud bubble.<br>",
    "kind": "photo"
   },
@@ -493,6 +543,7 @@
    "src": "inflatable-patterner/inflatable-patterner_50.jpg",
    "width": 1894,
    "height": 1498,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBv/EABoQAQADAQEBAAAAAAAAAAAAAAABESECMUH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO2m4lLv6vWSkorXPmhz4KgAP//Z",
    "kind": "white"
   },
   {
@@ -503,6 +554,7 @@
      "src": "inflatable-patterner/inflatable-patterner_51.jpg",
      "width": 2400,
      "height": 2400,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQH/xAAnEAACAgIABAUFAAAAAAAAAAABAgMEABEFEhMhFSIxQXEyUWKRwf/EABcBAAMBAAAAAAAAAAAAAAAAAAACAwH/xAAaEQADAQEBAQAAAAAAAAAAAAAAAQIRITED/9oADAMBAAIRAxEAPwCjhNGo9BGaBGbZ7n5yqShUCbFeP9Zyat+zBW6cMcZA7hmY/wAyY8fvySSR6hTk/EnKR9YcoSorSukkfj1qPyoqroA+ntjMK1aIzyS3nkLuDpol8o3jIXWvhRTzp41J68Sz9RTGy63yk67fbM6tKq7EsVcO2izkqNn2Oj6HvjGLKS8Hpt+ncalw2mXLWhECBpWlmH//2Q==",
      "kind": "photo"
     },
     {
@@ -510,6 +562,7 @@
      "src": "inflatable-patterner/inflatable-patterner_52.jpg",
      "width": 2400,
      "height": 2400,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAMCBAUG/8QAJxAAAgICAQMDBAMAAAAAAAAAAQIDEQAEBRMhQRIxYRQiQlGRsdH/xAAYAQADAQEAAAAAAAAAAAAAAAABAwQAAv/EABoRAAMAAwEAAAAAAAAAAAAAAAABAhESIQP/2gAMAwEAAhEDEQA/AIltqXTlWJVpZSI/SaLC++V0urracss8UgmkJADXddvF5s8edaRg2xI0ewpIaP2o/FZ0pIdYIXaERgiupIfSf9ySvR1WurGJY6cmVzNFDHGnvYDV4v8AvGTJ0daSTo7LvHVPEe4LeKs2MZScluQ5ZONCiBI+pIPuZF73nntnd3eQe3kZFP6Pf+cYwMxnrcakK/VbDMo/E+XPwH//2Q==",
      "kind": "photo"
     },
     {
@@ -517,6 +570,7 @@
      "src": "inflatable-patterner/inflatable-patterner_53.jpg",
      "width": 2400,
      "height": 2400,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAQBAgMG/8QAJBAAAgEDBAICAwAAAAAAAAAAAQIDAAQRBRIhMUFRExQiweH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ALrWUvb4ddpXjvuozdFdMRpnYq21EUDok91mP45bt0tIxDGqhgMY5zjPFT225LC2ErKysSpVh4/L9gVlW2uW73JhwyLsY8s2PFKs02f64EaGJ3ddxLH+980oa84pu8khsH3VscUsKq6XccrRjKxmM458ZpStSbU1yg02RwGeRgwOoP/Z",
      "kind": "photo"
     },
     {
@@ -524,6 +578,7 @@
      "src": "inflatable-patterner/inflatable-patterner_54.jpg",
      "width": 2400,
      "height": 2400,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUCAf/EACcQAAICAgEBBwUAAAAAAAAAAAECAwQAERIhBRMUQVGBkSIxYXHw/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgME/8QAHBEBAAMAAwEBAAAAAAAAAAAAAQACEQMSMRMh/9oADAMBAAIRAxEAPwCfPVgWQGe9EAOqhASfnNpYpPOk0kjmSNePNFJLe3vlHwda32y8Mse444RxAOtf282KsMLskdaLkp67G9emZ789S2PsZVzZMFNKt2CdTuJgSpcDl8jyxlnhC9d0mGot9RrRQ+TD0/WMlbj+z2JSt+pk0qd2zWIYQbD/AEsWOgBnGryyuZLM8cakglQN/b8nGMXHSqtn9dhspgTslnsuqh76zJKT1I5dD8axPJOf/9k=",
      "kind": "photo"
     }
    ],
@@ -543,6 +598,7 @@
      "src": "inflatable-patterner/inflatable-patterner_55.jpg",
      "width": 2400,
      "height": 1800,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIEAQMF/8QAIRAAAgICAgIDAQAAAAAAAAAAAQIAEQMEEiExYRMUcYH/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EABoRAAMBAAMAAAAAAAAAAAAAAAABAhEDQUL/2gAMAwEAAhEDEQA/AKq4y68QtwdUaDY3zYHbEWtkUWSPyXcDLiQPZ+S6CiZZkbk70vV9nwPU5825pM10tWHPy49LJT6OucVk8uQI7/sTbu7HJlaiEqgSSYlOSnVaCEpWEcpI2HrrxKm+7NnHJibPdmIiew9EMzN9NhyNcvFVCM//2Q==",
      "kind": "photo"
     },
     {
@@ -550,6 +606,7 @@
      "src": "inflatable-patterner/inflatable-patterner_56.jpg",
      "width": 2400,
      "height": 1800,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIEAQMF/8QAJBAAAgIBAwMFAQAAAAAAAAAAAQIAAxEEEiEFEyIxM1FhkUH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQB/8QAHREAAgICAwEAAAAAAAAAAAAAAAECEQMxEiJBUf/aAAwDAQACEQMRAD8AnfZ2tOdx8RjLqORz8SNfUEFIc1uwLECwADMv36fuUbMIwz5Ajgic1+kPhShqQg5OWJwfqTY80X1exk4Su1oyNZpw7W9uxdq7SWbj8+Ymu/QW6nUWo9y5HqCTg/cRnOP0GpeIpi61TgWOBk8BjGksdnO52PH9MRJltjyw9tmPcb/9iImBH//Z",
      "kind": "photo"
     },
     {
@@ -557,6 +614,7 @@
      "src": "inflatable-patterner/inflatable-patterner_57.jpg",
      "width": 2400,
      "height": 1800,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAv/EACMQAAEDAwQCAwAAAAAAAAAAAAEAAgMEERIhIkFRBRMxMoH/xAAXAQEBAQEAAAAAAAAAAAAAAAADBAEC/8QAHREAAgIBBQAAAAAAAAAAAAAAAAECMSEDESIyYf/aAAwDAQACEQMRAD8ArmA2kqWtZIX5YkCw1I0WXup4pJHPcDPcu1P1bx+rOg83JK90dTlHGTtceh2pJakt+KwhUvTjMiUsvu5HSLogNqJJrNkcXksc3pFQqQbebJXNHscbC9/laU7QZJLgHbyERa6Dj2KZABif/9k=",
      "kind": "photo"
     },
     {
@@ -564,6 +622,7 @@
      "src": "inflatable-patterner/inflatable-patterner_58.jpg",
      "width": 2400,
      "height": 1800,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUCA//EACQQAAICAQQCAQUAAAAAAAAAAAECAAMRBAUSIRQxQRNCYYHx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAgMEAAX/xAAdEQADAAICAwAAAAAAAAAAAAAAAQIDMQQhESIy/9oADAMBAAIRAxEAPwDrRtVV7K+osusUqpYcscvnsCb1OhQ3AUn6eft9gCTad3JsC65WVh0XrOB+xK6Vlqs1Ngn047/s5tVll76Kkpa0Ttx094q8hLw6L0VGQRjqJS1Ks2idbEDsy+k+T+IlHGyO59hGWfD6I27KvhBsDPM94mdkdxqK1DNxKHIz0YiC/ljnstKST2YiAAiBOjH/2Q==",
      "kind": "photo"
     }
    ],
@@ -581,6 +640,7 @@
        "src": "inflatable-patterner/inflatable-patterner_59.jpg",
        "width": 2400,
        "height": 1800,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAASABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAAmEAABAwMCBQUAAAAAAAAAAAACAAEDBAUREiETMTJhcRQiM8Hw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIABP/EAB0RAAIBBAMAAAAAAAAAAAAAAAABAgMEESEiMTL/2gAMAwEAAhEDEQA/AMyepcYtfDmF3b2E7bK3arbSZYawOJVEHE0l0iP2607bcKCmt9PHPOIGLZNnB3w+d25KPWUkkk4Tg9OTk7j2xt+7LluJyxhaEgkc3dacRnA4oxEHdxfTyyivHSHWwSDCOlxdjHfyiSk+KyzSW9GRN1N5UltMvXMGp9GenOyIqq+SY9nUUnzj4dEAAREIyP/Z",
        "caption": "bad sewing execution --- but demonstrated the idea!",
        "kind": "photo"
       }
@@ -594,6 +654,7 @@
        "src": "inflatable-patterner/inflatable-patterner_60.jpg",
        "width": 1586,
        "height": 1735,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAQFBgP/xAAlEAABAwQBAwUBAAAAAAAAAAABAAIDBAURIRMSIlEVMUFhcZH/xAAXAQEAAwAAAAAAAAAAAAAAAAACAAED/8QAGxEAAwEBAAMAAAAAAAAAAAAAAAECMQMRITL/2gAMAwEAAhEDEQA/AJgZgqjuF4dyPjgY0AZBc7efxaKVpLSI8dZGs+VV+iMlhk5qdsOWEh4dtp/qy6dJj6HMt4VluvU/I5s7g5nTrIxgoo1HT0tRI6Nok7BtxPuit+CezYSZLdHB8rKVF+r3B8Jl1tp7Rk/CInUTWoCbWHOygAykfQREQgAAArRrD//Z",
        "caption": "could be a cute and useless handcuff",
        "kind": "photo"
       }
@@ -607,12 +668,14 @@
   "type": "image",
   "src": "inflatable-patterner/inflatable-patterner_cover.jpg",
   "width": 1981,
-  "height": 1549
+  "height": 1549,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBv/EACEQAAICAQQCAwAAAAAAAAAAAAECAAMRBBIhURMiMmFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AOwtYWakVtu27Tgg45jSX+TdW7ZsQkHsiW1OWrYHlWJP3kSGRKfd2A9i2ScYzKjREzVaptRaBSmax8rDwD+dxFmEutMl60sXbYoZeiMxEiqAiIgf/9k="
  },
  "hover": {
   "type": "loop",
   "src": "/media/inflatable-patterner/inflatable-patterner_hover.mp4",
   "width": 800,
-  "height": 626
+  "height": 626,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAGhABAQEAAwEAAAAAAAAAAAAAAAERAiExQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDbW9yHG7bPsMXABJbfZgCgAAAAAAAD/9k="
  }
 }

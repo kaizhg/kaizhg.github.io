@@ -500,14 +500,18 @@ const {
 	.life-hint {
 		position: absolute;
 		right: 0;
-		bottom: -22px;
+		bottom: -26px;
 		margin: 0;
-		font: 9px var(--mono);
+		font: 11px var(--mono);
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		color: var(--muted);
-		opacity: 0.7;
 		pointer-events: none;
+		transition: color 0.3s ease;
+	}
+	/* The hint answers the cursor: it darkens while the band is being played with */
+	.life:hover .life-hint {
+		color: var(--fg);
 	}
 	@media (hover: none) {
 		.life-hint-action {

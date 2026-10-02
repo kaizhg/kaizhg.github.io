@@ -13,16 +13,16 @@ interface Props {
 const { items, gridHref, label = 'Projects' } = Astro.props;
 
 // The same cover the grid tile shows (a still, or the looping clip)
-const previews: Record<string, { type: 'image' | 'loop'; src: string } | null> = Object.fromEntries(
+const previews: Record<string, { type: 'image' | 'loop'; src: string; lqip?: string } | null> = Object.fromEntries(
 	await Promise.all(
 		items.map(async (p) => {
 			const s = getCaseStudy(p.slug);
 			const cover = s?.cover ?? s?.hero;
 			if (!cover) return [p.slug, null];
-			if (cover.type === 'loop') return [p.slug, { type: 'loop', src: cover.src }];
+			if (cover.type === 'loop') return [p.slug, { type: 'loop', src: cover.src, lqip: cover.lqip }];
 			if (cover.type !== 'image') return [p.slug, null];
 			const img = await getImage({ src: workImage(cover.src), width: 960, format: 'webp' });
-			return [p.slug, { type: 'image', src: img.src }];
+			return [p.slug, { type: 'image', src: img.src, lqip: cover.lqip }];
 		}),
 	),
 );
@@ -46,7 +46,7 @@ const previews: Record<string, { type: 'image' | 'loop'; src: string } | null> =
 						</span>
 						<span class="slot" aria-hidden="true">
 							{previews[p.slug]?.type === 'image' && (
-								<span class="thumb">
+								<span class="thumb" style={previews[p.slug]!.lqip ? `background-image: url(${previews[p.slug]!.lqip})` : undefined}>
 									<img src={previews[p.slug]!.src} alt="" decoding="async" fetchpriority="low" />
 								</span>
 							)}
@@ -141,6 +141,8 @@ const previews: Record<string, { type: 'image' | 'loop'; src: string } | null> =
 		bottom: calc(-1 * var(--row-pad));
 		height: 0;
 		overflow: hidden;
+		background-size: cover;
+		background-position: center;
 		pointer-events: none;
 		transition: height 0.25s cubic-bezier(0.4, 0, 0.6, 1);
 	}

@@ -22,7 +22,8 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 			sizes={sizes}
 			loading={eager ? 'eager' : 'lazy'}
 			class:list={['media', { alpha: /\.png$/i.test(block.src), portrait }]}
-			style={block.maxWidth ? `max-width: ${block.maxWidth}px` : undefined}
+			style={[block.maxWidth ? `max-width: ${block.maxWidth}px` : '', block.lqip ? `background-image: url(${block.lqip})` : ''].filter(Boolean).join('; ') || undefined}
+			data-fade={block.lqip ? '' : undefined}
 		/>
 	)
 }
@@ -31,8 +32,10 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 		<video
 			class="media"
 			src={block.src}
+			poster={block.poster}
 			width={block.width}
 			height={block.height}
+			style={block.lqip ? `background-image: url(${block.lqip})` : undefined}
 			autoplay
 			muted
 			loop
@@ -69,5 +72,18 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 	/* Cut-outs (PNG with transparency) sit straight on the page, no tint behind them */
 	.media.alpha {
 		background: transparent;
+	}
+	/* A blurred 24px stand-in sits behind the picture (inline background-image) and the real
+	   file focuses in over it: blurred while loading, sharp once decoded */
+	.media[style*='background-image'] {
+		background-size: cover;
+		background-position: center;
+	}
+	img[data-fade] {
+		transition: filter 0.5s ease;
+	}
+	img[data-fade].is-loading {
+		filter: blur(16px);
+		clip-path: inset(0);
 	}
 </style>

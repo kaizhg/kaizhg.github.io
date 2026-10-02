@@ -11,6 +11,7 @@ export const tile = (p: Project) => {
 		p,
 		img: cover && cover.type === 'image' ? workImage(cover.src) : null,
 		loop: cover && cover.type === 'loop' ? cover.src : null,
+		lqip: cover?.lqip ?? null,
 		hover: s?.hover ?? null,
 	};
 };
@@ -26,10 +27,10 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 
 <ul class:list={["grid", "reveal", { small }]} style={`--cols: ${cols}`}>
 	{
-		tiles.map(({ p, img, loop, hover }, i) => (
+		tiles.map(({ p, img, loop, lqip, hover }, i) => (
 			<li data-discipline={p.discipline}>
 				<a href={`/work/${p.slug}/`}>
-					<span class="frame">
+					<span class="frame" style={lqip ? `background-image: url(${lqip})` : undefined}>
 						{img && (
 							<Image
 								src={img}
@@ -37,6 +38,7 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 								widths={[480, 800, 1200]}
 								sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
 								loading={i < eager ? 'eager' : 'lazy'}
+								data-fade=""
 							/>
 						)}
 						{loop && <video src={loop} muted loop playsinline autoplay preload="metadata" />}
@@ -124,7 +126,7 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 		display: block;
 		aspect-ratio: var(--ratio);
 		overflow: hidden;
-		background: var(--line);
+		background: var(--line) center / cover; /* the blurred stand-in, when the tile has one */
 		/* Columns land on fractional pixels; each frame runs 1px under its right and lower
 		   neighbour so no rounding seam can open between tiles (the neighbour paints on top) */
 		margin: 0 -1px -1px 0;
@@ -154,6 +156,12 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 	   frame, so give it a wider margin than the stills: 2px past the frame on every side */
 	.frame :global(video) {
 		--over: 2px;
+	}
+	.frame :global(img[data-fade]) {
+		transition: filter 0.5s ease, top 1.2s, left 1.2s, width 1.2s, height 1.2s;
+	}
+	.frame :global(img[data-fade].is-loading) {
+		filter: blur(16px);
 	}
 	.grid a:hover .frame :global(img),
 	.grid a:hover .frame :global(video) {

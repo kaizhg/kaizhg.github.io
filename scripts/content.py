@@ -341,6 +341,60 @@ def block_to_md(b, take):
 
 
 # ---------------------------------------------------------------- build (content/ -> src/data)
+LQIP_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.lqip-cache.json')
+_lqip_cache = None
+
+
+def lqip(path):
+    """A 24px blurred stand-in for a picture or a clip's first frame, inlined as a data URL
+    (~500 bytes), shown while the real file loads. None for cut-outs with transparency, which sit
+    straight on the page. Cached on disk by file size and mtime so rebuilds stay quick."""
+    global _lqip_cache
+    import json
+    if _lqip_cache is None:
+        try:
+            _lqip_cache = json.load(open(LQIP_CACHE))
+        except Exception:
+            _lqip_cache = {}
+    st = os.stat(path)
+    key = f'{os.path.relpath(path)}|{st.st_size}|{int(st.st_mtime)}'
+    if key in _lqip_cache:
+        return _lqip_cache[key]
+    val = _lqip_make(path)
+    _lqip_cache[key] = val
+    json.dump(_lqip_cache, open(LQIP_CACHE, 'w'))
+    return val
+
+
+def _lqip_make(path):
+    from PIL import Image, ImageOps
+    import base64, io, subprocess
+    try:
+        if path.lower().endswith('.mp4'):
+            # first frame, straight from ffmpeg into memory
+            out = subprocess.run(['ffmpeg', '-v', 'error', '-i', path, '-frames:v', '1', '-vf', 'scale=48:-2',
+                                  '-f', 'image2pipe', '-vcodec', 'mjpeg', 'pipe:1'], capture_output=True, timeout=30).stdout
+            if not out:
+                return None
+            im = Image.open(io.BytesIO(out))
+        else:
+            im = Image.open(path)
+            if im.format == 'JPEG':
+                im.draft('RGB', (96, 96))
+        im = ImageOps.exif_transpose(im)
+        if im.mode == 'P':
+            im = im.convert('RGBA')
+        if im.mode in ('RGBA', 'LA') and im.getchannel('A').getextrema()[0] < 250:
+            return None
+        im = im.convert('RGB')
+        im.thumbnail((24, 24))
+        buf = io.BytesIO()
+        im.save(buf, 'JPEG', quality=45, optimize=True)
+        return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
+    except Exception:
+        return None
+
+
 def media_block(folder, slug, name, caption=None):
     from PIL import Image
     path = os.path.join(folder, name)
@@ -350,9 +404,18 @@ def media_block(folder, slug, name, caption=None):
     if ext in IMG_EXT:
         w, h = Image.open(path).size
         b = {'type': 'image', 'src': f'{slug}/{name}', 'width': w, 'height': h}
+        tiny = lqip(path)
+        if tiny:
+            b['lqip'] = tiny
     elif ext == '.mp4':
         w, h = video_size(path)
         b = {'type': 'loop', 'src': f'/media/{slug}/{name}', 'width': w, 'height': h}
+        still = os.path.join(folder, os.path.splitext(name)[0] + '.jpg')
+        if os.path.exists(still):
+            b['poster'] = f'/media/{slug}/{os.path.splitext(name)[0]}.jpg'
+        tiny = lqip(still if os.path.exists(still) else path)
+        if tiny:
+            b['lqip'] = tiny
     else:
         raise ValueError(f'{slug}: unsupported media {name}')
     if caption:

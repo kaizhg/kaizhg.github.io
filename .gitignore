@@ -33,3 +33,4 @@ pnpm-debug.log*
 
 # written by npm run edit while a project.md has a problem
 public/edit-errors.json
+scripts/.lqip-cache.json

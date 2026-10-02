@@ -12,12 +12,16 @@ export interface ImageBlock {
 	maxWidth?: number;
 	/** Cluster only: vertical offset in half-column units */
 	y?: number;
+	/** Tiny blurred stand-in (data URL) shown until the picture loads */
+	lqip?: string;
 }
 export interface LoopBlock {
 	type: 'loop';
 	src: string; // public URL
 	width: number;
 	height: number;
+	poster?: string;
+	lqip?: string;
 }
 export interface VideoBlock {
 	type: 'video';
