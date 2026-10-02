@@ -188,8 +188,8 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 	}
 	/* Once the rollover has faded in, the cover underneath steps aside: nothing light is left
 	   beneath a dark clip for a rounding seam to reveal */
-	.grid a:hover .frame :global(img:not(.hover)),
-	.grid a:hover .frame :global(video:not(.hover)) {
+	.grid a:hover .frame:has(.hover) :global(img:not(.hover)),
+	.grid a:hover .frame:has(.hover) :global(video:not(.hover)) {
 		opacity: 0;
 		transition: opacity 0.2s ease 0.4s, filter 0.5s ease, top 1.2s, left 1.2s, width 1.2s, height 1.2s;
 	}

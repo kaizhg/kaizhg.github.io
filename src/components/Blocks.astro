@@ -34,6 +34,7 @@ interface Cell {
 	blocks: Block[];
 	fitH?: string;
 	fitHM?: string;
+	spanM?: number;
 }
 
 // Text that may sit beside an image: unplanned, or planned as a plain side column
@@ -189,6 +190,7 @@ const cellStyle = (c: Cell) => {
 	if (m) parts.push(`grid-column: ${m[1]} / ${m[2]}`);
 	if (c.fitH) parts.push(`--fit-h: ${c.fitH}`);
 	if (c.fitHM) parts.push(`--fit-h-m: ${c.fitHM}`);
+	if (c.spanM) parts.push(`--span-m: ${c.spanM}`);
 	return parts.length ? parts.join('; ') : undefined;
 };
 // Two single pictures side by side on one row get exactly the same height: the lower of the
@@ -206,8 +208,13 @@ for (let i = 0; i + 1 < cells.length; i++) {
 	const hA = `calc(${colw(ra[1] - ra[0])} / ${(pa.width / pa.height).toFixed(4)})`;
 	const hB = `calc(${colw(rb[1] - rb[0])} / ${(pb.width / pb.height).toFixed(4)})`;
 	a.fitH = b.fitH = `min(${hA}, ${hB})`;
-	// on a phone the pair sits side by side at six columns each
-	a.fitHM = b.fitHM = `min(calc(${colw(6)} / ${(pa.width / pa.height).toFixed(4)}), calc(${colw(6)} / ${(pb.width / pb.height).toFixed(4)}))`;
+	// on a phone the pair sits side by side on a 24-column grid, widths in proportion to the
+	// shapes so neither picture needs cropping and both end on the same line
+	const arA = pa.width / pa.height, arB = pb.width / pb.height;
+	const spanA = Math.max(6, Math.min(18, Math.round((24 * arA) / (arA + arB)))), spanB = 24 - spanA;
+	const colw24 = (span: number) => `((100cqw - 23 * var(--gap)) / 24 * ${span} + ${span - 1} * var(--gap))`;
+	a.spanM = spanA; b.spanM = spanB;
+	a.fitHM = b.fitHM = `min(calc(${colw24(spanA)} / ${arA.toFixed(4)}), calc(${colw24(spanB)} / ${arB.toFixed(4)}))`;
 }
 const galleryClass = (b: Laid) => {
 	const l = (b.layout ?? '').replace(/@\d+-\d+/, '').trim();
@@ -278,8 +285,9 @@ const galleryClass = (b: Laid) => {
 					const pairStyle = (it: any) => {
 						const t = tier(it);
 						if (t.length !== 2) return '';
-						const wide = Math.max(...t.map((o: any) => o.width / o.height));
-						return `; --pair-h-m: calc(((100cqw - var(--gap)) / 2) / ${wide.toFixed(4)})`;
+						const ar = (o: any) => o.width / o.height;
+						const frac = ar(it) / (ar(t[0]) + ar(t[1])); // share of the width, so both end level
+						return `; --pair-w-m: calc((100cqw - var(--gap)) * ${frac.toFixed(4)}); --pair-h-m: calc((100cqw - var(--gap)) * ${(frac / ar(it)).toFixed(4)})`;
 					};
 					return (
 						<div class="block cluster reveal">
@@ -901,8 +909,13 @@ const galleryClass = (b: Laid) => {
 		opacity: 1;
 	}
 	@media (hover: none) {
+		/* no hover on a touch screen: the caption sits under the picture as a small line */
 		.hover-cap {
+			position: static;
 			opacity: 1;
+			padding: 8px 0 0;
+			background: none;
+			color: var(--muted);
 		}
 	}
 	.col > :global(.block:last-child) {
@@ -911,7 +924,8 @@ const galleryClass = (b: Laid) => {
 
 	@media (max-width: 800px) {
 		.mag {
-			row-gap: 40px;
+			grid-template-columns: repeat(24, minmax(0, 1fr)); /* finer steps for picture pairs */
+			row-gap: clamp(16px, 4vw, 24px); /* the same breath between rows as between a pair */
 		}
 		[class*='pair-after'],
 		[class*='pair-before'] {
@@ -923,9 +937,9 @@ const galleryClass = (b: Laid) => {
 		/* Two pictures that share a row on the desktop keep sharing it: half the width each,
 		   the same height, bottoms level */
 		.mag > .cell.fit {
-			grid-column: span 6 !important;
+			grid-column: span var(--span-m, 12) !important;
 		}
-		.cell.fit .media {
+		.cell.fit :global(.media) {
 			height: var(--fit-h-m);
 			width: 100%;
 			max-width: none;
@@ -966,7 +980,7 @@ const galleryClass = (b: Laid) => {
 		.cluster {
 			display: flex;
 			flex-wrap: wrap;
-			gap: var(--gap);
+			gap: clamp(16px, 4vw, 24px) var(--gap);
 		}
 		.cluster .cell-flex {
 			flex: 0 0 100%;
@@ -975,12 +989,11 @@ const galleryClass = (b: Laid) => {
 			height: auto;
 		}
 		.cluster .cell-flex.pair {
-			flex: 0 0 calc(50% - var(--gap) / 2);
+			flex: 0 0 var(--pair-w-m);
 		}
 		.cluster .cell-flex.pair :global(.media) {
 			height: var(--pair-h-m);
 			width: 100%;
-			object-fit: cover;
 		}
 		.jrow .cell-flex {
 			flex: 1 1 calc(50% - 12px) !important;

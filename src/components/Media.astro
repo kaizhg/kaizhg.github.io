@@ -35,7 +35,7 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 			poster={block.poster}
 			width={block.width}
 			height={block.height}
-			style={block.lqip ? `background-image: url(${block.lqip})` : undefined}
+			style={block.tone ? `background-color: ${block.tone}` : undefined}
 			autoplay
 			muted
 			loop
@@ -73,18 +73,14 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 	.media.alpha {
 		background: transparent;
 	}
-	/* Black line art (logos, diagrams) reads as white on the dark theme */
-	@media (prefers-color-scheme: dark) {
-		.media.ink {
-			filter: invert(1);
-		}
-	}
 	/* A blurred 24px stand-in sits behind the picture (inline background-image) and the real
 	   file focuses in over it: blurred while loading, sharp once decoded */
 	.media[style*='background-image'] {
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 	}
+
 	img[data-fade] {
 		transition: filter 0.35s ease;
 	}
