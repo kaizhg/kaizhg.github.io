@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>What does a virus look like when it designs itself?</h2>"
+  },
+  {
    "type": "image",
    "src": "homovirus/homovirus_01.jpg",
    "width": 2400,

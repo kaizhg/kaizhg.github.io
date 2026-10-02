@@ -31,6 +31,9 @@ hero: mix-museum-guide_hero.jpg    # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
+
+# What if the museum guide walked beside you?
+
 ![](mix-museum-guide_01.jpg) full
 
 ![](mix-museum-guide_02.jpg) half-l

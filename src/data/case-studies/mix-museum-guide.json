@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>What if the museum guide walked beside you?</h2>"
+  },
+  {
    "type": "image",
    "src": "mix-museum-guide/mix-museum-guide_01.jpg",
    "width": 2400,

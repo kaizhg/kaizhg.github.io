@@ -5,6 +5,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Can jewelry be grown rather than drawn?</h2>"
+  },
+  {
    "type": "row",
    "columns": [
     {

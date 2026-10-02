@@ -30,6 +30,9 @@ hover: hyperslice_hover.mp4        # 鼠标悬停时换成的图或循环视频
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
+
+# Can an image model interpolate 3D form?
+
 ![](hyperslice_02.jpg) narrow-l
 
 This project aims to integrate AI 2D-interpolation techniques into the 3D design process. It involves retrieving geometric sections from a specified slicing axis, and using an interpolation model to explore the latent space between the cross sections. {beside-r}

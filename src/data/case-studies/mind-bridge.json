@@ -13,18 +13,14 @@
  "blocks": [
   {
    "type": "text",
-   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2><p>A reflection on technology and post-covid time.</p>",
-   "kind": "text"
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Do we still remember how the 'Face-to-face' interaction feels?</h2>"
   },
   {
-   "type": "image",
-   "src": "mind-bridge/mind-bridge_01.jpg",
-   "width": 2400,
-   "height": 1600,
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYEBQf/xAAlEAACAQMCBQUAAAAAAAAAAAABAgMABBEFEgYTITGRIiMyQWH/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/EABgRAAMBAQAAAAAAAAAAAAAAAAABEQJB/9oADAMBAAIRAxEAPwC0teM9PnvBFy7hQxwGIyPAqfqGovLZSpp6u0rIwVwvRSOnmlLh6CBpZrkqFUnaoIzj8zT7EVECALgMoOFHSomKRUzxNBe3MlzctJK0frAR9u/7+XeinG4tOQ6+4vLc4Cs8P//Z",
-   "tone": "#aca4a1",
-   "layout": "full",
-   "kind": "photo"
+   "type": "text",
+   "html": "<p>A reflection on technology and post-covid time.</p>",
+   "kind": "text"
   },
   {
    "type": "image",

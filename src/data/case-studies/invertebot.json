@@ -18,6 +18,12 @@
    "layout": "credits"
   },
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Can a robot be built from folds and Mylar instead of joints?</h2>"
+  },
+  {
    "type": "row",
    "columns": [
     {

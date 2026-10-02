@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Can an image model interpolate 3D form?</h2>"
+  },
+  {
    "type": "image",
    "src": "hyperslice/hyperslice_02.jpg",
    "width": 1920,

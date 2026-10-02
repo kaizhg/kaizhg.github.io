@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>Sketches, but in Grasshopper.</h2>"
+  },
+  {
    "type": "image",
    "src": "made-in-gh/made-in-gh_01.png",
    "width": 2400,

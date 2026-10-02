@@ -10,7 +10,14 @@
   "tone": "#253552"
  },
  "locked": false,
- "blocks": [],
+ "blocks": [
+  {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>How should a speaker speak with light?</h2>"
+  }
+ ],
  "cover": {
   "type": "image",
   "src": "sound-x/sound-x_cover.jpg",

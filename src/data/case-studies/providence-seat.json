@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>How should a station seat make the wait worth it?</h2>"
+  },
+  {
    "type": "image",
    "src": "providence-seat/providence-seat_01.jpg",
    "width": 2400,

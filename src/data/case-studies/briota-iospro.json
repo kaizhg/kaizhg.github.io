@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>How does a breathing test become a product instead of a lab instrument?</h2>"
+  },
+  {
    "type": "image",
    "src": "briota-iospro/briota-iospro_01.jpg",
    "width": 1860,

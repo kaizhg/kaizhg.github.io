@@ -13,6 +13,12 @@
  "blocks": [
   {
    "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>What happens when two patterns intersect in a room?</h2>"
+  },
+  {
+   "type": "text",
    "kind": "section",
    "layout": "section",
    "html": "<h2>Pattern studies</h2>"

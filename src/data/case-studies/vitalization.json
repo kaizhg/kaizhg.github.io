@@ -11,6 +11,12 @@
    "layout": "credits"
   },
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>What if infrastructure were flesh?</h2>"
+  },
+  {
    "type": "row",
    "columns": [
     {
@@ -32,7 +38,7 @@
      "blocks": [
       {
        "type": "text",
-       "html": "<h3>This project aims to explore the vitality of complex piping and cable systems by transforming them into organic, fleshy, and alive structure using runwayML.</h3><p>The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.</p>",
+       "html": "<p>This project explores the vitality of complex piping and cable systems by transforming them into organic, fleshy, living structures with runwayML. The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.</p>",
        "kind": "text"
       }
      ]

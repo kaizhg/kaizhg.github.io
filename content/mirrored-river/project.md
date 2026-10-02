@@ -1,7 +1,7 @@
 ---
 title: Mirrored River              # 标题
 year: 2019                         # 年份（页面上的编号就是它）
-summary: Sculpture                 # 一句话类型，首页 tile 和列表里显示
+summary: River sculpture in stone and steel
 group: archive                     # selected 或 archive
 position: 23                       # 在所属组里排第几
 discipline: AR                     # 旧分类，现在不显示，可忽略
@@ -29,7 +29,7 @@ cover: mirrored-river_cover.jpg    # 首页封面（32:25 裁切）
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-### A river made out of stone, heavy metal, and lives.
+# A river made out of stone, heavy metal, and lives.
 
 [See more about this project →](https://cmao58.wixsite.com/mirroredriver)
 

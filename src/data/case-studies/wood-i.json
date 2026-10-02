@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>Wood, by hand first.</h2>"
+  },
+  {
    "type": "image",
    "src": "wood-i/wood-i_01.jpg",
    "width": 2400,

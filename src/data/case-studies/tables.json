@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Can one algorithm make an endless family of tables?</h2>"
+  },
+  {
    "type": "image",
    "src": "tables/tables_01.jpg",
    "width": 2400,

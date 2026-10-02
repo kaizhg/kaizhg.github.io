@@ -513,7 +513,10 @@ const galleryClass = (b: Laid) => {
 	.stagger {
 		margin-top: clamp(28px, 6vw, 96px);
 	}
-	.cell > :global(.block:last-child) {
+	/* The last block in a cell carries no bottom margin (Astro may place a <script> after the
+	   first media figure of a page, so the figure right before a trailing script counts too) */
+	.cell > :global(.block:last-child),
+	.cell > :global(.block:has(+ script:last-child)) {
 		margin-bottom: 0;
 	}
 

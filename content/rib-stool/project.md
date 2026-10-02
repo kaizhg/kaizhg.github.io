@@ -1,7 +1,7 @@
 ---
 title: Rib Stool                   # 标题
 year: 2022                         # 年份（页面上的编号就是它）
-summary: Lightweight stool         # 一句话类型，首页 tile 和列表里显示
+summary: Vacuum-formed stool with structural ribs
 group: archive                     # selected 或 archive
 position: 17                       # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -30,7 +30,9 @@ hero: rib-stool_hero.png           # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-### Intentionally create a rib in the vacuum forming process, and use it as a structural reinforcement.
+# What if the flaw in vacuum forming became the structure?
+
+Intentionally create a rib in the vacuum forming process, and use it as a structural reinforcement.
 
 [gallery grid2 @3-11] rib-stool_01.jpg rib-stool_02.jpg
 

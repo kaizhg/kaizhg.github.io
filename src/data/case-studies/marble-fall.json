@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Can four players grow one marble run in AR?</h2>"
+  },
+  {
    "type": "image",
    "src": "marble-fall/marble-fall_01.jpg",
    "width": 2400,

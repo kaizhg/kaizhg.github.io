@@ -40,6 +40,9 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
+
+# Can a robot be built from folds and Mylar instead of joints?
+
 ![](invertebot_01.jpg) | ![](invertebot_02.jpg)
 
 ![](invertebot_03.jpg) full

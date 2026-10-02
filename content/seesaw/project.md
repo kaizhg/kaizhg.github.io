@@ -8,7 +8,7 @@ discipline: IX                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/seesaw # 旧网站地址，仅备查
 cover: seesaw_cover.jpg            # 首页封面（32:25 裁切）
 hover: seesaw_hover.jpg            # 鼠标悬停时换成的图或循环视频
-hero: seesaw_hero.jpg              # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
+hero: inline                       # 顶部不放大图，图在正文里
 credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
   Course: Interaction Intelligence, Spring 2023
   Instructor: Marcelo Coelho
@@ -36,9 +36,13 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-## How to make a simple '1D' game that encourages physical collaborations?
+# How to make a simple '1D' game that encourages physical collaborations?
 
+[row 0.55 0.45]
+![](seesaw_hero.jpg)
+|
 See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.
+[/row]
 
 ![](seesaw_01.jpg) half-l
 

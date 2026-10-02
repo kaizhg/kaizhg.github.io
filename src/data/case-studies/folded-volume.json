@@ -5,6 +5,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>Volume from a single fold.</h2>"
+  },
+  {
    "type": "image",
    "src": "folded-volume/folded-volume_01.jpg",
    "width": 2400,

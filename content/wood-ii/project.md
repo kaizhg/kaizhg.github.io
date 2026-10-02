@@ -1,7 +1,7 @@
 ---
 title: Wood II                     # 标题
 year: 2019                         # 年份（页面上的编号就是它）
-summary: Wood manipulation with machine tools # 一句话类型，首页 tile 和列表里显示
+summary: Turned and stacked wood vessels
 group: archive                     # selected 或 archive
 position: 19                       # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -29,6 +29,9 @@ hero: wood-ii_hero.jpg             # 项目页顶部大图；没有这行就用�
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# Turned, cut, stacked: wood on machines.
 
 ![](wood-ii_01.jpg) wide-l
 

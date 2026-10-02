@@ -1,7 +1,7 @@
 ---
 title: Intersect                   # 标题
 year: 2022                         # 年份（页面上的编号就是它）
-summary: Public restroom design    # 一句话类型，首页 tile 和列表里显示
+summary: Pattern-driven public restroom design
 group: archive                     # selected 或 archive
 position: 15                       # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -28,6 +28,9 @@ cover: intersect_cover.jpg         # 首页封面（32:25 裁切）
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# What happens when two patterns intersect in a room?
 
 [section] Pattern studies
 

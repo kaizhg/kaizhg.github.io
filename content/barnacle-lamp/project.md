@@ -1,7 +1,7 @@
 ---
 title: Barnacle Lamp               # 标题
 year: 2019                         # 年份（页面上的编号就是它）
-summary: Lamp                      # 一句话类型，首页 tile 和列表里显示
+summary: Laser-cut paper lamp grown from a barnacle pattern
 group: archive                     # selected 或 archive
 position: 16                       # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -28,6 +28,9 @@ cover: barnacle-lamp_cover.jpg     # 首页封面（32:25 裁切）
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# Can one sheet of paper grow like a barnacle?
 
 ![](barnacle-lamp_01.jpg) full
 

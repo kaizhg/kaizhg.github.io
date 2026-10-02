@@ -1,7 +1,7 @@
 ---
 title: MIX Headset                 # 标题
 year: 2018                         # 年份（页面上的编号就是它）
-summary: SolidWorks practice       # 一句话类型，首页 tile 和列表里显示
+summary: Mixed reality headset, SolidWorks study
 group: archive                     # selected 或 archive
 position: 22                       # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -28,6 +28,9 @@ cover: mix-headset_cover.jpg       # 首页封面（32:25 裁切）
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# A headset modeled to learn the tool.
 
 Some very basic modeling and rendering that I did back in sophomore year.\
 Just for archive purpose. I took Microsoft Hololens as the reference.

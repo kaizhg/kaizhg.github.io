@@ -5,6 +5,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>First breaths into hot glass.</h2>"
+  },
+  {
    "type": "image",
    "src": "being-contained/being-contained_01.jpg",
    "width": 2400,

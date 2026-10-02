@@ -1,7 +1,7 @@
 ---
 title: Neurodynamic                # 标题
 year: 2019                         # 年份（页面上的编号就是它）
-summary: Speculative wearable      # 一句话类型，首页 tile 和列表里显示
+summary: Speculative wearable for neurotransmitter exchange
 group: archive                     # selected 或 archive
 position: 9                        # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略

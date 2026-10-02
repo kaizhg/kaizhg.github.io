@@ -8,6 +8,9 @@ discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/transform # 旧网站地址，仅备查
 cover: transform_cover.mp4         # 首页封面（32:25 裁切）
 hero: transform_hero.mp4           # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
+credits:
+  Course: SCI-6476 Transformable Design Methods
+  Instructor: Chuck Hoberman
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
@@ -29,6 +32,9 @@ hero: transform_hero.mp4           # 项目页顶部大图；没有这行就用�
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# How do you design a structure that moves, before building it?
 
 [row 0.305 0.695]
 ### Abstract

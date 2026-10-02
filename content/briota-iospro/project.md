@@ -1,7 +1,7 @@
 ---
 title: Briota IOSPro               # 标题
 year: 2023                         # 年份（页面上的编号就是它）
-summary: Impulse oscillometry product design # 一句话类型，首页 tile 和列表里显示
+summary: Housing design for a respiratory diagnostic device
 group: archive                     # selected 或 archive
 position: 6                        # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
@@ -11,6 +11,8 @@ hover: briota-iospro_hover.jpg     # 鼠标悬停时换成的图或循环视频
 hero: briota-iospro_hero.jpg       # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 deck: true                         # 整页都是幻灯片
 ---
+
+# How does a breathing test become a product instead of a lab instrument?
 
 ![](briota-iospro_01.jpg) full
 

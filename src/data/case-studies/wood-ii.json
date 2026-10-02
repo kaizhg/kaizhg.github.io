@@ -12,6 +12,12 @@
  "locked": false,
  "blocks": [
   {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>Turned, cut, stacked: wood on machines.</h2>"
+  },
+  {
    "type": "image",
    "src": "wood-ii/wood-ii_01.jpg",
    "width": 2400,

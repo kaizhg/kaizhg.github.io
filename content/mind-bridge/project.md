@@ -30,11 +30,9 @@ hover: mind-bridge_hover.jpg       # 鼠标悬停时换成的图或循环视频
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-## Do we still remember how the 'Face-to-face' interaction feels?
+# Do we still remember how the 'Face-to-face' interaction feels?
 
 A reflection on technology and post-covid time.
-
-![](mind-bridge_01.jpg) full
 
 ![](mind-bridge_02.jpg) half-l
 

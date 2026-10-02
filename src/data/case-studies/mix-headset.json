@@ -13,6 +13,12 @@
  "blocks": [
   {
    "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>A headset modeled to learn the tool.</h2>"
+  },
+  {
+   "type": "text",
    "html": "<p>Some very basic modeling and rendering that I did back in sophomore year.<br>Just for archive purpose. I took Microsoft Hololens as the reference.</p>",
    "kind": "text"
   },

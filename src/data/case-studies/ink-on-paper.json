@@ -13,6 +13,12 @@
  "blocks": [
   {
    "type": "text",
+   "kind": "section",
+   "layout": "quote",
+   "html": "<h2>Everything starts on paper.</h2>"
+  },
+  {
+   "type": "text",
    "html": "<p>Most of the drawings are drawn on paper, scanned, and colored with digital tool.</p>",
    "kind": "text"
   },

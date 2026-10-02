@@ -13,6 +13,12 @@
  "blocks": [
   {
    "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>What does it take to print eyelashes at production scale?</h2>"
+  },
+  {
+   "type": "text",
    "html": "<h3>3D Printed Eye Lashes R&amp;D.<br>Now available at <a href=\"https://tadbeauty.com/\">TAD Beauty</a>.</h3>",
    "kind": "text"
   },

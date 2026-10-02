@@ -1,7 +1,7 @@
 ---
 title: Ink on Paper                # 标题
 year: 1999                         # 年份（页面上的编号就是它）
-summary: Drawings and sketches     # 一句话类型，首页 tile 和列表里显示
+summary: Drawings, posters, and sketchbook pages
 group: archive                     # selected 或 archive
 position: 3                        # 在所属组里排第几
 discipline: AR                     # 旧分类，现在不显示，可忽略
@@ -29,6 +29,9 @@ hero_width: half                  # 顶图一半宽
 
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
+
+
+# Everything starts on paper.
 
 Most of the drawings are drawn on paper, scanned, and colored with digital tool.
 
