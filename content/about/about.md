@@ -5,3 +5,6 @@
 # 第一行的照片放最上面，其余按顺序往下排。存盘后页面自动更新；想暂时不显示，删掉那一行就行，文件留着没关系。
 
 ![](about_01.jpg "Biking near a local market in Chiang Mai, Thailand. I was having a relaxing time; I don't know why my face looks so serious.")
+![](about_02.jpg "Machine shop finds, 2024")
+![](about_03.jpg "On the ice, 2025")
+![](about_04.jpg "Waterfall, 2026")
