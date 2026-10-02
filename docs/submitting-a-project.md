@@ -133,5 +133,5 @@ credits:                           # 可选，有哪项写哪项，会显示在�
 ## 文件夹之外
 
 - 顺序：改 `position`。Selected 和 Archive 各自从 1 数。
-- 关于页、首页那句话、Life band 的词：还是找我改，它们不在 content 里。
+- About 页的照片：放进 `content/about/`，在那里的 `about.md` 里加一行（里面有说明）。About 的文字、首页那句话、Life band 的词：还是找我改。
 - 不要动 `src/` 里的 json，那是从 md 生成的，下次生成会覆盖。

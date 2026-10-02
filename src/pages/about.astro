@@ -1,7 +1,16 @@
 ---
 import { Image } from 'astro:assets';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import Base from '../layouts/Base.astro';
-import portrait from '../assets/about.jpg';
+import { workImage } from '../data/case-studies';
+
+// Photos come from content/about/about.md: one `![](file "caption")` line per picture
+const photos = readFileSync(join(process.cwd(), 'content/about/about.md'), 'utf8')
+	.split('\n')
+	.map((l) => l.match(/^!\[\]\(([^)\s]+)(?:\s+"([^"]*)")?\)/))
+	.filter((m): m is RegExpMatchArray => !!m)
+	.map((m) => ({ src: workImage(`about/${m[1]}`), caption: m[2] ?? '' }));
 ---
 
 <Base title="About" description="Kai Zhang — computational and industrial designer. RISD ID, Harvard GSD. Based in Seattle.">
@@ -55,13 +64,22 @@ import portrait from '../assets/about.jpg';
 			</dl>
 		</div>
 
-		<figure class="photo reveal">
-			<Image src={portrait} alt="Kai biking past a market in Chiang Mai" widths={[720, 1200, 1800]} sizes="(max-width: 900px) 100vw, 50vw" loading="eager" />
-			<figcaption>
-				Biking near a local market in Chiang Mai, Thailand. I was having a relaxing time; I don't know
-				why my face looks so serious.
-			</figcaption>
-		</figure>
+		<div class:list={['photos', { single: photos.length === 1 }]}>
+			{
+				photos.map((ph, i) => (
+					<figure class="photo reveal">
+						<Image
+							src={ph.src}
+							alt={ph.caption || 'Kai Zhang'}
+							widths={[720, 1200, 1800]}
+							sizes="(max-width: 900px) 100vw, 50vw"
+							loading={i === 0 ? 'eager' : 'lazy'}
+						/>
+						{ph.caption && <figcaption>{ph.caption}</figcaption>}
+					</figure>
+				))
+			}
+		</div>
 	</section>
 </Base>
 
@@ -78,11 +96,19 @@ import portrait from '../assets/about.jpg';
 		grid-column: 1 / 6;
 		max-width: 34rem;
 	}
-	.photo {
+	.photos {
 		grid-column: 7 / 13;
-		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: clamp(24px, 2.6vw, 40px);
+	}
+	/* A lone portrait rides along while the text scrolls; a set of photos just stacks */
+	.photos.single {
 		position: sticky;
 		top: 32px;
+	}
+	.photo {
+		margin: 0;
 	}
 	.photo :global(img) {
 		width: 100%;
@@ -140,10 +166,10 @@ import portrait from '../assets/about.jpg';
 	}
 	@media (max-width: 900px) {
 		.text,
-		.photo {
+		.photos {
 			grid-column: 1 / -1;
 		}
-		.photo {
+		.photos {
 			position: static;
 			order: -1;
 		}
