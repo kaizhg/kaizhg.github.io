@@ -15,7 +15,7 @@ const photos = readFileSync(join(process.cwd(), 'content/about/about.md'), 'utf8
 
 <Base title="About" description="Kai Zhang — computational and industrial designer. RISD ID, Harvard GSD. Based in Seattle.">
 	<section class="about">
-		<div class="text">
+		<div class:list={['text', { pinned: photos.length > 1 }]}>
 			<h1>
 				I'm Kai Zhang, a computational and industrial designer. Born and raised in Shenzhen, now
 				based in Seattle.
@@ -67,7 +67,7 @@ const photos = readFileSync(join(process.cwd(), 'content/about/about.md'), 'utf8
 		<div class:list={['photos', { single: photos.length === 1 }]}>
 			{
 				photos.map((ph, i) => (
-					<figure class="photo reveal">
+					<figure class:list={['photo', 'reveal', { wide: ph.src.width > ph.src.height }]}>
 						<Image
 							src={ph.src}
 							alt={ph.caption || 'Kai Zhang'}
@@ -96,19 +96,26 @@ const photos = readFileSync(join(process.cwd(), 'content/about/about.md'), 'utf8
 		grid-column: 1 / 6;
 		max-width: 34rem;
 	}
+	/* Photos: landscapes take the whole column, portraits sit in pairs */
 	.photos {
 		grid-column: 7 / 13;
-		display: flex;
-		flex-direction: column;
-		gap: clamp(24px, 2.6vw, 40px);
-	}
-	/* A lone portrait rides along while the text scrolls; a set of photos just stacks */
-	.photos.single {
-		position: sticky;
-		top: 32px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: clamp(16px, 1.6vw, 24px);
+		align-items: start;
 	}
 	.photo {
 		margin: 0;
+	}
+	.photo.wide {
+		grid-column: 1 / -1;
+	}
+	/* One side stays put while the other scrolls: a lone portrait rides along with the text,
+	   a set of photos scrolls past the pinned text */
+	.photos.single,
+	.text.pinned {
+		position: sticky;
+		top: 32px;
 	}
 	.photo :global(img) {
 		width: 100%;
@@ -169,8 +176,11 @@ const photos = readFileSync(join(process.cwd(), 'content/about/about.md'), 'utf8
 		.photos {
 			grid-column: 1 / -1;
 		}
-		.photos {
+		.photos,
+		.text.pinned {
 			position: static;
+		}
+		.photos {
 			order: -1;
 		}
 	}
