@@ -77,8 +77,13 @@ const smallFacts = credits.filter((c) => c !== roleFact);
 let lead: string | null = null;
 const first = blocks[0];
 const firstText = first?.type === 'text' ? first.html.replace(/<[^>]+>/g, ' ').trim() : '';
-// Statements (kind 'quote') stay in the body so they read the same on every page
-if (first?.type === 'text' && first.kind !== 'section' && first.kind !== 'quote' && (/<p>/.test(first.html) || firstText.length >= 40)) {
+// A statement (kind 'quote') sits in the body under the top picture; when there is no top
+// picture it takes the lead position beside the title instead, so two headlines never stack.
+const heroShown = !!study?.hero;
+if (first?.type === 'text' && first.kind === 'quote' && !heroShown) {
+	lead = first.html;
+	blocks = blocks.slice(1);
+} else if (first?.type === 'text' && first.kind !== 'section' && first.kind !== 'quote' && (/<p>/.test(first.html) || firstText.length >= 40)) {
 	lead = first.html;
 	blocks = blocks.slice(1);
 }

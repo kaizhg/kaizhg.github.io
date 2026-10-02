@@ -34,8 +34,7 @@ hover: eyelash_hover.jpg           # 鼠标悬停时换成的图或循环视频
 
 # What does it take to print eyelashes at production scale?
 
-### 3D Printed Eye Lashes R&D.\
-Now available at [TAD Beauty](https://tadbeauty.com/).
+R&D on 3D-printed eyelashes at OPT Industries, now available at [TAD Beauty](https://tadbeauty.com/).
 
 [row 0.615 0.385]
 ![](eyelash_01.jpg)
