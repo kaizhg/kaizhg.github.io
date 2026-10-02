@@ -9,14 +9,14 @@ legacy: https://kaizhang.io/os-11  # 旧网站地址，仅备查
 cover: os-11_cover.jpg             # 首页封面（32:25 裁切）
 hover: os-11_hover.jpg             # 鼠标悬停时换成的图或循环视频
 hero: os-11_hero.jpg               # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
-credits_notes:                     # 不属于固定栏目的 credits 文字，一行一条
-  - Harvard Graduate School of Design,
-  - "Master in Design Studies: Open Project"
-  - Operating System_1.1
-  - Sarah Oppenheimer Instructor
-  - Claire GlassTA
-  - Team members (in the alphabetic order）
-  - Alexia Asgari, Selin Dursun, Skye Gao, Danning Liang, Quincy Kuang, Kai Zhang
+credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
+  Course: "MDes Open Project: Operating System_1.1, Harvard GSD"
+  Instructor: Sarah Oppenheimer
+  Thanks: Claire Glass (TA)
+  Team: Alexia Asgari, Selin Dursun, Skye Gao, Danning Liang, Quincy Kuang, Kai Zhang
+  # Role:                          # 你在小组里负责的部分，一条一行，写好后把前面的 # 去掉
+  #   - …
+  #   - …
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
