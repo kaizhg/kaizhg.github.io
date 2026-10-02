@@ -888,6 +888,9 @@ const galleryClass = (b: Laid) => {
 	}
 	.gallery.plates .cell-flex :global(.media) {
 		object-fit: contain;
+		/* the plate is the backdrop: no stand-in or tone may show in the letterbox of a clip */
+		background-image: none !important;
+		background-color: transparent !important;
 	}
 	/* Captions from the old site: appear on hover, always shown on touch screens */
 	.hover-cap {
