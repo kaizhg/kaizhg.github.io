@@ -21,7 +21,7 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 			widths={[...new Set([640, 1024, 1600, 2400, block.width].filter((w) => w <= block.width))]}
 			sizes={sizes}
 			loading={eager ? 'eager' : 'lazy'}
-			class:list={['media', { alpha: /\.png$/i.test(block.src), portrait }]}
+			class:list={['media', { alpha: /\.png$/i.test(block.src), ink: block.ink, portrait }]}
 			style={[block.maxWidth ? `max-width: ${block.maxWidth}px` : '', block.lqip ? `background-image: url(${block.lqip})` : ''].filter(Boolean).join('; ') || undefined}
 			data-fade={block.lqip ? '' : undefined}
 		/>
@@ -72,6 +72,12 @@ const { block, alt = '', sizes = '(max-width: 1400px) 100vw, 1400px', eager = fa
 	/* Cut-outs (PNG with transparency) sit straight on the page, no tint behind them */
 	.media.alpha {
 		background: transparent;
+	}
+	/* Black line art (logos, diagrams) reads as white on the dark theme */
+	@media (prefers-color-scheme: dark) {
+		.media.ink {
+			filter: invert(1);
+		}
 	}
 	/* A blurred 24px stand-in sits behind the picture (inline background-image) and the real
 	   file focuses in over it: blurred while loading, sharp once decoded */

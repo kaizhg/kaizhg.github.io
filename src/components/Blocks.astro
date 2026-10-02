@@ -611,6 +611,9 @@ const galleryClass = (b: Laid) => {
 	.col .text.quote + .text {
 		margin-top: calc(-1 * clamp(24px, 3vw, 40px) + 18px);
 	}
+	.text.quote {
+		overflow-wrap: break-word; /* a long number in a statement must not push the page sideways */
+	}
 	.quote .text :global(h2),
 	.quote .text :global(h3),
 	.quote .text :global(p) {
@@ -904,7 +907,10 @@ const galleryClass = (b: Laid) => {
 			padding: 0;
 		}
 		.mag > .cell {
-			grid-column: 1 / -1;
+			grid-column: 1 / -1 !important; /* also the @a-b cells, which carry an inline column */
+		}
+		.cell.fit .media {
+			height: auto; /* the shared height of a pair means nothing once the pair has stacked */
 		}
 		.stagger,
 		.row.stagger .col:nth-child(2) {
@@ -949,12 +955,32 @@ const galleryClass = (b: Laid) => {
 		.jrow .cell-flex {
 			flex: 1 1 calc(50% - 12px) !important;
 		}
-		.gallery.grid4,
+		.gallery.grid4 {
+			grid-template-columns: repeat(2, minmax(0, 1fr)); /* 4-ups become 2×2, never 3+1 */
+		}
 		.gallery.grid5 {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
+		.gallery.grid5:has(> :nth-child(6)) {
+			grid-template-columns: repeat(2, minmax(0, 1fr)); /* big sets pair up instead of leaving an orphan */
+		}
+		/* A justified row of only two pictures stacks instead of showing two thumbnails */
+		.jrow:not(:has(> :nth-child(3))) .cell-flex {
+			flex-basis: 100% !important;
+		}
 		.col > :global(.block:last-child) {
 			margin-bottom: clamp(24px, 3vw, 40px);
+		}
+		/* Opener columns: the words keep their spacing once the row has stacked */
+		.row.spread .col:first-child > :global(.block) {
+			margin-bottom: 24px;
+		}
+		.col .text.quote + .text {
+			margin-top: 0;
+		}
+		.row.spread .col:last-child :global(figcaption) {
+			position: static;
+			text-align: left;
 		}
 	}
 </style>

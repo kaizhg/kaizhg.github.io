@@ -385,6 +385,15 @@ def _lqip_make(path):
         if im.mode == 'P':
             im = im.convert('RGBA')
         if im.mode in ('RGBA', 'LA') and im.getchannel('A').getextrema()[0] < 250:
+            # a cut-out: no stand-in, but note dark, colourless line art (logos, diagrams)
+            small = im.convert('RGBA').copy()
+            small.thumbnail((200, 200))
+            px = [p for p in small.getdata() if p[3] > 200]
+            if px and len(px) < 0.4 * small.size[0] * small.size[1]:
+                lum = sum(p[0] + p[1] + p[2] for p in px) / (3 * len(px))
+                sat = sum(max(p[:3]) - min(p[:3]) for p in px) / len(px)
+                if lum < 110 and sat < 12:
+                    return {'ink': True}
             return None
         im = im.convert('RGB')
         im.thumbnail((24, 24))
@@ -412,6 +421,8 @@ def media_block(folder, slug, name, caption=None):
         tiny = lqip(path)
         if tiny:
             b.update(tiny)
+        if b.get('lqip') is None and 'lqip' in b:
+            del b['lqip']
     elif ext == '.mp4':
         w, h = video_size(path)
         b = {'type': 'loop', 'src': f'/media/{slug}/{name}', 'width': w, 'height': h}

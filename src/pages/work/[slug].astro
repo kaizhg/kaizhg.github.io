@@ -434,4 +434,11 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 			order: -1;
 		}
 	}
+	@media (max-width: 800px) {
+		/* A narrowed top picture is a phone-wide picture */
+		.hero.wide > :global(*),
+		.hero.half > :global(*) {
+			grid-column: 1 / -1 !important;
+		}
+	}
 </style>

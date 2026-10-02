@@ -15,6 +15,8 @@ export interface ImageBlock {
 	/** Tiny blurred stand-in (data URL) shown until the picture loads, and its edge colour */
 	lqip?: string;
 	tone?: string;
+	/** Dark line art on a transparent ground: inverted on the dark theme */
+	ink?: boolean;
 }
 export interface LoopBlock {
 	type: 'loop';
