@@ -958,6 +958,9 @@ const galleryClass = (b: Laid) => {
 		.gallery.grid4 {
 			grid-template-columns: repeat(2, minmax(0, 1fr)); /* 4-ups become 2×2, never 3+1 */
 		}
+		.gallery.grid4:has(> :nth-child(3n):last-child) {
+			grid-template-columns: repeat(3, minmax(0, 1fr)); /* a count divisible by three fills three columns */
+		}
 		.gallery.grid5 {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
