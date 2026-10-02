@@ -85,6 +85,7 @@ let opener: any = null;
 if (study?.hero && !study.heroWidth && !study.heroCaption && isIntro(blocks[0])) {
 	const words: any[] = [blocks[0]];
 	if (isIntro(blocks[1]) && (blocks[0] as any).kind !== (blocks[1] as any).kind) words.push(blocks[1]);
+	words.sort((a, b) => (b.kind === 'quote' ? 1 : 0) - (a.kind === 'quote' ? 1 : 0)); // statement first
 	const portrait = study.hero.height > study.hero.width;
 	const picture = study.link ? { ...study.hero, href: study.link } : study.hero;
 	opener = { type: 'row', columns: [{ flex: portrait ? 0.4 : 0.5, blocks: [picture] }, { flex: portrait ? 0.6 : 0.5, blocks: words }] };

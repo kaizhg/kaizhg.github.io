@@ -597,7 +597,8 @@ const galleryClass = (b: Laid) => {
 		margin: 0;
 		text-wrap: balance;
 	}
-	.row .col > :global(.block:last-child) {
+	.row .col > :global(.block:last-child),
+	.row .col > :global(.block:has(+ script:last-child)) {
 		margin-bottom: 0;
 	}
 	.col .text.quote + .text {
