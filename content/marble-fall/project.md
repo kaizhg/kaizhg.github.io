@@ -32,7 +32,7 @@ hero: marble-fall_hero.jpg         # 项目页顶部大图；没有这行就用�
 -->
 
 
-# Can four players grow one marble run in AR?
+# One marble run, grown by four players in AR.
 
 ![](marble-fall_01.jpg) full
 

@@ -28,12 +28,6 @@
    "kind": "photo"
   },
   {
-   "type": "text",
-   "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>",
-   "layout": "credits",
-   "kind": "credits"
-  },
-  {
    "type": "image",
    "src": "tables/tables_02.jpg",
    "width": 1662,
@@ -174,6 +168,12 @@
     }
    ],
    "kind": "row"
+  },
+  {
+   "type": "text",
+   "html": "<p>All the works/image belong to Zhang Zhoujie and Endless form.</p>",
+   "layout": "credits",
+   "kind": "credits"
   }
  ],
  "cover": {

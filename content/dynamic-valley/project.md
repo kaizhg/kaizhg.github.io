@@ -31,7 +31,7 @@ hero: dynamic-valley_hero.mp4      # 项目页顶部大图；没有这行就用�
 -->
 
 
-# Can a body's motion leave a landscape behind?
+# A landscape left behind by a body in motion.
 
 ### 1. Create a conceptual visualization of the body motion {text-l}
 

@@ -32,7 +32,7 @@ hero: homovirus_hero.mp4           # 项目页顶部大图；没有这行就用�
 -->
 
 
-# What does a virus look like when it designs itself?
+# A virus that designs itself.
 
 ![](homovirus_01.jpg) full
 

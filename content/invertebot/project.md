@@ -41,7 +41,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 -->
 
 
-# Can a robot be built from folds and Mylar instead of joints?
+# A walking robot made of folds and Mylar, not joints.
 
 ![](invertebot_01.jpg) | ![](invertebot_02.jpg)
 

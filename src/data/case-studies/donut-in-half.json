@@ -13,9 +13,9 @@
  "blocks": [
   {
    "type": "text",
-   "kind": "section",
+   "kind": "quote",
    "layout": "quote",
-   "html": "<h2>What is inside an inflatable donut?</h2>"
+   "html": "<h2>An inflatable donut, cut open to see inside.</h2>"
   },
   {
    "type": "image",

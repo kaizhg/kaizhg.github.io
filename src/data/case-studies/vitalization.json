@@ -12,9 +12,9 @@
   },
   {
    "type": "text",
-   "kind": "section",
+   "kind": "quote",
    "layout": "quote",
-   "html": "<h2>What if infrastructure were flesh?</h2>"
+   "html": "<h2>Infrastructure, reimagined as flesh.</h2>"
   },
   {
    "type": "row",

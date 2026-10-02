@@ -30,7 +30,7 @@ hero: rib-stool_hero.png           # 项目页顶部大图；没有这行就用�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-# What if the flaw in vacuum forming became the structure?
+# A vacuum-forming flaw, turned into structure.
 
 Intentionally create a rib in the vacuum forming process, and use it as a structural reinforcement.
 

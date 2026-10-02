@@ -34,7 +34,7 @@ credits:
 -->
 
 
-# How do you design a structure that moves, before building it?
+# A tool that lets a structure move before it is built.
 
 [row 0.305 0.695]
 ### Abstract

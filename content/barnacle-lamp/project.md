@@ -30,7 +30,7 @@ cover: barnacle-lamp_cover.jpg     # 首页封面（32:25 裁切）
 -->
 
 
-# Can one sheet of paper grow like a barnacle?
+# One sheet of paper, grown like a barnacle.
 
 ![](barnacle-lamp_01.jpg) full
 

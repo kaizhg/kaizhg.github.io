@@ -31,7 +31,7 @@ hover: providence-seat_hover.jpg   # 鼠标悬停时换成的图或循环视频
 -->
 
 
-# How should a station seat make the wait worth it?
+# A station seat that makes the wait worth it.
 
 ![](providence-seat_01.jpg) full
 

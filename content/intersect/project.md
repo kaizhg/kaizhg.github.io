@@ -30,7 +30,7 @@ cover: intersect_cover.jpg         # 首页封面（32:25 裁切）
 -->
 
 
-# What happens when two patterns intersect in a room?
+# A room where two patterns intersect.
 
 [section] Pattern studies
 

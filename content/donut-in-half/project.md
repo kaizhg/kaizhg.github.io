@@ -30,7 +30,7 @@ cover: donut-in-half_cover.jpg     # 首页封面（32:25 裁切）
 -->
 
 
-# What is inside an inflatable donut?
+# An inflatable donut, cut open to see inside.
 
 ![](donut-in-half_01.jpg) full
 

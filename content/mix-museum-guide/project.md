@@ -32,7 +32,7 @@ hero: mix-museum-guide_hero.jpg    # 项目页顶部大图；没有这行就用�
 -->
 
 
-# What if the museum guide walked beside you?
+# A museum guide that walks beside you.
 
 ![](mix-museum-guide_01.jpg) full
 

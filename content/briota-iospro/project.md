@@ -12,7 +12,7 @@ hero: briota-iospro_hero.jpg       # 项目页顶部大图；没有这行就用�
 deck: true                         # 整页都是幻灯片
 ---
 
-# How does a breathing test become a product instead of a lab instrument?
+# A breathing test shaped as a product, not a lab instrument.
 
 ![](briota-iospro_01.jpg) full
 

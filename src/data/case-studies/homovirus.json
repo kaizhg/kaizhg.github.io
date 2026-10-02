@@ -13,9 +13,9 @@
  "blocks": [
   {
    "type": "text",
-   "kind": "quote",
+   "kind": "section",
    "layout": "quote",
-   "html": "<h2>What does a virus look like when it designs itself?</h2>"
+   "html": "<h2>A virus that designs itself.</h2>"
   },
   {
    "type": "image",

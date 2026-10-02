@@ -34,7 +34,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-# What if infrastructure were flesh?
+# Infrastructure, reimagined as flesh.
 
 [row 0.55 0.45]
 ![](vitalization_03.jpg)
