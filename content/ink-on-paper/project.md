@@ -7,6 +7,7 @@ position: 3                        # 在所属组里排第几
 discipline: AR                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/drawing # 旧网站地址，仅备查
 cover: ink-on-paper_cover.jpg      # 首页封面（32:25 裁切）
+hero_width: half                  # 顶图一半宽
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
@@ -39,8 +40,6 @@ Most of the drawings are drawn on paper, scanned, and colored with digital tool
 
 [gallery grid2 @3-11] ink-on-paper_10.jpg ink-on-paper_11.jpg
 
-![](ink-on-paper_12.jpg "Duomo di Milano, 2020")
-
 [gallery grid4 cols=4] ink-on-paper_13.jpg ink-on-paper_14.jpg ink-on-paper_15.jpg ink-on-paper_16.jpg
 
 [gallery cols=5] ink-on-paper_17.jpg "Bowling Demon, 2020" ink-on-paper_18.jpg "Happy Valentine, 2020" ink-on-paper_19.jpg "颓, 2020" ink-on-paper_20.jpg "Untitled, 2020" ink-on-paper_21.jpg "Virginity, 2020"
@@ -53,6 +52,6 @@ Most of the drawings are drawn on paper, scanned, and colored with digital tool
 
 [section] Sketchbook
 
-[gallery cols=4] ink-on-paper_31.jpg ink-on-paper_32.jpg ink-on-paper_33.jpg ink-on-paper_34.jpg ink-on-paper_35.jpg ink-on-paper_36.jpg ink-on-paper_37.jpg ink-on-paper_38.jpg ink-on-paper_39.jpg ink-on-paper_40.jpg ink-on-paper_41.jpg ink-on-paper_42.jpg ink-on-paper_43.jpg ink-on-paper_44.jpg
+[gallery cols=4] ink-on-paper_12.jpg "Duomo di Milano, 2020" ink-on-paper_31.jpg ink-on-paper_32.jpg ink-on-paper_33.jpg ink-on-paper_34.jpg ink-on-paper_35.jpg ink-on-paper_36.jpg ink-on-paper_37.jpg ink-on-paper_38.jpg ink-on-paper_39.jpg ink-on-paper_40.jpg ink-on-paper_41.jpg ink-on-paper_42.jpg ink-on-paper_43.jpg ink-on-paper_44.jpg
 
 This page only shows a very small percentage of all my drawings/sketches/doodles!

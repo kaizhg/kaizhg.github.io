@@ -1,0 +1,31 @@
+---
+/**
+ * Redirects for the old site's addresses (kaizhang.io/prismo → /work/prismo/), so links that
+ * are out in the world keep working once the domain points here.
+ */
+import { allProjects } from '../data/projects';
+
+export function getStaticPaths() {
+	const reserved = new Set(['about', 'archive', 'list', 'work']);
+	return allProjects
+		.map((p) => ({ legacy: new URL(p.legacyUrl).pathname.replace(/^\/|\/$/g, ''), slug: p.slug }))
+		.filter(({ legacy }) => legacy && !legacy.includes('/') && !reserved.has(legacy))
+		.map(({ legacy, slug }) => ({ params: { legacy }, props: { slug } }));
+}
+const { slug } = Astro.props;
+const to = `/work/${slug}/`;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content={`0; url=${to}`} />
+		<link rel="canonical" href={new URL(to, Astro.site)} />
+		<meta name="robots" content="noindex" />
+		<title>Redirecting…</title>
+	</head>
+	<body>
+		<p>This page has moved to <a href={to}>{new URL(to, Astro.site).href}</a>.</p>
+	</body>
+</html>

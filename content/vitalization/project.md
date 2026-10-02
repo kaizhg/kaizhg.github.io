@@ -7,6 +7,7 @@ position: 2                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/vitalization # 旧网站地址，仅备查
 cover: vitalization_cover.jpg      # 首页封面（32:25 裁切）
+hero: inline                       # 顶部不放大图，图在正文里
 credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
   Course: Neural Bodies, Spring 2023
   Instructor: Andrew Witt
@@ -33,14 +34,15 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
+[row 0.55 0.45]
+![](vitalization_03.jpg)
+|
 ### This project aims to explore the vitality of complex piping and cable systems by transforming them into organic, fleshy, and alive structure using runwayML.
 
 The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.
+[/row]
 
 ![](vitalization_01.jpg) wide-l
 
 ![](vitalization_02.jpg) wide-r stagger
 
-[section] Final Drawing
-
-![](vitalization_03.jpg) wide-c

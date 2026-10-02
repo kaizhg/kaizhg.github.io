@@ -126,14 +126,6 @@
    "kind": "gallery"
   },
   {
-   "type": "image",
-   "src": "ink-on-paper/ink-on-paper_12.jpg",
-   "width": 1242,
-   "height": 1573,
-   "caption": "Duomo di Milano, 2020",
-   "kind": "white"
-  },
-  {
    "type": "gallery",
    "items": [
     {
@@ -315,6 +307,14 @@
    "items": [
     {
      "type": "image",
+     "src": "ink-on-paper/ink-on-paper_12.jpg",
+     "width": 1242,
+     "height": 1573,
+     "caption": "Duomo di Milano, 2020",
+     "kind": "white"
+    },
+    {
+     "type": "image",
      "src": "ink-on-paper/ink-on-paper_31.jpg",
      "width": 1284,
      "height": 1797,
@@ -427,5 +427,6 @@
   "src": "ink-on-paper/ink-on-paper_cover.jpg",
   "width": 1759,
   "height": 1375
- }
+ },
+ "heroWidth": "half"
 }
