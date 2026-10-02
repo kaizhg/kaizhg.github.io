@@ -450,6 +450,13 @@ const galleryClass = (b: Laid) => {
 	.cell.credits {
 		padding-top: clamp(8px, 2vw, 32px);
 	}
+	/* A statement in the middle of a page gets air on both sides, beyond the grid's row gap */
+	.mag > .cell.quote:not(:first-child) {
+		margin-top: clamp(24px, 4vw, 64px);
+	}
+	.mag > .cell.quote {
+		margin-bottom: clamp(16px, 3vw, 48px);
+	}
 	.cell.intro .text :global(h2),
 	.cell.intro .text :global(h3) {
 		margin-bottom: 0.45em;
