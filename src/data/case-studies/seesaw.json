@@ -11,16 +11,10 @@
    "layout": "credits"
   },
   {
-   "type": "text",
-   "kind": "quote",
-   "layout": "quote",
-   "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2>"
-  },
-  {
    "type": "row",
    "columns": [
     {
-     "flex": 0.55,
+     "flex": 0.58,
      "blocks": [
       {
        "type": "image",
@@ -34,8 +28,14 @@
      ]
     },
     {
-     "flex": 0.45,
+     "flex": 0.42,
      "blocks": [
+      {
+       "type": "text",
+       "kind": "quote",
+       "layout": "quote",
+       "html": "<h2>How to make a simple '1D' game that encourages physical collaborations?</h2>"
+      },
       {
        "type": "text",
        "html": "<p>See Saw is a one-dimensional game that encourages collaboration between two players who share a single controller. As they slide along the rail, the players must maintain balance and overcome growing challenges. The project involves both software and hardware development. The game is coded within the p5js environment and receives data from Arduino via a serial port. This page will concentrate on the hardware design process.</p>",
@@ -63,7 +63,7 @@
    "height": 1602,
    "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAQABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAF/8QAJBAAAQMDAwQDAAAAAAAAAAAAAQACAxESIQQFFBMjUcExMkL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwDYM3aca0AGT4R8qA6Y6jq1iBoXXFPtLb2SPcKj6j2nOmhvEQhYI7TizFUyixm8gOYC3LT8HyFJt1jEbY5AKfk+AAAAHpSU/9k=",
    "tone": "#b4b4ba",
-   "layout": "half-r stagger",
+   "layout": "half-r",
    "kind": "photo"
   },
   {

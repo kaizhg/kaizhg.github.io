@@ -34,11 +34,11 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-# Infrastructure, reimagined as flesh.
-
-[row 0.55 0.45]
+[row 0.58 0.42]
 ![](vitalization_03.jpg)
 |
+# Infrastructure, reimagined as flesh.
+
 This project explores the vitality of complex piping and cable systems by transforming them into organic, fleshy, living structures with runwayML. The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.
 [/row]
 

@@ -73,24 +73,33 @@ while (blocks[0]?.type === 'text' && blocks[0].kind === 'credits') {
 const roleFact = credits.find((c) => c.key === 'Role');
 const smallFacts = credits.filter((c) => c !== roleFact);
 
-// The opening paragraph or statement becomes the lead next to the title, magazine style
+// Don't repeat the hero if the page opens with that same image
+const dupAt = blocks.findIndex((b, i) => i < 3 && 'src' in b && study?.hero && b.src === study.hero.src);
+if (dupAt >= 0) blocks = [...blocks.slice(0, dupAt), ...blocks.slice(dupAt + 1)];
+
+// Opener: when the page has a top picture and opens with a statement and/or an intro paragraph,
+// picture and words share one row (picture left, words right) instead of the picture running
+// full width with the words floating under it.
+const isIntro = (b: any) => b?.type === 'text' && b.kind !== 'section' && b.kind !== 'credits' && (b.kind === 'quote' || /<p>/.test(b.html));
+let opener: any = null;
+if (study?.hero && !study.heroWidth && !study.heroCaption && isIntro(blocks[0])) {
+	const words: any[] = [blocks[0]];
+	if (isIntro(blocks[1]) && (blocks[0] as any).kind !== (blocks[1] as any).kind) words.push(blocks[1]);
+	const portrait = study.hero.height > study.hero.width;
+	const picture = study.link ? { ...study.hero, href: study.link } : study.hero;
+	opener = { type: 'row', columns: [{ flex: portrait ? 0.4 : 0.5, blocks: [picture] }, { flex: portrait ? 0.6 : 0.5, blocks: words }] };
+	blocks = [opener, ...blocks.slice(words.length)];
+}
+const showHero = !!study?.hero && !opener;
+
+// Without a top picture, the opening statement or paragraph becomes the lead beside the title
 let lead: string | null = null;
 const first = blocks[0];
 const firstText = first?.type === 'text' ? first.html.replace(/<[^>]+>/g, ' ').trim() : '';
-// A statement (kind 'quote') sits in the body under the top picture; when there is no top
-// picture it takes the lead position beside the title instead, so two headlines never stack.
-const heroShown = !!study?.hero;
-if (first?.type === 'text' && first.kind === 'quote' && !heroShown) {
-	lead = first.html;
-	blocks = blocks.slice(1);
-} else if (first?.type === 'text' && first.kind !== 'section' && first.kind !== 'quote' && (/<p>/.test(first.html) || firstText.length >= 40)) {
+if (!study?.hero && first?.type === 'text' && first.kind !== 'section' && first.kind !== 'credits' && (first.kind === 'quote' || /<p>/.test(first.html) || firstText.length >= 40)) {
 	lead = first.html;
 	blocks = blocks.slice(1);
 }
-// Don't repeat the hero if the page opens with that same image
-const dup = blocks.findIndex((b, i) => i < 3 && 'src' in b && study?.hero && b.src === study.hero.src);
-if (dup >= 0) blocks = [...blocks.slice(0, dup), ...blocks.slice(dup + 1)];
-const showHero = !!study?.hero;
 const hasBody = study && !study.locked && blocks.length > 0;
 
 const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workImage(study.hero.src), width: 1200, format: 'jpeg' })).src : undefined;
@@ -147,7 +156,7 @@ const shareImage = study?.hero?.type === 'image' ? (await getImage({ src: workIm
 					<Blocks blocks={blocks} title={project.title} />
 				</div>
 			) : (
-				!showHero && (
+				!study?.hero && (
 					<div class="notice">
 						<p>{study?.locked ? 'Details of this project are available on request.' : 'Case study coming soon.'}</p>
 						<a href="mailto:this.kaizhang@gmail.com">Get in touch →</a>

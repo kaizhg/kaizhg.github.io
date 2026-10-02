@@ -11,16 +11,10 @@
    "layout": "credits"
   },
   {
-   "type": "text",
-   "kind": "quote",
-   "layout": "quote",
-   "html": "<h2>Infrastructure, reimagined as flesh.</h2>"
-  },
-  {
    "type": "row",
    "columns": [
     {
-     "flex": 0.55,
+     "flex": 0.58,
      "blocks": [
       {
        "type": "image",
@@ -34,8 +28,14 @@
      ]
     },
     {
-     "flex": 0.45,
+     "flex": 0.42,
      "blocks": [
+      {
+       "type": "text",
+       "kind": "quote",
+       "layout": "quote",
+       "html": "<h2>Infrastructure, reimagined as flesh.</h2>"
+      },
       {
        "type": "text",
        "html": "<p>This project explores the vitality of complex piping and cable systems by transforming them into organic, fleshy, living structures with runwayML. The intricate network of these systems has always fascinated me, resembling a living organism that serves a specific purpose. Each pipe and cable contributes to the overall functionality of the system, and removing one component can disrupt the entire process, much like the biological body. To achieve this transformation, the project used a dataset collected from Google searches and personal photography. The keywords for the img2img process are veins, bones, muscles, and neurons. By transforming these systems into organic structures, the project aims to stimulate new ways of understanding these infrastructures and explore their potential for alternative visual and conceptual interpretations.</p>",

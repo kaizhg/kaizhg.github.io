@@ -32,10 +32,10 @@ hero: inline                       # 项目页顶部大图；没有这行就用�
 -->
 
 
-# Can jewelry be grown rather than drawn?
-
 [row 0.68 0.32 spread]
 ![](imago_01.png) w=260
+
+# Can jewelry be grown rather than drawn?
 
 Project Imago is a wearable sculpture laboratory led by graduates from Harvard University, Massachusetts Institute of Technology, and Rhode Island School of Design with backgrounds in media design, contemporary jewelry, contemporary painting, industrial design, and architecture. These wearable sculptures are intended to be used as jewelry, with the brand offering parametrically generated bracelets, earrings, and necklaces that go through hand-crafted surface treatments to capture the elusive and unknowable natural imagery.
 |

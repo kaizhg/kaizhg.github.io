@@ -216,7 +216,7 @@ const galleryClass = (b: Laid) => {
 		(blocks as Laid[]).map((b) => {
 			switch (b.type) {
 				case 'text':
-					return <div class:list={['block', 'text', { credits: b.kind === 'credits' }]} set:html={b.html} />;
+					return <div class:list={['block', 'text', { credits: b.kind === 'credits', quote: b.kind === 'quote' }]} set:html={b.html} />;
 				case 'image':
 					return (
 						<figure class="block media-block reveal">
@@ -585,6 +585,23 @@ const galleryClass = (b: Laid) => {
 		font: 13px/1.6 var(--text);
 		color: var(--muted);
 		margin: 0;
+	}
+	/* A statement beside a picture (opener row): the lead's voice, a size under the full-width one */
+	.col .text.quote :global(h2),
+	.col .text.quote :global(h3),
+	.col .text.quote :global(p) {
+		font-size: clamp(22px, 2.4vw, 34px);
+		line-height: 1.15;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.row .col > :global(.block:last-child) {
+		margin-bottom: 0;
+	}
+	.col .text.quote + .text {
+		margin-top: calc(-1 * clamp(24px, 3vw, 40px) + 18px);
 	}
 	.quote .text :global(h2),
 	.quote .text :global(h3),
