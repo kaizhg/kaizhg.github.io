@@ -13,6 +13,8 @@ export const tile = (p: Project) => {
 		loop: cover && cover.type === 'loop' ? cover.src : null,
 		lqip: cover?.lqip ?? null,
 		hover: s?.hover ?? null,
+		hoverLqip: s?.hover?.lqip ?? cover?.lqip ?? null,
+		hoverTone: s?.hover?.tone ?? null,
 	};
 };
 
@@ -27,10 +29,13 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 
 <ul class:list={["grid", "reveal", { small }]} style={`--cols: ${cols}`}>
 	{
-		tiles.map(({ p, img, loop, lqip, hover }, i) => (
+		tiles.map(({ p, img, loop, lqip, hover, hoverLqip, hoverTone }, i) => (
 			<li data-discipline={p.discipline}>
 				<a href={`/work/${p.slug}/`}>
-					<span class="frame" style={lqip ? `background-image: url(${lqip})` : undefined}>
+					<span
+						class="frame"
+						style={[lqip ? `--lqip: url(${lqip})` : '', hoverLqip ? `--hover-lqip: url(${hoverLqip})` : ''].filter(Boolean).join('; ') || undefined}
+					>
 						{img && (
 							<Image
 								src={img}
@@ -53,7 +58,15 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 							/>
 						)}
 						{hover?.type === 'loop' && (
-							<video class="hover" src={hover.src} muted loop playsinline preload="metadata" />
+							<video
+								class="hover"
+								src={hover.src}
+								muted
+								loop
+								playsinline
+								preload="metadata"
+								style={hoverTone ? `background-color: ${hoverTone}` : undefined}
+							/>
 						)}
 					</span>
 					<span class="caption">
@@ -126,7 +139,10 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 		display: block;
 		aspect-ratio: var(--ratio);
 		overflow: hidden;
-		background: var(--line) center / cover; /* the blurred stand-in, when the tile has one */
+		/* Behind everything: the cover's blurred stand-in, swapped for the rollover's while hovered,
+		   so a hairline at the edge of a dark rollover can only ever show something dark */
+		background: var(--lqip, var(--line)) center / cover var(--line);
+		transition: background-image 0.3s ease;
 		/* Columns land on fractional pixels; each frame runs 1px under its right and lower
 		   neighbour so no rounding seam can open between tiles (the neighbour paints on top) */
 		margin: 0 -1px -1px 0;
@@ -166,6 +182,16 @@ const { tiles, cols = 3, small = false, eager = 0 } = Astro.props;
 	.grid a:hover .frame :global(img),
 	.grid a:hover .frame :global(video) {
 		--zoom: 1.5%;
+	}
+	.grid a:hover .frame {
+		background-image: var(--hover-lqip, var(--lqip, none));
+	}
+	/* Once the rollover has faded in, the cover underneath steps aside: nothing light is left
+	   beneath a dark clip for a rounding seam to reveal */
+	.grid a:hover .frame :global(img:not(.hover)),
+	.grid a:hover .frame :global(video:not(.hover)) {
+		opacity: 0;
+		transition: opacity 0.2s ease 0.4s, filter 0.5s ease, top 1.2s, left 1.2s, width 1.2s, height 1.2s;
 	}
 	/* Second shot / loop, faded in on hover */
 	.frame :global(.hover) {

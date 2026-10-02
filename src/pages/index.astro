@@ -17,10 +17,6 @@ const tiles = projects.map(tile);
 	<Life />
 
 	<section class="index" aria-label="Projects">
-		<div class="bar">
-			<a class="switch" href="/list/">List view →</a>
-		</div>
-
 		<Gallery tiles={tiles} eager={6} />
 	</section>
 </Base>
@@ -47,23 +43,6 @@ const tiles = projects.map(tile);
 		letter-spacing: 0.04em;
 		color: var(--muted);
 		margin-top: 24px;
-	}
-	.bar {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		gap: 16px;
-		flex-wrap: wrap;
-		margin-bottom: 20px;
-	}
-	.switch {
-		font: 12px var(--mono);
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		color: var(--muted);
-	}
-	.switch:hover {
-		color: var(--fg);
 	}
 
 </style>

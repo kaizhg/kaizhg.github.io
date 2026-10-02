@@ -13,9 +13,6 @@ const tiles = archive.map(tile);
 	</section>
 
 	<section class="index" aria-label="Archive projects">
-		<div class="bar">
-			<a class="switch" href="/archive/list/">List view →</a>
-		</div>
 		<Gallery tiles={tiles} cols={4} small eager={8} />
 	</section>
 </Base>
@@ -38,22 +35,5 @@ const tiles = archive.map(tile);
 		letter-spacing: 0.04em;
 		color: var(--muted);
 		margin-top: 20px;
-	}
-	.bar {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		gap: 16px;
-		flex-wrap: wrap;
-		margin-bottom: 20px;
-	}
-	.switch {
-		font: 12px var(--mono);
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		color: var(--muted);
-	}
-	.switch:hover {
-		color: var(--fg);
 	}
 </style>

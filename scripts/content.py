@@ -358,7 +358,7 @@ def lqip(path):
             _lqip_cache = {}
     st = os.stat(path)
     key = f'{os.path.relpath(path)}|{st.st_size}|{int(st.st_mtime)}'
-    if key in _lqip_cache:
+    if isinstance(_lqip_cache.get(key), dict):
         return _lqip_cache[key]
     val = _lqip_make(path)
     _lqip_cache[key] = val
@@ -390,7 +390,12 @@ def _lqip_make(path):
         im.thumbnail((24, 24))
         buf = io.BytesIO()
         im.save(buf, 'JPEG', quality=45, optimize=True)
-        return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
+        # average colour of the outer ring: what a hairline gap at the edge should show
+        w, h = im.size
+        px = im.load()
+        ring = [px[x, y] for x in range(w) for y in range(h) if x == 0 or y == 0 or x == w - 1 or y == h - 1]
+        tone = '#%02x%02x%02x' % tuple(sum(c[i] for c in ring) // len(ring) for i in range(3))
+        return {'lqip': 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode(), 'tone': tone}
     except Exception:
         return None
 
@@ -406,7 +411,7 @@ def media_block(folder, slug, name, caption=None):
         b = {'type': 'image', 'src': f'{slug}/{name}', 'width': w, 'height': h}
         tiny = lqip(path)
         if tiny:
-            b['lqip'] = tiny
+            b.update(tiny)
     elif ext == '.mp4':
         w, h = video_size(path)
         b = {'type': 'loop', 'src': f'/media/{slug}/{name}', 'width': w, 'height': h}
@@ -415,7 +420,7 @@ def media_block(folder, slug, name, caption=None):
             b['poster'] = f'/media/{slug}/{os.path.splitext(name)[0]}.jpg'
         tiny = lqip(still if os.path.exists(still) else path)
         if tiny:
-            b['lqip'] = tiny
+            b.update(tiny)
     else:
         raise ValueError(f'{slug}: unsupported media {name}')
     if caption:

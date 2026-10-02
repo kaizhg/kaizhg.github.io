@@ -12,8 +12,9 @@ export interface ImageBlock {
 	maxWidth?: number;
 	/** Cluster only: vertical offset in half-column units */
 	y?: number;
-	/** Tiny blurred stand-in (data URL) shown until the picture loads */
+	/** Tiny blurred stand-in (data URL) shown until the picture loads, and its edge colour */
 	lqip?: string;
+	tone?: string;
 }
 export interface LoopBlock {
 	type: 'loop';
@@ -22,6 +23,7 @@ export interface LoopBlock {
 	height: number;
 	poster?: string;
 	lqip?: string;
+	tone?: string;
 }
 export interface VideoBlock {
 	type: 'video';

@@ -436,7 +436,7 @@ const galleryClass = (b: Laid) => {
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		column-gap: clamp(12px, 1.6vw, 24px);
-		row-gap: clamp(24px, 2.6vw, 40px); /* pictures stack closer; text cells add their own air */
+		row-gap: clamp(20px, 2.2vw, 32px); /* pictures stack closer; text cells add their own air */
 		align-items: start;
 	}
 	.cell {
@@ -511,7 +511,7 @@ const galleryClass = (b: Laid) => {
 		margin: 0;
 	}
 	.stagger {
-		margin-top: clamp(32px, 7vw, 120px);
+		margin-top: clamp(28px, 6vw, 96px);
 	}
 	.cell > :global(.block:last-child) {
 		margin-bottom: 0;
