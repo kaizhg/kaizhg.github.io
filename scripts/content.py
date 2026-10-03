@@ -676,10 +676,15 @@ def parse_block_line(s, folder, slug):
     if MEDIA_RE.match(s):
         return parse_media_line(s, folder, slug)
     m = re.match(r'\[gallery((?:\s+' + LAYOUT_WORDS + r')*)(?:\s+cols=(\d))?((?:\s+[\w=-]+)*)\]\s*(.*)$', s)
-    if m and m.group(3).strip():
-        warn(f'{slug}: [gallery] 里看不懂 "{m.group(3).strip()}"，先忽略: {s[:60]}')
+    extras = m.group(3).split() if m else []
+    every = next((int(e[6:]) for e in extras if re.fullmatch(r'every=\d{1,3}', e)), None)
+    extras = [e for e in extras if not e.startswith('every=')]
+    if m and extras:
+        warn(f'{slug}: [gallery] 里看不懂 "{" ".join(extras)}"，先忽略: {s[:60]}')
     if m:
         g = {'type': 'gallery', 'items': parse_items(m.group(4), folder, slug)}
+        if every:
+            g['every'] = every * 1000  # seconds per slide, for a carousel
         if m.group(1).strip():
             g['layout'] = m.group(1).strip()
         if m.group(2):

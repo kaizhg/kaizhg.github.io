@@ -237,49 +237,6 @@
    "kind": "text"
   },
   {
-   "type": "gallery",
-   "items": [
-    {
-     "type": "image",
-     "src": "lattice/lattice_07_ring-a.png",
-     "width": 1280,
-     "height": 1600,
-     "caption": "Same ring, five lattices.",
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_08_ring-b.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_09_ring-c.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_10_ring-d.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_11_ring-e.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    }
-   ],
-   "layout": "grid5",
-   "kind": "gallery"
-  },
-  {
    "type": "loop",
    "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
    "width": 1000,
@@ -305,95 +262,63 @@
   {
    "type": "text",
    "html": "<p>A saddle and a pair of earpads: two places where a body meets a product and a single foam density is always a compromise.</p>",
+   "layout": "text-l",
    "kind": "text"
   },
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_03_saddle-front.jpg",
-       "width": 1600,
-       "height": 1333,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBAX/xAAjEAABAwQCAQUAAAAAAAAAAAACAAEDBBESIQUTBjFBQlFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAiH/2gAMAwEAAhEDEQA/ALhS5chUny8hjWSDHGdurWLt7suryDlZqOXrjfEcb69SdeHFfpaV4pbnfJsHvtNjCnQd7d4XSKU8a5CubkWoqgylpyF3AjbY2/URNRwVOqlS8QOebgLk3ydtrSIsNM9YZz//2Q==",
-       "tone": "#ffffff",
-       "caption": "Saddle. Hover to see the rails.",
-       "hover": {
-        "type": "image",
-        "src": "lattice/lattice_04_saddle-front-frame.jpg",
-        "width": 1600,
-        "height": 1333,
-        "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBQf/xAAkEAAABgICAQUBAAAAAAAAAAAAAQIDBBEFEiExBhQyYYGRcf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABgRAQEBAQEAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwC4EXJzc9PkBKS8pMQndDTZamV11Q6fkuZcx69ErJCdb47UYi3H1HNWg1kdtbfeu1/ocmehu3j1UBGeHZuZInFDecN1k0GaduVIr5AGzCl1VTcbDyCdZcZt3irUXJfYweJgnHNn0zehlr7ea/vYAMa1CxkKAkiiRm2qKrSnn97AAAAAAAAAABJ//9k=",
-        "tone": "#ffffff"
-       },
-       "kind": "white"
-      }
-     ]
-    },
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_05_saddle-bottom.jpg",
-       "width": 1600,
-       "height": 1333,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAgX/xAAkEAACAgEDAgcAAAAAAAAAAAABAgADEQQSEwYhFBUjQVFh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABkRAQEAAwEAAAAAAAAAAAAAAAABAgMhQf/aAAwDAQACEQMRAD8Atb3NdDuoyVUkCR+s1urq9WvUWcgsBA3dj9YlnJ9tGh6lrUgca5fb7Zx+mJhZ0WyXj3q2LVqzDBIBI+InUQykyeHTzXm77xXEn//Z",
-       "tone": "#f9fbfd",
-       "caption": "Saddle from below.",
-       "hover": {
-        "type": "image",
-        "src": "lattice/lattice_06_saddle-bottom-frame.jpg",
-        "width": 1600,
-        "height": 1333,
-        "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAUGBwL/xAAkEAABBAIBAwUBAAAAAAAAAAABAAIDEQQSBRMhMQYWIkFRsf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AumTI6LGlkY3ZzGFwA+yAs0dzOeMps4zJi4/PXY0Tfilp6psfHQD14YumNBcwbXa6v+pgq4Quc+Fjnt1c5oJH4UXSIIo0cfD7hObb+r0davsF/9k=",
-        "tone": "#f9fbfb"
-       },
-       "kind": "white"
-      }
-     ]
-    }
-   ],
-   "kind": "row"
+   "type": "image",
+   "src": "lattice/lattice_04_saddle-front-frame.jpg",
+   "width": 1600,
+   "height": 1333,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBQf/xAAkEAAABgICAQUBAAAAAAAAAAAAAQIDBBEFEiExBhQyYYGRcf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABgRAQEBAQEAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwC4EXJzc9PkBKS8pMQndDTZamV11Q6fkuZcx69ErJCdb47UYi3H1HNWg1kdtbfeu1/ocmehu3j1UBGeHZuZInFDecN1k0GaduVIr5AGzCl1VTcbDyCdZcZt3irUXJfYweJgnHNn0zehlr7ea/vYAMa1CxkKAkiiRm2qKrSnn97AAAAAAAAAABJ//9k=",
+   "tone": "#ffffff",
+   "caption": "Saddle on its rails. Hover to see the lattice alone.",
+   "hover": {
+    "type": "image",
+    "src": "lattice/lattice_03_saddle-front.jpg",
+    "width": 1600,
+    "height": 1333,
+    "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBAX/xAAjEAABAwQCAQUAAAAAAAAAAAACAAEDBBESIQUTBjFBQlFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAiH/2gAMAwEAAhEDEQA/ALhS5chUny8hjWSDHGdurWLt7suryDlZqOXrjfEcb69SdeHFfpaV4pbnfJsHvtNjCnQd7d4XSKU8a5CubkWoqgylpyF3AjbY2/URNRwVOqlS8QOebgLk3ydtrSIsNM9YZz//2Q==",
+    "tone": "#ffffff"
+   },
+   "layout": "wide-l",
+   "kind": "white"
   },
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_30_slide-headphones.jpg",
-       "width": 1920,
-       "height": 1080,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EACEQAAEEAQQDAQAAAAAAAAAAAAECAwQRAAUSEyEUMVFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO/K1HjcmXMQh9lQDbBIoirF/b7/ADMGpHcSJaDJ8jj8exQG6tv7Xd/cqf0SBInpmOsBTwIJNnsj1Y9YGiQE6j5wYHPe67NX9r1gTRNR5FRCiYh555ZDrQIpPRsD5XX7jKYuiQIc1UphgJdVfdk1fuhjAAAAAAAAMD//2Q==",
-       "tone": "#ffffff",
-       "caption": "Earpads in Kelvin and Voronoi cells.",
-       "kind": "white"
-      }
-     ]
-    },
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_31_slide-earpad-surfaces.jpg",
-       "width": 1920,
-       "height": 1080,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAgEAACAQQCAwEAAAAAAAAAAAABAgMABBFBEiETUWEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANhNcMjtxA4pgHOydVV7lhLhQOAcJ9Y7pzQK0oc6OcffdQLZPMJD2R2BoH3QJW6dp0AA4OxVRsgfpopsdskcpkF8ooP/2Q==",
-       "tone": "#ffffff",
-       "caption": "Printed surface, fabric over print, or exposed mesh.",
-       "kind": "white"
-      }
-     ]
-    }
-   ],
-   "kind": "row"
+   "type": "image",
+   "src": "lattice/lattice_06_saddle-bottom-frame.jpg",
+   "width": 1600,
+   "height": 1333,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAUGBwL/xAAkEAABBAIBAwUBAAAAAAAAAAABAAIDEQQSBRMhMQYWIkFRsf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AumTI6LGlkY3ZzGFwA+yAs0dzOeMps4zJi4/PXY0Tfilp6psfHQD14YumNBcwbXa6v+pgq4Quc+Fjnt1c5oJH4UXSIIo0cfD7hObb+r0davsF/9k=",
+   "tone": "#f9fbfb",
+   "caption": "From below: the lattice opens up where nothing bears on it.",
+   "hover": {
+    "type": "image",
+    "src": "lattice/lattice_05_saddle-bottom.jpg",
+    "width": 1600,
+    "height": 1333,
+    "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAgX/xAAkEAACAgEDAgcAAAAAAAAAAAABAgADEQQSEwYhFBUjQVFh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABkRAQEAAwEAAAAAAAAAAAAAAAABAgMhQf/aAAwDAQACEQMRAD8Atb3NdDuoyVUkCR+s1urq9WvUWcgsBA3dj9YlnJ9tGh6lrUgca5fb7Zx+mJhZ0WyXj3q2LVqzDBIBI+InUQykyeHTzXm77xXEn//Z",
+    "tone": "#f9fbfd"
+   },
+   "layout": "wide-r stagger",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Earpads</h3><p>An earpad has to be soft against the head, breathable, and still hold its shape around the driver. One lattice can do all three if it is allowed to change across the pad.</p>",
+   "layout": "text-l",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_30_slide-headphones.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EACEQAAEEAQQDAQAAAAAAAAAAAAECAwQRAAUSEyEUMVFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO/K1HjcmXMQh9lQDbBIoirF/b7/ADMGpHcSJaDJ8jj8exQG6tv7Xd/cqf0SBInpmOsBTwIJNnsj1Y9YGiQE6j5wYHPe67NX9r1gTRNR5FRCiYh555ZDrQIpPRsD5XX7jKYuiQIc1UphgJdVfdk1fuhjAAAAAAAAMD//2Q==",
+   "tone": "#ffffff",
+   "caption": "Kelvin and Voronoi earpads on the same headphone.",
+   "layout": "wide-r",
+   "kind": "white"
   },
   {
    "type": "row",
@@ -431,6 +356,66 @@
    "kind": "row"
   },
   {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "lattice/lattice_07_ring-a.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_08_ring-b.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_09_ring-c.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_10_ring-d.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_11_ring-e.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    }
+   ],
+   "every": 3000,
+   "layout": "carousel @1-6",
+   "kind": "gallery"
+  },
+  {
+   "type": "text",
+   "html": "<p>One earpad, five lattices: the same ring regenerated with different cells and densities, each a different hand feel and a different airflow.</p>",
+   "layout": "text-r low",
+   "kind": "text"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_31_slide-earpad-surfaces.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAgEAACAQQCAwEAAAAAAAAAAAABAgMABBFBEiETUWEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANhNcMjtxA4pgHOydVV7lhLhQOAcJ9Y7pzQK0oc6OcffdQLZPMJD2R2BoH3QJW6dp0AA4OxVRsgfpopsdskcpkF8ooP/2Q==",
+   "tone": "#ffffff",
+   "caption": "Printed surface, fabric over print, or exposed mesh.",
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
    "type": "image",
    "src": "lattice/lattice_13_g-regions.jpg",
    "width": 2400,
@@ -438,7 +423,7 @@
    "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAJBAAAQMEAQMFAAAAAAAAAAAAAQIDBQAEERIhFDFxBhOBkaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAACATEyA//aAAwDAQACEQMRAD8AVTTxt4x10EjXB480KVf34bS/1YTuchvJ7U4lmeoj3G9dtsZHzQ9fp+QUn2cILYPCjjIH3TJRP00LYV1T0W04s7FWeR5qrYa3VaxjTKu6AR+Zg//Z",
    "tone": "#e9f4f9",
    "caption": "Regions of a lattice carrying a letterform.",
-   "layout": "wide-c",
+   "layout": "narrow-r stagger",
    "kind": "white"
   },
   {

@@ -42,7 +42,7 @@ export type Block =
 	| MediaBlock
 	| { type: 'text'; html: string }
 	| { type: 'youtube'; id: string; start?: number }
-	| { type: 'gallery'; items: MediaBlock[] }
+	| { type: 'gallery'; items: MediaBlock[]; every?: number }
 	| { type: 'cluster'; items: MediaBlock[] }
 	| { type: 'row'; columns: { flex: number; blocks: Block[] }[] };
 

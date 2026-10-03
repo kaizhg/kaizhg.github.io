@@ -66,23 +66,33 @@ Cell types are assigned per vertex rather than per cell, so a transition happens
 
 Density follows the point seeding, so it can thin out where a part needs to be light and tighten where it needs support. Strut thickness is a per-edge value and can follow any field. Cell type is the unusual one: because types live on vertices, a part can go from a stiff Kelvin cell to a soft Voronoi cell continuously.
 
-[gallery grid5] lattice_07_ring-a.png "Same ring, five lattices." lattice_08_ring-b.png lattice_09_ring-c.png lattice_10_ring-d.png lattice_11_ring-e.png
-
 ![](lattice_12_hex-cell-morph.mp4) small-l
 
 One hexagonal unit cell, morphing between types. The transition is what lets zones meet without a seam. {text-r low}
 
 [section] Studies
 
-A saddle and a pair of earpads: two places where a body meets a product and a single foam density is always a compromise.
+A saddle and a pair of earpads: two places where a body meets a product and a single foam density is always a compromise. {text-l}
 
-![](lattice_03_saddle-front.jpg "Saddle. Hover to see the rails.") hover=lattice_04_saddle-front-frame.jpg | ![](lattice_05_saddle-bottom.jpg "Saddle from below.") hover=lattice_06_saddle-bottom-frame.jpg
+![](lattice_04_saddle-front-frame.jpg "Saddle on its rails. Hover to see the lattice alone.") wide-l hover=lattice_03_saddle-front.jpg
 
-![](lattice_30_slide-headphones.jpg "Earpads in Kelvin and Voronoi cells.") | ![](lattice_31_slide-earpad-surfaces.jpg "Printed surface, fabric over print, or exposed mesh.")
+![](lattice_06_saddle-bottom-frame.jpg "From below: the lattice opens up where nothing bears on it.") wide-r stagger hover=lattice_05_saddle-bottom.jpg
+
+### Earpads
+
+An earpad has to be soft against the head, breathable, and still hold its shape around the driver. One lattice can do all three if it is allowed to change across the pad. {text-l}
+
+![](lattice_30_slide-headphones.jpg "Kelvin and Voronoi earpads on the same headphone.") wide-r
 
 ![](lattice_17_headphones-zelda.jpg "Because the lattice is generated, a pattern or a logo can be written into its skin.") | ![](lattice_14_zelda-pattern.jpg)
 
-![](lattice_13_g-regions.jpg "Regions of a lattice carrying a letterform.") wide-c
+[gallery carousel @1-6 every=3] lattice_07_ring-a.png lattice_08_ring-b.png lattice_09_ring-c.png lattice_10_ring-d.png lattice_11_ring-e.png
+
+One earpad, five lattices: the same ring regenerated with different cells and densities, each a different hand feel and a different airflow. {text-r low}
+
+![](lattice_31_slide-earpad-surfaces.jpg "Printed surface, fabric over print, or exposed mesh.") wide-l
+
+![](lattice_13_g-regions.jpg "Regions of a lattice carrying a letterform.") narrow-r stagger
 
 [section] What it is not, yet
 

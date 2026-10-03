@@ -123,7 +123,7 @@ credits:                           # 可选，有哪项写哪项，会显示在�
 | 段落末尾加 `{text-l}` 或 `{text-r}` | 文字固定在左 / 右栏 |
 | `[gallery]` 后加 `cols=N` | 每行最多几张；比例不同的图自动按等高行排，相同的排网格 |
 | `[gallery stack]` | 一张一行、整宽 |
-| `[gallery carousel]` | 轮播 |
+| `[gallery carousel]` | 轮播；`[gallery carousel every=3]` = 每 3 秒换一张（默认 4 秒） |
 | `![](x.mp4)` | 循环播放的小动画（GIF 请先转 mp4，或直接给我 GIF 我来转） |
 | `[video]` | 带播放条的视频；`[video audio]` 表示有声音 |
 

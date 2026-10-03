@@ -314,7 +314,7 @@ const galleryClass = (b: Laid) => {
 					// Carousel: one slide at a time, advancing on its own, arrows to step through
 					if (cls === 'carousel') {
 						return (
-							<div class:list={['block', 'gallery', 'reveal', 'carousel', { plates }]} style={`--ar: ${ar.toFixed(4)}`} data-carousel data-interval="4000">
+							<div class:list={['block', 'gallery', 'reveal', 'carousel', { plates }]} style={`--ar: ${ar.toFixed(4)}`} data-carousel data-interval={(b as any).every ?? 4000}>
 								<div class="slides" role="group" aria-roledescription="carousel" aria-label={`${title} slides`}>
 									{b.items.map((it, k) => (
 										<figure class:list={['cell-flex', 'slide', { on: k === 0 }]} aria-hidden={k !== 0}>
@@ -532,7 +532,7 @@ const galleryClass = (b: Laid) => {
 		grid-column: 1 / -1;
 		padding-top: 14px;
 		border-top: 1px solid var(--line);
-		margin-bottom: calc(-1 * clamp(24px, 4vw, 72px));
+		margin-top: clamp(8px, 2vw, 24px); /* a section break breathes a little more above */
 	}
 	.section .text :global(h2),
 	.section .text :global(h3) {
@@ -707,7 +707,8 @@ const galleryClass = (b: Laid) => {
 	.gallery.stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(12px, 1.6vw, 24px); }
 	.gallery.carousel {
 		display: block;
-		max-width: 1040px; /* a slide deck reads better a little narrower than the page */
+		/* a slide deck reads better a little narrower than the page, and never taller than a screen */
+		max-width: min(1040px, calc(72vh * var(--ar, 1.7778)));
 	}
 	.carousel .slides {
 		position: relative;
