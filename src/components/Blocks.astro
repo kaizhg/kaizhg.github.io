@@ -881,6 +881,20 @@ const galleryClass = (b: Laid) => {
 		z-index: 1;
 		min-height: 0;
 	}
+	.row.fit:not(.stagger) .col > :global(.gallery.carousel) {
+		display: contents; /* slides and controls become grid items: slides level with the picture */
+	}
+	.row.fit:not(.stagger) .col > :global(.gallery.carousel) > :global(.slides) {
+		grid-column: var(--c);
+		grid-row: 1;
+		aspect-ratio: auto;
+		height: 100%;
+		min-height: 0;
+	}
+	.row.fit:not(.stagger) .col > :global(.gallery.carousel) > :global(.ctl) {
+		grid-column: var(--c);
+		grid-row: 2;
+	}
 	.row.fit:not(.stagger) .col > :global(.media-block.swap) > :global(.alt) > :global(.media) {
 		width: 100%;
 		height: 100%;

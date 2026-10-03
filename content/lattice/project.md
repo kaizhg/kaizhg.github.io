@@ -9,9 +9,7 @@ cover: lattice_cover.jpg           # 首页封面（32:25 裁切）
 hover: lattice_hover.jpg           # 鼠标悬停时换成的图或循环视频
 hero: lattice_03_saddle-front.jpg  # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
-  Tools: Rhino, Grasshopper (C#), TetGen
-  Reference: Carbon Design Engine
-  Status: Design tool, 2025 – ongoing
+  Tools: Rhino, Grasshopper, Custom Python Script, TetGen
   Role:
     - Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.
     - Designed the cell-transition scheme that lets one part carry several lattice types without seams.
@@ -38,7 +36,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
 不想管排版就把排版词删掉，自动规则会排。完整说明：docs/submitting-a-project.md
 -->
 
-# What if a cushion could be grown to fit the body that sits on it?
+# What if the parts that touch the body were grown to fit it?
 
 Lattice++ is a lattice generation system I built inside Grasshopper, taking Carbon's Design Engine as the reference. Give it any closed geometry and it fills the volume with a conformal lattice: tetrahedral, hexahedral, or Voronoi cells, at a chosen density and strut thickness. Density, thickness, and even the cell type can change gradually across one part. It is a design tool, not yet a simulation tool. But the shapes it makes are the shapes that could one day be tuned to a person's own pressure map.
 
@@ -70,9 +68,9 @@ Density follows the point seeding, so it can thin out where a part needs to be l
 
 A saddle and a pair of earpads: two places where a body meets a product and a single foam density is always a compromise. {text-l}
 
-![](lattice_04_saddle-front-frame.jpg "Saddle on its rails. Hover to see the lattice alone.") wide-l hover=lattice_03_saddle-front.jpg
+![](lattice_04_saddle-front-frame.jpg "Saddle on its rails. Hover to see the lattice alone.") half-l hover=lattice_03_saddle-front.jpg
 
-![](lattice_06_saddle-bottom-frame.jpg "From below: the lattice opens up where nothing bears on it.") wide-r stagger hover=lattice_05_saddle-bottom.jpg
+![](lattice_06_saddle-bottom-frame.jpg "From below: the lattice opens up where nothing bears on it.") half-r stagger hover=lattice_05_saddle-bottom.jpg
 
 ### Earpads
 
@@ -92,6 +90,8 @@ The skin of a generated lattice is a design surface in its own right. Its patter
 
 [section] What it is not, yet
 
-![](lattice_16_comfort-map.jpg "Softer to stiffer, mapped onto the head. The data is illustrative.") | ![](lattice_12_hex-cell-morph.mp4 "One hexahedral unit cell, morphing between types.")
+![](lattice_16_comfort-map.jpg "Softer to stiffer, mapped onto the head. The data is illustrative.") @1-5
+
+![](lattice_12_hex-cell-morph.mp4 "One hexahedral unit cell, morphing between types.") @5-9
 
 Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out. {text-l}

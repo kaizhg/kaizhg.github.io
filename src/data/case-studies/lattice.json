@@ -14,14 +14,14 @@
   {
    "type": "text",
    "kind": "credits",
-   "html": "<p>Tools: Rhino, Grasshopper (C#), TetGen</p><p>Reference: Carbon Design Engine</p><p>Status: Design tool, 2025 – ongoing</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.</p>",
+   "html": "<p>Tools: Rhino, Grasshopper, Custom Python Script, TetGen</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.</p>",
    "layout": "credits"
   },
   {
    "type": "text",
    "kind": "quote",
    "layout": "quote",
-   "html": "<h2>What if a cushion could be grown to fit the body that sits on it?</h2>"
+   "html": "<h2>What if the parts that touch the body were grown to fit it?</h2>"
   },
   {
    "type": "text",
@@ -264,7 +264,7 @@
     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBAX/xAAjEAABAwQCAQUAAAAAAAAAAAACAAEDBBESIQUTBjFBQlFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAiH/2gAMAwEAAhEDEQA/ALhS5chUny8hjWSDHGdurWLt7suryDlZqOXrjfEcb69SdeHFfpaV4pbnfJsHvtNjCnQd7d4XSKU8a5CubkWoqgylpyF3AjbY2/URNRwVOqlS8QOebgLk3ydtrSIsNM9YZz//2Q==",
     "tone": "#ffffff"
    },
-   "layout": "wide-l",
+   "layout": "half-l",
    "kind": "white"
   },
   {
@@ -283,7 +283,7 @@
     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAgX/xAAkEAACAgEDAgcAAAAAAAAAAAABAgADEQQSEwYhFBUjQVFh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABkRAQEAAwEAAAAAAAAAAAAAAAABAgMhQf/aAAwDAQACEQMRAD8Atb3NdDuoyVUkCR+s1urq9WvUWcgsBA3dj9YlnJ9tGh6lrUgca5fb7Zx+mJhZ0WyXj3q2LVqzDBIBI+InUQykyeHTzXm77xXEn//Z",
     "tone": "#f9fbfd"
    },
-   "layout": "wide-r stagger",
+   "layout": "half-r stagger",
    "kind": "white"
   },
   {
@@ -426,41 +426,27 @@
    "html": "<h2>What it is not, yet</h2>"
   },
   {
-   "type": "row",
-   "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_16_comfort-map.jpg",
-       "width": 1262,
-       "height": 1388,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
-       "tone": "#f4f5f1",
-       "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
-       "kind": "white"
-      }
-     ]
-    },
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "loop",
-       "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
-       "width": 1000,
-       "height": 1000,
-       "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
-       "tone": "#ffffff",
-       "caption": "One hexahedral unit cell, morphing between types.",
-       "kind": "photo"
-      }
-     ]
-    }
-   ],
-   "kind": "row"
+   "type": "image",
+   "src": "lattice/lattice_16_comfort-map.jpg",
+   "width": 1262,
+   "height": 1388,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
+   "tone": "#f4f5f1",
+   "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
+   "layout": "@1-5",
+   "kind": "white"
+  },
+  {
+   "type": "loop",
+   "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
+   "width": 1000,
+   "height": 1000,
+   "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
+   "tone": "#ffffff",
+   "caption": "One hexahedral unit cell, morphing between types.",
+   "layout": "@5-9",
+   "kind": "photo"
   },
   {
    "type": "text",
