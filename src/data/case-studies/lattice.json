@@ -114,6 +114,7 @@
   {
    "type": "text",
    "html": "<p>The tetrahedral grid is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly.</p>",
+   "layout": "text-l",
    "kind": "text"
   },
   {
@@ -155,6 +156,7 @@
   {
    "type": "text",
    "html": "<p>Cell types are assigned per vertex rather than per cell, so a transition happens inside a cell, not between cells. That is what lets one part carry several lattice types without a seam.</p>",
+   "layout": "text-l",
    "kind": "text"
   },
   {

@@ -865,6 +865,13 @@ const galleryClass = (b: Laid) => {
 		grid-column: var(--c);
 		grid-row: 2;
 	}
+	.row.fit:not(.stagger) .col > :global(.media-block.swap) > :global(.alt) {
+		position: static;
+		grid-column: var(--c);
+		grid-row: 1;
+		z-index: 1;
+		min-height: 0;
+	}
 	.row.fit:not(.stagger) .col > :global(.media-block) > :global(.media) {
 		align-self: stretch;
 		width: 100%;

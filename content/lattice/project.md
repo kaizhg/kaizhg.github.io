@@ -52,11 +52,11 @@ The tool builds on two kinds of grid. The hexahedral grid is the simple one: a c
 
 ![](lattice_22_slide-hex-torus.jpg "Hexahedral grid on a torus.") | ![](lattice_21_slide-hex-cells.jpg "Hex cells built by extrusion, grid, or loft, with the same star cell inside.")
 
-The tetrahedral grid is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly.
+The tetrahedral grid is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly. {text-l}
 
 ![](lattice_20_slide-tetgen-wip.jpg "An early tetrahedralization: usable, but with a few small and distorted cells near the boundary.") | ![](lattice_15_tetgen-workflow.jpg "TetGen inside Grasshopper: the tetrahedralization step, before and after refinement.")
 
-Cell types are assigned per vertex rather than per cell, so a transition happens inside a cell, not between cells. That is what lets one part carry several lattice types without a seam.
+Cell types are assigned per vertex rather than per cell, so a transition happens inside a cell, not between cells. That is what lets one part carry several lattice types without a seam. {text-l}
 
 ![](lattice_23_slide-transition-cell.jpg "Each vertex of a tetrahedron carries a cell type, or a mix of types. The cell between them blends.") | ![](lattice_24_slide-zones-wip.jpg "Assigning cell types per node in a custom script, next to the brute-force zoning a native component gives.")
 
