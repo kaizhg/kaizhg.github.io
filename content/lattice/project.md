@@ -14,7 +14,7 @@ credits:                           # 显示在标题下方，有哪项写哪项�
   Role:
     - Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.
     - Designed the cell-transition scheme that lets one part carry several lattice types without seams.
-    - Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.
+    - Modeled the application studies: bicycle saddle and headphone earpads.
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）
