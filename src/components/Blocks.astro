@@ -450,7 +450,8 @@ const galleryClass = (b: Laid) => {
 		c.querySelector('.next')!.addEventListener('click', () => { go(i + 1); restart(); });
 		c.querySelector('.prev')!.addEventListener('click', () => { go(i - 1); restart(); });
 		c.querySelector('.slides')!.addEventListener('click', () => { go(i + 1); restart(); });
-		new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.3 }).observe(c);
+		// watch the slides box: in a fitted row the carousel itself has no box (display: contents)
+		new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.3 }).observe(c.querySelector('.slides')!);
 		restart();
 		stops.push(() => clearInterval(timer));
 	});

@@ -24,10 +24,14 @@ for (const f of readdirSync(data)) {
 		console.warn(`lock-pages: no <article> in ${d.slug}`);
 		continue;
 	}
+	// Astro places component scripts (carousel, clips…) inside the article after their first use;
+	// they must stay in the page as live scripts, so pull them out before encrypting
+	const scripts = [];
+	const inner = m[0].replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, (tag) => { scripts.push(tag); return ''; });
 	const salt = randomBytes(16), iv = randomBytes(12);
 	const key = pbkdf2Sync(String(d.password).normalize('NFKC'), salt, ITER, 32, 'sha256');
 	const cipher = createCipheriv('aes-256-gcm', key, iv);
-	const enc = Buffer.concat([cipher.update(m[0], 'utf8'), cipher.final(), cipher.getAuthTag()]);
+	const enc = Buffer.concat([cipher.update(inner, 'utf8'), cipher.final(), cipher.getAuthTag()]);
 	const payload = Buffer.concat([salt, iv, enc]).toString('base64');
 	const title = (m[0].match(/<h1[^>]*>([^<]*)<\/h1>/) || [])[1] || d.slug;
 	const code = (m[0].match(/<p class="code[^"]*"[^>]*>([^<]*)<\/p>/) || [])[1] || '';
@@ -88,7 +92,7 @@ ${code ? `<p class="gate-code">${code}</p>` : ''}
 	});
 })();
 </script>`;
-	html = html.replace(m[0], gate).replace('</head>', '<meta name="robots" content="noindex">\n</head>');
+	html = html.replace(m[0], scripts.join('') + gate).replace('</head>', '<meta name="robots" content="noindex">\n</head>');
 	writeFileSync(page, html);
 	n++;
 }
