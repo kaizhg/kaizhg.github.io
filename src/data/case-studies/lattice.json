@@ -72,7 +72,7 @@
   },
   {
    "type": "text",
-   "html": "<h3>How it works</h3><p>The tool builds on two kinds of grid. The hexahedral grid is the simple one: a cube, extruded, gridded, or lofted through the volume, with the same unit cell repeated inside and the cells at the boundary cut to the shape. It is regular and predictable, but it only approximates the surface.</p>",
+   "html": "<h3>How it works</h3><p>The tool builds on two kinds of grid. <strong>The hexahedral grid</strong> is the simple one: a cube, extruded, gridded, or lofted through the volume, with the same unit cell repeated inside and the cells at the boundary cut to the shape. It is regular and predictable, but it only approximates the surface.</p>",
    "kind": "text"
   },
   {
@@ -113,7 +113,7 @@
   },
   {
    "type": "text",
-   "html": "<p>The tetrahedral grid is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly.</p>",
+   "html": "<p><strong>The tetrahedral grid</strong> is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly.</p>",
    "layout": "text-l",
    "kind": "text"
   },
@@ -237,23 +237,6 @@
    "kind": "text"
   },
   {
-   "type": "loop",
-   "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
-   "width": 1000,
-   "height": 1000,
-   "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
-   "tone": "#ffffff",
-   "layout": "small-l",
-   "kind": "photo"
-  },
-  {
-   "type": "text",
-   "html": "<p>One hexagonal unit cell, morphing between types. The transition is what lets zones meet without a seam.</p>",
-   "layout": "text-r low",
-   "kind": "text"
-  },
-  {
    "type": "text",
    "kind": "section",
    "layout": "section",
@@ -321,23 +304,14 @@
    "kind": "white"
   },
   {
+   "type": "text",
+   "html": "<p>The skin of a generated lattice is a design surface in its own right. Its pattern can be drawn from a key visual element or an IP: this earpad takes the Sheikah emblem from The Legend of Zelda: Breath of the Wild as its motif.</p>",
+   "layout": "text-l",
+   "kind": "text"
+  },
+  {
    "type": "row",
    "columns": [
-    {
-     "flex": 0.5,
-     "blocks": [
-      {
-       "type": "image",
-       "src": "lattice/lattice_17_headphones-zelda.jpg",
-       "width": 2400,
-       "height": 1500,
-       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBAX/xAAiEAACAQMEAgMAAAAAAAAAAAABAgMABBEFEhMxIVEUIkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AbtUuZLTTZ54l3SImVGM+ap3FhNBpcksFzN8xV5OQuSGYecEdY/K0btJJLWVISBIykKT1mlGWz1pylgGbjldnJaQfUZ67z4oG2ynN1ZQTldpljVyPWRmipIk44kTOdqgZAA94ooP/2Q==",
-       "tone": "#f8f8f9",
-       "caption": "Because the lattice is generated, a pattern or a logo can be written into its skin.",
-       "kind": "white"
-      }
-     ]
-    },
     {
      "flex": 0.5,
      "blocks": [
@@ -348,7 +322,23 @@
        "height": 1272,
        "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABIDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAQBAgMF/8QAIBAAAgICAQUBAAAAAAAAAAAAAQIAEQMSIRMiMUFxUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdshOxLH5NR3XHe549AyPPtqKsjbkCYGRXcYLCBa82LgXdVfZs/InllzcQKFcg8C7/ACcW7jWtREBED//Z",
        "tone": "#656565",
+       "caption": "The Sheikah emblem, redrawn as a lattice pattern.",
        "kind": "photo"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_17_headphones-zelda.jpg",
+       "width": 2400,
+       "height": 1500,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBAX/xAAiEAACAQMEAgMAAAAAAAAAAAABAgMABBEFEhMxIVEUIkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AbtUuZLTTZ54l3SImVGM+ap3FhNBpcksFzN8xV5OQuSGYecEdY/K0btJJLWVISBIykKT1mlGWz1pylgGbjldnJaQfUZ67z4oG2ynN1ZQTldpljVyPWRmipIk44kTOdqgZAA94ooP/2Q==",
+       "tone": "#f8f8f9",
+       "caption": "The pattern carried on the earpad.",
+       "kind": "white"
       }
      ]
     }
@@ -356,75 +346,78 @@
    "kind": "row"
   },
   {
-   "type": "gallery",
-   "items": [
+   "type": "row",
+   "columns": [
     {
-     "type": "image",
-     "src": "lattice/lattice_07_ring-a.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "gallery",
+       "items": [
+        {
+         "type": "image",
+         "src": "lattice/lattice_07_ring-a.png",
+         "width": 1280,
+         "height": 1600,
+         "caption": "Lattice surface skin, design 1 of 5",
+         "kind": "white"
+        },
+        {
+         "type": "image",
+         "src": "lattice/lattice_08_ring-b.png",
+         "width": 1280,
+         "height": 1600,
+         "caption": "Lattice surface skin, design 2 of 5",
+         "kind": "white"
+        },
+        {
+         "type": "image",
+         "src": "lattice/lattice_09_ring-c.png",
+         "width": 1280,
+         "height": 1600,
+         "caption": "Lattice surface skin, design 3 of 5",
+         "kind": "white"
+        },
+        {
+         "type": "image",
+         "src": "lattice/lattice_10_ring-d.png",
+         "width": 1280,
+         "height": 1600,
+         "caption": "Lattice surface skin, design 4 of 5",
+         "kind": "white"
+        },
+        {
+         "type": "image",
+         "src": "lattice/lattice_11_ring-e.png",
+         "width": 1280,
+         "height": 1600,
+         "caption": "Lattice surface skin, design 5 of 5",
+         "kind": "white"
+        }
+       ],
+       "every": 3000,
+       "layout": "grid2",
+       "kind": "gallery"
+      }
+     ]
     },
     {
-     "type": "image",
-     "src": "lattice/lattice_08_ring-b.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_09_ring-c.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_10_ring-d.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
-    },
-    {
-     "type": "image",
-     "src": "lattice/lattice_11_ring-e.png",
-     "width": 1280,
-     "height": 1600,
-     "kind": "white"
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_31_slide-earpad-surfaces.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAgEAACAQQCAwEAAAAAAAAAAAABAgMABBFBEiETUWEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANhNcMjtxA4pgHOydVV7lhLhQOAcJ9Y7pzQK0oc6OcffdQLZPMJD2R2BoH3QJW6dp0AA4OxVRsgfpopsdskcpkF8ooP/2Q==",
+       "tone": "#ffffff",
+       "caption": "Printed surface, fabric over print, or exposed mesh.",
+       "kind": "white"
+      }
+     ]
     }
    ],
-   "every": 3000,
-   "layout": "carousel @1-6",
-   "kind": "gallery"
-  },
-  {
-   "type": "text",
-   "html": "<p>One earpad, five lattices: the same ring regenerated with different cells and densities, each a different hand feel and a different airflow.</p>",
-   "layout": "text-r low",
-   "kind": "text"
-  },
-  {
-   "type": "image",
-   "src": "lattice/lattice_31_slide-earpad-surfaces.jpg",
-   "width": 1920,
-   "height": 1080,
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAgEAACAQQCAwEAAAAAAAAAAAABAgMABBFBEiETUWEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANhNcMjtxA4pgHOydVV7lhLhQOAcJ9Y7pzQK0oc6OcffdQLZPMJD2R2BoH3QJW6dp0AA4OxVRsgfpopsdskcpkF8ooP/2Q==",
-   "tone": "#ffffff",
-   "caption": "Printed surface, fabric over print, or exposed mesh.",
-   "layout": "wide-l",
-   "kind": "white"
-  },
-  {
-   "type": "image",
-   "src": "lattice/lattice_13_g-regions.jpg",
-   "width": 2400,
-   "height": 1500,
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAJBAAAQMEAQMFAAAAAAAAAAAAAQIDBQAEERIhFDFxBhOBkaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAACATEyA//aAAwDAQACEQMRAD8AVTTxt4x10EjXB480KVf34bS/1YTuchvJ7U4lmeoj3G9dtsZHzQ9fp+QUn2cILYPCjjIH3TJRP00LYV1T0W04s7FWeR5qrYa3VaxjTKu6AR+Zg//Z",
-   "tone": "#e9f4f9",
-   "caption": "Regions of a lattice carrying a letterform.",
-   "layout": "narrow-r stagger",
-   "kind": "white"
+   "kind": "row"
   },
   {
    "type": "text",
@@ -433,20 +426,45 @@
    "html": "<h2>What it is not, yet</h2>"
   },
   {
-   "type": "image",
-   "src": "lattice/lattice_16_comfort-map.jpg",
-   "width": 1262,
-   "height": 1388,
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
-   "tone": "#f4f5f1",
-   "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
-   "layout": "half-l",
-   "kind": "white"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_16_comfort-map.jpg",
+       "width": 1262,
+       "height": 1388,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
+       "tone": "#f4f5f1",
+       "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
+       "width": 1000,
+       "height": 1000,
+       "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
+       "tone": "#ffffff",
+       "caption": "One hexahedral unit cell, morphing between types.",
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
   },
   {
    "type": "text",
-   "html": "<p>The tool generates; it does not simulate. There is no stiffness model behind the gradients yet, so the choice of where to soften and where to stiffen is still the designer's. The next step is obvious: take a pressure map from a real body, in a saddle or a pair of earpads, and let it drive density and cell type directly. Then a cushion would be generated for one person, rather than for an average of everyone.</p>",
-   "layout": "text-r low",
+   "html": "<p>Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out.</p>",
    "kind": "text"
   }
  ],

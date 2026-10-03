@@ -371,8 +371,14 @@ const galleryClass = (b: Laid) => {
 					// ends on the same bottom edge (a column of two diagrams beside one photo, etc.)
 					const dims = (m: any): number | null => {
 						if (m.type === 'gallery') {
+							if (!m.items.every((it: any) => it.width && it.height)) return null;
+							// a carousel is one picture of the deck's median shape
+							if (/carousel/.test(m.layout ?? '')) {
+								const rs = m.items.map((it: any) => it.width / it.height).sort((a: number, b: number) => a - b);
+								return rs[Math.floor(rs.length / 2)];
+							}
 							// a stacked gallery behaves like one tall picture
-							if (m.layout !== 'stack' || !m.items.every((it: any) => it.width && it.height)) return null;
+							if (m.layout !== 'stack') return null;
 							return 1 / m.items.reduce((sum: number, it: any) => sum + it.height / it.width, 0);
 						}
 						return m.width && m.height ? m.width / m.height : null;

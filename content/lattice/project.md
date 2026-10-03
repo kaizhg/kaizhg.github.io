@@ -48,11 +48,11 @@ Lattice++ is a lattice generation system I built inside Grasshopper, taking Carb
 
 ### How it works
 
-The tool builds on two kinds of grid. The hexahedral grid is the simple one: a cube, extruded, gridded, or lofted through the volume, with the same unit cell repeated inside and the cells at the boundary cut to the shape. It is regular and predictable, but it only approximates the surface.
+The tool builds on two kinds of grid. **The hexahedral grid** is the simple one: a cube, extruded, gridded, or lofted through the volume, with the same unit cell repeated inside and the cells at the boundary cut to the shape. It is regular and predictable, but it only approximates the surface.
 
 ![](lattice_22_slide-hex-torus.jpg "Hexahedral grid on a torus.") | ![](lattice_21_slide-hex-cells.jpg "Hex cells built by extrusion, grid, or loft, with the same star cell inside.")
 
-The tetrahedral grid is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly. {text-l}
+**The tetrahedral grid** is what makes the lattice conformal. Points are seeded at a controllable density, and TetGen, called from a C# component, fills the volume with well-shaped tetrahedra. The outer faces of that mesh are extracted, so the lattice follows the input surface exactly. {text-l}
 
 ![](lattice_20_slide-tetgen-wip.jpg "An early tetrahedralization: usable, but with a few small and distorted cells near the boundary.") | ![](lattice_15_tetgen-workflow.jpg "TetGen inside Grasshopper: the tetrahedralization step, before and after refinement.")
 
@@ -65,10 +65,6 @@ Cell types are assigned per vertex rather than per cell, so a transition happens
 ### Three gradients
 
 Density follows the point seeding, so it can thin out where a part needs to be light and tighten where it needs support. Strut thickness is a per-edge value and can follow any field. Cell type is the unusual one: because types live on vertices, a part can go from a stiff Kelvin cell to a soft Voronoi cell continuously.
-
-![](lattice_12_hex-cell-morph.mp4) small-l
-
-One hexagonal unit cell, morphing between types. The transition is what lets zones meet without a seam. {text-r low}
 
 [section] Studies
 
@@ -84,18 +80,18 @@ An earpad has to be soft against the head, breathable, and still hold its shape 
 
 ![](lattice_30_slide-headphones.jpg "Kelvin and Voronoi earpads on the same headphone.") wide-r
 
-![](lattice_17_headphones-zelda.jpg "Because the lattice is generated, a pattern or a logo can be written into its skin.") | ![](lattice_14_zelda-pattern.jpg)
+The skin of a generated lattice is a design surface in its own right. Its pattern can be drawn from a key visual element or an IP: this earpad takes the Sheikah emblem from The Legend of Zelda: Breath of the Wild as its motif. {text-l}
 
-[gallery carousel @1-6 every=3] lattice_07_ring-a.png lattice_08_ring-b.png lattice_09_ring-c.png lattice_10_ring-d.png lattice_11_ring-e.png
+![](lattice_14_zelda-pattern.jpg "The Sheikah emblem, redrawn as a lattice pattern.") | ![](lattice_17_headphones-zelda.jpg "The pattern carried on the earpad.")
 
-One earpad, five lattices: the same ring regenerated with different cells and densities, each a different hand feel and a different airflow. {text-r low}
-
-![](lattice_31_slide-earpad-surfaces.jpg "Printed surface, fabric over print, or exposed mesh.") wide-l
-
-![](lattice_13_g-regions.jpg "Regions of a lattice carrying a letterform.") narrow-r stagger
+[row]
+[gallery carousel every=3] lattice_07_ring-a.png "Lattice surface skin, design 1 of 5" lattice_08_ring-b.png "Lattice surface skin, design 2 of 5" lattice_09_ring-c.png "Lattice surface skin, design 3 of 5" lattice_10_ring-d.png "Lattice surface skin, design 4 of 5" lattice_11_ring-e.png "Lattice surface skin, design 5 of 5"
+|
+![](lattice_31_slide-earpad-surfaces.jpg "Printed surface, fabric over print, or exposed mesh.")
+[/row]
 
 [section] What it is not, yet
 
-![](lattice_16_comfort-map.jpg "Softer to stiffer, mapped onto the head. The data is illustrative.") half-l
+![](lattice_16_comfort-map.jpg "Softer to stiffer, mapped onto the head. The data is illustrative.") | ![](lattice_12_hex-cell-morph.mp4 "One hexahedral unit cell, morphing between types.")
 
-The tool generates; it does not simulate. There is no stiffness model behind the gradients yet, so the choice of where to soften and where to stiffen is still the designer's. The next step is obvious: take a pressure map from a real body, in a saddle or a pair of earpads, and let it drive density and cell type directly. Then a cushion would be generated for one person, rather than for an average of everyone. {text-r low}
+Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out.
