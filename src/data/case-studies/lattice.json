@@ -13,8 +13,9 @@
  "blocks": [
   {
    "type": "text",
-   "kind": "text",
-   "html": "<p>Tools: Rhino, Grasshopper (C#), TetGen</p><p>Reference: Carbon Design Engine</p><p>Status: Design tool, 2025 – ongoing</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.</p>"
+   "kind": "credits",
+   "html": "<p>Tools: Rhino, Grasshopper (C#), TetGen</p><p>Reference: Carbon Design Engine</p><p>Status: Design tool, 2025 – ongoing</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.</p>",
+   "layout": "credits"
   },
   {
    "type": "text",

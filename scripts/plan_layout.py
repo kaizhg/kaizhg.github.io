@@ -20,7 +20,7 @@ from PIL import Image, ImageOps
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(SITE, 'src', 'data', 'case-studies')
 IMG = os.path.join(SITE, 'content')  # block src is <slug>/<file> under content/
-CREDITS = re.compile(r'^\s*(course|for:|instructor|project team|team members?|my role|special thanks|thanks:|all the works|harvard graduate|realized)', re.I)
+CREDITS = re.compile(r'^\s*(course|for:|instructor|project team|team members?|team:|my role|role:|duration|special thanks|thanks:|tools?:|stack:|software:|references?:|status:|client:|all the works|harvard graduate|realized)', re.I)
 
 
 def whiteness(block):
