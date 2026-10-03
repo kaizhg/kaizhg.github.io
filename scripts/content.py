@@ -21,8 +21,9 @@ CREDIT_KEYS = [  # label -> how it is written in the credits block (the page par
     ('Team', r'^(team( members?)?|project team)$'), ('Role', r'^(my )?role$'),
     ('Thanks', r'^(spe(?:a)?cial )?thanks$'), ('For', r'^(for|client)$'),
     ('With', r'^(advisors?|collaborators?|contributors?)$'),
+    ('Tools', r'^(tools?|stack|software)$'), ('Reference', r'^references?$'), ('Status', r'^status$'),
 ]
-KEY_RE = re.compile(r'(Course|Instructors?|Project Duration|Duration|Team members?|Project team|Team|My Role|Role|Spe(?:a)?cial Thanks|Thanks|For|Client|Advisors?|Collaborators?|Contributors?)\s*:')
+KEY_RE = re.compile(r'(Course|Instructors?|Project Duration|Duration|Team members?|Project team|Team|My Role|Role|Spe(?:a)?cial Thanks|Thanks|For|Client|Advisors?|Collaborators?|Contributors?|Tools?|Stack|Software|References?|Status)\s*:')
 
 
 # ---------------------------------------------------------------- html <-> markdown-ish

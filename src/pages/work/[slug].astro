@@ -32,8 +32,11 @@ const KEYS: [RegExp, string][] = [
 	[/^(spe(?:a)?cial )?thanks$/i, 'Thanks'],
 	[/^(for|client)$/i, 'For'],
 	[/^(advisors?|collaborators?|contributors?)$/i, 'With'],
+	[/^(tools?|stack|software)$/i, 'Tools'],
+	[/^references?$/i, 'Reference'],
+	[/^status$/i, 'Status'],
 ];
-const KEY_RE = /(Course|Instructors?|Project Duration|Duration|Team members?|Project team|Team|My Role|Role|Spe(?:a)?cial Thanks|Thanks|For|Client|Advisors?|Collaborators?|Contributors?)\s*:/g;
+const KEY_RE = /(Course|Instructors?|Project Duration|Duration|Team members?|Project team|Team|My Role|Role|Spe(?:a)?cial Thanks|Thanks|For|Client|Advisors?|Collaborators?|Contributors?|Tools?|Stack|Software|References?|Status)\s*:/g;
 const canon = (k: string) => KEYS.find(([re]) => re.test(k.trim()))?.[1] ?? null;
 
 function parseCredits(html: string) {

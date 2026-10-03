@@ -8,6 +8,7 @@ import { allProjects } from '../data/projects';
 export function getStaticPaths() {
 	const reserved = new Set(['about', 'archive', 'list', 'work']);
 	return allProjects
+		.filter((p) => /^https?:\/\//.test(p.legacyUrl || ''))
 		.map((p) => ({ legacy: new URL(p.legacyUrl).pathname.replace(/^\/|\/$/g, ''), slug: p.slug }))
 		.filter(({ legacy }) => legacy && !legacy.includes('/') && !reserved.has(legacy))
 		.map(({ legacy, slug }) => ({ params: { legacy }, props: { slug } }));

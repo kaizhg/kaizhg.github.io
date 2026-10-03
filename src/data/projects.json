@@ -1,5 +1,13 @@
 [
  {
+  "slug": "lattice",
+  "title": "Lattice++",
+  "year": 2025,
+  "discipline": "CD",
+  "summary": "Conformal lattice generator for Grasshopper",
+  "legacyUrl": ""
+ },
+ {
   "slug": "eyelash",
   "title": "3D Printed Eyelash",
   "year": 2024,

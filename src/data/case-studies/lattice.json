@@ -1,0 +1,521 @@
+{
+ "slug": "lattice",
+ "legacy": "",
+ "hero": {
+  "type": "image",
+  "src": "lattice/lattice_03_saddle-front.jpg",
+  "width": 1600,
+  "height": 1333,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBAX/xAAjEAABAwQCAQUAAAAAAAAAAAACAAEDBBESIQUTBjFBQlFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAiH/2gAMAwEAAhEDEQA/ALhS5chUny8hjWSDHGdurWLt7suryDlZqOXrjfEcb69SdeHFfpaV4pbnfJsHvtNjCnQd7d4XSKU8a5CubkWoqgylpyF3AjbY2/URNRwVOqlS8QOebgLk3ydtrSIsNM9YZz//2Q==",
+  "tone": "#ffffff"
+ },
+ "locked": false,
+ "blocks": [
+  {
+   "type": "text",
+   "kind": "text",
+   "html": "<p>Tools: Rhino, Grasshopper (C#), TetGen</p><p>Reference: Carbon Design Engine</p><p>Status: Design tool, 2025 – ongoing</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle, VR headset gasket, headphone earpads.</p>"
+  },
+  {
+   "type": "text",
+   "kind": "quote",
+   "layout": "quote",
+   "html": "<h2>What if a cushion could be grown to fit the body that sits on it?</h2>"
+  },
+  {
+   "type": "text",
+   "html": "<p>Lattice++ is a lattice generation system I built inside Grasshopper, taking Carbon's Design Engine as the reference. Give it any closed geometry and it fills the volume with a conformal lattice: tetrahedral, hexahedral, or Voronoi cells, at a chosen density and strut thickness. Density, thickness, and even the cell type can change gradually across one part. It is a design tool, not yet a simulation tool. But the shapes it makes are the shapes that could one day be tuned to a person's own pressure map.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>The tool</h2>"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_19_slide-tool-goal.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQb/xAAfEAACAgIDAAMAAAAAAAAAAAABAgMRACEEEjFBYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7UuFkCV6LG8wSHtXU+/WK/FR5xKSb0a/MqFAN1vAVJleR0Hq+7wyEHAjh5TTqzFmnDA//9k=",
+   "tone": "#fefefe",
+   "caption": "Any closed geometry in; struts, nodes, and a printable mesh out.",
+   "layout": "wide-c",
+   "kind": "white"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_18_slide-seven-types.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMEBQb/xAAlEAABAwMCBgMAAAAAAAAAAAABAgMRAAUSBDETFCFBYaEiUWL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAZEQACAwEAAAAAAAAAAAAAAAAAAgERIbH/2gAMAwEAAhEDEQA/ANK6Nem4rwS2NPBxKiImOnmZqMXL3yRAw5jPb45Yx9bRPqrG429FwbQha1IxMgiD2jvSVWVlWsOoLrslGMT+cd99vdBrDLW8GML1q32irhlvEZlBBEx1870UWq1t2tlaG3FLzVJJAHaNQ1Xh/9k=",
+   "tone": "#fcfcfc",
+   "caption": "Seven cell families on the same torus: tetrahedral, rhombic, icosahedral, Voronoi, kagome, star, Kelvin.",
+   "layout": "full",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<h3>How it works</h3><p>Four problems had to be solved for the tool to work on an arbitrary shape. Seeding points at a controllable density, and filling the volume with well-shaped tetrahedra, are both handled by TetGen, called from a C# component. The outer faces of the tetrahedral mesh are extracted so the lattice follows the input surface exactly. Cell types are assigned per vertex rather than per cell, so a transition happens inside a cell, not between cells.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_15_tetgen-workflow.jpg",
+       "width": 2400,
+       "height": 1344,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAANABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwb/xAAiEAACAgICAAcAAAAAAAAAAAABAgMRAAQSMRMiM2FicaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A2EzLG3pF/ZReEq3qkrUbNVnqhjSa3Ny3MgnIlgB1jGWJF2T+4FWqly8hN5R0oa7+8MbW1k5+ORbXxwwP/9k=",
+       "tone": "#f5f5f5",
+       "caption": "TetGen inside Grasshopper: the tetrahedralization step, before and after refinement.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_20_slide-tetgen-wip.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAdEAACAgMBAQEAAAAAAAAAAAABAgADBBESE0Fh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANozMWIX5KW5HnSH52egIxq9tsHUnzUpyQCP2AirL6yjSwAOtgiEbTgH/9k=",
+       "tone": "#fefefe",
+       "caption": "An early tetrahedralization: usable, but with a few small and distorted cells near the boundary.",
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_23_slide-transition-cell.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBv/EAB4QAQABBAMBAQAAAAAAAAAAAAEAAhESIQMxYSJB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANnnhUgfvsqrkxKdKruxB4hqVXcrHVjr2Aiu/JjZtbu0CB//2Q==",
+   "tone": "#fefefe",
+   "caption": "Each vertex of a tetrahedron carries a cell type, or a mix of types. The cell between them blends.",
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<h3>Three gradients</h3><p>Density follows the point seeding, so it can thin out where a part needs to be light and tighten where it needs support. Strut thickness is a per-edge value and can follow any field. Cell type is the unusual one: because types live on vertices, a part can go from a stiff Kelvin cell to a soft Voronoi cell continuously.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "lattice/lattice_07_ring-a.png",
+     "width": 1280,
+     "height": 1600,
+     "caption": "Same ring, five lattices.",
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_08_ring-b.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_09_ring-c.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_10_ring-d.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_11_ring-e.png",
+     "width": 1280,
+     "height": 1600,
+     "kind": "white"
+    }
+   ],
+   "layout": "grid5",
+   "kind": "gallery"
+  },
+  {
+   "type": "loop",
+   "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
+   "width": 1000,
+   "height": 1000,
+   "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
+   "tone": "#ffffff",
+   "layout": "small-l",
+   "kind": "photo"
+  },
+  {
+   "type": "text",
+   "html": "<p>One hexagonal unit cell, morphing between types. The transition is what lets zones meet without a seam.</p>",
+   "layout": "text-r low",
+   "kind": "text"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_25_slide-zone-icosa-tetra.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAjEAACAgEDBAMBAAAAAAAAAAABAgMEAAURMRIhUZETQXHB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOutSiF0VYWkLnbt9e8Vd1NKVGSYp1FCFC8bk8ZXLD8nDsh8jb+4tqED1XryqZEk7sWPcnzgZ9DV7EtyOvbijUyr1IY2394ZTQ0apQlMkQZnGB//2Q==",
+       "tone": "#fbfbfb",
+       "caption": "Zone transition: icosahedral to tetrahedral.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_26_slide-zone-voronoi.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIhAAAgICAQMFAAAAAAAAAAAAAQIDBAAREgUGMTJBcZGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAaEQACAgMAAAAAAAAAAAAAAAAAAQIDESEx/9oADAMBAAIRAxEAPwDX35UqVJJ+Oyg2PnIS9S6miC4WR65fjx9/rNHYhSzA8Mo2jjRyAO3LayGMXFMBPkqeWvzJWKTeUJfglE8CSr4cbxiCJYIUiT1sD//Z",
+       "tone": "#fcfcfc",
+       "caption": "Zone transition: Voronoi.",
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_24_slide-zones-wip.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwX/xAAhEAABBAICAgMAAAAAAAAAAAACAQMEEQAFE0ESURQhkf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAMAwEAAhEDEQA/AN6dImOy3WNf4gTSXZd/uOFujf1XMYpzIfGtJ9X7y/ZagZZq4DpNGSUSj3k2NTHY13xRur8lLtV94XdKcmA0/IalgzIUSQ0tK6wxw9ejLvIbhOEiUl9YYkIAAAAAAAACT//Z",
+   "tone": "#fbfbfb",
+   "caption": "Assigning cell types per node in a custom script, next to the brute-force zoning a native component gives.",
+   "layout": "wide-c",
+   "kind": "white"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_22_slide-hex-torus.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCBQb/xAAhEAABAwMFAQEAAAAAAAAAAAABAAIDBRESBBMhMWFBUv/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAExAiH/2gAMAwEAAhEDEQA/ANVU5S3GMdEXPqVGkkOl3y5trXxt8TlShzjEgNizv0Ku33iHDN2H5TUIbvR6lyuJfEeQOR4hSpkOMbpSbl/XgQgAALpXEP/Z",
+       "tone": "#dbebed",
+       "caption": "Hexahedral grid on a torus.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_21_slide-hex-cells.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwb/xAAkEAABAwQBAwUAAAAAAAAAAAABAhESAAMEMRMUIUEFFSJRYf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAAMBAQAAAAAAAAAAAAAAAAABIQIR/9oADAMBAAIRAxEAPwDX5dwouIAuBL6EgO9KaushyB9xkNN9UszARlXUrKiktEt5G6XtyOs5pqZ5R/WbdDF6Q9OVeVeuclyQAYiYPyfw2hRVmFgoxri1JUo9oh/A3QuU0qf/2Q==",
+       "tone": "#fdfdfd",
+       "caption": "Hex cells built by extrusion, grid, or loft, with the same star cell inside.",
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>Studies</h2>"
+  },
+  {
+   "type": "text",
+   "html": "<p>A saddle, a headset gasket, and a pair of earpads: three places where a body meets a product and a single foam density is always a compromise.</p>",
+   "kind": "text"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "lattice/lattice_03_saddle-front.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBAX/xAAjEAABAwQCAQUAAAAAAAAAAAACAAEDBBESIQUTBjFBQlFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAiH/2gAMAwEAAhEDEQA/ALhS5chUny8hjWSDHGdurWLt7suryDlZqOXrjfEcb69SdeHFfpaV4pbnfJsHvtNjCnQd7d4XSKU8a5CubkWoqgylpyF3AjbY2/URNRwVOqlS8QOebgLk3ydtrSIsNM9YZz//2Q==",
+     "tone": "#ffffff",
+     "caption": "Saddle, front.",
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_01_saddle-side.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUCBAb/xAAgEAACAgICAgMAAAAAAAAAAAABAgADBBEFEiFBUWFx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABsRAAICAwEAAAAAAAAAAAAAAAABESECMUED/9oADAMBAAIRAxEAPwD3Eg8pm2HkbEVmWvHTfg62xEuW2LTU1jnSqNmR8XjTmvZk5RIW1u3Ue/r8E084VsjOXSKHF5D5fHUX2gB3XZ18xOmtFrRURQqqNAD1Eh7KWjN9K319H312D4m1UKoVRoAaAiIcDoiIiAAAAAAAAAGf/9k=",
+     "tone": "#fcfdfe",
+     "caption": "Saddle, side.",
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_05_saddle-bottom.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAgX/xAAkEAACAgEDAgcAAAAAAAAAAAABAgADEQQSEwYhFBUjQVFh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABkRAQEAAwEAAAAAAAAAAAAAAAABAgMhQf/aAAwDAQACEQMRAD8Atb3NdDuoyVUkCR+s1urq9WvUWcgsBA3dj9YlnJ9tGh6lrUgca5fb7Zx+mJhZ0WyXj3q2LVqzDBIBI+InUQykyeHTzXm77xXEn//Z",
+     "tone": "#f9fbfd",
+     "caption": "Saddle, bottom.",
+     "kind": "white"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
+  },
+  {
+   "type": "gallery",
+   "items": [
+    {
+     "type": "image",
+     "src": "lattice/lattice_04_saddle-front-frame.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCBQf/xAAkEAAABgICAQUBAAAAAAAAAAAAAQIDBBEFEiExBhQyYYGRcf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABgRAQEBAQEAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwC4EXJzc9PkBKS8pMQndDTZamV11Q6fkuZcx69ErJCdb47UYi3H1HNWg1kdtbfeu1/ocmehu3j1UBGeHZuZInFDecN1k0GaduVIr5AGzCl1VTcbDyCdZcZt3irUXJfYweJgnHNn0zehlr7ea/vYAMa1CxkKAkiiRm2qKrSnn97AAAAAAAAAABJ//9k=",
+     "tone": "#ffffff",
+     "caption": "With the rails.",
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_02_saddle-side-frame.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAYBAgME/8QAIhAAAgICAgICAwAAAAAAAAAAAQIAAwQRBRIGQSExIpHw/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQEAAwEAAAAAAAAAAAAAAAAAAQIhEf/aAAwDAQACEQMRAD8AuJLeSctdRltXU7IKgAuj9sfcp7rVpqeyw6VBsyPo4u7yLOfKye9WP32pA12/h8Sq52UzuKXhMuzP4nHybhqx1/L96ierHorxqEppULWg0oHoRJU0zMVMzGai0sEf76nRnWtFqrWtAFVQAAPQiIGYiAAAAAAAACB//9k=",
+     "tone": "#fcfdfe",
+     "kind": "white"
+    },
+    {
+     "type": "image",
+     "src": "lattice/lattice_06_saddle-bottom-frame.jpg",
+     "width": 1600,
+     "height": 1333,
+     "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAUABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAUGBwL/xAAkEAABBAIBAwUBAAAAAAAAAAABAAIDEQQSBRMhMQYWIkFRsf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AumTI6LGlkY3ZzGFwA+yAs0dzOeMps4zJi4/PXY0Tfilp6psfHQD14YumNBcwbXa6v+pgq4Quc+Fjnt1c5oJH4UXSIIo0cfD7hObb+r0davsF/9k=",
+     "tone": "#f9fbfb",
+     "kind": "white"
+    }
+   ],
+   "layout": "grid3",
+   "kind": "gallery"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_27_slide-vr-gasket.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAb/xAAhEAACAgEEAwEBAAAAAAAAAAABAgMEABESITEFE1EiYf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAwDAQACEQMRAD8A09zyCV30SrLKoba0g4VT/Tj6d6K3W9sAYgMU0Gh5GRJ4yvLa97hyTyU3nYx+lessiNFTaqhVHQUaYwlw2BKQChRjr+W7wxoU7hgH/9k=",
+   "tone": "#fbfbfb",
+   "caption": "VR headset gasket: icosahedral where it bears on the face, tetrahedral where it only needs to hold shape.",
+   "layout": "full",
+   "kind": "white"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_28_slide-gasket-variants.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQb/xAAiEAACAgICAAcAAAAAAAAAAAABEQADAhIEQRMUFSEiI1L/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7HmWGuhjIYspnqS/Nfctzr+pV5lJvp0xIBY94j03DwNH829+3Adw7DZSzkMkUx3Cbw6TRRpkWWUAAAABmED/2Q==",
+       "tone": "#fbfbfb",
+       "caption": "The same gasket in Voronoi, BCC, and icosahedral + tetrahedral.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_29_slide-gasket-heatmap.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMG/8QAIBAAAwACAgIDAQAAAAAAAAAAAQIDBBEAIQUTEjFBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDqH8lhRyKwu/reZ72D2D3yH8i1Mab4sqN7WIXS7IUfvHKYmPVy9IzZiNElRvXMJLVask2RJI4AUL9L/OBRcu8MucsidClOvZ8RpT+djhx8gNjhwP/Z",
+       "tone": "#f9f9f9",
+       "caption": "Lattice only on the underside, where pressure concentrates, keeping the outside clean.",
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_30_slide-headphones.jpg",
+   "width": 1920,
+   "height": 1080,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBf/EACEQAAEEAQQDAQAAAAAAAAAAAAECAwQRAAUSEyEUMVFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO/K1HjcmXMQh9lQDbBIoirF/b7/ADMGpHcSJaDJ8jj8exQG6tv7Xd/cqf0SBInpmOsBTwIJNnsj1Y9YGiQE6j5wYHPe67NX9r1gTRNR5FRCiYh555ZDrQIpPRsD5XX7jKYuiQIc1UphgJdVfdk1fuhjAAAAAAAAMD//2Q==",
+   "tone": "#ffffff",
+   "caption": "Earpads in Kelvin and Voronoi cells.",
+   "layout": "wide-l",
+   "kind": "white"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_31_slide-earpad-surfaces.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgb/xAAgEAACAQQCAwEAAAAAAAAAAAABAgMABBFBEiETUWEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANhNcMjtxA4pgHOydVV7lhLhQOAcJ9Y7pzQK0oc6OcffdQLZPMJD2R2BoH3QJW6dp0AA4OxVRsgfpopsdskcpkF8ooP/2Q==",
+       "tone": "#ffffff",
+       "caption": "Printed surface, fabric over print, or exposed mesh.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_32_slide-micro-texture.jpg",
+       "width": 1920,
+       "height": 1080,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAOABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACYQAAIBAwIFBQEAAAAAAAAAAAEDAgAEBRETEiExQVEGFDIzYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ad9QXrt1Vjaz25t5yYTpwx7knwACa4cTkXWWEu7hj5vUHGNtNg5mI7/ylMxgbbLOSx82wMNQQuWnGPBrXI4lN5i/ZLJRGIG2YD4adKAnC3OROdCbi4LIyTuOUR9RPQa+elVMYfFJxVuYLlJjGHiY2Zz+1UH//2Q==",
+       "tone": "#fbfbfb",
+       "caption": "A micro texture on the inner wall, sized to the frequencies it should damp.",
+       "kind": "white"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_17_headphones-zelda.jpg",
+       "width": 2400,
+       "height": 1500,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBAX/xAAiEAACAQMEAgMAAAAAAAAAAAABAgMABBEFEhMxIVEUIkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AbtUuZLTTZ54l3SImVGM+ap3FhNBpcksFzN8xV5OQuSGYecEdY/K0btJJLWVISBIykKT1mlGWz1pylgGbjldnJaQfUZ67z4oG2ynN1ZQTldpljVyPWRmipIk44kTOdqgZAA94ooP/2Q==",
+       "tone": "#f8f8f9",
+       "caption": "Because the lattice is generated, a pattern or a logo can be written into its skin.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_14_zelda-pattern.jpg",
+       "width": 922,
+       "height": 1272,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABIDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAQBAgMF/8QAIBAAAgICAQUBAAAAAAAAAAAAAQIAEQMSIRMiMUFxUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdshOxLH5NR3XHe549AyPPtqKsjbkCYGRXcYLCBa82LgXdVfZs/InllzcQKFcg8C7/ACcW7jWtREBED//Z",
+       "tone": "#656565",
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "kind": "row"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_13_g-regions.jpg",
+   "width": 2400,
+   "height": 1500,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAPABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAJBAAAQMEAQMFAAAAAAAAAAAAAQIDBQAEERIhFDFxBhOBkaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAACATEyA//aAAwDAQACEQMRAD8AVTTxt4x10EjXB480KVf34bS/1YTuchvJ7U4lmeoj3G9dtsZHzQ9fp+QUn2cILYPCjjIH3TJRP00LYV1T0W04s7FWeR5qrYa3VaxjTKu6AR+Zg//Z",
+   "tone": "#e9f4f9",
+   "caption": "Regions of a lattice carrying a letterform.",
+   "layout": "wide-c",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "kind": "section",
+   "layout": "section",
+   "html": "<h2>What it is not, yet</h2>"
+  },
+  {
+   "type": "image",
+   "src": "lattice/lattice_16_comfort-map.jpg",
+   "width": 1262,
+   "height": 1388,
+   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
+   "tone": "#f4f5f1",
+   "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
+   "layout": "half-l",
+   "kind": "white"
+  },
+  {
+   "type": "text",
+   "html": "<p>The tool generates; it does not simulate. There is no stiffness model behind the gradients yet, so the choice of where to soften and where to stiffen is still the designer's. The next step is obvious: take a pressure map from a real body, in a saddle, a headset, or a pair of earpads, and let it drive density and cell type directly. Then a cushion would be generated for one person, rather than for an average of everyone.</p>",
+   "layout": "text-r low",
+   "kind": "text"
+  }
+ ],
+ "cover": {
+  "type": "image",
+  "src": "lattice/lattice_cover.jpg",
+  "width": 1600,
+  "height": 1250,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQb/xAAmEAABAwMDAgcAAAAAAAAAAAABAAIDBAUREiIxE1EhM0FiceHw/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABsRAAMAAgMAAAAAAAAAAAAAAAABIQJBAxEx/9oADAMBAAIRAxEAPwDuFz11qXvuUoJIjp2bR7iOf3Zb08rYIXyP4aM/KyqO2iqL6mrJd1HatA4P0tOPpVkZ2Iu2maSotlPLN5jm7j3RWmtDGhrQAAMAD0RQ6yl4R1MbZItLxkZHgpQA0AAYA4TP/9k=",
+  "tone": "#f8fafc"
+ },
+ "hover": {
+  "type": "image",
+  "src": "lattice/lattice_hover.jpg",
+  "width": 1600,
+  "height": 1250,
+  "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAQP/xAAkEAACAgIBBAEFAAAAAAAAAAABAgADBBEFEiEiMUEGM1Fhwf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABgRAQADAQAAAAAAAAAAAAAAAAABESEC/9oADAMBAAIRAxEAPwC4kl9T8lZXmOisVFYCpo68j3JlVfcuPQ9th0qDZklicPbz2Y+ZnK6UM20HrqH5/kXM1cjO4oeCybczh8a+/wC46+X77xNtVSU1LVUoREGlUegIhJ4clSl+E9do6kbWxvXzNCKqIEQAKo0APgRE1On1EQAAAAARMT//2Q==",
+  "tone": "#f7f9fb"
+ }
+}
