@@ -562,6 +562,8 @@ const galleryClass = (b: Laid) => {
 	/* Rollover picture: the alternate sits on top and fades in under the cursor */
 	.media-block.swap {
 		position: relative;
+		width: fit-content; /* shrink to the picture, so the alternate covers exactly it */
+		max-width: 100%;
 	}
 	.media-block.swap .alt {
 		position: absolute;
