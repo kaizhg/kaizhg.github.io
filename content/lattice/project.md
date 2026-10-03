@@ -94,4 +94,4 @@ The skin of a generated lattice is a design surface in its own right. Its patter
 
 ![](lattice_16_comfort-map.jpg "Softer to stiffer, mapped onto the head. The data is illustrative.") | ![](lattice_12_hex-cell-morph.mp4 "One hexahedral unit cell, morphing between types.")
 
-Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out.
+Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out. {text-l}

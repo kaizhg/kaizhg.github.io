@@ -396,7 +396,7 @@
         }
        ],
        "every": 3000,
-       "layout": "grid2",
+       "layout": "carousel",
        "kind": "gallery"
       }
      ]
@@ -465,6 +465,7 @@
   {
    "type": "text",
    "html": "<p>Whether the grid is hexahedral or tetrahedral, every unit cell is a parameter: its type, its size, and its strut thickness can be tuned to human-factors data, pressure, heat, fit. The Grasshopper workflow does not simulate yet; it designs. The data has to come from somewhere else, and that is exactly where a close collaboration with a human-factors team would begin: their measurements in, a cushion generated for one person out.</p>",
+   "layout": "text-l",
    "kind": "text"
   }
  ],

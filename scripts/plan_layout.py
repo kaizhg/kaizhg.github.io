@@ -82,9 +82,11 @@ def tag(bs):
             for c in b['columns']:
                 tag(c['blocks'])
                 for g in c['blocks']:
-                    if g['type'] == 'gallery' and len(g['items']) >= 4:
+                    if g['type'] != 'gallery' or g.get('layout'):
+                        continue  # an explicit layout (carousel, stack, grid…) is kept as written
+                    if len(g['items']) >= 4:
                         g['layout'] = 'grid3' if len(g['items']) >= 7 else 'grid2'
-                    elif g['type'] == 'gallery' and all(it['width'] / it['height'] > 1.6 for it in g['items']):
+                    elif all(it['width'] / it['height'] > 1.6 for it in g['items']):
                         g['layout'] = 'stack'  # wide drawings side by side would be tiny
             b['kind'] = 'row'  # rows are top-aligned; set layout 'stagger' in PLAN to offset the second column
         else:
