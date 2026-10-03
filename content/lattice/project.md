@@ -11,10 +11,6 @@ hero: lattice_34_saddle-closeup-1.jpg  # 项目页顶部大图；没有这行就
 password: bounce                   # 访问密码：页面内容会用它加密，删掉这行就不加锁
 credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
   Tools: Rhino, Grasshopper, Custom Python Script, TetGen
-  Role:
-    - Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.
-    - Designed the cell-transition scheme that lets one part carry several lattice types without seams.
-    - Modeled the application studies: bicycle saddle and headphone earpads.
 ---
 
 <!-- 使用说明（这段不会显示在网站上，可以删）

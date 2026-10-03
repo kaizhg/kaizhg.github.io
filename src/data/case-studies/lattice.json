@@ -14,7 +14,7 @@
   {
    "type": "text",
    "kind": "credits",
-   "html": "<p>Tools: Rhino, Grasshopper, Custom Python Script, TetGen</p><p>Role: Built the whole pipeline alone: point seeding, tetrahedralization, surface extraction, cell typing, and strut generation.<br>Designed the cell-transition scheme that lets one part carry several lattice types without seams.<br>Modeled the application studies: bicycle saddle and headphone earpads.</p>",
+   "html": "<p>Tools: Rhino, Grasshopper, Custom Python Script, TetGen</p>",
    "layout": "credits"
   },
   {
