@@ -17,6 +17,8 @@ export interface ImageBlock {
 	tone?: string;
 	/** Dark line art on a transparent ground: inverted on the dark theme */
 	ink?: boolean;
+	/** A second picture shown while the cursor is over this one (md: hover=file) */
+	hover?: ImageBlock;
 }
 export interface LoopBlock {
 	type: 'loop';

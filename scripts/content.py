@@ -456,7 +456,7 @@ def has_audio(path):
 
 # ![](file "caption")  or the forgivable  ![](file) "caption";  wrapped in [ ... ](url) it is a link
 MEDIA_RE = re.compile(r'(?:\[)?!\[\]\(([^\s)"]+)(?:\s+"([^"]*)")?\)(?:\]\(([^)\s]+)\))?(?:\s*"([^"]*)")?')
-LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|spread|@\d{1,2}-\d{1,2}|y=\d{1,2}|w=\d{2,4})'
+LAYOUT_WORDS = r'(?:full|wide-[lrc]|half-[lr]|narrow-[lrc]|third-[lr]|small-[lcr]|tri-[abc]|text-[lr]|beside-[lr]|intro|quote|section|credits|grid[2-5]|strip|stack|carousel|flow|justified|stagger|pull|low|spread|@\d{1,2}-\d{1,2}|y=\d{1,2}|w=\d{2,4}|hover=[\w.-]+)'
 HINT_RE = re.compile(r'\s+((?:' + LAYOUT_WORDS + r')(?:\s+' + LAYOUT_WORDS + r')*)$')
 
 
@@ -483,6 +483,8 @@ def parse_media_line(line, folder, slug):
                 b['maxWidth'] = int(w[2:]); words.remove(w)
             elif w.startswith('y='):
                 b['y'] = int(w[2:]); words.remove(w)
+            elif w.startswith('hover='):  # a second picture shown while the cursor is over the first
+                b['hover'] = media_block(folder, slug, w[6:]); words.remove(w)
         if words:
             b['layout'] = ' '.join(words)
     return b

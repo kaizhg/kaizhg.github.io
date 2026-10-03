@@ -230,7 +230,12 @@ const galleryClass = (b: Laid) => {
 					return <div class:list={['block', 'text', { credits: b.kind === 'credits', quote: b.kind === 'quote' }]} set:html={b.html} />;
 				case 'image':
 					return (
-						<figure class="block media-block reveal">
+						<figure class:list={['block', 'media-block', 'reveal', { swap: !!b.hover }]}>
+							{b.hover && (
+								<span class="alt" aria-hidden="true">
+									<Media block={b.hover} sizes="(max-width: 800px) 100vw, 60vw" />
+								</span>
+							)}
 							{b.href ? (
 								<a href={b.href} target="_blank" rel="noopener" class="media-link">
 									<Media block={b} alt={b.caption ?? title} sizes="(max-width: 800px) 100vw, 60vw" />
@@ -552,6 +557,31 @@ const galleryClass = (b: Laid) => {
 	}
 	.media-block {
 		margin-inline: 0;
+	}
+	/* Rollover picture: the alternate sits on top and fades in under the cursor */
+	.media-block.swap {
+		position: relative;
+	}
+	.media-block.swap .alt {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		pointer-events: none;
+	}
+	.media-block.swap .alt :global(.media) {
+		width: 100%;
+		height: 100%;
+		max-height: none;
+		object-fit: cover;
+	}
+	.media-block.swap:hover .alt {
+		opacity: 1;
+	}
+	@media (hover: none) {
+		.media-block.swap .alt {
+			display: none;
+		}
 	}
 	figcaption {
 		font: 11px/1.5 var(--mono);

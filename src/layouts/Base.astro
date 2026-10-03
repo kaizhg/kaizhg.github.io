@@ -149,7 +149,7 @@ const archiveSlugs = new Set(archive.map((p) => p.slug));
 				if (!box) return;
 				const big = box.querySelector('img') as HTMLImageElement;
 				const pics = Array.from(document.querySelectorAll<HTMLImageElement>('article img.media')).filter(
-					(img) => !img.closest('a') && !img.closest('.carousel'),
+					(img) => !img.closest('a') && !img.closest('.carousel') && !img.closest('.alt'),
 				);
 				let at = -1;
 				const largest = (img: HTMLImageElement) => {
