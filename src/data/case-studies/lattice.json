@@ -426,27 +426,42 @@
    "html": "<h2>What it is not, yet</h2>"
   },
   {
-   "type": "image",
-   "src": "lattice/lattice_16_comfort-map.jpg",
-   "width": 1262,
-   "height": 1388,
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
-   "tone": "#f4f5f1",
-   "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
-   "layout": "@1-5",
-   "kind": "white"
-  },
-  {
-   "type": "loop",
-   "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
-   "width": 1000,
-   "height": 1000,
-   "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
-   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
-   "tone": "#ffffff",
-   "caption": "One hexahedral unit cell, morphing between types.",
-   "layout": "@5-9",
-   "kind": "photo"
+   "type": "row",
+   "columns": [
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "image",
+       "src": "lattice/lattice_16_comfort-map.jpg",
+       "width": 1262,
+       "height": 1388,
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABYDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQb/xAAiEAACAgICAgIDAAAAAAAAAAABAgADBBEFEiExE0EUUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AOpzbK0XqQzP7Chyv9Mr4mdRZjNayWVsm+yFyfUhygf5LNMFJTSn9SjwPG2NVf8AkNoEa1vfn7Ml6Y2cDOqzO/QMrJ4KsfURx/H14RsIZnew7ZmiIJZyW2VdKkDbPncr41GRQ4IQ6+wT7oR//9k=",
+       "tone": "#f4f5f1",
+       "caption": "Softer to stiffer, mapped onto the head. The data is illustrative.",
+       "kind": "white"
+      }
+     ]
+    },
+    {
+     "flex": 0.5,
+     "blocks": [
+      {
+       "type": "loop",
+       "src": "/media/lattice/lattice_12_hex-cell-morph.mp4",
+       "width": 1000,
+       "height": 1000,
+       "poster": "/media/lattice/lattice_12_hex-cell-morph.jpg",
+       "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gAQTGF2YzYxLjE5LjEwMQD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBv/EACMQAAIBAwQCAwEAAAAAAAAAAAECAwAEEQUSITEGE0FRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A7K7uo7SLfJk5IVVHbE9AVPOvxq6h4SoJ5y43D8rPyAPLJDCYw6SDapJ4DE9/lZlotGu5PftkWReHPdBcjdZEDoQVYZBFKk+PCcLP7JFeJiHQDkKSMkA/WMUoKlxbpcxGOQZU/wBB+xUiPRLkSF5LlGk3ZEm1icA8cZxSlBT0+yi0+1WCHO0ZJJ/pSlB//9k=",
+       "tone": "#ffffff",
+       "caption": "One hexahedral unit cell, morphing between types.",
+       "kind": "photo"
+      }
+     ]
+    }
+   ],
+   "layout": "@1-9",
+   "kind": "row"
   },
   {
    "type": "text",
@@ -470,5 +485,6 @@
   "height": 1250,
   "lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAATABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAQP/xAAkEAACAgIBBAEFAAAAAAAAAAABAgADBBEFEiEiMUEGM1Fhwf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABgRAQADAQAAAAAAAAAAAAAAAAABESEC/9oADAMBAAIRAxEAPwC4kl9T8lZXmOisVFYCpo68j3JlVfcuPQ9th0qDZklicPbz2Y+ZnK6UM20HrqH5/kXM1cjO4oeCybczh8a+/wC46+X77xNtVSU1LVUoREGlUegIhJ4clSl+E9do6kbWxvXzNCKqIEQAKo0APgRE1On1EQAAAAARMT//2Q==",
   "tone": "#f7f9fb"
- }
+ },
+ "password": "bounce"
 }

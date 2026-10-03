@@ -640,6 +640,8 @@ def build_one(slug):
         data['hero'] = dict(data['cover'])
     if fm.get('link'):
         data['link'] = fm['link']
+    if fm.get('password'):
+        data['password'] = str(fm['password'])  # the built page is encrypted with it (scripts/lock-pages.mjs)
     if fm.get('hero_width'):
         data['heroWidth'] = fm['hero_width']
     if fm.get('hero_caption'):
@@ -794,7 +796,7 @@ FM_NOTES = {
     'context': '显示为 "@ …"，不要可删', 'group': 'selected 或 archive', 'position': '在所属组里排第几',
     'discipline': '旧分类，现在不显示，可忽略', 'legacy': '旧网站地址，仅备查', 'cover': '首页封面（32:25 裁切）',
     'hover': '鼠标悬停时换成的图或循环视频', 'hero': '项目页顶部大图；没有这行就用封面；inline = 顶部不放大图',
-    'link': '顶部大图点击跳转的网址', 'hero_width': '顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左', 'hero_caption': '顶部大图下面的小字说明', 'deck': '整页都是幻灯片', 'credits': '显示在标题下方，有哪项写哪项，可整段删掉',
+    'link': '顶部大图点击跳转的网址', 'password': '访问密码：页面内容会用它加密，删掉这行就不加锁', 'hero_width': '顶部大图宽度：full（整宽）/ wide（三分之二）/ half（一半），靠左', 'hero_caption': '顶部大图下面的小字说明', 'deck': '整页都是幻灯片', 'credits': '显示在标题下方，有哪项写哪项，可整段删掉',
     'credits_notes': '不属于固定栏目的 credits 文字，一行一条',
 }
 LEGEND = """<!-- 使用说明（这段不会显示在网站上，可以删）

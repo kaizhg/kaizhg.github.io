@@ -117,7 +117,7 @@ function layout(bs: Laid[]): Cell[] {
 			const photos = media.length > 0 && media.every((m) => m.type === 'image' || m.type === 'loop' || m.type === 'video' || m.type === 'gallery');
 			if (photos && b.columns.length === 2 && b.layout !== 'flat') {
 				const merged = { ...b, columns: [{ ...b.columns[0], blocks: [...b.columns[0].blocks, next!] }, b.columns[1]] };
-				cells.push({ cls: 'full', blocks: [merged] });
+				cells.push({ cls: b.layout?.match(/@\d+-\d+/)?.[0] || 'full', blocks: [merged] });
 				i++;
 				continue;
 			}
@@ -164,8 +164,8 @@ function layout(bs: Laid[]): Cell[] {
 			continue;
 		}
 
-		// a gallery may ask for a column range: "[gallery grid3 @2-12]"
-		cells.push({ cls: (b.type === 'gallery' && b.layout?.match(/@\d+-\d+/)?.[0]) || 'full', blocks: [b] });
+		// a gallery or a row may ask for a column range: "[gallery grid3 @2-12]", "[row @1-9]"
+		cells.push({ cls: ((b.type === 'gallery' || b.type === 'row') && b.layout?.match(/@\d+-\d+/)?.[0]) || 'full', blocks: [b] });
 	}
 	return cells;
 }
