@@ -1,13 +1,5 @@
 [
  {
-  "slug": "lattice",
-  "title": "Lattice++",
-  "year": 2025,
-  "discipline": "CD",
-  "summary": "Conformal lattice generator for Grasshopper",
-  "legacyUrl": ""
- },
- {
   "slug": "eyelash",
   "title": "3D Printed Eyelash",
   "year": 2024,
@@ -15,6 +7,14 @@
   "summary": "3D printed lash product",
   "context": "OPT Industries",
   "legacyUrl": "https://kaizhang.io/at-opt-industries"
+ },
+ {
+  "slug": "lattice",
+  "title": "Lattice++",
+  "year": 2025,
+  "discipline": "CD",
+  "summary": "Conformal lattice generator for Grasshopper",
+  "legacyUrl": ""
  },
  {
   "slug": "os-11",

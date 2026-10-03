@@ -3,11 +3,11 @@ title: Lattice++                   # 标题
 year: 2025                         # 年份（页面上的编号就是它）
 summary: Conformal lattice generator for Grasshopper # 一句话类型，首页 tile 和列表里显示
 group: selected                    # selected 或 archive
-position: 1                        # 在所属组里排第几
+position: 2                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 cover: lattice_cover.jpg           # 首页封面（32:25 裁切）
 hover: lattice_hover.jpg           # 鼠标悬停时换成的图或循环视频
-hero: lattice_hero.jpg  # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
+hero: lattice_03_saddle-front.jpg  # 项目页顶部大图；没有这行就用封面；inline = 顶部不放大图
 password: bounce                   # 访问密码：页面内容会用它加密，删掉这行就不加锁
 credits:                           # 显示在标题下方，有哪项写哪项，可整段删掉
   Tools: Rhino, Grasshopper, Custom Python Script, TetGen
