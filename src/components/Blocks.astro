@@ -110,8 +110,9 @@ function layout(bs: Laid[]): Cell[] {
 			continue;
 		}
 
-		// A staggered pair of photos followed by text: the text tucks under the first photo
-		if (b.type === 'row' && plainText(next)) {
+		// A pair of photos followed by text: the text tucks under the first photo, unless the
+		// paragraph asked for its own place ({text-l} / {text-r})
+		if (b.type === 'row' && plainText(next) && !next!.layout) {
 			const media = b.columns.flatMap((c) => c.blocks);
 			const photos = media.length > 0 && media.every((m) => m.type === 'image' || m.type === 'loop' || m.type === 'video' || m.type === 'gallery');
 			if (photos && b.columns.length === 2 && b.layout !== 'flat') {
