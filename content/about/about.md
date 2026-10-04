@@ -4,6 +4,6 @@
 # 然后在下面加一行，一行一张，引号里是图下面的小字说明（可以不写）。
 # 第一行的照片放最上面，其余按顺序往下排。存盘后页面自动更新；想暂时不显示，删掉那一行就行，文件留着没关系。
 
-![](about_04.jpg "Cherry Creek Fall, 2026")
-![](about_05.jpg "Hvannadalshnúkur, 2025")
-![](about_01.jpg "Chiang Mai, 2019")
+![](about_04.jpg "Cherry Creek Falls")
+![](about_05.jpg "Hvannadalshnúkur")
+![](about_01.jpg "Chiang Mai")
