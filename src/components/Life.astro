@@ -18,7 +18,7 @@ const {
 <div class="life" data-text={text} data-words={JSON.stringify(words)}>
 	<canvas aria-label={`Conway's Game of Life spelling ${text}`} role="img"></canvas>
 	<p class="life-hint">
-		<span class="life-hint-note">Website still under construction</span>
+		<span class="life-hint-note">Site work in progress</span>
 		<span class="life-hint-action" aria-hidden="true">Draw with the cursor · click for the next word</span>
 	</p>
 </div>
@@ -530,6 +530,10 @@ const {
 		.life {
 			aspect-ratio: 3 / 1;
 			min-height: 120px;
+		}
+		.life-hint-note {
+			font-size: 9px;
+			opacity: 0.6;
 		}
 	}
 </style>

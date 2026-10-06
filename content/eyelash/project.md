@@ -57,7 +57,7 @@ R&D on 3D-printed eyelashes at OPT Industries, now available at [TAD Beauty](htt
 1. Geometry optimization: yield up 10–40% in absolute terms, depending on the lash style\
 2. New layout: 80–100% more throughput for certain sizes\
 3. New support: higher yield, and it removed the air-blade step, a slow and labor-intensive part of post-processing\
-4. Design tools development, so each of the above could be iterated in hours instead of days
+4. Design tools development, small features for optimization, visualization, and documentation
 
 ...
 Below shows a simplified overview of works I've done.
