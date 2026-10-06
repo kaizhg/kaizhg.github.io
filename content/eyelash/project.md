@@ -36,6 +36,8 @@ hover: eyelash_hover.jpg           # 鼠标悬停时换成的图或循环视频
 
 R&D on 3D-printed eyelashes at OPT Industries, now available at [TAD Beauty](https://tadbeauty.com/).
 
+**Work in progress.** This page is still being written; more detail is on the way.
+
 [row 0.615 0.385]
 ![](eyelash_01.jpg)
 |
@@ -52,11 +54,10 @@ R&D on 3D-printed eyelashes at OPT Industries, now available at [TAD Beauty](htt
 
 ### What I've achieved
 
-1. Geometry optimization\
-2. New support and layout\
-3. Design tools development
-
-⬆ Yield  ·  ⬆ Throughput  ·  ⬆ Iteration
+1. Geometry optimization: yield up 10–40% in absolute terms, depending on the lash style\
+2. New layout: 80–100% more throughput for certain sizes\
+3. New support: higher yield, and it removed the air-blade step, a slow and labor-intensive part of post-processing\
+4. Design tools development, so each of the above could be iterated in hours instead of days
 
 ...
 Below shows a simplified overview of works I've done.
