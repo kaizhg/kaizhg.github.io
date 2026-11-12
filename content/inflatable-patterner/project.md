@@ -4,7 +4,7 @@ year: 2023                         # 年份（页面上的编号就是它）
 summary: "Grasshopper C# development" # 一句话类型，首页 tile 和列表里显示
 context: Pneuhaus                  # 显示为 "@ …"，不要可删
 group: selected                    # selected 或 archive
-position: 3                        # 在所属组里排第几
+position: 4                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/inflatable-generator # 旧网站地址，仅备查
 cover: inflatable-patterner_cover.jpg # 首页封面（32:25 裁切）

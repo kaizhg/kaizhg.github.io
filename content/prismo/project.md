@@ -3,7 +3,7 @@ title: Prismo                      # 标题
 year: 2022                         # 年份（页面上的编号就是它）
 summary: Transformable lamp        # 一句话类型，首页 tile 和列表里显示
 group: selected                    # selected 或 archive
-position: 11                       # 在所属组里排第几
+position: 8                        # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/prismo # 旧网站地址，仅备查
 cover: prismo_cover.jpg            # 首页封面（32:25 裁切）
