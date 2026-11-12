@@ -3,7 +3,7 @@ title: Operating System 1.1        # 标题
 year: 2024                         # 年份（页面上的编号就是它）
 summary: Interactive installation  # 一句话类型，首页 tile 和列表里显示
 group: selected                    # selected 或 archive
-position: 2                        # 在所属组里排第几
+position: 10                       # 在所属组里排第几
 discipline: IX                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/os-11  # 旧网站地址，仅备查
 cover: os-11_cover.jpg             # 首页封面（32:25 裁切）

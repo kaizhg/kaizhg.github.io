@@ -17,12 +17,29 @@
   "legacyUrl": ""
  },
  {
-  "slug": "os-11",
-  "title": "Operating System 1.1",
-  "year": 2024,
-  "discipline": "IX",
-  "summary": "Interactive installation",
-  "legacyUrl": "https://kaizhang.io/os-11"
+  "slug": "inflatable-patterner",
+  "title": "Inflatable Patterner",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Grasshopper C# development",
+  "context": "Pneuhaus",
+  "legacyUrl": "https://kaizhang.io/inflatable-generator"
+ },
+ {
+  "slug": "transform",
+  "title": "Transform",
+  "year": 2022,
+  "discipline": "CD",
+  "summary": "Grasshopper plugin for 1 DOF prismatic structures",
+  "legacyUrl": "https://kaizhang.io/transform"
+ },
+ {
+  "slug": "hyperslice",
+  "title": "HyperSlice",
+  "year": 2023,
+  "discipline": "CD",
+  "summary": "Image-interpolation-based 3D modeling workflow",
+  "legacyUrl": "https://kaizhang.io/hyperslice"
  },
  {
   "slug": "large-language-objects",
@@ -34,15 +51,6 @@
   "legacyUrl": "https://kaizhang.io/large-language-objects"
  },
  {
-  "slug": "inflatable-patterner",
-  "title": "Inflatable Patterner",
-  "year": 2023,
-  "discipline": "CD",
-  "summary": "Grasshopper C# development",
-  "context": "Pneuhaus",
-  "legacyUrl": "https://kaizhang.io/inflatable-generator"
- },
- {
   "slug": "imago",
   "title": "Project Imago",
   "year": 2023,
@@ -51,20 +59,30 @@
   "legacyUrl": "https://kaizhang.io/pupas"
  },
  {
-  "slug": "hyperslice",
-  "title": "HyperSlice",
-  "year": 2023,
+  "slug": "tables",
+  "title": "Tables?",
+  "year": 2019,
   "discipline": "CD",
-  "summary": "Image-interpolation-based 3D modeling workflow",
-  "legacyUrl": "https://kaizhang.io/hyperslice"
+  "summary": "Generative furniture study",
+  "context": "Zhang Zhoujie Digital Lab",
+  "legacyUrl": "https://kaizhang.io/zhang-zhoujie-digital-lab-internship"
  },
  {
-  "slug": "seesaw",
-  "title": "See/Saw",
-  "year": 2023,
+  "slug": "sound-x",
+  "title": "Sound X 2021 Design R&D",
+  "year": 2020,
+  "discipline": "ID",
+  "summary": "Light effect design",
+  "context": "Huawei CBG",
+  "legacyUrl": "https://kaizhang.io/sound-x-2021-light-effect-design"
+ },
+ {
+  "slug": "os-11",
+  "title": "Operating System 1.1",
+  "year": 2024,
   "discipline": "IX",
-  "summary": "1D balancing game and controller",
-  "legacyUrl": "https://kaizhang.io/seesaw"
+  "summary": "Interactive installation",
+  "legacyUrl": "https://kaizhang.io/os-11"
  },
  {
   "slug": "prismo",
@@ -73,6 +91,14 @@
   "discipline": "ID",
   "summary": "Transformable lamp",
   "legacyUrl": "https://kaizhang.io/prismo"
+ },
+ {
+  "slug": "seesaw",
+  "title": "See/Saw",
+  "year": 2023,
+  "discipline": "IX",
+  "summary": "1D balancing game and controller",
+  "legacyUrl": "https://kaizhang.io/seesaw"
  },
  {
   "slug": "yottabyte",
@@ -97,33 +123,6 @@
   "discipline": "IX",
   "summary": "Responsive telepresence furniture",
   "legacyUrl": "https://kaizhang.io/wind"
- },
- {
-  "slug": "sound-x",
-  "title": "Sound X 2021 Design R&D",
-  "year": 2020,
-  "discipline": "ID",
-  "summary": "Light effect design",
-  "context": "Huawei CBG",
-  "legacyUrl": "https://kaizhang.io/sound-x-2021-light-effect-design"
- },
- {
-  "slug": "tables",
-  "title": "Tables?",
-  "year": 2019,
-  "discipline": "CD",
-  "summary": "Generative furniture study",
-  "context": "Zhang Zhoujie Digital Lab",
-  "legacyUrl": "https://kaizhang.io/zhang-zhoujie-digital-lab-internship"
- },
- {
-  "slug": "transform",
-  "title": "Transform",
-  "year": 2022,
-  "discipline": "CD",
-  "summary": "Grasshopper plugin for 1 DOF prismatic structures",
-  "archive": true,
-  "legacyUrl": "https://kaizhang.io/transform"
  },
  {
   "slug": "vitalization",

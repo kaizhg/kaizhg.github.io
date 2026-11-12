@@ -3,7 +3,7 @@ title: Project Imago               # 标题
 year: 2023                         # 年份（页面上的编号就是它）
 summary: Contemporary generative jewelry # 一句话类型，首页 tile 和列表里显示
 group: selected                    # selected 或 archive
-position: 5                        # 在所属组里排第几
+position: 7                        # 在所属组里排第几
 discipline: CD                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/pupas  # 旧网站地址，仅备查
 cover: imago_vogue25_08.jpg        # 首页封面（32:25 裁切）

@@ -4,7 +4,7 @@ year: 2020                         # 年份（页面上的编号就是它）
 summary: Light effect design       # 一句话类型，首页 tile 和列表里显示
 context: Huawei CBG                # 显示为 "@ …"，不要可删
 group: selected                    # selected 或 archive
-position: 12                       # 在所属组里排第几
+position: 9                        # 在所属组里排第几
 discipline: ID                     # 旧分类，现在不显示，可忽略
 legacy: https://kaizhang.io/sound-x-2021-light-effect-design # 旧网站地址，仅备查
 cover: sound-x_cover.jpg           # 首页封面（32:25 裁切）
